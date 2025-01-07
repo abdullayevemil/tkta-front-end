@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
 import {
@@ -8,11 +6,13 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
+  NavigationMenuSub,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import ListItem from "./navigation-link";
 import { LanguageSelector } from "./language-selector";
+import { cn } from "@/lib/utils";
 
 export function Navigation() {
   return (
@@ -125,10 +125,39 @@ export function Navigation() {
                   title="Maliyə hesabatları"
                 ></ListItem>
 
-                <ListItem
-                  href="/unrecognized-universities"
-                  title="Akkreditasiya hesabatları"
-                ></ListItem>
+                <NavigationMenuSub defaultValue="sub1" className="w-full">
+                  <NavigationMenuList className="w-full">
+                    <NavigationMenuItem className="w-full">
+                      <NavigationMenuTrigger className="font-helvetica w-full flex flex-row justify-left">
+                        Akkreditasiya hesabatları
+                      </NavigationMenuTrigger>
+
+                      <NavigationMenuContent>
+                        <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
+                          <ListItem
+                            href="/about"
+                            title="ATMlərin İnstitusional akkreditasiya hesabatları"
+                          ></ListItem>
+
+                          <ListItem
+                            href="/principles"
+                            title="ATMlərin Proqram akkreditasiya hesabatları"
+                          ></ListItem>
+
+                          <ListItem
+                            href="/structure"
+                            title="Peşə Təhsili üzrə hesabatlar"
+                          ></ListItem>
+
+                          <ListItem
+                            href="/internationalization"
+                            title="Beynəlxalq akkreditasiya hesabatları"
+                          ></ListItem>
+                        </ul>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  </NavigationMenuList>
+                </NavigationMenuSub>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
@@ -141,15 +170,18 @@ export function Navigation() {
             <NavigationMenuContent>
               <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                 <ListItem href="/news" title="Vakansiyalar">
-                Agentlikdə mövcud vakansiyalar
+                  Agentlikdə mövcud vakansiyalar
                 </ListItem>
 
-                <ListItem href="/Interviews" title="Peşə ixtisasının tanınması üzrə sənəd qəbulu">
-                İxtisas uyğunluğunun təsdiqi üçün sənədlərin qəbulu
+                <ListItem
+                  href="/Interviews"
+                  title="Peşə ixtisasının tanınması üzrə sənəd qəbulu"
+                >
+                  İxtisas uyğunluğunun təsdiqi üçün sənədlərin qəbulu
                 </ListItem>
 
                 <ListItem href="/Interviews" title="Əməkdaşlıq imkanları">
-                Birgə fəaliyyət perspektivləri
+                  Birgə fəaliyyət perspektivləri
                 </ListItem>
               </ul>
             </NavigationMenuContent>
@@ -182,11 +214,17 @@ export function Navigation() {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <Link href="/docs" legacyBehavior passHref className="font-helvetica text-base">
+            <Link
+              href="/docs"
+              legacyBehavior
+              passHref
+              className="font-helvetica text-base"
+            >
               <NavigationMenuLink
-                className={
-                  navigationMenuTriggerStyle() + "font-helvetica text-[1rem]"
-                }
+                className={cn(
+                  navigationMenuTriggerStyle(),
+                  "font-helvetica text-base"
+                )}
               >
                 Əlaqə
               </NavigationMenuLink>

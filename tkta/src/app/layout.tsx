@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/header";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,8 +21,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  video,
+  services,
+  statistics,
 }: Readonly<{
   children: React.ReactNode;
+  video: React.ReactNode;
+  services: React.ReactNode;
+  statistics: React.ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -31,7 +37,15 @@ export default function RootLayout({
       >
         <Header />
 
-        {children}
+        <main className="flex flex-col gap-20">
+          <section>{video}</section>
+
+          <section>{services}</section>
+
+          <section>{statistics}</section>
+
+          {children}
+        </main>
 
         <SpeedInsights />
       </body>

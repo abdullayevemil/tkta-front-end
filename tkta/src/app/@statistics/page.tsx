@@ -1,4 +1,3 @@
-import ServiceCard from "@/components/home/service-card";
 import StatisticsCard from "@/components/home/statistics-card";
 
 export default function Services() {

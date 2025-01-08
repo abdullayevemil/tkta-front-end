@@ -16,29 +16,32 @@ import { cn } from "@/lib/utils";
 
 export function Navigation() {
   return (
-    <nav className="flex flex-row justify-between w-full">
+    <nav className="flex flex-row justify-between w-full gap-3">
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger className="font-helvetica text-base">
-              Agentlik
+              <Link href="/agency">Agentlik</Link>
             </NavigationMenuTrigger>
 
             <NavigationMenuContent>
               <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
-                <ListItem href="/about" title="Haqqımızda">
+                <ListItem href="/agency/about" title="Haqqımızda">
                   Agentlik haqqında qısa məlumat
                 </ListItem>
 
-                <ListItem href="/principles" title="Rəhbərlik">
+                <ListItem href="/agency/principles" title="Rəhbərlik">
                   Komanda və idarəçilər
                 </ListItem>
 
-                <ListItem href="/structure" title="Struktur">
+                <ListItem href="/agency/structure" title="Struktur">
                   Agentliyin daxili quruluşu
                 </ListItem>
 
-                <ListItem href="/internationalization" title="Beynəlmiləlləşmə">
+                <ListItem
+                  href="/agency/internationalization"
+                  title="Beynəlmiləlləşmə"
+                >
                   Qlobal əlaqə və əməkdaşlıq
                 </ListItem>
               </ul>
@@ -47,17 +50,17 @@ export function Navigation() {
 
           <NavigationMenuItem>
             <NavigationMenuTrigger className="font-helvetica text-base">
-              Xidmətlər
+              <Link href="/services">Xidmətlər</Link>
             </NavigationMenuTrigger>
 
             <NavigationMenuContent>
               <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
-                <ListItem href="/accreditation" title="Akkreditasiya">
+                <ListItem href="/services/accreditation" title="Akkreditasiya">
                   Rəsmi təsdiq və qiymətləndirmə
                 </ListItem>
 
                 <ListItem
-                  href="/qualifications-recognition"
+                  href="/services/qualifications-recognition"
                   title="Kvalifikasiyaların tanınması"
                 >
                   Diplom və sənəd tanınması
@@ -68,38 +71,43 @@ export function Navigation() {
 
           <NavigationMenuItem>
             <NavigationMenuTrigger className="font-helvetica text-base">
-              Normativ hüquqi baza
+              <Link href="/normative-legal-framework">
+                Normativ hüquqi baza
+              </Link>
             </NavigationMenuTrigger>
 
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 md:w-[300px] md:grid-cols-2 lg:w-[600px]">
-                <ListItem href="/accreditation" title="Qanunlar">
+                <ListItem
+                  href="/normative-legal-framework/accreditation"
+                  title="Qanunlar"
+                >
                   Rəsmi təsdiq və qiymətləndirmə
                 </ListItem>
 
                 <ListItem
-                  href="/qualifications-recognition"
+                  href="/normative-legal-framework/qualifications-recognition"
                   title="AR Prezidentinin fərmanaları"
                 >
                   Diplom və sənəd tanınması
                 </ListItem>
 
                 <ListItem
-                  href="/unrecognized-universities"
+                  href="/normative-legal-framework/unrecognized-universities"
                   title="AR Nazirlər Kabinetinin qərarları"
                 >
                   Diplomları tanınmayan universitetlərin siyahısı
                 </ListItem>
 
                 <ListItem
-                  href="/rejected-universities"
+                  href="/normative-legal-framework/rejected-universities"
                   title="Elm və Təhsil Nazirliyinin qərarları"
                 >
                   Ən çox imtina alan universitetlərin siyahısı
                 </ListItem>
 
                 <ListItem
-                  href="/rejected-universities"
+                  href="/normative-legal-framework/rejected-universities"
                   title="Digər qanun qüvvəli aktlar"
                 >
                   Ən çox imtina alan universitetlərin siyahısı
@@ -110,18 +118,18 @@ export function Navigation() {
 
           <NavigationMenuItem>
             <NavigationMenuTrigger className="font-helvetica text-base">
-              Hesabatlar
+              <Link href="/reports">Hesabatlar</Link>
             </NavigationMenuTrigger>
 
             <NavigationMenuContent>
               <ul className="grid w-[200px] gap-3 p-4 md:w-[150px] md:grid-cols-1 lg:w-[300px]">
                 <ListItem
-                  href="/accreditation"
+                  href="/reports/annual"
                   title="İllik hesabatlar"
                 ></ListItem>
 
                 <ListItem
-                  href="/qualifications-recognition"
+                  href="/reports/financial"
                   title="Maliyə hesabatları"
                 ></ListItem>
 
@@ -129,28 +137,28 @@ export function Navigation() {
                   <NavigationMenuList className="w-full">
                     <NavigationMenuItem className="w-full">
                       <NavigationMenuTrigger className="font-helvetica w-full flex flex-row justify-left">
-                        Akkreditasiya hesabatları
+                        <Link href="/reports/accreditation">Akkreditasiya hesabatları</Link>
                       </NavigationMenuTrigger>
 
                       <NavigationMenuContent>
                         <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                           <ListItem
-                            href="/about"
+                            href="/reports/accreditation/institutional"
                             title="ATMlərin İnstitusional akkreditasiya hesabatları"
                           ></ListItem>
 
                           <ListItem
-                            href="/principles"
+                            href="/reports/accreditation/program"
                             title="ATMlərin Proqram akkreditasiya hesabatları"
                           ></ListItem>
 
                           <ListItem
-                            href="/structure"
+                            href="/reports/accreditation/vocational"
                             title="Peşə Təhsili üzrə hesabatlar"
                           ></ListItem>
 
                           <ListItem
-                            href="/internationalization"
+                            href="/reports/accreditation/international"
                             title="Beynəlxalq akkreditasiya hesabatları"
                           ></ListItem>
                         </ul>
@@ -164,23 +172,23 @@ export function Navigation() {
 
           <NavigationMenuItem>
             <NavigationMenuTrigger className="font-helvetica text-base">
-              Elanlar
+              <Link href="/announcements">Elanlar</Link>
             </NavigationMenuTrigger>
 
             <NavigationMenuContent>
               <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
-                <ListItem href="/news" title="Vakansiyalar">
+                <ListItem href="/announcements/vacancies" title="Vakansiyalar">
                   Agentlikdə mövcud vakansiyalar
                 </ListItem>
 
                 <ListItem
-                  href="/Interviews"
+                  href="/announcements/qualification-recognition"
                   title="Peşə ixtisasının tanınması üzrə sənəd qəbulu"
                 >
                   İxtisas uyğunluğunun təsdiqi üçün sənədlərin qəbulu
                 </ListItem>
 
-                <ListItem href="/Interviews" title="Əməkdaşlıq imkanları">
+                <ListItem href="/announcements/cooperation" title="Əməkdaşlıq imkanları">
                   Birgə fəaliyyət perspektivləri
                 </ListItem>
               </ul>
@@ -189,24 +197,24 @@ export function Navigation() {
 
           <NavigationMenuItem>
             <NavigationMenuTrigger className="font-helvetica text-base">
-              Media
+              <Link href="/media">Media</Link>
             </NavigationMenuTrigger>
 
             <NavigationMenuContent>
               <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
-                <ListItem href="/news" title="Xəbərlər">
+                <ListItem href="/media/news" title="Xəbərlər">
                   Ən son yeniliklər
                 </ListItem>
 
-                <ListItem href="/Interviews" title="Müsahibələr">
+                <ListItem href="/media/interviews" title="Müsahibələr">
                   Tanınmış şəxslərlə söhbətlər
                 </ListItem>
 
-                <ListItem href="/disclosures" title="Açıqlamalar">
+                <ListItem href="/media/disclosures" title="Açıqlamalar">
                   Rəsmi məlumat və izahlar
                 </ListItem>
 
-                <ListItem href="/faq" title="FAQ">
+                <ListItem href="/media/faq" title="FAQ">
                   Müntəzəm verilən suallar
                 </ListItem>
               </ul>
@@ -215,7 +223,7 @@ export function Navigation() {
 
           <NavigationMenuItem>
             <Link
-              href="/docs"
+              href="/contact"
               legacyBehavior
               passHref
               className="font-helvetica text-base"
@@ -233,7 +241,7 @@ export function Navigation() {
 
           <NavigationMenuItem>
             <NavigationMenuTrigger className="font-helvetica text-base">
-              Diplom təsdiqi
+              <Link href="/diploma-recognition">Diplom təsdiqi</Link>
             </NavigationMenuTrigger>
 
             <NavigationMenuContent>

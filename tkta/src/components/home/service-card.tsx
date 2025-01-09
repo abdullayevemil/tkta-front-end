@@ -2,14 +2,9 @@ import Image from "next/image";
 import { Card } from "../ui/card";
 import Link from "next/link";
 import React from "react";
+import { Service } from "@/types/service";
 
-interface Props {
-  iconUrl: string;
-  name: string;
-  url: string;
-}
-
-export default function ServiceCard({ iconUrl, name, url }: Props) {
+export default function ServiceCard({ iconUrl, name, url }: Service) {
   return (
     <Link href={`/${url}`}>
       <Card className="px-20 py-24 w-fit flex flex-col gap-8 items-center justify-center w-[430px] h-[430px] bg-textPrimary">

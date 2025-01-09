@@ -19,6 +19,14 @@ const nextConfig: NextConfig = {
 
     return config;
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'www.tkta.edu.az',
+      },
+    ],
+  },
 };
 
 export default nextConfig;

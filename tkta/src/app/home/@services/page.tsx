@@ -7,7 +7,7 @@ export default function Services() {
         Xidmətlər
       </h2>
 
-      <ul className="px-[112px] flex flex-row gap-6 justify-evenly">
+      <ul className="px-16 flex flex-row gap-6 justify-evenly">
         <li>
           <ServiceCard
             id={1}

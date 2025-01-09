@@ -7,7 +7,7 @@ export default function Statistics() {
         Statistika
       </h2>
 
-      <ul className="px-[112px] flex flex-row gap-6 justify-evenly w-full">
+      <ul className="px-16 flex flex-row gap-6 justify-evenly w-full">
         <li className="w-1/4">
           <StatisticsCard
             id={1}

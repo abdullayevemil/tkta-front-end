@@ -35,6 +35,7 @@ body {
     --radius: 0.5rem;
     --black-transparent: rgba(0, 0, 0, 0.6);
     --primary-color: #B7A64F;
+    --secondary-color: #707070;
   }
   .dark {
     --background: 240 10% 3.9%;
@@ -63,6 +64,7 @@ body {
     --chart-5: 340 75% 55%;
     --black-transparent: rgba(0, 0, 0, 0.5);
     --primary-color: #B7A64F;
+    --secondary-color: #707070;
   }
 }
 

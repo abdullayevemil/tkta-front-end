@@ -51,7 +51,8 @@ export default {
           "5": "hsl(var(--chart-5))",
         },
         blackTransparent: "var(--black-transparent)",
-		textPrimary: "var(--primary-color)",
+        textPrimary: "var(--primary-color)",
+        textSecondary: "var(--secondary-color)",
       },
       borderRadius: {
         lg: "var(--radius)",

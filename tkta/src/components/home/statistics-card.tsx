@@ -1,13 +1,8 @@
 import Image from "next/image";
 import { Card } from "../ui/card";
+import { Statistics } from "@/types/statistics";
 
-interface Props {
-  name: string;
-  number: number;
-  iconUrl: string;
-}
-
-export default function StatisticsCard({ name, number, iconUrl }: Props) {
+export default function StatisticsCard({ name, number, iconUrl }: Statistics) {
   return (
     <Card className="flex flex-col gap-11 px-8 py-9 bg-textPrimary text-white w-full justify-center items-center">
       <Image src={iconUrl} alt={`${name} icon`} width={96} height={96} />

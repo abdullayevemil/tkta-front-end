@@ -25,12 +25,14 @@ export default function RootLayout({
   services,
   statistics,
   news,
+  map,
 }: Readonly<{
   children: React.ReactNode;
   video: React.ReactNode;
   services: React.ReactNode;
   statistics: React.ReactNode;
   news: React.ReactNode;
+  map: React.ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -47,6 +49,8 @@ export default function RootLayout({
           <section>{statistics}</section>
 
           <section>{news}</section>
+
+          <section>{map}</section>
 
           {children}
         </main>

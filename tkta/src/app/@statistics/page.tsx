@@ -1,6 +1,6 @@
 import StatisticsCard from "@/components/home/statistics-card";
 
-export default function Services() {
+export default function Statistics() {
   return (
     <div className="flex flex-col gap-20 w-full justify-center">
       <h2 className="text-textPrimary font-bold text-4xl w-full justify-center text-center uppercase">

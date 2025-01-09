@@ -40,13 +40,13 @@ export function LanguageSelector() {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-[90px] justify-between"
+          className="w-16 justify-between"
         >
           {value}
           <ChevronsUpDown className="opacity-50" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-[90px] p-0">
+      <PopoverContent className="w-16 p-0">
         <Command>
           <CommandList>
             <CommandGroup>

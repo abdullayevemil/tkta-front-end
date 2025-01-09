@@ -3,8 +3,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import Link from "next/link";
 
@@ -16,7 +14,7 @@ export default function News() {
       </h2>
 
       <Carousel
-        className="px-[112px] w-full"
+        className="px-16 w-full"
         opts={{
           loop: true,
         }}
@@ -88,10 +86,6 @@ export default function News() {
             </Link>
           </CarouselItem>
         </CarouselContent>
-
-        <CarouselPrevious />
-
-        <CarouselNext />
       </Carousel>
     </div>
   );

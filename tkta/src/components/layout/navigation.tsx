@@ -16,7 +16,7 @@ import { cn } from "@/lib/utils";
 
 export function Navigation() {
   return (
-    <nav className="flex flex-row justify-between w-full gap-3">
+    <nav className="flex flex-row justify-between w-full gap-1">
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
@@ -37,20 +37,31 @@ export function Navigation() {
                 <ListItem href="/agency/structure" title="Struktur">
                   Agentliyin daxili quruluşu
                 </ListItem>
-
-                <ListItem
-                  href="/agency/internationalization"
-                  title="Beynəlmiləlləşmə"
-                >
-                  Qlobal əlaqə və əməkdaşlıq
-                </ListItem>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
+            <Link
+              href="/agency/internationalization"
+              legacyBehavior
+              passHref
+              className="font-helvetica text-base"
+            >
+              <NavigationMenuLink
+                className={cn(
+                  navigationMenuTriggerStyle(),
+                  "font-helvetica text-base"
+                )}
+              >
+                Beynəlmiləlləşmə
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+
+          <NavigationMenuItem>
             <NavigationMenuTrigger className="font-helvetica text-base">
-              <Link href="/services">Xidmətlər</Link>
+              <Link href="/services">Fəaliyyət İstiqamətlərimiz</Link>
             </NavigationMenuTrigger>
 
             <NavigationMenuContent>
@@ -71,46 +82,24 @@ export function Navigation() {
 
           <NavigationMenuItem>
             <NavigationMenuTrigger className="font-helvetica text-base">
-              <Link href="/normative-legal-framework">
-                Normativ hüquqi baza
-              </Link>
+              <Link href="/announcements">Elanlar</Link>
             </NavigationMenuTrigger>
 
             <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[300px] md:grid-cols-2 lg:w-[600px]">
-                <ListItem
-                  href="/normative-legal-framework/accreditation"
-                  title="Qanunlar"
-                >
-                  Rəsmi təsdiq və qiymətləndirmə
+              <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
+                <ListItem href="/announcements/vacancies" title="Vakansiyalar">
+                  Agentlikdə mövcud vakansiyalar
                 </ListItem>
 
                 <ListItem
-                  href="/normative-legal-framework/qualifications-recognition"
-                  title="AR Prezidentinin fərmanaları"
+                  href="/announcements/qualification-recognition"
+                  title="Peşə ixtisasının tanınması üzrə sənəd qəbulu"
                 >
-                  Diplom və sənəd tanınması
+                  İxtisas uyğunluğunun təsdiqi üçün sənədlərin qəbulu
                 </ListItem>
 
-                <ListItem
-                  href="/normative-legal-framework/unrecognized-universities"
-                  title="AR Nazirlər Kabinetinin qərarları"
-                >
-                  Diplomları tanınmayan universitetlərin siyahısı
-                </ListItem>
-
-                <ListItem
-                  href="/normative-legal-framework/rejected-universities"
-                  title="Elm və Təhsil Nazirliyinin qərarları"
-                >
-                  Ən çox imtina alan universitetlərin siyahısı
-                </ListItem>
-
-                <ListItem
-                  href="/normative-legal-framework/rejected-universities"
-                  title="Digər qanun qüvvəli aktlar"
-                >
-                  Ən çox imtina alan universitetlərin siyahısı
+                <ListItem href="/announcements/cooperation" title="Əməkdaşlıq imkanları">
+                  Birgə fəaliyyət perspektivləri
                 </ListItem>
               </ul>
             </NavigationMenuContent>
@@ -172,24 +161,46 @@ export function Navigation() {
 
           <NavigationMenuItem>
             <NavigationMenuTrigger className="font-helvetica text-base">
-              <Link href="/announcements">Elanlar</Link>
+              <Link href="/normative-legal-framework">
+                Normativ hüquqi baza
+              </Link>
             </NavigationMenuTrigger>
 
             <NavigationMenuContent>
-              <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
-                <ListItem href="/announcements/vacancies" title="Vakansiyalar">
-                  Agentlikdə mövcud vakansiyalar
+              <ul className="grid w-[400px] gap-3 p-4 md:w-[300px] md:grid-cols-2 lg:w-[600px]">
+                <ListItem
+                  href="/normative-legal-framework/accreditation"
+                  title="Qanunlar"
+                >
+                  Rəsmi təsdiq və qiymətləndirmə
                 </ListItem>
 
                 <ListItem
-                  href="/announcements/qualification-recognition"
-                  title="Peşə ixtisasının tanınması üzrə sənəd qəbulu"
+                  href="/normative-legal-framework/qualifications-recognition"
+                  title="AR Prezidentinin fərmanaları"
                 >
-                  İxtisas uyğunluğunun təsdiqi üçün sənədlərin qəbulu
+                  Diplom və sənəd tanınması
                 </ListItem>
 
-                <ListItem href="/announcements/cooperation" title="Əməkdaşlıq imkanları">
-                  Birgə fəaliyyət perspektivləri
+                <ListItem
+                  href="/normative-legal-framework/unrecognized-universities"
+                  title="AR Nazirlər Kabinetinin qərarları"
+                >
+                  Diplomları tanınmayan universitetlərin siyahısı
+                </ListItem>
+
+                <ListItem
+                  href="/normative-legal-framework/rejected-universities"
+                  title="Elm və Təhsil Nazirliyinin qərarları"
+                >
+                  Ən çox imtina alan universitetlərin siyahısı
+                </ListItem>
+
+                <ListItem
+                  href="/normative-legal-framework/rejected-universities"
+                  title="Digər qanun qüvvəli aktlar"
+                >
+                  Ən çox imtina alan universitetlərin siyahısı
                 </ListItem>
               </ul>
             </NavigationMenuContent>
@@ -286,8 +297,6 @@ export function Navigation() {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-
-      <LanguageSelector />
     </nav>
   );
 }

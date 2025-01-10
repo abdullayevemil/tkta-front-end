@@ -60,20 +60,34 @@ export function Navigation() {
 
           <NavigationMenuItem>
             <NavigationMenuTrigger className="font-helvetica text-base">
-              <Link href="/services">Fəaliyyət İstiqamətlərimiz</Link>
+              <Link href="/services">Fəaliyyət Sahələrimiz</Link>
             </NavigationMenuTrigger>
 
             <NavigationMenuContent>
               <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
+                <ListItem
+                  href="/services/qualifications-recognition"
+                  title="Xarici kvalifikasiyalarin tanınması"
+                >
+                  Diplom və sənəd tanınması
+                </ListItem>
+
+                <ListItem
+                  href="/services/education-recognition"
+                  title="Qeyri formal ve informal təhsilin tanınması"
+                >
+                  Sertifikatsız təhsilin təsdiqi
+                </ListItem>
+
                 <ListItem href="/services/accreditation" title="Akkreditasiya">
                   Rəsmi təsdiq və qiymətləndirmə
                 </ListItem>
 
                 <ListItem
-                  href="/services/qualifications-recognition"
-                  title="Kvalifikasiyaların tanınması"
+                  href="/services/training-methodology"
+                  title="Təlim metodologiya"
                 >
-                  Diplom və sənəd tanınması
+                  Öyrətmə üsul və yanaşmaları
                 </ListItem>
               </ul>
             </NavigationMenuContent>
@@ -97,7 +111,10 @@ export function Navigation() {
                   İxtisas uyğunluğunun təsdiqi üçün sənədlərin qəbulu
                 </ListItem>
 
-                <ListItem href="/announcements/cooperation" title="Əməkdaşlıq imkanları">
+                <ListItem
+                  href="/announcements/cooperation"
+                  title="Əməkdaşlıq imkanları"
+                >
                   Birgə fəaliyyət perspektivləri
                 </ListItem>
               </ul>
@@ -125,7 +142,9 @@ export function Navigation() {
                   <NavigationMenuList className="w-full">
                     <NavigationMenuItem className="w-full">
                       <NavigationMenuTrigger className="font-helvetica w-full flex flex-row justify-left">
-                        <Link href="/reports/accreditation">Akkreditasiya hesabatları</Link>
+                        <Link href="/reports/accreditation">
+                          Akkreditasiya hesabatları
+                        </Link>
                       </NavigationMenuTrigger>
 
                       <NavigationMenuContent>

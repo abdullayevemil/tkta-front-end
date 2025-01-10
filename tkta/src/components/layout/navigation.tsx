@@ -295,24 +295,6 @@ export function Navigation() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-
-          <NavigationMenuItem>
-            <Link
-              href="/authentication/sign-in"
-              legacyBehavior
-              passHref
-              className="font-helvetica text-base"
-            >
-              <NavigationMenuLink
-                className={cn(
-                  navigationMenuTriggerStyle(),
-                  "font-helvetica text-base"
-                )}
-              >
-                Daxil olun
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
     </nav>

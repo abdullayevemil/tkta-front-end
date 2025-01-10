@@ -36,6 +36,7 @@ body {
     --black-transparent: rgba(0, 0, 0, 0.6);
     --primary-color: #B7A64F;
     --secondary-color: #707070;
+    --gold-border-color: #9A8C42;
   }
   .dark {
     --background: 240 10% 3.9%;
@@ -65,6 +66,7 @@ body {
     --black-transparent: rgba(0, 0, 0, 0.5);
     --primary-color: #B7A64F;
     --secondary-color: #707070;
+    --gold-border-color: #9A8C42;
   }
 }
 

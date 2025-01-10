@@ -53,6 +53,7 @@ export default {
         blackTransparent: "var(--black-transparent)",
         textPrimary: "var(--primary-color)",
         textSecondary: "var(--secondary-color)",
+        goldBorderColor: "var(--gold-border-color)",
       },
       borderRadius: {
         lg: "var(--radius)",

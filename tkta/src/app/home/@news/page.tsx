@@ -1,11 +1,3 @@
-import NewsCard from "@/components/home/news-card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
-import Link from "next/link";
-
 export default function News() {
   return (
     <div className="flex flex-col gap-20 w-full justify-center">
@@ -13,80 +5,7 @@ export default function News() {
         Xəbərlər
       </h2>
 
-      <Carousel
-        className="px-16 w-full"
-        opts={{
-          loop: true,
-        }}
-      >
-        <CarouselContent>
-          <CarouselItem className="basis-1/3">
-            <Link href="/news/1">
-              <NewsCard
-                id={1}
-                title="Təhsildə Keyfiyyət Təminatı Agentliyinin İdarə Heyətinin sədri Tural Əhmədov “Maarifçi” tələbə–məzun təcrübə proqramının iştirakçıları ilə görüş keçirib"
-                content=""
-                creationDate="23.12.2024"
-              />
-            </Link>
-          </CarouselItem>
-
-          <CarouselItem className="basis-1/3">
-            <Link href="/news/1">
-              <NewsCard
-                id={1}
-                title="Təhsildə Keyfiyyət Təminatı Agentliyinin İdarə Heyətinin sədri Tural Əhmədov “Maarifçi” tələbə–məzun təcrübə proqramının iştirakçıları ilə görüş keçirib"
-                content=""
-                creationDate="23.12.2024"
-              />
-            </Link>
-          </CarouselItem>
-
-          <CarouselItem className="basis-1/3">
-            <Link href="/news/1">
-              <NewsCard
-                id={1}
-                title="Təhsildə Keyfiyyət Təminatı Agentliyinin İdarə Heyətinin sədri Tural Əhmədov “Maarifçi” tələbə–məzun təcrübə proqramının iştirakçıları ilə görüş keçirib"
-                content=""
-                creationDate="23.12.2024"
-              />
-            </Link>
-          </CarouselItem>
-
-          <CarouselItem className="basis-1/3">
-            <Link href="/news/1">
-              <NewsCard
-                id={1}
-                title="Təhsildə Keyfiyyət Təminatı Agentliyinin İdarə Heyətinin sədri Tural Əhmədov “Maarifçi” tələbə–məzun təcrübə proqramının iştirakçıları ilə görüş keçirib"
-                content=""
-                creationDate="23.12.2024"
-              />
-            </Link>
-          </CarouselItem>
-
-          <CarouselItem className="basis-1/3">
-            <Link href="/news/1">
-              <NewsCard
-                id={1}
-                title="Təhsildə Keyfiyyət Təminatı Agentliyinin İdarə Heyətinin sədri Tural Əhmədov “Maarifçi” tələbə–məzun təcrübə proqramının iştirakçıları ilə görüş keçirib"
-                content=""
-                creationDate="23.12.2024"
-              />
-            </Link>
-          </CarouselItem>
-
-          <CarouselItem className="basis-1/3">
-            <Link href="/news/1">
-              <NewsCard
-                id={1}
-                title="Təhsildə Keyfiyyət Təminatı Agentliyinin İdarə Heyətinin sədri Tural Əhmədov “Maarifçi” tələbə–məzun təcrübə proqramının iştirakçıları ilə görüş keçirib"
-                content=""
-                creationDate="23.12.2024"
-              />
-            </Link>
-          </CarouselItem>
-        </CarouselContent>
-      </Carousel>
+      
     </div>
   );
 }

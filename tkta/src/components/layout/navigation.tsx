@@ -11,7 +11,6 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import ListItem from "./navigation-link";
-import { LanguageSelector } from "./language-selector";
 import { cn } from "@/lib/utils";
 
 export function Navigation() {

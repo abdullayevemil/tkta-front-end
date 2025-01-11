@@ -23,7 +23,6 @@ export default function AboutUs() {
             <Image
               src={CenterImage}
               alt="center image"
-              objectFit={"contain"}
               className="rounded-xl w-full"
             />
           </Card>

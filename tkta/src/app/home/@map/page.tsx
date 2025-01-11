@@ -1,3 +1,4 @@
+import RichTextEditor from "@/components/forms/rich-text-editor";
 import GoogleMapComponent from "@/components/maps/google-map";
 import { Card } from "@/components/ui/card";
 
@@ -8,9 +9,13 @@ export default function Map() {
         Bizimlə Əlaqə
       </h2>
 
-      <Card className="h-96 w-1/3 flex justify-right">
-        <GoogleMapComponent />
-      </Card>
+      <div className="w-full flex flex-row justify-between">
+        <RichTextEditor></RichTextEditor>
+
+        <Card className="h-96 w-1/3 flex justify-right">
+          <GoogleMapComponent />
+        </Card>
+      </div>
     </div>
   );
 }

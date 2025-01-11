@@ -17,47 +17,45 @@ export default function AboutUs() {
         cəmiyyətə faydalı olmaq üçün ən güclü vasitədir<b>”</b>
       </h2>
 
-      <div className="flex flex-row px-[112px] gap-16">
-        <Card className="w-2/3">
-          <Image src={CenterImage} alt="center image" className="w-full h-full rounded-xl" />
-        </Card>
-
-        <div className="flex flex-col gap-6 w-1/3 justify-between">
-          <div className="text-base w-full text-justify">
-            Azərbaycan Respublikası Prezidentinin 29.12.2019-cu il tarixdə
-            imzaladığı müvafiq Fərmana əsasən, Təhsil Nazirliyinin Akkreditasiya
-            və Nostrifikasiya İdarəsi Təhsil Nazirliyinin tabeliyində publik
-            hüquqi şəxs statusu olan Təhsildə Keyfiyyət Təminatı Agentliyinə
-            çevrilmə yolu ilə yenidən təşkil edilmişdir. Agentlik Azerbaycanda
-            və beynəlxalq səviyyədə qəbul edilmiş standartlara əsaslanan ali,
-            orta ixtisas və əlavə təhsilin keyfiyyətinin müstəqil
-            qiymətləndirilməsi sahəsində peşəkar və mütəxəssis qurumdur.
-          </div>
-
-          <div className="text-base w-full text-justify">
-            Təhsildə Keyfiyyət Təminatı Agentliyi (TKTA) təhsil proqramlarının
-            keyfiyyət səviyyələrinin müəyyənləşdirilməsi və tələblərin həyata
-            keçirilməsini təmin edir. Agentlik öz vəzifələrini yerinə yetirərkən
-            və hüquqlarını həyata keçirərkən dövlət orqanları (qurumları) və
-            bələdiyyələrlə, beynəlxalq və qeyri-hökumət təşkilatları, digər
-            hüquqi və fiziki şəxslərlə qarşılıqlı əlaqədə fəaliyyət göstərir.
-          </div>
+      <div className="px-[112px] w-full">
+        <div className="w-2/3 h-fit">
+          <Card className="w-full h-fit float-left mr-8 mb-4">
+            <Image
+              src={CenterImage}
+              alt="center image"
+              objectFit={"contain"}
+              className="rounded-xl w-full"
+            />
+          </Card>
         </div>
-      </div>
 
-      <div className="text-base w-full px-[112px] text-justify">
-        Azərbaycan Respublikası Təhsil Nazirliyinin fəaliyyətinin
-        təkmilləşdirilməsi və “Azərbaycan Respublikasında bir sıra dövlət
-        orqanlarının strukturunun optimallaşdırılması və idarə edilməsinin
-        təkmilləşdirilməsi ilə bağlı əlavə tədbirlər haqqında” Azərbaycan
-        Respublikası Prezidentinin 2019-cu il 17 yanvar tarixli 479 nömrəli
-        Fərmanında dəyişiklik edilməsi barədə{" "}
-        <Link
-          className="italic text-textPrimary font-semibold"
-          href="https://e-qanun.az/framework/44056"
-        >
-          NİZAMNAMƏYƏ KEÇİD
-        </Link>
+        <p className="text-base w-full text-justify tracking-wide leading-7">
+          Azərbaycan Respublikası Prezidentinin 29.12.2019-cu il tarixdə
+          imzaladığı müvafiq Fərmana əsasən, Təhsil Nazirliyinin Akkreditasiya
+          və Nostrifikasiya İdarəsi Təhsil Nazirliyinin tabeliyində publik
+          hüquqi şəxs statusu olan Təhsildə Keyfiyyət Təminatı Agentliyinə
+          çevrilmə yolu ilə yenidən təşkil edilmişdir. Agentlik Azerbaycanda və
+          beynəlxalq səviyyədə qəbul edilmiş standartlara əsaslanan ali, orta
+          ixtisas və əlavə təhsilin keyfiyyətinin müstəqil qiymətləndirilməsi
+          sahəsində peşəkar və mütəxəssis qurumdur. <br /> Təhsildə Keyfiyyət
+          Təminatı Agentliyi (TKTA) təhsil proqramlarının keyfiyyət
+          səviyyələrinin müəyyənləşdirilməsi və tələblərin həyata keçirilməsini
+          təmin edir. Agentlik öz vəzifələrini yerinə yetirərkən və hüquqlarını
+          həyata keçirərkən dövlət orqanları (qurumları) və bələdiyyələrlə,
+          beynəlxalq və qeyri-hökumət təşkilatları, digər hüquqi və fiziki
+          şəxslərlə qarşılıqlı əlaqədə fəaliyyət göstərir. Azərbaycan Respublikası Təhsil Nazirliyinin fəaliyyətinin
+          təkmilləşdirilməsi və “Azərbaycan Respublikasında bir sıra dövlət
+          orqanlarının strukturunun optimallaşdırılması və idarə edilməsinin
+          təkmilləşdirilməsi ilə bağlı əlavə tədbirlər haqqında” Azərbaycan
+          Respublikası Prezidentinin 2019-cu il 17 yanvar tarixli 479 nömrəli
+          Fərmanında dəyişiklik edilməsi barədə{" "}
+          <Link
+            className="italic text-textPrimary font-semibold"
+            href="https://e-qanun.az/framework/44056"
+          >
+            NİZAMNAMƏYƏ KEÇİD
+          </Link>
+        </p>
       </div>
     </div>
   );

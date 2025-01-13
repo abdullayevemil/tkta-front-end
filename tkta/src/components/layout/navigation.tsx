@@ -23,11 +23,28 @@ export function Navigation() {
               <Link href="/agency">Agentlik</Link>
             </NavigationMenuTrigger>
 
-            <NavigationMenuContent>
+            <NavigationMenuContent className="left-0">
               <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
-                <ListItem href="/agency/about" title="Haqqımızda">
-                  Agentlik haqqında qısa məlumat
-                </ListItem>
+                <NavigationMenuSub defaultValue="sub1" className="w-full">
+                  <NavigationMenuList className="w-full">
+                    <NavigationMenuItem className="w-full">
+                      <NavigationMenuTrigger className="font-helvetica w-full flex flex-row justify-left">
+                        <Link href="/agency/about">
+                          Haqqımızda
+                        </Link>
+                      </NavigationMenuTrigger>
+
+                      <NavigationMenuContent className="left-64 top-0">
+                        <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
+                          <ListItem
+                            href="/agency/about/institutional"
+                            title="Daxili keyfiyyət təminatı sistemi"
+                          ></ListItem>
+                        </ul>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  </NavigationMenuList>
+                </NavigationMenuSub>
 
                 <ListItem href="/agency/principles" title="Rəhbərlik">
                   Komanda və idarəçilər
@@ -63,7 +80,7 @@ export function Navigation() {
               <Link href="/services">Fəaliyyət Sahələrimiz</Link>
             </NavigationMenuTrigger>
 
-            <NavigationMenuContent>
+            <NavigationMenuContent className="left-0">
               <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                 <ListItem
                   href="/services/qualifications-recognition"
@@ -79,7 +96,10 @@ export function Navigation() {
                   Sertifikatsız təhsilin təsdiqi
                 </ListItem>
 
-                <ListItem href="/services/accreditation" title="Akkreditasiya və lisenziya">
+                <ListItem
+                  href="/services/accreditation"
+                  title="Akkreditasiya və lisenziya"
+                >
                   Rəsmi təsdiq və qiymətləndirmə
                 </ListItem>
 
@@ -98,7 +118,7 @@ export function Navigation() {
               <Link href="/announcements">Elanlar</Link>
             </NavigationMenuTrigger>
 
-            <NavigationMenuContent>
+            <NavigationMenuContent className="left-0">
               <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                 <ListItem href="/announcements/vacancies" title="Vakansiyalar">
                   Agentlikdə mövcud vakansiyalar
@@ -126,7 +146,7 @@ export function Navigation() {
               <Link href="/reports">Hesabatlar</Link>
             </NavigationMenuTrigger>
 
-            <NavigationMenuContent>
+            <NavigationMenuContent className="left-0">
               <ul className="grid w-[200px] gap-3 p-4 md:w-[150px] md:grid-cols-1 lg:w-[300px]">
                 <ListItem
                   href="/reports/annual"
@@ -147,7 +167,7 @@ export function Navigation() {
                         </Link>
                       </NavigationMenuTrigger>
 
-                      <NavigationMenuContent>
+                      <NavigationMenuContent className="left-0">
                         <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                           <ListItem
                             href="/reports/accreditation/institutional"
@@ -184,7 +204,7 @@ export function Navigation() {
               </Link>
             </NavigationMenuTrigger>
 
-            <NavigationMenuContent>
+            <NavigationMenuContent className="left-0">
               <ul className="grid w-[400px] gap-3 p-4 md:w-[300px] md:grid-cols-2 lg:w-[600px]">
                 <ListItem
                   href="/normative-legal-framework/accreditation"
@@ -229,7 +249,7 @@ export function Navigation() {
               <Link href="/media">Media</Link>
             </NavigationMenuTrigger>
 
-            <NavigationMenuContent>
+            <NavigationMenuContent className="left-0">
               <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                 <ListItem href="/media/news" title="Xəbərlər">
                   Ən son yeniliklər
@@ -273,7 +293,7 @@ export function Navigation() {
               <Link href="/diploma-recognition">Diplom təsdiqi</Link>
             </NavigationMenuTrigger>
 
-            <NavigationMenuContent>
+            <NavigationMenuContent className="left-0">
               <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                 <ListItem
                   href="/diploma-recognition/video-instructions"

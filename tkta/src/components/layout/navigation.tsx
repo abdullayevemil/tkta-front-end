@@ -74,18 +74,18 @@ export function Navigation() {
 
                 <ListItem
                   href="/services/education-recognition"
-                  title="Qeyri formal ve informal təhsilin tanınması"
+                  title="Qeyri formal və informal təhsilin tanınması"
                 >
                   Sertifikatsız təhsilin təsdiqi
                 </ListItem>
 
-                <ListItem href="/services/accreditation" title="Akkreditasiya">
+                <ListItem href="/services/accreditation" title="Akkreditasiya və lisenziya">
                   Rəsmi təsdiq və qiymətləndirmə
                 </ListItem>
 
                 <ListItem
                   href="/services/training-methodology"
-                  title="Təlim metodologiya"
+                  title="Təlim və metodologiya"
                 >
                   Öyrətmə üsul və yanaşmaları
                 </ListItem>

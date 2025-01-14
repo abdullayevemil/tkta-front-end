@@ -29,9 +29,7 @@ export function Navigation() {
                   <NavigationMenuList className="w-full">
                     <NavigationMenuItem className="w-full">
                       <NavigationMenuTrigger className="font-helvetica w-full flex flex-row justify-left">
-                        <Link href="/agency/about">
-                          Haqqımızda
-                        </Link>
+                        <Link href="/agency/about">Haqqımızda</Link>
                       </NavigationMenuTrigger>
 
                       <NavigationMenuContent className="left-64 top-0">
@@ -271,24 +269,6 @@ export function Navigation() {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <Link
-              href="/contact"
-              legacyBehavior
-              passHref
-              className="font-helvetica text-base"
-            >
-              <NavigationMenuLink
-                className={cn(
-                  navigationMenuTriggerStyle(),
-                  "font-helvetica text-base"
-                )}
-              >
-                Əlaqə
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-
-          <NavigationMenuItem>
             <NavigationMenuTrigger className="font-helvetica text-base">
               <Link href="/diploma-recognition">Diplom təsdiqi</Link>
             </NavigationMenuTrigger>
@@ -297,7 +277,7 @@ export function Navigation() {
               <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                 <ListItem
                   href="/diploma-recognition/video-instructions"
-                  title="Video təlimat"
+                  title="Təlimat"
                 >
                   Tanıma prosesi ilə bağlı izah
                 </ListItem>
@@ -314,6 +294,24 @@ export function Navigation() {
                 </ListItem>
               </ul>
             </NavigationMenuContent>
+          </NavigationMenuItem>
+
+          <NavigationMenuItem>
+            <Link
+              href="/contact"
+              legacyBehavior
+              passHref
+              className="font-helvetica text-base"
+            >
+              <NavigationMenuLink
+                className={cn(
+                  navigationMenuTriggerStyle(),
+                  "font-helvetica text-base"
+                )}
+              >
+                Əlaqə
+              </NavigationMenuLink>
+            </Link>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>

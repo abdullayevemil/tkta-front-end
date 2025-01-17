@@ -11,6 +11,67 @@ import FacebookIcon from "@/assets/icons/footer/social-media/facebook.svg";
 import InstagramIcon from "@/assets/icons/footer/social-media/instagram.svg";
 import LinkedinIcon from "@/assets/icons/footer/social-media/linkedin.svg";
 import TelegramIcon from "@/assets/icons/footer/social-media/telegram.svg";
+import { Position, ReactFlow } from "@xyflow/react";
+import "@xyflow/react/dist/style.css";
+
+const nodeDefaults = {
+  sourcePosition: Position.Left,
+  targetPosition: Position.Left,
+  style: {
+    color: "var(--primary-color)",
+    borderWidth: 1,
+    borderColor: "var(--primary-color)",
+    borderStyle: "solid",
+  },
+};
+
+const initialNodes = [
+  {
+    id: "1",
+    position: { x: 112, y: 0 },
+    data: { label: "Agentlik" },
+    sourcePosition: Position.Bottom,
+    targetPosition: Position.Bottom,
+    style: {
+      color: "var(--primary-color)",
+      borderWidth: 1,
+      borderColor: "var(--primary-color)",
+      borderStyle: "solid",
+    },
+  },
+  {
+    id: "2",
+    position: { x: 200, y: 50 },
+    data: { label: "Haqqımızda" },
+    ...nodeDefaults,
+    sourcePosition: Position.Right,
+  },
+  {
+    id: "3",
+    position: { x: 200, y: 100 },
+    data: { label: "Rəhbırlik" },
+    ...nodeDefaults,
+  },
+  {
+    id: "4",
+    position: { x: 200, y: 150 },
+    data: { label: "Struktur" },
+    ...nodeDefaults,
+  },
+  {
+    id: "5",
+    position: { x: 360, y: 50 },
+    data: { label: "Daxili keyfiyyət təminatı sistemi", },
+    ...nodeDefaults
+  },
+];
+
+const initialEdges = [
+  { id: "e1-2", source: "1", target: "2" },
+  { id: "e1-3", source: "1", target: "3" },
+  { id: "e1-4", source: "1", target: "4" },
+  { id: "e2-5", source: "2", target: "5" },
+];
 
 export default function Footer() {
   return (
@@ -22,37 +83,61 @@ export default function Footer() {
           <Image src={Logo} alt="TKTA logo" className="w-[194.4px] h-18" />
         </Link>
 
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-row gap-5">
           <Link href="https://www.facebook.com/tkta.edu.az?_rdr">
-            <FacebookIcon width={32} height={32} color="var(--primary-color)" />
+            <FacebookIcon width={28} height={28} color="var(--primary-color)" />
           </Link>
 
-          <Link target="_blank" rel="noopener noreferrer" href="https://instagram.com/tktaeduaz">
-            <InstagramIcon width={32} height={32} color="var(--primary-color)" />
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://instagram.com/tktaeduaz"
+          >
+            <InstagramIcon
+              width={28}
+              height={28}
+              color="var(--primary-color)"
+            />
           </Link>
 
           <Link href="https://www.linkedin.com/company/tktaeduaz/">
-            <LinkedinIcon width={32} height={32} color="var(--primary-color)" />
+            <LinkedinIcon width={28} height={28} color="var(--primary-color)" />
           </Link>
 
           <Link href="https://t.me/tktaeduaz">
-            <TelegramIcon width={32} height={32} color="var(--primary-color)" />
+            <TelegramIcon width={28} height={28} color="var(--primary-color)" />
           </Link>
         </div>
       </div>
 
-      <div className="w-full flex flex-row justify-between">
+      <div className="w-full h-full flex flex-row justify-between">
+        <div className="w-2/3 h-[500px] flex flex-row gap-4">
+          <ReactFlow
+            className="text-textPrimary"
+            fitView
+            nodes={initialNodes}
+            edges={initialEdges}
+          />
+        </div>
+
         <div className="w-1/3 flex flex-col gap-6">
-          <Card className="h-96 w-full flex justify-right">
+          <Card className="w-full flex justify-right">
             <GoogleMapComponent />
           </Card>
 
           <div className="flex flex-row gap-2 items-center">
-            <PinIcon width={30} height={30} color="var(--primary-color)" />
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://maps.app.goo.gl/FTyJY73SYT4YvKfJ6"
+              className="flex flex-row gap-2 items-center"
+            >
+              <PinIcon width={24} height={24} color="var(--primary-color)" />
 
-            <div className="text-textPrimary text-base">
-              2B Qara Qarayev, Bakı 1060
-            </div>
+              <div className="text-textPrimary text-base">
+                2B Qara Qarayev, Bakı 1060
+              </div>
+            </Link>
           </div>
         </div>
       </div>

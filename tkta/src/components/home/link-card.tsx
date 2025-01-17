@@ -10,7 +10,7 @@ interface Props {
 
 export default function LinkCard({ name, imageUrl, url }: Props) {
   return (
-    <Link href={url} rel="noopener noreferrer" target="_blank"className="w-1/5 h-full">
+    <Link href={url} rel="noopener noreferrer" target="_blank" className="w-1/5 h-full">
       <Card className="flex flex-col items-center justify-evenly gap-3 p-6 h-full">
         <Image
           src={imageUrl}

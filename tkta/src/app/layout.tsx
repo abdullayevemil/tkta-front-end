@@ -6,6 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import AuthenticationProvider from "@/components/authentication/authentication-provider";
 import { Bounce, ToastContainer } from "react-toastify";
 import Footer from "@/components/layout/footer";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,6 +30,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <meta
+          name="al:ios:url"
+          content="instagram://user?username=tktaeduaz"
+        />
+        <meta name="al:ios:app_name" content="Instagram" />
+        <meta
+          name="al:android:url"
+          content="instagram://user?username=tktaeduaz"
+        />
+        <meta name="al:android:app_name" content="Instagram" />
+        <meta
+          property="al:web:url"
+          content="https://instagram.com/tktaeduaz"
+        />
+      </Head>
+      
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

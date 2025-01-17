@@ -27,7 +27,7 @@ export default function Footer() {
             <FacebookIcon width={32} height={32} color="var(--primary-color)" />
           </Link>
 
-          <Link href="https://www.instagram.com/tktaeduaz?fbclid=IwY2xjawH3gd1leHRuA2FlbQIxMAABHRGMCl47qavbAgAF6wW3jfoZo0_p_zNBMzi_ivQ1gFdfusnEqiz5EVAQ5A_aem_emGT00ne-11GvznZgiQlnQ">
+          <Link href="instagram://user?username=tktaeduaz">
             <InstagramIcon width={32} height={32} color="var(--primary-color)" />
           </Link>
 

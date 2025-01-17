@@ -2,52 +2,83 @@
 
 import React from "react";
 import { ReactFlow } from "@xyflow/react";
-
 import "@xyflow/react/dist/style.css";
 
+const style = {
+  style: {
+    color: "var(--primary-color)",
+    borderWidth: 1,
+    borderColor: "var(--primary-color)",
+    borderStyle: "solid",
+  },
+};
+
 const initialNodes = [
-  { id: "1", position: { x: 700, y: 0 }, data: { label: "İdarə Heyətinin Sədri" } },
-  { id: "2", position: { x: 1100, y: 100 }, data: { label: "İdarə Heyətinin sədr müavini" } },
+  {
+    id: "1",
+    position: { x: 700, y: 0 },
+    data: { label: "İdarə Heyətinin Sədri" },
+    ...style,
+  },
+  {
+    id: "2",
+    position: { x: 1100, y: 100 },
+    data: { label: "İdarə Heyətinin sədr müavini" },
+    ...style,
+  },
   {
     id: "3",
     position: { x: 200, y: 300 },
     data: { label: "İnformasiya və İnsan resursları şöbəsi" },
+    ...style,
   },
   {
     id: "4",
     position: { x: 400, y: 300 },
     data: { label: "Akkreditasiya və lisenziya şöbəsi" },
+    ...style,
   },
   {
     id: "5",
     position: { x: 600, y: 300 },
     data: { label: "Təlim və metodalogiya şöbəsi" },
+    ...style,
   },
   {
     id: "6",
     position: { x: 800, y: 300 },
     data: { label: "Kvalifikasiyaların tanınması departamenti" },
+    ...style,
   },
   {
     id: "7",
     position: { x: 700, y: 500 },
     data: { label: "Xarici kvalifikasiyaların tanınması şöbəsi" },
+    ...style,
   },
   {
     id: "8",
     position: { x: 900, y: 500 },
     data: { label: "Qeyri formal və informal təhsilin tanınması şöbəsi" },
+    ...style,
   },
-  { id: "9", position: { x: 1050, y: 300 }, data: { label: "Hüquq təminatı departamenti" } },
+  {
+    id: "9",
+    position: { x: 1050, y: 300 },
+    data: { label: "Hüquq təminatı departamenti" },
+    ...style,
+  },
   {
     id: "10",
     position: { x: 1100, y: 500 },
     data: { label: "Hüquqı məsələlərin tənzimlənməsi şöbəsi" },
+    ...style,
   },
   {
     id: "11",
     position: { x: 1300, y: 300 },
     data: { label: "Maliyyə şöbəsi" },
+    ...style,
   },
 ];
 

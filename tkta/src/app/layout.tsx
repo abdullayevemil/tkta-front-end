@@ -5,6 +5,7 @@ import Header from "@/components/layout/header";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import AuthenticationProvider from "@/components/authentication/authentication-provider";
 import { Bounce, ToastContainer } from "react-toastify";
+import Footer from "@/components/layout/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,8 @@ export default function RootLayout({
           <Header />
 
           {children}
+
+          <Footer />
 
           <SpeedInsights />
         </AuthenticationProvider>

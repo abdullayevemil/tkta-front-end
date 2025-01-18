@@ -11,58 +11,53 @@ import FacebookIcon from "@/assets/icons/footer/social-media/facebook.svg";
 import InstagramIcon from "@/assets/icons/footer/social-media/instagram.svg";
 import LinkedinIcon from "@/assets/icons/footer/social-media/linkedin.svg";
 import TelegramIcon from "@/assets/icons/footer/social-media/telegram.svg";
-import { Position, ReactFlow } from "@xyflow/react";
+import { NodeTypes, Position, ReactFlow } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
+import { useMemo } from "react";
+import NavigationNode from "../home/footer-node";
 
 const nodeDefaults = {
   sourcePosition: Position.Left,
   targetPosition: Position.Left,
-  style: {
-    color: "var(--primary-color)",
-    borderWidth: 1,
-    borderColor: "var(--primary-color)",
-    borderStyle: "solid",
-  },
 };
 
 const initialNodes = [
   {
     id: "1",
     position: { x: 112, y: 0 },
-    data: { label: "Agentlik" },
+    data: { label: "Agentlik", link: "/agency", },
     sourcePosition: Position.Bottom,
     targetPosition: Position.Bottom,
-    style: {
-      color: "var(--primary-color)",
-      borderWidth: 1,
-      borderColor: "var(--primary-color)",
-      borderStyle: "solid",
-    },
+    type: "navigation",
   },
   {
     id: "2",
     position: { x: 200, y: 50 },
-    data: { label: "Haqqımızda" },
+    data: { label: "Haqqımızda" , link: "/agency/about",},
     ...nodeDefaults,
     sourcePosition: Position.Right,
+    type: "navigation",
   },
   {
     id: "3",
     position: { x: 200, y: 100 },
-    data: { label: "Rəhbırlik" },
+    data: { label: "Rəhbırlik" , link: "/agency/principles",},
     ...nodeDefaults,
+    type: "navigation",
   },
   {
     id: "4",
     position: { x: 200, y: 150 },
-    data: { label: "Struktur" },
+    data: { label: "Struktur", link: "/agency/structure", },
     ...nodeDefaults,
+    type: "navigation",
   },
   {
     id: "5",
     position: { x: 360, y: 50 },
-    data: { label: "Daxili keyfiyyət təminatı sistemi", },
-    ...nodeDefaults
+    data: { label: "Daxili keyfiyyət təminatı sistemi", link: "/agency/about/links", },
+    ...nodeDefaults,
+    type: "navigation",
   },
 ];
 
@@ -74,6 +69,8 @@ const initialEdges = [
 ];
 
 export default function Footer() {
+  const nodeTypes = useMemo<NodeTypes>(() => ({ navigation: NavigationNode }), []);
+
   return (
     <footer className="flex flex-col gap-20 w-full items-end p-16">
       <ExternalLinks />
@@ -117,6 +114,7 @@ export default function Footer() {
             fitView
             nodes={initialNodes}
             edges={initialEdges}
+            nodeTypes={nodeTypes}
           />
         </div>
 

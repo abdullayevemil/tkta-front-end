@@ -22,12 +22,16 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'www.tkta.edu.az',
+        protocol: "https",
+        hostname: "www.tkta.edu.az",
       },
       {
-        protocol: 'https',
-        hostname: 'tkta.edu.az',
+        protocol: "https",
+        hostname: "tkta.edu.az",
+      },
+      {
+        protocol: "https",
+        hostname: "miras.blob.core.windows.net",
       },
     ],
   },

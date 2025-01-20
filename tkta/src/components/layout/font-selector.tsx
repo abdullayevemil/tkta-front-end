@@ -16,18 +16,19 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { useFontSize } from "@/context/font-size-context";
 
 const languages = [
   {
-    value: "14",
+    value: "14px",
     label: "A",
   },
   {
-    value: "16",
+    value: "16px",
     label: "A",
   },
   {
-    value: "18",
+    value: "18px",
     label: "A",
   },
 ];
@@ -35,7 +36,7 @@ const languages = [
 export function FontSelector() {
   const [open, setOpen] = React.useState(false);
 
-  const [value, setValue] = React.useState("16");
+  const { fontSize, setFontSize } = useFontSize();
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -45,7 +46,7 @@ export function FontSelector() {
           role="combobox"
           aria-expanded={open}
           className="w-18 justify-between"
-          style={{fontSize: Number.parseInt(value)}}
+          style={{ fontSize: fontSize }}
         >
           A
           <ChevronsUpDown className="opacity-50" />
@@ -60,16 +61,17 @@ export function FontSelector() {
                   key={languages.value}
                   value={languages.value}
                   onSelect={(currentValue) => {
-                    setValue(currentValue === value ? "16" : currentValue);
+                    setFontSize(currentValue);
+                    
                     setOpen(false);
                   }}
-                  style={{fontSize: Number.parseInt(languages.value)}}
+                  style={{ fontSize: Number.parseInt(languages.value) }}
                 >
                   {languages.label}
                   <Check
                     className={cn(
                       "ml-auto",
-                      value === languages.value ? "opacity-100" : "opacity-0"
+                      fontSize === languages.value ? "opacity-100" : "opacity-0"
                     )}
                   />
                 </CommandItem>

@@ -1,40 +1,30 @@
-import { Handle, NodeProps, Position } from "@xyflow/react";
+import { Handle, NodeProps, Node, Position } from "@xyflow/react";
 import Link from "next/link";
 
-interface Data {
-  label: string;
-  link: string;
-}
+type NavigationNodeType = Node<
+  {
+    link: string;
+    targetPosition: Position;
+    sourcePosition: Position;
+    label: string;
+  },
+  "navigation"
+>;
 
-interface Coordinates {
-  x: number;
-  y: number;
-}
-
-interface Props {
-  id: string;
-  position: Coordinates;
-  data: Data;
-  sourcePosition: Position;
-  targetPosition: Position;
-}
-
-const NavigationNode: React.FC<NodeProps<Props>> = ({
-  sourcePosition,
-  targetPosition,
+export default function NavigationNode({
   data,
-}: Props) => {
+}: NodeProps<NavigationNodeType>) {
   return (
     <>
-      <Handle type="target" position={targetPosition} />
+      <Handle type="target" position={data.targetPosition} />
 
       <div className="p-[10px] w-32 border border-textPrimary border-solid text-xs flex items-center justify-center rounded">
-        <Link className="text-center" href={data.link}>{data.label}</Link>
+        <Link className="text-center" href={data.link}>
+          {data.label}
+        </Link>
       </div>
 
-      <Handle type="source" position={sourcePosition} id="a" />
+      <Handle type="source" position={data.sourcePosition} id="a" />
     </>
   );
-};
-
-export default NavigationNode;
+}

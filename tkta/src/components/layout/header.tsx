@@ -4,6 +4,7 @@ import { Navigation } from "./navigation";
 import Link from "next/link";
 import { LanguageSelector } from "./language-selector";
 import { FontSelector } from "./font-selector";
+import { ColorSwitch } from "./color-switch";
 
 export default function Header() {
   return (
@@ -13,10 +14,12 @@ export default function Header() {
           <Image src={Logo} alt="TKTA logo" className="w-[194.4px] h-18" />
         </Link>
 
-        <div className="flex flex-col gap-2">
-          <LanguageSelector />
+        <div className="flex flex-row gap-3 items-center">
+          <ColorSwitch />
 
           <FontSelector />
+
+          <LanguageSelector />
         </div>
       </div>
 

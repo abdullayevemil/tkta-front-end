@@ -8,6 +8,7 @@ import { Bounce, ToastContainer } from "react-toastify";
 import Footer from "@/components/layout/footer";
 import Head from "next/head";
 import { FontSizeProvider } from "@/context/font-size-context";
+import { ColorModeProvider } from "@/context/color-mode-context";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,15 +47,17 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <FontSizeProvider>
-          <AuthenticationProvider>
-            <Header />
+          <ColorModeProvider>
+            <AuthenticationProvider>
+              <Header />
 
-            {children}
+              {children}
 
-            <Footer />
+              <Footer />
 
-            <SpeedInsights />
-          </AuthenticationProvider>
+              <SpeedInsights />
+            </AuthenticationProvider>
+          </ColorModeProvider>
         </FontSizeProvider>
 
         <ToastContainer

@@ -7,6 +7,7 @@ import AuthenticationProvider from "@/components/authentication/authentication-p
 import { Bounce, ToastContainer } from "react-toastify";
 import Footer from "@/components/layout/footer";
 import Head from "next/head";
+import { FontSizeProvider } from "@/context/font-size-context";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,34 +32,30 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <meta
-          name="al:ios:url"
-          content="instagram://user?username=tktaeduaz"
-        />
+        <meta name="al:ios:url" content="instagram://user?username=tktaeduaz" />
         <meta name="al:ios:app_name" content="Instagram" />
         <meta
           name="al:android:url"
           content="instagram://user?username=tktaeduaz"
         />
         <meta name="al:android:app_name" content="Instagram" />
-        <meta
-          property="al:web:url"
-          content="https://instagram.com/tktaeduaz"
-        />
+        <meta property="al:web:url" content="https://instagram.com/tktaeduaz" />
       </Head>
-      
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <AuthenticationProvider>
-          <Header />
+        <FontSizeProvider>
+          <AuthenticationProvider>
+            <Header />
 
-          {children}
+            {children}
 
-          <Footer />
+            <Footer />
 
-          <SpeedInsights />
-        </AuthenticationProvider>
+            <SpeedInsights />
+          </AuthenticationProvider>
+        </FontSizeProvider>
 
         <ToastContainer
           position="top-right"

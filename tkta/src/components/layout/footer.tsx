@@ -25,38 +25,45 @@ const initialNodes = [
   {
     id: "1",
     position: { x: 112, y: 0 },
-    data: { label: "Agentlik", link: "/agency", },
-    sourcePosition: Position.Bottom,
-    targetPosition: Position.Bottom,
+    data: {
+      label: "Agentlik",
+      link: "/agency",
+      sourcePosition: Position.Bottom,
+      targetPosition: Position.Bottom,
+    },
     type: "navigation",
   },
   {
     id: "2",
     position: { x: 200, y: 50 },
-    data: { label: "Haqqımızda" , link: "/agency/about",},
-    ...nodeDefaults,
-    sourcePosition: Position.Right,
+    data: {
+      label: "Haqqımızda",
+      link: "/agency/about",
+      ...nodeDefaults,
+      sourcePosition: Position.Right,
+    },
     type: "navigation",
   },
   {
     id: "3",
     position: { x: 200, y: 100 },
-    data: { label: "Rəhbırlik" , link: "/agency/principles",},
-    ...nodeDefaults,
+    data: { label: "Rəhbırlik", link: "/agency/principles", ...nodeDefaults },
     type: "navigation",
   },
   {
     id: "4",
     position: { x: 200, y: 150 },
-    data: { label: "Struktur", link: "/agency/structure", },
-    ...nodeDefaults,
+    data: { label: "Struktur", ...nodeDefaults, link: "/agency/structure" },
     type: "navigation",
   },
   {
     id: "5",
     position: { x: 360, y: 50 },
-    data: { label: "Daxili keyfiyyət təminatı sistemi", link: "/agency/about/links", },
-    ...nodeDefaults,
+    data: {
+      label: "Daxili keyfiyyət təminatı sistemi",
+      link: "/agency/about/links",
+      ...nodeDefaults,
+    },
     type: "navigation",
   },
 ];
@@ -69,7 +76,10 @@ const initialEdges = [
 ];
 
 export default function Footer() {
-  const nodeTypes = useMemo<NodeTypes>(() => ({ navigation: NavigationNode }), []);
+  const nodeTypes = useMemo<NodeTypes>(
+    () => ({ navigation: NavigationNode }),
+    []
+  );
 
   return (
     <footer className="flex flex-col gap-20 w-full items-end p-16">

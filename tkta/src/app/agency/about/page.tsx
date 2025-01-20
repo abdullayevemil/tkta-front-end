@@ -9,7 +9,7 @@ export default function AboutUs() {
     <div className="w-full flex flex-col gap-16 items-center">
       <Image src={HeaderImage} alt="header image" className="w-full" />
 
-      <h1 className="uppercase text-7xl text-center">HAQQIMIZDA</h1>
+      <h1 className="uppercase text-6xl text-center">HAQQIMIZDA</h1>
 
       <h2 className="italic text-3xl text-center w-2/3 p-4 text-textPrimary">
         <b>“</b>Təhsil, yalnız bilik əldə etmək deyil, həm də insanın düşünmə

@@ -56,24 +56,6 @@ export function Navigation() {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <Link
-              href="/agency/internationalization"
-              legacyBehavior
-              passHref
-              className="font-helvetica text-base"
-            >
-              <NavigationMenuLink
-                className={cn(
-                  navigationMenuTriggerStyle(),
-                  "font-helvetica text-base"
-                )}
-              >
-                Beynəlmiləlləşmə
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-
-          <NavigationMenuItem>
             <NavigationMenuTrigger className="font-helvetica text-base">
               <Link href="/services">Fəaliyyət Sahələrimiz</Link>
             </NavigationMenuTrigger>
@@ -94,12 +76,31 @@ export function Navigation() {
                   Sertifikatsız təhsilin təsdiqi
                 </ListItem>
 
-                <ListItem
-                  href="/services/accreditation"
-                  title="Akkreditasiya və lisenziya"
-                >
-                  Rəsmi təsdiq və qiymətləndirmə
-                </ListItem>
+                <NavigationMenuSub defaultValue="sub1" className="w-full">
+                  <NavigationMenuList className="w-full">
+                    <NavigationMenuItem className="w-full">
+                      <NavigationMenuTrigger className="font-helvetica w-full flex flex-row justify-left">
+                        <Link href="/services/accreditation">
+                          Akkreditasiya və lisenziya
+                        </Link>
+                      </NavigationMenuTrigger>
+
+                      <NavigationMenuContent className="left-64 top-0">
+                        <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
+                          <ListItem
+                            href="/services/accreditation/"
+                            title="Akkreditasiya Məyarları"
+                          ></ListItem>
+
+                          <ListItem
+                            href="/services/accreditation/rules"
+                            title="Akkreditasiya Qaydalları"
+                          ></ListItem>
+                        </ul>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  </NavigationMenuList>
+                </NavigationMenuSub>
 
                 <ListItem
                   href="/services/training-methodology"
@@ -109,6 +110,24 @@ export function Navigation() {
                 </ListItem>
               </ul>
             </NavigationMenuContent>
+          </NavigationMenuItem>
+
+          <NavigationMenuItem>
+            <Link
+              href="/agency/internationalization"
+              legacyBehavior
+              passHref
+              className="font-helvetica text-base"
+            >
+              <NavigationMenuLink
+                className={cn(
+                  navigationMenuTriggerStyle(),
+                  "font-helvetica text-base"
+                )}
+              >
+                Beynəlmiləlləşmə
+              </NavigationMenuLink>
+            </Link>
           </NavigationMenuItem>
 
           <NavigationMenuItem>

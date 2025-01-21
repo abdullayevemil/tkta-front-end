@@ -11,75 +11,72 @@ import FacebookIcon from "@/assets/icons/footer/social-media/facebook.svg";
 import InstagramIcon from "@/assets/icons/footer/social-media/instagram.svg";
 import LinkedinIcon from "@/assets/icons/footer/social-media/linkedin.svg";
 import TelegramIcon from "@/assets/icons/footer/social-media/telegram.svg";
-import { NodeTypes, Position } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
-import { useMemo } from "react";
-import NavigationNode from "../home/footer-node";
 
-const nodeDefaults = {
-  sourcePosition: Position.Left,
-  targetPosition: Position.Left,
-};
+// const nodeDefaults = {
+//   sourcePosition: Position.Left,
+//   targetPosition: Position.Left,
+// };
 
-const initialNodes = [
-  {
-    id: "1",
-    position: { x: 112, y: 0 },
-    data: {
-      label: "Agentlik",
-      link: "/agency",
-      sourcePosition: Position.Bottom,
-      targetPosition: Position.Bottom,
-    },
-    type: "navigation",
-  },
-  {
-    id: "2",
-    position: { x: 200, y: 50 },
-    data: {
-      label: "Haqqımızda",
-      link: "/agency/about",
-      ...nodeDefaults,
-      sourcePosition: Position.Right,
-    },
-    type: "navigation",
-  },
-  {
-    id: "3",
-    position: { x: 200, y: 100 },
-    data: { label: "Rəhbırlik", link: "/agency/principles", ...nodeDefaults },
-    type: "navigation",
-  },
-  {
-    id: "4",
-    position: { x: 200, y: 150 },
-    data: { label: "Struktur", ...nodeDefaults, link: "/agency/structure" },
-    type: "navigation",
-  },
-  {
-    id: "5",
-    position: { x: 360, y: 50 },
-    data: {
-      label: "Daxili keyfiyyət təminatı sistemi",
-      link: "/agency/about/links",
-      ...nodeDefaults,
-    },
-    type: "navigation",
-  },
-];
+// const initialNodes = [
+//   {
+//     id: "1",
+//     position: { x: 112, y: 0 },
+//     data: {
+//       label: "Agentlik",
+//       link: "/agency",
+//       sourcePosition: Position.Bottom,
+//       targetPosition: Position.Bottom,
+//     },
+//     type: "navigation",
+//   },
+//   {
+//     id: "2",
+//     position: { x: 200, y: 50 },
+//     data: {
+//       label: "Haqqımızda",
+//       link: "/agency/about",
+//       ...nodeDefaults,
+//       sourcePosition: Position.Right,
+//     },
+//     type: "navigation",
+//   },
+//   {
+//     id: "3",
+//     position: { x: 200, y: 100 },
+//     data: { label: "Rəhbırlik", link: "/agency/principles", ...nodeDefaults },
+//     type: "navigation",
+//   },
+//   {
+//     id: "4",
+//     position: { x: 200, y: 150 },
+//     data: { label: "Struktur", ...nodeDefaults, link: "/agency/structure" },
+//     type: "navigation",
+//   },
+//   {
+//     id: "5",
+//     position: { x: 360, y: 50 },
+//     data: {
+//       label: "Daxili keyfiyyət təminatı sistemi",
+//       link: "/agency/about/links",
+//       ...nodeDefaults,
+//     },
+//     type: "navigation",
+//   },
+// ];
 
-const initialEdges = [
-  { id: "e1-2", source: "1", target: "2" },
-  { id: "e1-3", source: "1", target: "3" },
-  { id: "e1-4", source: "1", target: "4" },
-  { id: "e2-5", source: "2", target: "5" },
-];
+// const initialEdges = [
+//   { id: "e1-2", source: "1", target: "2" },
+//   { id: "e1-3", source: "1", target: "3" },
+//   { id: "e1-4", source: "1", target: "4" },
+//   { id: "e2-5", source: "2", target: "5" },
+// ];
 
 export default function Footer() {
-  const nodeTypes = useMemo<NodeTypes>(
-    () => ({ navigation: NavigationNode }),
-    []
-  );
+  // const nodeTypes = useMemo<NodeTypes>(
+  //   () => ({ navigation: NavigationNode }),
+  //   []
+  // );
 
   return (
     <footer className="flex flex-col gap-20 w-full items-end p-16">

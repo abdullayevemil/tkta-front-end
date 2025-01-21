@@ -17,11 +17,26 @@ export default function EducationRecognition() {
         className="w-full px-[112px] flex flex-col gap-16"
       >
         <TabsList>
-          <TabsTrigger className="w-1/3 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold" value="general-information">Ümumi məlumat</TabsTrigger>
+          <TabsTrigger
+            className="w-1/3 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
+            value="general-information"
+          >
+            Ümumi məlumat
+          </TabsTrigger>
 
-          <TabsTrigger className="w-1/4 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold" value="registration">Qeydiyyat</TabsTrigger>
+          <TabsTrigger
+            className="w-1/4 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
+            value="registration"
+          >
+            Qeydiyyat
+          </TabsTrigger>
 
-          <TabsTrigger className="w-1/3 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold" value="partners">Tərəfdaşlar</TabsTrigger>
+          <TabsTrigger
+            className="w-1/3 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
+            value="partners"
+          >
+            Tərəfdaşlar
+          </TabsTrigger>
         </TabsList>
 
         <TabsContent value="general-information">
@@ -273,7 +288,82 @@ export default function EducationRecognition() {
           </div>
         </TabsContent>
 
-        <TabsContent value="registration"></TabsContent>
+        <TabsContent value="registration">
+          <div className="flex flex-col gap-2">
+            <h4>
+              Qeyri-formal və informal təhsilin tanınması prosesi aşağıdakı
+              ixtisaslar üzrə həyata keçirilməkdədir:
+            </h4>
+
+            <ol className="list-decimal pl-8 flex flex-col gap-3">
+              <li className="flex flex-row gap-3 items-center">
+                <h5>Aşpaz</h5>
+
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://tkta.edu.az/files/METODİKİ%20VƏSAİT/1.%20Aşpaz.pdf"
+                  className="text-textPrimary italic hover:underline"
+                >
+                  Metodik vəsait
+                </Link>
+
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/viewform?edit_requested=true"
+                  className="px-4 py-1 text-white bg-textPrimary hover:bg-textPrimary text-base font-semibold w-fit shadow rounded"
+                >
+                  Qeydiyyat
+                </Link>
+              </li>
+
+              <li className="flex flex-row gap-3 items-center">
+                <h5>Avtomobil mühərriklərinin yığıcısı</h5>
+
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://tkta.edu.az/files/METODİKİ%20VƏSAİT/2.%20Avtomobil%20müh%C9%99rrikl%C9%99rinin%20yığıcısı.pdf"
+                  className="text-textPrimary italic hover:underline"
+                >
+                  Metodik vəsait
+                </Link>
+
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/viewform?edit_requested=true"
+                  className="px-4 py-1 text-white bg-textPrimary hover:bg-textPrimary text-base font-semibold w-fit shadow rounded"
+                >
+                  Qeydiyyat
+                </Link>
+              </li>
+
+              <li className="flex flex-row gap-3 items-center">
+                <h5> Avtomobillərin təmiri çilingəri</h5>
+
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://tkta.edu.az/files/METODİKİ%20VƏSAİT/3.%20Avtomobill%C9%99rin%20t%C9%99miri%20çiling%C9%99ri.pdf"
+                  className="text-textPrimary italic hover:underline"
+                >
+                  Metodik vəsait
+                </Link>
+
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/viewform?edit_requested=true"
+                  className="px-4 py-1 text-white bg-textPrimary hover:bg-textPrimary text-base font-semibold w-fit shadow rounded"
+                >
+                  Qeydiyyat
+                </Link>
+              </li>
+            </ol>
+          </div>
+        </TabsContent>
 
         <TabsContent value="partners"></TabsContent>
       </Tabs>

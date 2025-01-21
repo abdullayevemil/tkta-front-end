@@ -10,7 +10,7 @@ import ProfilePhoto3 from "@/assets/images/qualifications-recognition/profile-ph
 
 export default function HomePage() {
   return (
-    <div className="w-full flex flex-col gap-16 items-center">
+    <section className="w-full flex flex-col gap-16 items-center">
       <Image src={HeaderImage} alt="header image" className="w-full" />
 
       <h1 className="uppercase text-6xl text-center">
@@ -512,6 +512,6 @@ export default function HomePage() {
           </ol>
         </TabsContent>
       </Tabs>
-    </div>
+    </section>
   );
 }

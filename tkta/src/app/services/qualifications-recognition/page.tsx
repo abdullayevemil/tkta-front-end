@@ -104,6 +104,8 @@ export default function HomePage() {
               Qeyd edək ki, ENIC-NARIC (Avropa İnformasiya Mərkəzləri-Milli
               Akademik Tanınma üzrə İnformasiya Mərkəzləri) Şəbəkəsinin{" "}
               <Link
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-textPrimary italic hover:underline"
                 href="https://www.enic-naric.net"
               >
@@ -119,6 +121,8 @@ export default function HomePage() {
               Xarici dövlətlərin ali təhsilə aid kvalifikasiyalarının tanınması
               üzrə{" "}
               <Link
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-textPrimary italic hover:underline"
                 href="https://apply.enic.edu.az/register/"
               >
@@ -345,6 +349,8 @@ export default function HomePage() {
             </div>
 
             <Link
+              target="_blank"
+              rel="noopener noreferrer"
               href="https://apply.enic.edu.az/e-reference/"
               className="px-4 py-2 text-white bg-textPrimary hover:bg-textPrimary text-base font-semibold w-fit shadow rounded"
             >
@@ -365,6 +371,8 @@ export default function HomePage() {
               “Azərbaycan Respublikasının Konsul Nizamnaməsi” ilə müəyyən
               edilmiş qaydada və ya{" "}
               <Link
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-textPrimary italic hover:underline"
                 href="https://tkta.edu.az/files/Haaqa%20Konvensiyası.pdf"
               >

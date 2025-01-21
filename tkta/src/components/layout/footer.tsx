@@ -11,7 +11,7 @@ import FacebookIcon from "@/assets/icons/footer/social-media/facebook.svg";
 import InstagramIcon from "@/assets/icons/footer/social-media/instagram.svg";
 import LinkedinIcon from "@/assets/icons/footer/social-media/linkedin.svg";
 import TelegramIcon from "@/assets/icons/footer/social-media/telegram.svg";
-import { NodeTypes, Position, ReactFlow } from "@xyflow/react";
+import { NodeTypes, Position } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
 import { useMemo } from "react";
 import NavigationNode from "../home/footer-node";
@@ -119,13 +119,13 @@ export default function Footer() {
 
       <div className="w-full h-full flex flex-row justify-between">
         <div className="w-2/3 h-[500px] flex flex-row gap-4">
-          <ReactFlow
+          {/* <ReactFlow
             className="text-textPrimary"
             fitView
             nodes={initialNodes}
             edges={initialEdges}
             nodeTypes={nodeTypes}
-          />
+          /> */}
         </div>
 
         <div className="w-1/3 flex flex-col gap-6">

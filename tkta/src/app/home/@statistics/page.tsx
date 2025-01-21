@@ -2,6 +2,7 @@ import { StatisticsAreaChart } from "@/components/home/statistics-area-chart";
 import { StatisticsBarChart } from "@/components/home/statistics-bar-chart";
 import { ChartConfig } from "@/components/ui/chart";
 import { HigherEducation } from "@/types/higher-education";
+import Link from "next/link";
 
 const higherEducationData: HigherEducation[] = [
   { year: "2020", value: 52 },
@@ -70,39 +71,53 @@ export default function Statistics() {
         Statistika
       </h2>
 
-      <ul className="px-16 flex flex-row gap-6 justify-evenly w-full">
-        <li className="w-1/4">
-          <StatisticsAreaChart
-            chartConfig={higherEducationConfig}
-            chartData={higherEducationData}
-            step={1}
-          />
-        </li>
+      <div className="px-16 flex flex-col gap-6">
+        <ul className="flex flex-row gap-6 justify-evenly w-full">
+          <li className="w-1/4">
+            <StatisticsAreaChart
+              chartConfig={higherEducationConfig}
+              chartData={higherEducationData}
+              step={1}
+            />
+          </li>
 
-        <li className="w-1/4">
-          <StatisticsBarChart
-            chartConfig={schoolConfig}
-            chartData={schoolData}
-            step={10}
-          />
-        </li>
+          <li className="w-1/4">
+            <StatisticsBarChart
+              chartConfig={schoolConfig}
+              chartData={schoolData}
+              step={10}
+            />
+          </li>
 
-        <li className="w-1/4">
-          <StatisticsAreaChart
-            chartConfig={middleEducationConfig}
-            chartData={middleEducationData}
-            step={1}
-          />
-        </li>
+          <li className="w-1/4">
+            <StatisticsAreaChart
+              chartConfig={middleEducationConfig}
+              chartData={middleEducationData}
+              step={1}
+            />
+          </li>
 
-        <li className="w-1/4">
-        <StatisticsBarChart
-            chartConfig={majorEducationConfig}
-            chartData={majorEducationData}
-            step={5}
-          />
-        </li>
-      </ul>
+          <li className="w-1/4">
+            <StatisticsBarChart
+              chartConfig={majorEducationConfig}
+              chartData={majorEducationData}
+              step={5}
+            />
+          </li>
+        </ul>
+
+        <div className="text-black/[0.5] text-sm w-full text-right">
+          mənbə:{" "}
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full text-right text-textPrimary hover:cursor-pointer italic hover:underline"
+            href="https://stat.gov.az"
+          >
+            Azərbaycan Respublikasının Dövlət Statistika Komitəsi
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

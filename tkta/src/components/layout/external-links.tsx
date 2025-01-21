@@ -2,7 +2,7 @@ import LinkCard from "@/components/home/link-card";
 
 export default function ExternalLinks() {
   return (
-    <div className="flex flex-col gap-20 w-full items-end pt-20">
+    <div className="flex flex-col gap-20 w-full items-end">
       <div className="flex flex-row w-full justify-between items-center h-[240px] gap-6">
         <LinkCard
           name="Azərbaycanda fəaliyyət göstərən Ali Təhsil müəssisələri"

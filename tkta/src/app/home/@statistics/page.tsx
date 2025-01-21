@@ -106,16 +106,20 @@ export default function Statistics() {
           </li>
         </ul>
 
-        <div className="text-black/[0.5] text-sm w-full text-right">
-          mənbə:{" "}
-          <Link
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full text-right text-textPrimary hover:cursor-pointer italic hover:underline"
-            href="https://stat.gov.az"
-          >
-            Azərbaycan Respublikasının Dövlət Statistika Komitəsi
-          </Link>
+        <div className="text-black/[0.5] text-sm w-full text-right flex flex-row justify-between">
+          <span className="flex flex-row gap-2 w-fit">
+            <span>Mənbə:</span>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-left text-textPrimary hover:cursor-pointer italic hover:underline"
+              href="https://www.stat.gov.az/source/education/#"
+            >
+              Azərbaycan Respublikasının Dövlət Statistika Komitəsi
+            </Link>
+          </span>
+
+          <span className="w-fit">Son yenilənmə: 18.09.2024</span>
         </div>
       </div>
     </div>

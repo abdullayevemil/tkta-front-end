@@ -14,7 +14,7 @@ export default function Video() {
     <div className="w-full relative">
       <video className="w-full" autoPlay={true} muted loop preload="none">
         <source
-          src="https://miras.blob.core.windows.net/multimedia/Let s Talk About Education.mp4"
+          src="https://miras.blob.core.windows.net/multimedia/Let%20s%20Talk%20About%20Education%20(online-video-cutter.com)-2.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.

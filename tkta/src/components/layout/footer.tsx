@@ -79,7 +79,7 @@ export default function Footer() {
   // );
 
   return (
-    <footer className="flex flex-col gap-20 w-full items-end p-16 pt-0">
+    <footer className="flex flex-col gap-20 w-full items-end p-16">
       <ExternalLinks />
 
       <div className="w-full flex flex-row justify-between items-center">

@@ -15,7 +15,7 @@ import { cn } from "@/lib/utils";
 
 export function Navigation() {
   return (
-    <nav className="flex flex-row justify-between w-full gap-1">
+    <nav className="flex flex-row justify-center w-full gap-1">
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
@@ -28,8 +28,14 @@ export function Navigation() {
                 <NavigationMenuSub className="w-full">
                   <NavigationMenuList className="w-full">
                     <NavigationMenuItem className="w-full">
-                      <NavigationMenuTrigger className="font-helvetica w-full flex flex-row justify-left">
-                        <Link href="/agency/about">Haqqımızda</Link>
+                      <NavigationMenuTrigger className="h-fit font-helvetica w-full flex flex-row justify-left p-0 text-left">
+                        <ListItem
+                          className="hover:bg-transparent"
+                          href="/agency/about"
+                          title="Haqqımızda"
+                        >
+                          Agentlik haqqında məlumat
+                        </ListItem>
                       </NavigationMenuTrigger>
 
                       <NavigationMenuContent className="left-64 top-0 z-50">
@@ -63,7 +69,7 @@ export function Navigation() {
 
           <NavigationMenuItem>
             <NavigationMenuTrigger className="font-helvetica text-base">
-              <Link href="/services">Fəaliyyət Sahələrimiz</Link>
+              <Link href="/services">Fəaliyyət Sahələri</Link>
             </NavigationMenuTrigger>
 
             <NavigationMenuContent className="left-0">
@@ -292,7 +298,7 @@ export function Navigation() {
           <NavigationMenuItem>
             <NavigationMenuTrigger className="font-helvetica text-base">
               <Link href="/normative-legal-framework">
-                Normativ hüquqi baza
+                Qanunvericilik
               </Link>
             </NavigationMenuTrigger>
 

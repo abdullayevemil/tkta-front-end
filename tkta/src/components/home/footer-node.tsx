@@ -1,15 +1,6 @@
-import { Handle, NodeProps, Node, Position } from "@xyflow/react";
+import { NavigationNodeType } from "@/types/navigation-node";
+import { Handle, NodeProps } from "@xyflow/react";
 import Link from "next/link";
-
-type NavigationNodeType = Node<
-  {
-    link: string;
-    targetPosition: Position;
-    sourcePosition: Position;
-    label: string;
-  },
-  "navigation"
->;
 
 export default function NavigationNode({
   data,
@@ -19,7 +10,7 @@ export default function NavigationNode({
       <Handle type="target" position={data.targetPosition} />
 
       <div className="p-[10px] w-32 border border-textPrimary border-solid text-xs flex items-center justify-center rounded">
-        <Link className="text-center" href={data.link}>
+        <Link className="text-center hover:font-bold text-textPrimary" href={data.link}>
           {data.label}
         </Link>
       </div>

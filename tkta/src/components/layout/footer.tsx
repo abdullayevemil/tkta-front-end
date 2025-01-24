@@ -21,11 +21,7 @@ export default function Footer() {
 
           <div className="flex flex-row gap-4"></div>
 
-          <div className="w-1/3 flex flex-col gap-6">
-            <Card className="w-full flex justify-right">
-              <GoogleMapComponent />
-            </Card>
-
+          <div className="flex flex-row gap-6 items-center">
             <div className="flex flex-row gap-2 items-center">
               <Link
                 target="_blank"
@@ -40,6 +36,10 @@ export default function Footer() {
                 </div>
               </Link>
             </div>
+
+            <Card className="flex justify-right">
+              <GoogleMapComponent />
+            </Card>
           </div>
         </div>
 

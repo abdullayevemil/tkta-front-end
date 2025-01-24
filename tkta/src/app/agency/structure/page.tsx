@@ -1,104 +1,217 @@
 "use client";
 
-import React from "react";
-import { ReactFlow } from "@xyflow/react";
+import React, { useMemo } from "react";
+import { Position, ReactFlow } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
-
-const style = {
-  style: {
-    color: "var(--primary-color)",
-    borderWidth: 1,
-    borderColor: "var(--primary-color)",
-    borderStyle: "solid",
-  },
-};
+import NavigationNode from "@/components/home/footer-node";
 
 const initialNodes = [
   {
     id: "1",
-    position: { x: 700, y: 0 },
-    data: { label: "İdarə Heyətinin Sədri" },
-    ...style,
+    position: { x: 550, y: 0 },
+    data: {
+      label: "İdarə Heyəti",
+      link: "/agency/principles",
+      targetPosition: Position.Top,
+      sourcePosition: Position.Bottom,
+    },
+    type: "navigationNode",
   },
   {
     id: "2",
-    position: { x: 1100, y: 100 },
-    data: { label: "İdarə Heyətinin sədr müavini" },
-    ...style,
+    position: { x: 550, y: 150 },
+    data: {
+      link: "/agency/principles",
+      targetPosition: Position.Top,
+      sourcePosition: Position.Bottom,
+      label: "İH-nin sədri",
+    },
+    type: "navigationNode",
   },
   {
     id: "3",
-    position: { x: 200, y: 300 },
-    data: { label: "İnformasiya və İnsan resursları şöbəsi" },
-    ...style,
+    position: { x: 350, y: 150 },
+    data: {
+      link: "/agency/principles",
+      targetPosition: Position.Top,
+      sourcePosition: Position.Bottom,
+      label: "İH-nin sədr müavini",
+    },
+    type: "navigationNode",
   },
   {
     id: "4",
-    position: { x: 400, y: 300 },
-    data: { label: "Akkreditasiya və lisenziya şöbəsi" },
-    ...style,
+    position: { x: 750, y: 250 },
+    data: {
+      link: "/agency/principles",
+      targetPosition: Position.Top,
+      sourcePosition: Position.Bottom,
+      label: "Keyfiyyət təminatı departamenti",
+    },
+    type: "navigationNode",
   },
   {
     id: "5",
-    position: { x: 600, y: 300 },
-    data: { label: "Təlim və metodalogiya şöbəsi" },
-    ...style,
+    position: { x: 950, y: 250 },
+    data: {
+      link: "/agency/principles",
+      targetPosition: Position.Top,
+      sourcePosition: Position.Bottom,
+      label: "Hüquq təminatı departamenti",
+    },
+    type: "navigationNode",
   },
   {
     id: "6",
-    position: { x: 800, y: 300 },
-    data: { label: "Kvalifikasiyaların tanınması departamenti" },
-    ...style,
+    position: { x: 1150, y: 250 },
+    data: {
+      link: "/agency/principles",
+      targetPosition: Position.Top,
+      sourcePosition: Position.Bottom,
+      label: "Kvalifikasiyaların tanınması departamenti",
+    },
+    type: "navigationNode",
   },
   {
     id: "7",
-    position: { x: 700, y: 500 },
-    data: { label: "Xarici kvalifikasiyaların tanınması şöbəsi" },
-    ...style,
+    position: { x: 350, y: 250 },
+    data: {
+      link: "/agency/principles",
+      targetPosition: Position.Top,
+      sourcePosition: Position.Bottom,
+      label: "İnformasiya və İnsan resursları şöbəsi",
+    },
+    type: "navigationNode",
   },
   {
     id: "8",
-    position: { x: 900, y: 500 },
-    data: { label: "Qeyri formal və informal təhsilin tanınması şöbəsi" },
-    ...style,
+    position: { x: 550, y: 250 },
+    data: {
+      link: "/agency/principles",
+      targetPosition: Position.Top,
+      sourcePosition: Position.Bottom,
+      label: "Analitik təhlil şöbəsi",
+    },
+    type: "navigationNode",
   },
   {
     id: "9",
-    position: { x: 1050, y: 300 },
-    data: { label: "Hüquq təminatı departamenti" },
-    ...style,
+    position: { x: 150, y: 250 },
+    data: {
+      link: "/agency/principles",
+      targetPosition: Position.Top,
+      sourcePosition: Position.Bottom,
+      label: "Maliyyə şöbəsi",
+    },
+    type: "navigationNode",
   },
   {
     id: "10",
-    position: { x: 1100, y: 500 },
-    data: { label: "Hüquqı məsələlərin tənzimlənməsi şöbəsi" },
-    ...style,
+    position: { x: 550, y: 450 },
+    data: {
+      link: "/agency/principles",
+      targetPosition: Position.Top,
+      sourcePosition: Position.Bottom,
+      label: "Akkreditasiya və lisenziya şöbəsi",
+    },
+    type: "navigationNode",
   },
   {
     id: "11",
-    position: { x: 1300, y: 300 },
-    data: { label: "Maliyyə şöbəsi" },
-    ...style,
+    position: { x: 750, y: 450 },
+    data: {
+      link: "/agency/principles",
+      targetPosition: Position.Top,
+      sourcePosition: Position.Bottom,
+      label: "Təlim və metodologiya şöbəsi",
+    },
+    type: "navigationNode",
+  },
+  {
+    id: "12",
+    position: { x: 850, y: 350 },
+    data: {
+      link: "/agency/principles",
+      targetPosition: Position.Top,
+      sourcePosition: Position.Bottom,
+      label: "Hüquqi məsələlərin tənzimlənməsi şöbəsi",
+    },
+    type: "navigationNode",
+  },
+  {
+    id: "13",
+    position: { x: 1050, y: 350 },
+    data: {
+      link: "/agency/principles",
+      targetPosition: Position.Top,
+      sourcePosition: Position.Bottom,
+      label: "Kvalifikasiyaların tanınması departamenti",
+    },
+    type: "navigationNode",
+  },
+  {
+    id: "14",
+    position: { x: 750, y: 150 },
+    data: {
+      link: "/agency/principles",
+      targetPosition: Position.Top,
+      sourcePosition: Position.Bottom,
+      label: "İH-nin üzvü",
+    },
+    type: "navigationNode",
+  },
+  {
+    id: "15",
+    position: { x: 950, y: 150 },
+    data: {
+      link: "/agency/principles",
+      targetPosition: Position.Top,
+      sourcePosition: Position.Bottom,
+      label: "İH-nin üzvü",
+    },
+    type: "navigationNode",
+  },
+  {
+    id: "16",
+    position: { x: 1150, y: 150 },
+    data: {
+      link: "/agency/principles",
+      targetPosition: Position.Top,
+      sourcePosition: Position.Bottom,
+      label: "İH-nin üzvü",
+    },
+    type: "navigationNode",
   },
 ];
 
 const initialEdges = [
   { id: "e1-2", source: "1", target: "2" },
   { id: "e1-3", source: "1", target: "3" },
-  { id: "e1-4", source: "1", target: "4" },
-  { id: "e1-5", source: "1", target: "5" },
-  { id: "e1-6", source: "1", target: "6" },
-  { id: "e1-9", source: "1", target: "9" },
-  { id: "e1-11", source: "1", target: "11" },
-  { id: "e6-7", source: "6", target: "7" },
-  { id: "e6-8", source: "6", target: "8" },
-  { id: "e9-10", source: "9", target: "10" },
+  { id: "e2-4", source: "2", target: "4" },
+  { id: "e2-5", source: "2", target: "5" },
+  { id: "e2-6", source: "2", target: "6" },
+  { id: "e2-7", source: "2", target: "7" },
+  { id: "e2-8", source: "2", target: "8" },
+  { id: "e3-9", source: "3", target: "9" },
+  { id: "e4-10", source: "4", target: "10" },
+  { id: "e4-11", source: "4", target: "11" },
+  { id: "e5-12", source: "5", target: "12" },
+  { id: "e6-13", source: "6", target: "13" },
+  { id: "e1-14", source: "1", target: "14" },
+  { id: "e1-15", source: "1", target: "15" },
+  { id: "e1-16", source: "1", target: "16" },
 ];
 
 export default function Structure() {
+  const nodeTypes = useMemo(() => ({ navigationNode: NavigationNode }), []);
+
   return (
     <div className="w-screen h-screen">
-      <ReactFlow nodes={initialNodes} edges={initialEdges} />
+      <ReactFlow
+        nodes={initialNodes}
+        edges={initialEdges}
+        nodeTypes={nodeTypes}
+      />
     </div>
   );
 }

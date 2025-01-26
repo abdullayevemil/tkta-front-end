@@ -6,10 +6,12 @@ export default function HomeLayout({
   children,
   video,
   statistics,
+  partners,
 }: Readonly<{
   children: React.ReactNode;
   video: React.ReactNode;
   statistics: React.ReactNode;
+  partners: React.ReactNode;
 }>) {
   const { fontSize } = useFontSize();
 
@@ -21,6 +23,8 @@ export default function HomeLayout({
       <section>{video}</section>
 
       <section>{statistics}</section>
+
+      <section>{partners}</section>
 
       {children}
     </main>

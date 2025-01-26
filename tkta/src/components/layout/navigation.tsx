@@ -159,7 +159,7 @@ export function Navigation() {
 
         <NavigationMenuItem>
           <Link
-            href="/agency/internationalization"
+            href="/internationalization"
             legacyBehavior
             passHref
             className="font-helvetica text-base"
@@ -290,14 +290,14 @@ export function Navigation() {
 
         <NavigationMenuItem>
           <NavigationMenuTrigger className="font-helvetica text-base">
-            <Link href="/normative-legal-framework">Qanunvericilik</Link>
+            <Link href="/legislation">Qanunvericilik</Link>
           </NavigationMenuTrigger>
 
           <NavigationMenuContent className="left-0">
             <ul className="grid w-[400px] gap-3 p-4 md:w-[300px] md:grid-cols-2 lg:w-[600px]">
               <li>
                 <ListItem
-                  href="/normative-legal-framework/accreditation"
+                  href="/legislation/accreditation"
                   title="Qanunlar"
                 >
                   Rəsmi təsdiq və qiymətləndirmə
@@ -306,7 +306,7 @@ export function Navigation() {
 
               <li>
                 <ListItem
-                  href="/normative-legal-framework/qualifications-recognition"
+                  href="/legislation/qualifications-recognition"
                   title="AR Prezidentinin fərmanaları"
                 >
                   Diplom və sənəd tanınması
@@ -315,7 +315,7 @@ export function Navigation() {
 
               <li>
                 <ListItem
-                  href="/normative-legal-framework/unrecognized-universities"
+                  href="/legislation/unrecognized-universities"
                   title="AR Nazirlər Kabinetinin qərarları"
                 >
                   Diplomları tanınmayan universitetlərin siyahısı
@@ -324,7 +324,7 @@ export function Navigation() {
 
               <li>
                 <ListItem
-                  href="/normative-legal-framework/rejected-universities"
+                  href="/legislation/rejected-universities"
                   title="Elm və Təhsil Nazirliyinin qərarları"
                 >
                   Ən çox imtina alan universitetlərin siyahısı
@@ -333,7 +333,7 @@ export function Navigation() {
 
               <li>
                 <ListItem
-                  href="/normative-legal-framework/rejected-universities"
+                  href="/legislation/rejected-universities"
                   title="Digər qanun qüvvəli aktlar"
                 >
                   Ən çox imtina alan universitetlərin siyahısı
@@ -342,7 +342,7 @@ export function Navigation() {
 
               <li>
                 <ListItem
-                  href="/normative-legal-framework/rejected-universities"
+                  href="/legislation/rejected-universities"
                   title="Akkreditasiya Məyarları"
                 >
                   Ən çox imtina alan universitetlərin siyahısı
@@ -351,7 +351,7 @@ export function Navigation() {
 
               <li>
                 <ListItem
-                  href="/normative-legal-framework/rejected-universities"
+                  href="/legislation/rejected-universities"
                   title="Akkreditasiya Qaydaları"
                 >
                   Ən çox imtina alan universitetlərin siyahısı

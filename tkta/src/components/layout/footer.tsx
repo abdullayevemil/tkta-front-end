@@ -2,11 +2,9 @@
 
 import GoogleMapComponent from "@/components/maps/google-map";
 import { Card } from "@/components/ui/card";
-import Logo from "@/assets/images/logo.png";
 import ExternalLinks from "./external-links";
-import Image from "next/image";
 import Link from "next/link";
-import PinIcon from "@/assets/icons/footer/map-pin.svg";
+import { Clock, Mail, MapPinned, Phone } from "lucide-react";
 
 export default function Footer() {
   const currentDate = new Date();
@@ -15,32 +13,121 @@ export default function Footer() {
     <footer className="flex flex-col gap-6 w-full items-end p-16">
       <div className="flex flex-col gap-20 w-full items-end">
         <div className="w-full h-full flex flex-row justify-between">
-          <Link href="/home" className="hover:cursor-pointer w-fit">
-            <Image src={Logo} alt="TKTA logo" className="w-[194.4px] h-18" />
-          </Link>
+          <div className="flex flex-col gap-4">
+            <div className="text-textPrimary font-semibold">Sürətli keçid</div>
 
-          <div className="flex flex-row gap-4"></div>
+            <ul className="flex flex-col justify-between h-full">
+              <li className="hover:text-textPrimary">
+                <Link href="/home">Ana səhifə</Link>
+              </li>
 
-          <div className="flex flex-row gap-6 items-center">
-            <div className="flex flex-row gap-2 items-center">
+              <li className="hover:text-textPrimary">
+                <Link href="/agency">Agentlik</Link>
+              </li>
+
+              <li className="hover:text-textPrimary">
+                <Link href="/sercices">Fəaliyyət Sahələri</Link>
+              </li>
+
+              <li className="hover:text-textPrimary">
+                <Link href="/internationalization">Beynəlmiləlləşmə</Link>
+              </li>
+
+              <li className="hover:text-textPrimary">
+                <Link href="/announcements">Elanlar</Link>
+              </li>
+
+              <li className="hover:text-textPrimary">
+                <Link href="/reports">Hesabatlar</Link>
+              </li>
+
+              <li className="hover:text-textPrimary">
+                <Link href="/legislation">Qanunvericilik</Link>
+              </li>
+
+              <li className="hover:text-textPrimary">
+                <Link href="/media">Media</Link>
+              </li>
+
+              <li className="hover:text-textPrimary">
+                <Link href="/diploma-recognition">Diplom Təsdiqi</Link>
+              </li>
+
+              <li className="hover:text-textPrimary">
+                <Link href="/">İmtina alan universitetlər</Link>
+              </li>
+
+              <li className="hover:text-textPrimary">
+                <Link href="">Tanınmayan universitetlər</Link>
+              </li>
+
+              <li className="hover:text-textPrimary">
+                <Link href="/contact">Əlaqə</Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="flex flex-col gap-6">
+            <div className="text-textPrimary font-semibold text-center">
+              Əlaqə
+            </div>
+
+            <div className="flex flex-col gap-6 items-start justfy-left">
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                href="mailto::info@tkta.edu.az"
+                className="flex flex-row gap-2"
+              >
+                <Mail width={60} color="var(--primary-color)" />
+
+                <div className="text-textPrimary text-base text-justify">
+                  info@tkta.edu.az
+                </div>
+              </Link>
+
+              <div className="flex flex-row justify-between gap-16">
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="tel::146-8"
+                  className="flex flex-row gap-2"
+                >
+                  <Phone width={60} color="var(--primary-color)" />
+
+                  <div className="text-textPrimary text-base text-justify">
+                    146-8
+                  </div>
+                </Link>
+
+                <div className="flex flex-row gap-2">
+                  <Clock width={60} color="var(--primary-color)" />
+
+                  <div className="text-textPrimary text-base text-justify">
+                    09:00 - 18:00
+                  </div>
+                </div>
+              </div>
+
               <Link
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://maps.app.goo.gl/FTyJY73SYT4YvKfJ6"
-                className="flex flex-row gap-2 items-center"
+                className="flex flex-row gap-2"
               >
-                <PinIcon width={24} height={24} color="var(--primary-color)" />
+                <MapPinned width={60} color="var(--primary-color)" />
 
-                <div className="text-textPrimary text-base">
-                  2B Qara Qarayev, Bakı 1060
+                <div className="text-textPrimary text-base text-justify text-wrap max-w-80">
+                  Q.Qarayev prospekti 2B (Bakı Texniki Kolleci). AZ 1060,
+                  Azərbaycan, Bakı. Agentliyə giriş Kamil Balakişiyev küçəsi.
                 </div>
               </Link>
             </div>
-
-            <Card className="flex justify-right">
-              <GoogleMapComponent />
-            </Card>
           </div>
+
+          <Card className="flex justify-right">
+            <GoogleMapComponent />
+          </Card>
         </div>
 
         <ExternalLinks />

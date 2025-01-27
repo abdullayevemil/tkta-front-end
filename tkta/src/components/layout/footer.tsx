@@ -76,7 +76,7 @@ export default function Footer() {
               <Link
                 target="_blank"
                 rel="noopener noreferrer"
-                href="mailto::info@tkta.edu.az"
+                href="mailto:info@tkta.edu.az"
                 className="flex flex-row gap-2"
               >
                 <Mail width={60} color="var(--primary-color)" />
@@ -90,7 +90,7 @@ export default function Footer() {
                 <Link
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="tel::146-8"
+                  href="tel:146-8"
                   className="flex flex-row gap-2"
                 >
                   <Phone width={60} color="var(--primary-color)" />

@@ -55,7 +55,7 @@ export default function Accreditation() {
             target="_blank"
             rel="noopener noreferrer"
             className="text-textPrimary italic hover:underline"
-            href="mailto::info@tkta.edu.az"
+            href="mailto:info@tkta.edu.az"
           >
             info@tkta.edu.az
           </Link>{" "}

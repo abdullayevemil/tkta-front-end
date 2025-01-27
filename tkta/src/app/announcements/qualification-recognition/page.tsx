@@ -81,7 +81,7 @@ export default function EducationRecognition() {
       <ul className="grid grid-cols-3 gap-4 px-16">
         {vacancies.map((vacancy) => (
           <li key={vacancy.id}>
-            <Link href={`/vacancies/${vacancy.id}`}>
+            <Link href={`/qualification-recognition/${vacancy.id}`}>
               <NewsCard
                 id={vacancy.id}
                 title={vacancy.title}

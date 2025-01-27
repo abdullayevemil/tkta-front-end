@@ -182,6 +182,8 @@ export default function EducationRecognition() {
                 Respublikası Nazirlər Kabinetinin 5 avqust 2020-ci il tarixli
                 279 nömrəli qərarı ilə təsdiq edilmiş{" "}
                 <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-textPrimary italic hover:underline"
                   href="https://nk.gov.az/az/senedler/qerarlar/“vatandaslarin-pesa-tahsili-uzra-qeyri-formal-va-informal-tahsil-formalari-vasitasila-alda-etdiklari-4660"
                 >
@@ -191,6 +193,8 @@ export default function EducationRecognition() {
                 vətədaşlardan bununla bağlı Azərbaycan Respublikası Nazirlər
                 Kabinetinin 25 dekabr 2020-ci il tarixili 508 nömrəli{" "}
                 <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-textPrimary italic hover:underline"
                   href="https://nk.gov.az/az/senedler/qerarlar/“pesa--tahsili--uzra--qeyri-formal-va--informal--tahsil--formalari-vasitasila--alda--edilmis--bilik--5027"
                 >
@@ -227,6 +231,8 @@ export default function EducationRecognition() {
             <ol className="list-[lower-alpha] pl-8 flex flex-col gap-3">
               <li>
                 <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-textPrimary italic hover:underline font-bold"
                   href="https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/viewform?edit_requested=true"
                 >
@@ -397,6 +403,8 @@ export default function EducationRecognition() {
                 modul üçün 80 AZN məbləğində ödəniş qəbzi tələb olunur. Ödənişlə
                 bağlı təlimatla{" "}
                 <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-textPrimary italic hover:underline"
                   href="https://tkta.edu.az/files/video/v%C9%99t%C9%99ndaşlar%20üçün%20öd%C9%99niş%20t%C9%99limat%20v%C9%99r%C9%99qi.pdf"
                 >

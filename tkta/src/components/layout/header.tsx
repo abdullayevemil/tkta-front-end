@@ -14,7 +14,23 @@ export default function Header() {
           <Image src={Logo} alt="TKTA logo" className="w-[194.4px] h-18" />
         </Link>
 
-        <div className="flex flex-row gap-3 items-center">
+        <div className="flex flex-row gap-4 items-center">
+          <div className="flex flex-row gap-4">
+            <Link
+              className="text-base max-w-[100]"
+              href="/rejected-universities"
+            >
+              İmtina alan universitetlər
+            </Link>
+
+            <Link
+              className="text-base max-w-[100]"
+              href="/not-recognized-universities"
+            >
+              Tanınmayan universitetlər
+            </Link>
+          </div>
+
           <ColorSwitch />
 
           <FontSelector />

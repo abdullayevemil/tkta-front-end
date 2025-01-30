@@ -24,32 +24,11 @@ export function Navigation() {
 
           <NavigationMenuContent className="left-0">
             <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
-              <NavigationMenuSub className="w-full">
-                <NavigationMenuList className="w-full">
-                  <NavigationMenuItem className="w-full">
-                    <NavigationMenuTrigger className="h-fit font-helvetica w-full flex flex-row justify-left p-0 text-left">
-                      <ListItem
-                        className="hover:bg-transparent"
-                        href="/agency/about"
-                        title="Haqqımızda"
-                      >
-                        Agentlik haqqında məlumat
-                      </ListItem>
-                    </NavigationMenuTrigger>
-
-                    <NavigationMenuContent className="left-64 top-0 z-50">
-                      <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
-                        <li>
-                          <ListItem
-                            href="/agency/about/institutional"
-                            title="Daxili keyfiyyət təminatı sistemi"
-                          ></ListItem>
-                        </li>
-                      </ul>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenuSub>
+              <li>
+                <ListItem href="/agency/about" title="Haqqımızda">
+                  Agentlik haqqında məlumat
+                </ListItem>
+              </li>
 
               <li>
                 <ListItem href="/agency/principles" title="Rəhbərlik">
@@ -60,6 +39,12 @@ export function Navigation() {
               <li>
                 <ListItem href="/agency/structure" title="Struktur">
                   Agentliyin daxili quruluşu
+                </ListItem>
+              </li>
+
+              <li>
+                <ListItem href="/agency/inner-quality" title="Daxili keyfiyyət">
+                  Agentliyin daxili nəzarəti
                 </ListItem>
               </li>
             </ul>
@@ -91,14 +76,39 @@ export function Navigation() {
                 </ListItem>
               </li>
 
-              <li>
-                <ListItem
-                  href="/services/accreditation"
-                  title="Akkreditasiya və lisenziya"
-                >
-                  Rəsmi təsdiq və qiymətləndirmə
-                </ListItem>
-              </li>
+              <NavigationMenuSub defaultValue="sub1" className="w-full">
+                <NavigationMenuList className="w-full">
+                  <NavigationMenuItem className="w-full">
+                    <NavigationMenuTrigger className="h-fit font-helvetica w-full flex flex-row justify-left p-0 text-left">
+                      <ListItem
+                        href="/services/accreditation"
+                        title="Akkreditasiya və lisenziya"
+                        className="hover:bg-transparent"
+                      >
+                        Rəsmi təsdiq və qiymətləndirmə
+                      </ListItem>
+                    </NavigationMenuTrigger>
+
+                    <NavigationMenuContent className="left-64 top-0 z-50">
+                      <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
+                        <li>
+                          <ListItem
+                            href="/services/training-methodology/experts-registration"
+                            title="Akkreditasiya şurası"
+                          ></ListItem>
+                        </li>
+
+                        <li>
+                          <ListItem
+                            href="/services/training-methodology/experts-registration"
+                            title="Appelyasiya komissiyası"
+                          ></ListItem>
+                        </li>
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenuSub>
 
               <NavigationMenuSub defaultValue="sub1" className="w-full">
                 <NavigationMenuList className="w-full">
@@ -297,7 +307,7 @@ export function Navigation() {
             <ul className="grid w-[400px] gap-3 p-4 md:w-[300px] md:grid-cols-2 lg:w-[600px]">
               <li>
                 <ListItem href="/legislation/accreditation" title="Qanunlar">
-                  Rəsmi təsdiq və qiymətləndirmə
+                Rəsmi qaydalar və hüquqi tələblər
                 </ListItem>
               </li>
 
@@ -306,7 +316,7 @@ export function Navigation() {
                   href="/legislation/qualifications-recognition"
                   title="AR Prezidentinin fərmanaları"
                 >
-                  Diplom və sənəd tanınması
+                  Rəsmi sərəncamlar və hüquqi qərarlar
                 </ListItem>
               </li>
 
@@ -315,7 +325,7 @@ export function Navigation() {
                   href="/legislation/unrecognized-universities"
                   title="AR Nazirlər Kabinetinin qərarları"
                 >
-                  Diplomları tanınmayan universitetlərin siyahısı
+                  Dövlət idarəçiliyi və hüquqi tənzimləmə qərarları
                 </ListItem>
               </li>
 
@@ -324,7 +334,7 @@ export function Navigation() {
                   href="/legislation/rejected-universities"
                   title="Elm və Təhsil Nazirliyinin qərarları"
                 >
-                  Ən çox imtina alan universitetlərin siyahısı
+                  Təhsil və elmi fəaliyyətlə bağlı rəsmi qərarlar
                 </ListItem>
               </li>
 
@@ -333,7 +343,7 @@ export function Navigation() {
                   href="/legislation/rejected-universities"
                   title="Digər qanun qüvvəli aktlar"
                 >
-                  Ən çox imtina alan universitetlərin siyahısı
+                  Hüquqi tənzimləməyə aid əlavə normativ aktlar
                 </ListItem>
               </li>
 
@@ -342,7 +352,7 @@ export function Navigation() {
                   href="/legislation/rejected-universities"
                   title="Akkreditasiya Məyarları"
                 >
-                  Ən çox imtina alan universitetlərin siyahısı
+                  Təhsil və qurumların qiymətləndirilməsi meyarları
                 </ListItem>
               </li>
 
@@ -351,7 +361,16 @@ export function Navigation() {
                   href="/legislation/rejected-universities"
                   title="Akkreditasiya Qaydaları"
                 >
-                  Ən çox imtina alan universitetlərin siyahısı
+                  Akkreditasiya prosesinin tənzimlənmə qaydaları.
+                </ListItem>
+              </li>
+
+              <li>
+                <ListItem
+                  href="/legislation/rejected-universities"
+                  title="Agentliyin Nizamnaməsi"
+                >
+                  Agentliyin fəaliyyəti və səlahiyyətlərini müəyyən edən əsas sənəd
                 </ListItem>
               </li>
             </ul>

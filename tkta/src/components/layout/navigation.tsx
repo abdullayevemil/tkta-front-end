@@ -306,7 +306,7 @@ export function Navigation() {
           <NavigationMenuContent className="left-0">
             <ul className="grid w-[400px] gap-3 p-4 md:w-[300px] md:grid-cols-2 lg:w-[600px]">
               <li>
-                <ListItem href="/legislation/accreditation" title="Qanunlar">
+                <ListItem href="/legislation/laws" title="Qanunlar">
                 Rəsmi qaydalar və hüquqi tələblər
                 </ListItem>
               </li>

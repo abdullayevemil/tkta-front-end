@@ -322,7 +322,7 @@ export function Navigation() {
 
               <li>
                 <ListItem
-                  href="/legislation/unrecognized-universities"
+                  href="/legislation/cabinet_of_ministers"
                   title="AR Nazirlər Kabinetinin qərarları"
                 >
                   Dövlət idarəçiliyi və hüquqi tənzimləmə qərarları

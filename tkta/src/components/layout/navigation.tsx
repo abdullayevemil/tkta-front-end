@@ -250,7 +250,7 @@ export function Navigation() {
                       </ListItem>
                     </NavigationMenuTrigger>
 
-                    <NavigationMenuContent className="left-0 top-14">
+                    <NavigationMenuContent className="z-50 left-64 top-0">
                       <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                         <li>
                           <ListItem
@@ -296,10 +296,7 @@ export function Navigation() {
           <NavigationMenuContent className="left-0">
             <ul className="grid w-[400px] gap-3 p-4 md:w-[300px] md:grid-cols-2 lg:w-[600px]">
               <li>
-                <ListItem
-                  href="/legislation/accreditation"
-                  title="Qanunlar"
-                >
+                <ListItem href="/legislation/accreditation" title="Qanunlar">
                   Rəsmi təsdiq və qiymətləndirmə
                 </ListItem>
               </li>
@@ -404,7 +401,9 @@ export function Navigation() {
             <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
               <li>
                 <ListItem
-                  href="/diploma-recognition/video-instructions"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://apply.enic.edu.az/instructions/"
                   title="Təlimat"
                 >
                   Tanıma prosesi ilə bağlı izah
@@ -412,14 +411,21 @@ export function Navigation() {
               </li>
 
               <li>
-                <ListItem href="/diploma-recognition/apply" title="Müraciət et">
+                <ListItem
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://apply.enic.edu.az/"
+                  title="Müraciət et"
+                >
                   Tanıma üçün ərizə göndərilməsi
                 </ListItem>
               </li>
 
               <li>
                 <ListItem
-                  href="/diploma-recognition/check"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://apply.enic.edu.az/e-reference/"
                   title="Dipomunu yoxla"
                 >
                   Diplomun tanınma vəziyyətinin araşdırılması

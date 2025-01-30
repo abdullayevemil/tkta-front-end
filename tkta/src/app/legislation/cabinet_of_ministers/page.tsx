@@ -7,13 +7,20 @@ import LawIcon from "@/assets/icons/law/law.svg";
 const laws = [
   {
     id: 1,
-    link: "https://e-qanun.az/framework/44056",
-    title: 'Azərbaycan Respublikası Prezidentinin 2019-cu il 29 dekabr tarixli 907 nömrəli Fərmanı ilə təsdiq edilmiş “Təhsildə Keyfiyyət Təminatı Agentliyinin Nizamnaməsi”',
+    link: "https://e-qanun.az/framework/47272",
+    title:
+      "“Xarici dövlətlərin xarici təhsilə aid kvalifikasiyalarının tanınması xidmətləri ilə əlaqədar digər xidmətlərin siyahısı və göstərilən xidmətlərə görə ödəniləcək haqların məbləği”",
   },
   {
     id: 2,
-    link: "https://e-qanun.az/framework/54957",
-    title: 'Azərbaycan Respublikası Prezidentinin 2023-cü il 18 avqust tarixli 2306 nömrəli Fərmanı ilə təsdiq edilmiş “Xarici dövlətlərin ali təhsilə aid kvalifikasiyalarının tanınması Qaydaları”',
+    link: "https://e-qanun.az/framework/20089",
+    title:
+      "Azərbaycan Respublikası Nazirlər Kabinetinin 2010-cu il 28 sentyabr tarixli, 167 nömrəli qərarı ilə “Təhsil müəssisələrinin akkreditasiyası Qaydaları”",
+  },
+  {
+    id: 3,
+    link: "https://e-qanun.az/framework/45613",
+    title: 'Azərbaycan Respublikası Nazirlər Kabinetinin 2020-ci il 5 avqust tarixli 279 nömrəli Qərarı ilə təsdiq edilmiş “Vətəndaşların peşə təhsili üzrə qeyri-formal və informal təhsil formaları vasitəsilə əldə etdikləri bilik, bacarıq, səriştə və təcrübənin qiymətləndirilməsi və tanınması məqsədilə imtahanın keçirilməsi və onlara peşə ixtisasını təsdiq edən sənədin verilməsi Qaydası”',
   },
 ];
 
@@ -23,10 +30,10 @@ export default function Laws() {
       <Image src={HeaderImage} alt="header image" className="w-full" />
 
       <h1 className="uppercase text-6xl text-center w-full px-[112px]">
-        AR Prezidentinin fərmanaları
+        Qanunlar
       </h1>
 
-      <ul className="grid grid-cols-4 gap-4 px-16 justify-center items-center">
+      <ul className="grid grid-cols-4 gap-4 px-16">
         {laws.map((law) => (
           <li key={law.id}>
             <Link

@@ -7,20 +7,15 @@ import LawIcon from "@/assets/icons/law/law.svg";
 const laws = [
   {
     id: 1,
-    link: "https://e-qanun.az/framework/47272",
+    link: "https://e-qanun.az/framework/52566",
     title:
-      "“Xarici dövlətlərin xarici təhsilə aid kvalifikasiyalarının tanınması xidmətləri ilə əlaqədar digər xidmətlərin siyahısı və göstərilən xidmətlərə görə ödəniləcək haqların məbləği”",
+      "“Ali təhsil müəssisəsinin institusional akkreditasiyası üzrə qiymətləndirmə Meyarları” və “Ali təhsil müəssisəsinin proqram akkreditasiyası üzrə qiymətləndirmə Meyarları”",
   },
   {
     id: 2,
-    link: "https://e-qanun.az/framework/20089",
+    link: "https://e-qanun.az/framework/58178",
     title:
-      "Azərbaycan Respublikası Nazirlər Kabinetinin 2010-cu il 28 sentyabr tarixli, 167 nömrəli qərarı ilə “Təhsil müəssisələrinin akkreditasiyası Qaydaları”",
-  },
-  {
-    id: 3,
-    link: "https://e-qanun.az/framework/45613",
-    title: 'Azərbaycan Respublikası Nazirlər Kabinetinin 2020-ci il 5 avqust tarixli 279 nömrəli Qərarı ilə təsdiq edilmiş “Vətəndaşların peşə təhsili üzrə qeyri-formal və informal təhsil formaları vasitəsilə əldə etdikləri bilik, bacarıq, səriştə və təcrübənin qiymətləndirilməsi və tanınması məqsədilə imtahanın keçirilməsi və onlara peşə ixtisasını təsdiq edən sənədin verilməsi Qaydası”',
+      '"Peşə təhsili müəssisəsinin institusional akkreditasiyası üzrə qiymətləndirmə meyarları" və "Peşə təhsili müəssisəsinin proqram akkreditasiyası üzrə qiymətləndirmə meyarları"',
   },
 ];
 
@@ -30,10 +25,10 @@ export default function Laws() {
       <Image src={HeaderImage} alt="header image" className="w-full" />
 
       <h1 className="uppercase text-6xl text-center w-full px-[112px]">
-      AR Nazirlər Kabinetinin qərarları
+        Elm və Təhsil Nazirliyinin qərarları
       </h1>
 
-      <ul className="grid grid-cols-4 gap-4 px-16">
+      <ul className="grid grid-cols-4 gap-4 px-16 justify-center items-center">
         {laws.map((law) => (
           <li key={law.id}>
             <Link

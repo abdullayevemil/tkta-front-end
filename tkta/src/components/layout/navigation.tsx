@@ -331,7 +331,7 @@ export function Navigation() {
 
               <li>
                 <ListItem
-                  href="/legislation/rejected-universities"
+                  href="/legislation/education"
                   title="Elm və Təhsil Nazirliyinin qərarları"
                 >
                   Təhsil və elmi fəaliyyətlə bağlı rəsmi qərarlar

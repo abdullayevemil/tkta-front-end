@@ -313,7 +313,7 @@ export function Navigation() {
 
               <li>
                 <ListItem
-                  href="/legislation/qualifications-recognition"
+                  href="/legislation/president-requirements"
                   title="AR Prezidentinin fərmanaları"
                 >
                   Rəsmi sərəncamlar və hüquqi qərarlar

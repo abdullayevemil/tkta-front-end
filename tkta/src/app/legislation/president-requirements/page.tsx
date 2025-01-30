@@ -7,23 +7,17 @@ import LawIcon from "@/assets/icons/law/law.svg";
 const laws = [
   {
     id: 1,
-    link: "https://e-qanun.az/framework/18343",
-    title: '"Təhsil haqqında"',
+    link: "https://e-qanun.az/framework/44056",
+    title:
+      "Azərbaycan Respublikası Prezidentinin 2019-cu il 29 dekabr tarixli 907 nömrəli Fərmanı ilə təsdiq edilmiş",
+    name: "“Təhsildə Keyfiyyət Təminatı Agentliyinin Nizamnaməsi”",
   },
   {
     id: 2,
-    link: "https://e-qanun.az/framework/31994",
-    title: '"Publik hüquqi şəxslər haqqında"',
-  },
-  {
-    id: 3,
-    link: "https://e-qanun.az/framework/2860",
-    title: '"Dövlət rüsumu haqqında"',
-  },
-  {
-    id: 4,
-    link: "https://e-qanun.az/framework/11254",
-    title: '"İnzibati icraat haqqında"',
+    link: "https://e-qanun.az/framework/54957",
+    title:
+      "Azərbaycan Respublikası Prezidentinin 2023-cü il 18 avqust tarixli 2306 nömrəli Fərmanı ilə təsdiq edilmiş",
+    name: "“Xarici dövlətlərin ali təhsilə aid kvalifikasiyalarının tanınması Qaydaları”",
   },
 ];
 
@@ -33,10 +27,10 @@ export default function Laws() {
       <Image src={HeaderImage} alt="header image" className="w-full" />
 
       <h1 className="uppercase text-6xl text-center w-full px-[112px]">
-        Qanunlar
+        AR Prezidentinin fərmanaları
       </h1>
 
-      <ul className="grid grid-cols-4 gap-4 px-16">
+      <ul className="grid grid-cols-4 gap-4 px-16 justify-center items-center">
         {laws.map((law) => (
           <li key={law.id}>
             <Link
@@ -51,7 +45,7 @@ export default function Laws() {
                 <div className="text-center">
                   <div>{law.title}</div>
 
-                  <div> Azərbaycan Respublikasının Qanunu</div>
+                  <div>{law.name}</div>
                 </div>
               </Card>
             </Link>

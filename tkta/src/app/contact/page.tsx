@@ -21,8 +21,8 @@ const ContactSchema = z.object({
   fullName: z.string().min(1, {
     message: "Adınızı daxil edin",
   }),
-  contactNumber: z.string().min(10, {
-    message: "Əlaqə nömrəsini düzgün daxil edin",
+  contactNumber: z.string().regex(/^0\d{2}-\d{3}-\d{2}-\d{2}$/, {
+    message: "Əlaqə nömrəsini bu formatda daxil edin: 055-555-55-55",
   }),
   email: z.string().email({
     message: "Düzgün e-poçt ünvanı daxil edin",
@@ -54,7 +54,10 @@ export default function ContactForm() {
       <h1 className="uppercase text-6xl text-center">Əlaqə</h1>
 
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 px-16 mx-auto w-full">
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="space-y-6 px-16 mx-auto w-full"
+        >
           <div className="flex flex-row justify-between gap-6">
             <FormField
               control={form.control}

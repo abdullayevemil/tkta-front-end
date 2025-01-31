@@ -243,7 +243,7 @@ export default function EducationRecognition() {
                   <li>
                     Qiymətləndirmə və tanınma üçün müraciət elektron qaydada
                     həyata keçirilir. Bütün sənədlər elektron poçt vasitəsilə
-                    <span className="font-bold">qfitt@tkta.edu.az</span>{" "}
+                    {" "}<span className="font-bold">qfitt@tkta.edu.az</span>{" "}
                     ünvanına göndərilir.
                   </li>
 

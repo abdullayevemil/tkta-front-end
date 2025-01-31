@@ -233,7 +233,7 @@ export function Navigation() {
               </li>
 
               <li>
-                <ListItem href="/reports/financial" title="Maliyə hesabatları">
+                <ListItem href="/reports/financial" title="Maliyyə hesabatları">
                   Rəsmi maliyyə məlumatları
                 </ListItem>
               </li>

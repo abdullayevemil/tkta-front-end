@@ -350,7 +350,7 @@ export function Navigation() {
               <li>
                 <ListItem
                   href="/legislation/rejected-universities"
-                  title="Akkreditasiya Məyarları"
+                  title="Akkreditasiya Meyarları"
                 >
                   Təhsil və qurumların qiymətləndirilməsi meyarları
                 </ListItem>

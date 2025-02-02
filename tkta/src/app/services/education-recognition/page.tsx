@@ -12,6 +12,191 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
+const majors = [
+  {
+    title: "Aşpaz",
+    methodicalMaterial:
+      "https://tkta.edu.az/files/METOD%C4%B0K%C4%B0%20V%C6%8FSA%C4%B0T/1.%20A%C5%9Fpaz.pdf",
+    registration:
+      "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
+  },
+  {
+    title: "Avtomobil mühərriklərinin yığıcısı",
+    methodicalMaterial:
+      "https://tkta.edu.az/files/METOD%C4%B0K%C4%B0%20V%C6%8FSA%C4%B0T/2.%20Avtomobil%20m%C3%BCh%C9%99rrikl%C9%99rinin%20y%C4%B1%C4%9F%C4%B1c%C4%B1s%C4%B1.pdf",
+    registration:
+      "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
+  },
+  {
+    title: "Avtomobillərin təmiri çilingəri",
+    methodicalMaterial:
+      "https://tkta.edu.az/files/METOD%C4%B0K%C4%B0%20V%C6%8FSA%C4%B0T/3.%20Avtomobill%C9%99rin%20t%C9%99miri%20%C3%A7iling%C9%99ri.pdf",
+    registration:
+      "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
+  },
+  {
+    title: "Bağban dekorator",
+    methodicalMaterial:
+      "https://tkta.edu.az/files/METOD%C4%B0K%C4%B0%20V%C6%8FSA%C4%B0T/4.%20Ba%C4%9Fban%20dekorator.pdf",
+    registration:
+      "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
+  },
+  {
+    title: "Baytar texniki",
+    methodicalMaterial:
+      "https://tkta.edu.az/files/METOD%C4%B0K%C4%B0%20V%C6%8FSA%C4%B0T/5.%20Baytar%20texniki.pdf",
+    registration:
+      "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
+  },
+  {
+    title: "Bərbər manikürçü-vizajist",
+    methodicalMaterial:
+      "https://tkta.edu.az/files/METOD%C4%B0K%C4%B0%20V%C6%8FSA%C4%B0T/6.%20B%C9%99rb%C9%99r%20manik%C3%BCr%C3%A7%C3%BC-vizajist.pdf",
+    registration:
+      "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
+  },
+  {
+    title: "Bərbər",
+    methodicalMaterial:
+      "https://tkta.edu.az/files/METOD%C4%B0K%C4%B0%20V%C6%8FSA%C4%B0T/7.%20B%C9%99rb%C9%99r.pdf",
+    registration:
+      "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
+  },
+  {
+    title: "Bitkiçilik mütəxəssisi",
+    methodicalMaterial:
+      "https://tkta.edu.az/files/METOD%C4%B0K%C4%B0%20V%C6%8FSA%C4%B0T/8.%20Bitki%C3%A7ilik%20m%C3%BCt%C9%99x%C9%99ssisi.pdf",
+    registration:
+      "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
+  },
+  {
+    title: "Dayə",
+    methodicalMaterial:
+      "https://tkta.edu.az/files/METOD%C4%B0K%C4%B0%20V%C6%8FSA%C4%B0T/9.%20Day%C9%99.pdf",
+    registration:
+      "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
+  },
+  {
+    title: "Dərzi",
+    methodicalMaterial:
+      "https://tkta.edu.az/files/METOD%C4%B0K%C4%B0%20V%C6%8FSA%C4%B0T/10.%20D%C9%99rzi.pdf",
+    registration:
+      "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
+  },
+  {
+    title: "Elektrik qaz qaynaqçısı",
+    methodicalMaterial:
+      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/11.%20Elektrik%20qaz%20qaynaqçısı.pdf",
+    registration:
+      "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
+  },
+  {
+    title: "Əməliyyatçı mühasib",
+    methodicalMaterial:
+      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/12.%20Əm%C9%99liyyatçı%20mühasib.pdf",
+    registration:
+      "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
+  },
+  {
+    title: "Ərzaq və qeyri-ərzaq malları satıcısı, nəzarətçi xəzinadar",
+    methodicalMaterial:
+      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/13.%20Ərzaq%20v%C9%99%20qeyri-%C9%99rzaq.pdf",
+    registration:
+      "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
+  },
+  {
+    title: "Heyvandarlıq mütəxəssisi",
+    methodicalMaterial:
+      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/14.%20Heyvandarlıq%20müt%C9%99x%C9%99ssisi.pdf",
+    registration:
+      "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
+  },
+  {
+    title: "İnşaat ustası",
+    methodicalMaterial:
+      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/15.%20İnşaat%20ustası.pdf",
+    registration:
+      "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
+  },
+  {
+    title: "Kargüzar",
+    methodicalMaterial:
+      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/16.%20Kargüzar.pdf",
+    registration:
+      "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
+  },
+  {
+    title: "Komputer operatoru",
+    methodicalMaterial:
+      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/17.%20komputer%20operatoru.pdf",
+    registration:
+      "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
+  },
+  {
+    title: "Mənzil təsərrüfat xidməti",
+    methodicalMaterial:
+      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/18.%20M%C9%99nzil%20t%C9%99s%C9%99rrüfat%20xidm%C9%99ti.pdf",
+    registration:
+      "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
+  },
+  {
+    title: "Mobil telefonların təmiri ustası",
+    methodicalMaterial:
+      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/19.%20Mobil%20telefonların%20t%C9%99miri%20ustası.pdf",
+    registration:
+      "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
+  },
+  {
+    title: "Mühafizəçi",
+    methodicalMaterial:
+      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/20.%20Mühafiz%C9%99çi.pdf",
+    registration:
+      "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
+  },
+  {
+    title: "Plastik boru qaynaqçısı",
+    methodicalMaterial:
+      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/21.%20Plastik%20boru%20qaynaqçısı.pdf",
+    registration:
+      "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
+  },
+  {
+    title: "Poliqrafiya üzrə dizayner",
+    methodicalMaterial:
+      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/22.%20Poliqrafiya%20üzr%C9%99%20dizayner.pdf",
+    registration:
+      "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
+  },
+  {
+    title: "Qənnadçı, şirniyyatçı",
+    methodicalMaterial:
+      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/23.%20Q%C9%99nnadçı%2C%20şirniyyatçı.pdf",
+    registration:
+      "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
+  },
+  {
+    title: "Tikiş avadanlıqlarının operatoru, tikişçi",
+    methodicalMaterial:
+      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/24.%20Tikiş%20avadanlıqlarının%20operatoru%2Ctikişçi.pdf",
+    registration:
+      "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
+  },
+  {
+    title: "Turizm sahəsində iaşə mütəxəssisi",
+    methodicalMaterial:
+      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/25.%20Turizm%20sah%C9%99sind%C9%99%20iaş%C9%99%20müt%C9%99x%C9%99ssisi.pdf",
+    registration:
+      "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
+  },
+  {
+    title: "Zərgər",
+    methodicalMaterial:
+      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/26.%20Z%C9%99rg%C9%99r%20son.pdf",
+    registration:
+      "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
+  },
+];
+
 const partners = [
   {
     id: 1,
@@ -242,8 +427,8 @@ export default function EducationRecognition() {
                 <ul className="list-disc pl-8 flex flex-col gap-2">
                   <li>
                     Qiymətləndirmə və tanınma üçün müraciət elektron qaydada
-                    həyata keçirilir. Bütün sənədlər elektron poçt vasitəsilə
-                    {" "}<span className="font-bold">qfitt@tkta.edu.az</span>{" "}
+                    həyata keçirilir. Bütün sənədlər elektron poçt vasitəsilə{" "}
+                    <span className="font-bold">qfitt@tkta.edu.az</span>{" "}
                     ünvanına göndərilir.
                   </li>
 
@@ -424,71 +609,31 @@ export default function EducationRecognition() {
             </h4>
 
             <ol className="list-decimal pl-8 flex flex-col gap-3">
-              <li className="flex flex-row gap-3 items-center">
-                <h5>Aşpaz</h5>
+              {majors.map((major, index) => (
+                <li key={index}>
+                  <div className="flex flex-row gap-3 items-center">
+                    <h5>{major.title}</h5>
 
-                <Link
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://tkta.edu.az/files/METODİKİ%20VƏSAİT/1.%20Aşpaz.pdf"
-                  className="text-textPrimary italic hover:underline"
-                >
-                  Metodik vəsait
-                </Link>
+                    <Link
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={major.methodicalMaterial}
+                      className="text-textPrimary italic hover:underline"
+                    >
+                      Metodik vəsait
+                    </Link>
 
-                <Link
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/viewform?edit_requested=true"
-                  className="px-4 py-1 text-white bg-textPrimary hover:bg-textPrimary text-base font-semibold w-fit shadow rounded"
-                >
-                  Qeydiyyat
-                </Link>
-              </li>
-
-              <li className="flex flex-row gap-3 items-center">
-                <h5>Avtomobil mühərriklərinin yığıcısı</h5>
-
-                <Link
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://tkta.edu.az/files/METODİKİ%20VƏSAİT/2.%20Avtomobil%20müh%C9%99rrikl%C9%99rinin%20yığıcısı.pdf"
-                  className="text-textPrimary italic hover:underline"
-                >
-                  Metodik vəsait
-                </Link>
-
-                <Link
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/viewform?edit_requested=true"
-                  className="px-4 py-1 text-white bg-textPrimary hover:bg-textPrimary text-base font-semibold w-fit shadow rounded"
-                >
-                  Qeydiyyat
-                </Link>
-              </li>
-
-              <li className="flex flex-row gap-3 items-center">
-                <h5> Avtomobillərin təmiri çilingəri</h5>
-
-                <Link
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://tkta.edu.az/files/METODİKİ%20VƏSAİT/3.%20Avtomobill%C9%99rin%20t%C9%99miri%20çiling%C9%99ri.pdf"
-                  className="text-textPrimary italic hover:underline"
-                >
-                  Metodik vəsait
-                </Link>
-
-                <Link
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/viewform?edit_requested=true"
-                  className="px-4 py-1 text-white bg-textPrimary hover:bg-textPrimary text-base font-semibold w-fit shadow rounded"
-                >
-                  Qeydiyyat
-                </Link>
-              </li>
+                    <Link
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={major.registration}
+                      className="px-4 py-1 text-white bg-textPrimary hover:bg-textPrimary text-base font-semibold w-fit shadow rounded"
+                    >
+                      Qeydiyyat
+                    </Link>
+                  </div>
+                </li>
+              ))}
             </ol>
           </div>
         </TabsContent>

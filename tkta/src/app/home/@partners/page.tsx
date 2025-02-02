@@ -142,7 +142,7 @@ export default function Partners() {
             {partners.map((partner) => (
               <CarouselItem
                 key={partner.id}
-                className="basis-1/5 flex items-center"
+                className="basis-1/5 flex items-center justify-center"
               >
                 <Link href="">
                   <CldImage

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import HeaderImage from "@/assets/images/qualifications-recognition/header-image.png";
+import HeaderImage from "@/assets/images/internationalization/header-image.png";
 
 export default function Iternationalization() {
   return (

@@ -14,8 +14,8 @@ export default function Principles() {
           <Image
             src="https://tkta.edu.az/files/r%C9%99hb%C9%99rlik.jpg"
             alt="Director photo"
-            width={80}
-            height={80}
+            width={500}
+            height={500}
             className="w-full rounded"
           />
 
@@ -84,8 +84,8 @@ export default function Principles() {
           <Image
             src="https://miras.blob.core.windows.net/multimedia/Kamran%20mu%CC%88%C9%99llim-2.jpg"
             alt="Director photo"
-            width={80}
-            height={80}
+            width={500}
+            height={500}
             className="w-full rounded"
           />
 

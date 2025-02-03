@@ -93,14 +93,14 @@ export function Navigation() {
                       <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                         <li>
                           <ListItem
-                            href="/services/training-methodology/experts-registration"
+                            href="/services/accreditation"
                             title="Akkreditasiya şurası"
                           ></ListItem>
                         </li>
 
                         <li>
                           <ListItem
-                            href="/services/training-methodology/experts-registration"
+                            href="/services/accreditation/appeal"
                             title="Appelyasiya komissiyası"
                           ></ListItem>
                         </li>
@@ -264,7 +264,7 @@ export function Navigation() {
                       <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                         <li>
                           <ListItem
-                            href="/reports/accreditation/institutional"
+                            href="/reports/accreditation"
                             title="ATMlərin İnstitusional akkreditasiya hesabatları"
                           ></ListItem>
                         </li>

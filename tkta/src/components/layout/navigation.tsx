@@ -340,7 +340,7 @@ export function Navigation() {
 
               <li>
                 <ListItem
-                  href="/legislation/rejected-universities"
+                  href="/legislation/others"
                   title="Digər qanun qüvvəli aktlar"
                 >
                   Hüquqi tənzimləməyə aid əlavə normativ aktlar
@@ -349,7 +349,7 @@ export function Navigation() {
 
               <li>
                 <ListItem
-                  href="/legislation/rejected-universities"
+                  href="/legislation/accreditation-parameters"
                   title="Akkreditasiya Meyarları"
                 >
                   Təhsil və qurumların qiymətləndirilməsi meyarları
@@ -358,7 +358,7 @@ export function Navigation() {
 
               <li>
                 <ListItem
-                  href="/legislation/rejected-universities"
+                  href="/legislation/accreditation-regulations"
                   title="Akkreditasiya Qaydaları"
                 >
                   Akkreditasiya prosesinin tənzimlənmə qaydaları.
@@ -367,7 +367,7 @@ export function Navigation() {
 
               <li>
                 <ListItem
-                  href="/legislation/rejected-universities"
+                  href="/legislation/agency-regulations"
                   title="Agentliyin Nizamnaməsi"
                 >
                   Agentliyin fəaliyyəti və səlahiyyətlərini müəyyən edən əsas sənəd

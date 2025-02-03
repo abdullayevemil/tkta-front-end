@@ -9,6 +9,7 @@ import Footer from "@/components/layout/footer";
 import Head from "next/head";
 import { FontSizeProvider } from "@/context/font-size-context";
 import { ColorModeProvider } from "@/context/color-mode-context";
+import { Analytics } from '@vercel/analytics/next';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -56,6 +57,8 @@ export default function RootLayout({
               <Footer />
 
               <SpeedInsights />
+
+              <Analytics />
             </AuthenticationProvider>
           </ColorModeProvider>
         </FontSizeProvider>

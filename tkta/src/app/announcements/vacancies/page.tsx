@@ -1,5 +1,5 @@
 import Image from "next/image";
-import HeaderImage from "@/assets/images/qualifications-recognition/header-image.png";
+import HeaderImage from "@/assets/images/announcements/header-image.png";
 import NewsCard from "@/components/home/news-card";
 import Link from "next/link";
 

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import HeaderImage from "@/assets/images/qualifications-recognition/header-image.png";
+import HeaderImage from "@/assets/images/media/header-image.png";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Accordion,

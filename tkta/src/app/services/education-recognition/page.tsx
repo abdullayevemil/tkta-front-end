@@ -313,7 +313,7 @@ export default function EducationRecognition() {
     <section className="w-full flex flex-col gap-16 items-center">
       <Image src={HeaderImage} alt="header image" className="w-full" />
 
-      <h1 className="uppercase text-6xl text-center w-full px-[112px]">
+      <h1 className="uppercase text-5xl text-center w-full px-[112px]">
         QEYRİ-FORMAL VƏ İNFORMAL TƏHSİLİN TANINMASI
       </h1>
 

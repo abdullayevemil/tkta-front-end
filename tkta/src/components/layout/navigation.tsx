@@ -42,11 +42,32 @@ export function Navigation() {
                 </ListItem>
               </li>
 
-              <li>
-                <ListItem href="/agency/inner-quality" title="Daxili keyfiyyət">
-                  Agentliyin daxili nəzarəti
-                </ListItem>
-              </li>
+              <NavigationMenuSub defaultValue="sub1" className="w-full">
+                <NavigationMenuList className="w-full">
+                  <NavigationMenuItem className="w-full">
+                    <NavigationMenuTrigger className="h-fit font-helvetica w-full flex flex-row justify-left p-0 text-left">
+                      <ListItem
+                        className="hover:bg-transparent"
+                        href="/agency/inner-quality"
+                        title="Daxili keyfiyyət təminatı sistemi"
+                      >
+                        Agentliyin daxili nəzarəti
+                      </ListItem>
+                    </NavigationMenuTrigger>
+
+                    <NavigationMenuContent className="left-64 top-0 z-50">
+                      <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
+                        <li>
+                          <ListItem
+                            href="/agency/inner-quality/plan"
+                            title="Strateji plan"
+                          ></ListItem>
+                        </li>
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenuSub>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
@@ -307,7 +328,7 @@ export function Navigation() {
             <ul className="grid w-[400px] gap-3 p-4 md:w-[300px] md:grid-cols-2 lg:w-[600px]">
               <li>
                 <ListItem href="/legislation/laws" title="Qanunlar">
-                Rəsmi qaydalar və hüquqi tələblər
+                  Rəsmi qaydalar və hüquqi tələblər
                 </ListItem>
               </li>
 
@@ -370,7 +391,8 @@ export function Navigation() {
                   href="/legislation/agency-regulations"
                   title="Agentliyin Nizamnaməsi"
                 >
-                  Agentliyin fəaliyyəti və səlahiyyətlərini müəyyən edən əsas sənəd
+                  Agentliyin fəaliyyəti və səlahiyyətlərini müəyyən edən əsas
+                  sənəd
                 </ListItem>
               </li>
             </ul>

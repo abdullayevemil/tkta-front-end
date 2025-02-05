@@ -51,7 +51,7 @@ export default function ContactForm() {
     <section className="w-full flex flex-col gap-16 items-center">
       <Image src={HeaderImage} alt="header image" className="w-full" />
 
-      <h1 className="uppercase text-6xl text-center">Əlaqə</h1>
+      <h1 className="uppercase text-5xl text-center">Əlaqə</h1>
 
       <Form {...form}>
         <form

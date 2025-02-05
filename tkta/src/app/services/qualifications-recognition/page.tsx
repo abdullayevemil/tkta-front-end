@@ -13,7 +13,7 @@ export default function HomePage() {
     <section className="w-full flex flex-col gap-16 items-center">
       <Image src={HeaderImage} alt="header image" className="w-full" />
 
-      <h1 className="uppercase text-6xl text-center">
+      <h1 className="uppercase text-5xl text-center">
         Xarİcİ kvalİfİkasİyaların tanınması
       </h1>
 

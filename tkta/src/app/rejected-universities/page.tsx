@@ -375,6 +375,11 @@ const columns: ColumnDef<University>[] = [
     enableHiding: false,
   },
   {
+    accessorKey: "id",
+    header: "№",
+    cell: ({ row }) => <div className="capitalize">{row.getValue("id")}</div>,
+  },
+  {
     accessorKey: "country",
     header: "Ölkə",
     cell: ({ row }) => (
@@ -450,7 +455,7 @@ export default function DataTableDemo() {
     <section className="w-full flex flex-col gap-16 items-center">
       <Image src={HeaderImage} alt="header image" className="w-full" />
 
-      <h1 className="uppercase text-6xl text-center w-full px-[112px]">
+      <h1 className="uppercase text-5xl text-center w-full px-[112px]">
         İmtina alan universitetlər
       </h1>
 
@@ -462,13 +467,13 @@ export default function DataTableDemo() {
           çox imtina verilmiş universitetlərin siyahısı
         </div>
 
-        <div>Müvafiqdir: 21.05.2024</div>
+        <div>Müvafiqdir: 21.05.2024**</div>
       </h2>
 
       <div className="w-full px-16">
         <div className="flex items-center py-4">
           <Input
-            placeholder="Adlara görə filtr..."
+            placeholder="Ada görə filtr..."
             value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
             onChange={(event) =>
               table.getColumn("name")?.setFilterValue(event.target.value)
@@ -572,6 +577,13 @@ export default function DataTableDemo() {
             </Button>
           </div>
         </div>
+      </div>
+
+      <div className="w-full px-16 text-center">
+        * Siyahı, ali təhsil müəssisəsi üzrə minimum 30 müraciət nəzərə
+        alınaraq, edilən müraciətlərdən 30% və ondan artıq imtinaları əhatə
+        etməkdədir.
+        <div>** Siyahı mütəmadi olaraq yenilənəcəkdir.</div>
       </div>
     </section>
   );

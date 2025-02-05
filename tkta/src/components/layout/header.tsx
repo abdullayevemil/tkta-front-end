@@ -17,14 +17,14 @@ export default function Header() {
         <div className="flex flex-row gap-4 items-center">
           <div className="flex flex-row gap-4">
             <Link
-              className="text-base max-w-[100]"
+              className="text-base max-w-[120px] text-center shadow rounded p-2 hover:border hover:text-textPrimary"
               href="/rejected-universities"
             >
               İmtina alan universitetlər
             </Link>
 
             <Link
-              className="text-base max-w-[100]"
+              className="text-base max-w-[120px] text-center shadow rounded p-2 hover:border  hover:text-textPrimary"
               href="/not-recognized-universities"
             >
               Tanınmayan universitetlər

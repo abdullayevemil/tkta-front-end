@@ -6,7 +6,7 @@ export default function NewsCard({ title, creationDate, imageUrl }: News) {
   return (
     <Card className="w-full flex flex-col bg-transparent">
       <div className="h-3/5 w-full">
-        {imageUrl ? <Image src={imageUrl} alt={`${title} image`} width={40} height={40} className="w-full"/> : <div className="flex items-center justify-center text-textPrimary text-6xl pt-20 pb-12">TKTA</div>}
+        {imageUrl ? <Image src={imageUrl} alt={`${title} image`} width={40} height={40} className="w-full"/> : <div className="flex items-center justify-center text-textPrimary text-5xl pt-20 pb-12">TKTA</div>}
       </div>
 
       <div className="p-6 flex flex-col gap-7">

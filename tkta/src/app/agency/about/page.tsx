@@ -7,15 +7,9 @@ import { Card } from "@/components/ui/card";
 export default function AboutUs() {
   return (
     <div className="w-full flex flex-col gap-16 items-center">
-      <Image src={HeaderImage} alt="header image" className="w-full" />
+      {/* <Image src={HeaderImage} alt="header image" className="w-full" /> */}
 
-      <h1 className="uppercase text-5xl text-center">HAQQIMIZDA</h1>
-
-      <h2 className="italic text-3xl text-center w-2/3 p-4 text-textPrimary">
-        <b>“</b>Təhsil, yalnız bilik əldə etmək deyil, həm də insanın düşünmə
-        qabiliyyətini inkişaf etdirmək, həyatda doğru qərarlar vermək və
-        cəmiyyətə faydalı olmaq üçün ən güclü vasitədir<b>”</b>
-      </h2>
+      <h1 className="uppercase text-5xl text-center pt-[]">HAQQIMIZDA</h1>
 
       <div className="px-[112px] w-full">
         <div className="w-2/3 h-fit">

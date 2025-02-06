@@ -8,7 +8,7 @@ export default function ExpertsRegistration() {
       <Image src={HeaderImage} alt="header image" className="w-full" />
 
       <h1 className="uppercase text-5xl text-center w-full px-[112px]">
-        Ekspertların Qeydiyyatı
+        Ekspertların Qeydİyyatı
       </h1>
 
       <div className="px-16 flex flex-col gap-4 text-justify">

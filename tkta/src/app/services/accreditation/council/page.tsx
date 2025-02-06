@@ -7,7 +7,7 @@ export default function Council() {
       <Image src={HeaderImage} alt="header image" className="w-full" />
 
       <h1 className="uppercase text-5xl text-center w-full px-[112px]">
-        Akkreditasiya şurası
+        Akkredİtasİya şurası
       </h1>
 
       <div className="flex flex-col gap-4  px-16">

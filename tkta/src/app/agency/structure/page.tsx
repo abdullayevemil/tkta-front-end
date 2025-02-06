@@ -79,7 +79,7 @@ const initialNodes = [
       link: "/agency/principles",
       targetPosition: Position.Top,
       sourcePosition: Position.Bottom,
-      label: "İnformasiya və İnsan resursları şöbəsi",
+      label: "İnformasiya və insan resursları şöbəsi",
     },
     type: "navigationNode",
   },

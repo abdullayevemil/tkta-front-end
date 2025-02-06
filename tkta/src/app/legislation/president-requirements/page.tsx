@@ -23,7 +23,7 @@ export default function Laws() {
       <Image src={HeaderImage} alt="header image" className="w-full" />
 
       <h1 className="uppercase text-5xl text-center w-full px-[112px]">
-        AR Prezidentinin fərmanaları
+        AR Prezİdentİnİn fərmanaları
       </h1>
 
       <ul className="grid grid-cols-4 gap-4 px-16 justify-center items-center">

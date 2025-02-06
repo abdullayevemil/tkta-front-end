@@ -456,7 +456,7 @@ export default function DataTableDemo() {
       <Image src={HeaderImage} alt="header image" className="w-full" />
 
       <h1 className="uppercase text-5xl text-center w-full px-[112px]">
-        İmtina alan universitetlər
+        İmtİna alan unİversİtetlər
       </h1>
 
       <h2 className="text-base text-center px-16">

@@ -3,8 +3,8 @@
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import Image from "next/image";
-import HeaderImage from "@/assets/images/about/header-image.png";
+// import Image from "next/image";
+// import HeaderImage from "@/assets/images/about/header-image.png";
 import {
   Form,
   FormControl,
@@ -49,9 +49,9 @@ export default function ContactForm() {
 
   return (
     <section className="w-full flex flex-col gap-16 items-center">
-      <Image src={HeaderImage} alt="header image" className="w-full" />
+      {/* <Image src={HeaderImage} alt="header image" className="w-full" /> */}
 
-      <h1 className="uppercase text-5xl text-center">Əlaqə</h1>
+      <h1 className="uppercase text-5xl text-center">Onlayn Müracİət</h1>
 
       <Form {...form}>
         <form

@@ -24,7 +24,7 @@ export default function News() {
       <Image src={HeaderImage} alt="header image" className="w-full" />
 
       <h1 className="uppercase text-5xl text-center w-full px-[112px]">
-        Müsahibələr
+        Müsahİbələr
       </h1>
 
       <ul className="grid grid-cols-3 gap-4 px-16">

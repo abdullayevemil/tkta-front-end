@@ -10,7 +10,7 @@ export default function AnnualReports() {
       <Image src={HeaderImage} alt="header image" className="w-full" />
 
       <h1 className="uppercase text-5xl text-center w-full px-[112px]">
-        ATMlərin İnstitusional akkreditasiya hesabatları
+        ATMlərin İnstİtusİonal akkredİtasİya hesabatları
       </h1>
 
       <div className="grid grid-cols-4 px-16 gap-6">

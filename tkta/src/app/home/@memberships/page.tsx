@@ -40,7 +40,7 @@ export default function Memberships() {
   return (
     <div className="flex flex-col gap-20 w-full justify-center">
       <h2 className="text-textPrimary font-bold text-4xl w-full justify-center text-center uppercase">
-        TKTA üzv olduğu təşkilatlar
+        TKTA üzv olduğu təşkİlatlar
       </h2>
 
       <div className="px-16 flex flex-col gap-6">

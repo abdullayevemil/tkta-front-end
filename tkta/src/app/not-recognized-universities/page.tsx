@@ -337,6 +337,7 @@ export default function DataTableDemo() {
   const [columnVisibility, setColumnVisibility] =
     React.useState<VisibilityState>({});
   const [rowSelection, setRowSelection] = React.useState({});
+  const [itemsPerPage, setItemsPerPage] = React.useState(10);
 
   const table = useReactTable({
     data,
@@ -355,6 +356,7 @@ export default function DataTableDemo() {
       columnVisibility,
       rowSelection,
     },
+    pageCount: data.length / itemsPerPage,
   });
 
   return (

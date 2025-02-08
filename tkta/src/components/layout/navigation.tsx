@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import ListItem from "./navigation-link";
 import { cn } from "@/lib/utils";
+import CallIcon from "@/assets/icons/footer/call.svg";
 
 export function Navigation() {
   return (
@@ -490,6 +491,28 @@ export function Navigation() {
               )}
             >
               Əlaqə
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <Link
+            href="tel:146" 
+            legacyBehavior
+            passHref
+            className="font-helvetica text-base"
+          >
+            <NavigationMenuLink
+              className={cn(
+                navigationMenuTriggerStyle(),
+                "font-helvetica text-base"
+              )}
+            >
+              <div className="flex flex-row justify-between items-center gap-2">
+                <CallIcon width={20} height={20} color="var(--primary-color)" />
+
+                <span>146-8</span>
+              </div>
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

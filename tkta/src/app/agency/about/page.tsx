@@ -1,5 +1,5 @@
 import Image from "next/image";
-import HeaderImage from "@/assets/images/principles/header-image.png";
+// import HeaderImage from "@/assets/images/principles/header-image.png";
 import CenterImage from "@/assets/images/about/center-image.png";
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
@@ -11,7 +11,7 @@ export default function AboutUs() {
 
       <h1 className="uppercase text-5xl text-center pt-[]">HAQQIMIZDA</h1>
 
-      <div className="px-[112px] w-full">
+      <div className="px-[112px] w-full" >
         <div className="w-2/3 h-fit">
           <Card className="w-full h-fit float-left mr-8 mb-4">
             <Image

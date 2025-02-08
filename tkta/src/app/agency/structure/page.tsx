@@ -22,7 +22,7 @@ const initialNodes = [
     id: "2",
     position: { x: 550, y: 150 },
     data: {
-      link: "/agency/principles",
+      link: "/agency/principles/director",
       targetPosition: Position.Top,
       sourcePosition: Position.Bottom,
       label: "İH-nin sədri",
@@ -33,7 +33,7 @@ const initialNodes = [
     id: "3",
     position: { x: 350, y: 150 },
     data: {
-      link: "/agency/principles",
+      link: "/agency/principles/deputy-director",
       targetPosition: Position.Top,
       sourcePosition: Position.Bottom,
       label: "İH-nin sədr müavini",

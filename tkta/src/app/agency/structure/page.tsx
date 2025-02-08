@@ -11,7 +11,7 @@ const initialNodes = [
     id: "1",
     position: { x: 550, y: 0 },
     data: {
-      label: "İdarə Heyəti",
+      label: "Rəhbərlik",
       link: "/agency/principles",
       targetPosition: Position.Top,
       sourcePosition: Position.Bottom,

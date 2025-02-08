@@ -10,7 +10,7 @@ export default function NavigationNode({
       <Handle type="target" position={data.targetPosition} />
 
       <div className="p-[10px] w-32 border border-textPrimary border-solid text-xs flex items-center justify-center rounded">
-        <Link className="text-center hover:font-bold text-textPrimary" href={data.link}>
+        <Link className="text-center hover:font-semibold text-textPrimary" href={data.link}>
           {data.label}
         </Link>
       </div>

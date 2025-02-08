@@ -16,6 +16,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const ContactSchema = z.object({
   fullName: z.string().min(1, {
@@ -48,96 +49,211 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="w-full flex flex-col gap-16 items-center">
+    <section className="w-full flex flex-col gap-16 items-center pt-16">
       {/* <Image src={HeaderImage} alt="header image" className="w-full" /> */}
 
-      <h1 className="uppercase text-5xl text-center">Onlayn Müracİət</h1>
+      <h1 className="uppercase text-5xl text-center">Əlaqə</h1>
 
-      <Form {...form}>
-        <form
-          onSubmit={form.handleSubmit(onSubmit)}
-          className="space-y-6 px-16 mx-auto w-full"
-        >
-          <div className="flex flex-row justify-between gap-6">
-            <FormField
-              control={form.control}
-              name="fullName"
-              render={({ field }) => (
-                <FormItem className="w-1/2">
-                  <FormLabel>Ad və Soyad</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder="Adınızı və soyadınızı daxil edin"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name="contactNumber"
-              render={({ field }) => (
-                <FormItem className="w-1/2">
-                  <FormLabel>Əlaqə nömrəsi</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder="Əlaqə nömrənizi daxil edin"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>E-poçt ünvanı</FormLabel>
-                <FormControl>
-                  <Input
-                    type="email"
-                    placeholder="E-poçtunuzu daxil edin"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-          <FormField
-            control={form.control}
-            name="content"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Mesaj</FormLabel>
-                <FormControl>
-                  <Textarea
-                    placeholder="Mesajınızı daxil edin"
-                    {...field}
-                    className="focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-textPrimary"
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-          <Button
-            type="submit"
-            className="w-full bg-textPrimary hover:bg-textPrimary font-semibold"
+      <Tabs
+        defaultValue="contact"
+        className="w-full px-[112px] flex flex-col gap-16"
+      >
+        <TabsList>
+          <TabsTrigger
+            className="w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
+            value="contact"
           >
-            Göndər
-          </Button>
-        </form>
-      </Form>
+            Onlayn müraciət
+          </TabsTrigger>
+
+          <TabsTrigger
+            className="w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
+            value="meet_citizens"
+          >
+            Vətəndaş qəbulu
+          </TabsTrigger>
+        </TabsList>
+
+        <TabsContent value="contact">
+          <div className="flex flex-col gap-4">
+            <Form {...form}>
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-6 px-16 mx-auto w-full"
+              >
+                <div className="flex flex-row justify-between gap-6">
+                  <FormField
+                    control={form.control}
+                    name="fullName"
+                    render={({ field }) => (
+                      <FormItem className="w-1/2">
+                        <FormLabel>Ad və Soyad</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Adınızı və soyadınızı daxil edin"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="contactNumber"
+                    render={({ field }) => (
+                      <FormItem className="w-1/2">
+                        <FormLabel>Əlaqə nömrəsi</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Əlaqə nömrənizi daxil edin"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>E-poçt ünvanı</FormLabel>
+                      <FormControl>
+                        <Input
+                          type="email"
+                          placeholder="E-poçtunuzu daxil edin"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="content"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Mesaj</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          placeholder="Mesajınızı daxil edin"
+                          {...field}
+                          className="focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-textPrimary"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <Button
+                  type="submit"
+                  className="w-full bg-textPrimary hover:bg-textPrimary font-semibold"
+                >
+                  Göndər
+                </Button>
+              </form>
+            </Form>
+          </div>
+        </TabsContent>
+
+        <TabsContent value="meet_citizens">
+          <div className="flex flex-col gap-4">
+            <Form {...form}>
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-6 px-16 mx-auto w-full"
+              >
+                <div className="flex flex-row justify-between gap-6">
+                  <FormField
+                    control={form.control}
+                    name="fullName"
+                    render={({ field }) => (
+                      <FormItem className="w-1/2">
+                        <FormLabel>Ad və Soyad</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Adınızı və soyadınızı daxil edin"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="contactNumber"
+                    render={({ field }) => (
+                      <FormItem className="w-1/2">
+                        <FormLabel>Əlaqə nömrəsi</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Əlaqə nömrənizi daxil edin"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>E-poçt ünvanı</FormLabel>
+                      <FormControl>
+                        <Input
+                          type="email"
+                          placeholder="E-poçtunuzu daxil edin"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="content"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Mesaj</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          placeholder="Mesajınızı daxil edin"
+                          {...field}
+                          className="focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-textPrimary"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <Button
+                  type="submit"
+                  className="w-full bg-textPrimary hover:bg-textPrimary font-semibold"
+                >
+                  Göndər
+                </Button>
+              </form>
+            </Form>
+          </div>
+        </TabsContent>
+      </Tabs>
     </section>
   );
 }

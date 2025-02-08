@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { Check, ChevronsUpDown } from "lucide-react";
+
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import {
@@ -15,26 +16,33 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import AzIcon from "@/assets/icons/flags/AZ.svg";
-import EnIcon from "@/assets/icons/flags/GB.svg";
 
-const icons = [AzIcon, EnIcon];
-
-const languages = [
+const types = [
   {
-    value: "0",
-    label: "az-AZ",
+    value: "default",
+    label: "əyri xətlər",
   },
   {
-    value: "1",
-    label: "en-EN",
+    value: "straight",
+    label: "düz xətlər",
+  },
+  {
+    value: "step",
+    label: "addım xətlər",
+  },
+  {
+    value: "smoothstep",
+    label: "hamar addım xətlər",
   },
 ];
 
-export function LanguageSelector() {
-  const [open, setOpen] = React.useState(false);
+interface EdgeSelectorProps {
+  value: string;
+  setValue: React.Dispatch<React.SetStateAction<string>>;
+}
 
-  const [value, setValue] = React.useState(0);
+export function EdgeSelector({ value, setValue }: EdgeSelectorProps) {
+  const [open, setOpen] = React.useState(false);
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -43,12 +51,9 @@ export function LanguageSelector() {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-18 justify-between"
+          className="w-[170] justify-between"
         >
-          {React.createElement(icons[value], {
-            width: "1%",
-            height: "36px",
-          })}
+          {types.find((t) => t.value === value)?.label}
           <ChevronsUpDown className="opacity-50" />
         </Button>
       </PopoverTrigger>
@@ -56,29 +61,21 @@ export function LanguageSelector() {
         <Command>
           <CommandList>
             <CommandGroup>
-              {languages.map((languages, index) => (
+              {types.map((types, index) => (
                 <CommandItem
-                  key={languages.value}
-                  value={languages.value}
+                  key={index}
+                  value={types.value}
                   onSelect={(currentValue) => {
-                    setValue(
-                      Number.parseInt(currentValue) === value
-                        ? 0
-                        : Number.parseInt(currentValue)
-                    );
+                    setValue(currentValue);
+
                     setOpen(false);
                   }}
                 >
-                  {React.createElement(icons[index], {
-                    width: "36px",
-                    height: "36px",
-                  })}
+                  {types.label}
                   <Check
                     className={cn(
                       "ml-auto",
-                      value === Number.parseInt(languages.value)
-                        ? "opacity-100"
-                        : "opacity-0"
+                      value === types.value ? "opacity-100" : "opacity-0"
                     )}
                   />
                 </CommandItem>

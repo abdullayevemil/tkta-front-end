@@ -33,6 +33,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { TablePagination } from "@/components/table/pagination";
+import ItemsPerPageSelector from "@/components/table/items-per-page";
 
 interface University {
   id: number;
@@ -283,9 +285,7 @@ const columns: ColumnDef<University>[] = [
   {
     accessorKey: "id",
     header: "№",
-    cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("id")}</div>
-    ),
+    cell: ({ row }) => <div className="capitalize">{row.getValue("id")}</div>,
   },
   {
     accessorKey: "country",
@@ -337,7 +337,11 @@ export default function DataTableDemo() {
   const [columnVisibility, setColumnVisibility] =
     React.useState<VisibilityState>({});
   const [rowSelection, setRowSelection] = React.useState({});
-  const [itemsPerPage, setItemsPerPage] = React.useState(10);
+
+  const [pagination, setPagination] = React.useState({
+    pageIndex: 0,
+    pageSize: 10,
+  });
 
   const table = useReactTable({
     data,
@@ -355,8 +359,11 @@ export default function DataTableDemo() {
       columnFilters,
       columnVisibility,
       rowSelection,
+      pagination,
     },
-    pageCount: data.length / itemsPerPage,
+    manualPagination: false,
+    onPaginationChange: setPagination,
+    pageCount: data.length / pagination.pageSize,
   });
 
   return (
@@ -465,24 +472,18 @@ export default function DataTableDemo() {
           </Table>
         </div>
         <div className="flex items-center justify-end space-x-2 py-4">
-          <div className="space-x-2">
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => table.previousPage()}
-              disabled={!table.getCanPreviousPage()}
-            >
-              Əvvəlki
-            </Button>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => table.nextPage()}
-              disabled={!table.getCanNextPage()}
-            >
-              Növbəti
-            </Button>
-          </div>
+          <ItemsPerPageSelector
+            pageSize={pagination.pageSize}
+            pageIndex={pagination.pageIndex}
+            onChange={setPagination}
+          />
+
+          <TablePagination
+            currentPage={pagination.pageIndex}
+            setCurrentPage={setPagination}
+            itemsPerPage={pagination.pageSize}
+            pagesCount={Math.ceil(data.length / pagination.pageSize)}
+          />
         </div>
       </div>
 

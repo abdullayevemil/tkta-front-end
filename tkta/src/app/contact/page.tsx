@@ -3,8 +3,6 @@
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-// import Image from "next/image";
-// import HeaderImage from "@/assets/images/about/header-image.png";
 import {
   Form,
   FormControl,
@@ -17,6 +15,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useRef, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactSchema = z.object({
   fullName: z.string().min(1, {
@@ -45,13 +45,45 @@ export default function ContactForm() {
   });
 
   const onSubmit = async (data: z.infer<typeof ContactSchema>) => {
-    console.log(data);
+    if (data) {
+      return;
+    }
   };
+
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+
+  const [isVerified, setIsVerified] = useState(false);
+
+  async function handleCaptchaSubmission(token: string | null) {
+    try {
+      if (token) {
+        await fetch("/api/recaptcha", {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ token }),
+        });
+        setIsVerified(true);
+      }
+    } catch (e) {
+      if (e) {
+        setIsVerified(false);
+      }
+    }
+  }
+
+  const handleChange = (token: string | null) => {
+    handleCaptchaSubmission(token);
+  };
+
+  function handleExpired() {
+    setIsVerified(false);
+  }
 
   return (
     <section className="w-full flex flex-col gap-16 items-center pt-16">
-      {/* <Image src={HeaderImage} alt="header image" className="w-full" /> */}
-
       <h1 className="uppercase text-5xl text-center">Əlaqə</h1>
 
       <Tabs
@@ -153,9 +185,17 @@ export default function ContactForm() {
                   )}
                 />
 
+                <ReCAPTCHA
+                  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
+                  ref={recaptchaRef}
+                  onChange={handleChange}
+                  onExpired={handleExpired}
+                />
+
                 <Button
                   type="submit"
                   className="w-full bg-textPrimary hover:bg-textPrimary font-semibold"
+                  disabled={!isVerified}
                 >
                   Göndər
                 </Button>
@@ -243,9 +283,17 @@ export default function ContactForm() {
                   )}
                 />
 
+                <ReCAPTCHA
+                  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
+                  ref={recaptchaRef}
+                  onChange={handleChange}
+                  onExpired={handleExpired}
+                />
+
                 <Button
                   type="submit"
                   className="w-full bg-textPrimary hover:bg-textPrimary font-semibold"
+                  disabled={!isVerified}
                 >
                   Göndər
                 </Button>

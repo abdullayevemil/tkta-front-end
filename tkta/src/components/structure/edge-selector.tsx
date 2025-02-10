@@ -51,7 +51,7 @@ export function EdgeSelector({ value, setValue }: EdgeSelectorProps) {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-[170] justify-between"
+          className="w-[10.5rem] justify-between"
         >
           {types.find((t) => t.value === value)?.label}
           <ChevronsUpDown className="opacity-50" />

@@ -262,7 +262,7 @@ export function Navigation() {
 
               <li>
                 <ListItem
-                  href="/reports/monitoring"
+                  href="/reports/accreditation/monitoring"
                   title="Monitorinq hesabatları"
                 >
                   İllik nəzarət hesabatları

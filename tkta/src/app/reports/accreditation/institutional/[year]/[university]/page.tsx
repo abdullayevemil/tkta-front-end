@@ -3,30 +3,45 @@ import FooterIcon from "@/assets/icons/reports/Folder.svg";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
 
+const types = [
+  {
+    title: "Özünütəhlil hesabatı",
+    link: "self-analysis",
+  },
+  {
+    title: "Yekun hesabat",
+    link: "final",
+  },
+  {
+    title: "Şəhadətnamə",
+    link: "diploma",
+  },
+];
+
 export async function generateStaticParams() {
   return reports.map((report) => ({
-    year: report.year.toString(),
+    university: report.university.toLowerCase(),
   }));
 }
 
 export default async function Accreditations({
   params,
 }: {
-  params: Promise<{ year: string }>;
+  params: Promise<{ year: string; university: string }>;
 }) {
-  const { year } = await params;
+  const { year, university } = await params;
 
   return (
       <div className="grid grid-cols-4 px-16 gap-6">
-        {reports.filter(report => report.year === Number(year)).map((report, index) => (
+        {types.map((type, index) => (
           <Link
             key={index}
-            href={`/reports/accreditation/international/${year}/${report.university.toLowerCase()}`}
+            href={`/reports/accreditation/institutional/${year}/${university}/${type.link}`}
           >
             <Card className="p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
               <FooterIcon width="30%" color="var(--primary-color)" />
 
-              <span className="text-center text-textPrimary">{report.university}</span>
+              <span className="text-center text-textPrimary">{type.title}</span>
             </Card>
           </Link>
         ))}

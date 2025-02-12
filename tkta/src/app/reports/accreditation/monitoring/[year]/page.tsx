@@ -21,7 +21,7 @@ export default async function Accreditations({
         {reports.filter(report => report.year === Number(year)).map((report, index) => (
           <Link
             key={index}
-            href={`/reports/accreditation/international/${year}/${report.university.toLowerCase()}`}
+            href={`/reports/accreditation/monitoring/${year}/${report.university.toLowerCase()}`}
           >
             <Card className="p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
               <FooterIcon width="30%" color="var(--primary-color)" />

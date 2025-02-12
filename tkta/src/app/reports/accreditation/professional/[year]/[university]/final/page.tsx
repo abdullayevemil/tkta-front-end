@@ -2,36 +2,23 @@ import { reports } from "@/data/acccreditation_reports";
 import FooterIcon from "@/assets/icons/reports/Folder.svg";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
-import Image from "next/image";
-import HeaderImage from "@/assets/images/reports/header-image.png";
-
-export async function generateStaticParams() {
-  return reports.map((report) => ({
-    year: report.year.toString(),
-  }));
-}
 
 export default async function Accreditations({
   params,
 }: {
-  params: Promise<{ year: string }>;
+  params: Promise<{ year: string; university: string }>;
 }) {
-  const { year } = await params;
+  const { year, university } = await params;
 
-  const filteredReports = reports.filter(
-    (report) => report.year === parseInt(year)
-  );
+  const report = reports
+    .filter((report) => report.year === parseInt(year))
+    .find(
+      (report) => report.university.toLowerCase() === university.toLowerCase()
+    );
 
   return (
-    <section className="w-full flex flex-col gap-16 items-center">
-      <Image src={HeaderImage} alt="header image" className="w-full" />
-
-      <h1 className="uppercase text-5xl text-center w-full px-[112px]">
-        ATMlərİn Proqram akkredİtasİya hesabatları
-      </h1>
-
       <div className="grid grid-cols-4 px-16 gap-6">
-        {filteredReports.map((report) => (
+        {report ? (
           <Link
             key={report.id}
             target="_blank"
@@ -46,8 +33,7 @@ export default async function Accreditations({
               </span>
             </Card>
           </Link>
-        ))}
+        ) : null}
       </div>
-    </section>
   );
 }

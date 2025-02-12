@@ -7,7 +7,9 @@ export default function Principles() {
     <div className="w-full flex flex-col justify-center gap-20">
       <Image src={HeaderImage} alt="header image" className="w-full" />
 
-      <h1 className="uppercase text-5xl text-center text-textPrimary">RƏHBƏRLİK</h1>
+      <h1 className="uppercase text-5xl text-center text-textPrimary">
+        RƏHBƏRLİK
+      </h1>
 
       <div className="px-[112px] w-full flex flex-row gap-6 items-center">
         <Card className="h-full bg-textPrimary w-1/3 p-4 flex flex-col items-center gap-6 hover:cursor-pointer">
@@ -77,7 +79,9 @@ export default function Principles() {
         </p>
       </div>
 
-      <hr></hr>
+      <div className="px-[112px]">
+        <hr></hr>
+      </div>
 
       <div className="px-[112px] w-full flex flex-row gap-6 items-center">
         <Card className="h-full bg-textPrimary w-1/3 p-4 flex flex-col items-center gap-6 hover:cursor-pointer">

@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function AnnualReports() {
   return (
       <div className="grid grid-cols-4 px-16 gap-6">
-        <Link href="/reports/accreditation/program/2023">
+        <Link href="/reports/accreditation/monitoring/2023">
           <Card className="p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
             <FooterIcon width="30%" color="var(--primary-color)" />
 
@@ -13,7 +13,7 @@ export default function AnnualReports() {
           </Card>
         </Link>
 
-        <Link href="/reports/accreditation/program/2024">
+        <Link href="/reports/accreditation/monitoring/2024">
           <Card className="p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
             <FooterIcon width="30%" color="var(--primary-color)" />
 

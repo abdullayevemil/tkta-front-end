@@ -134,7 +134,7 @@ export const reports = [
   {
     id: 23,
     year: 2024,
-    university: "GDU Intitutional",
+    university: "GDU Institutional",
     link: "https://tkta.edu.az/files/Akkreditasiya%20hesabatlari%202024/GDU%20-%20İnstitusional%20Akkrd._Yekun%20Hesabat%20-%20%2028.11.2024.pdf",
   },
   {

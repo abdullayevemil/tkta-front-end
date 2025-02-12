@@ -286,7 +286,7 @@ export function Navigation() {
                       <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                         <li>
                           <ListItem
-                            href="/reports/accreditation"
+                            href="/reports/accreditation/institutional"
                             title="ATMlərin İnstitusional akkreditasiya hesabatları"
                           ></ListItem>
                         </li>
@@ -300,7 +300,7 @@ export function Navigation() {
 
                         <li>
                           <ListItem
-                            href="/reports/accreditation/vocational"
+                            href="/reports/accreditation/professional"
                             title="Peşə Təhsili üzrə hesabatlar"
                           ></ListItem>
                         </li>

@@ -3,156 +3,208 @@ export const reports = [
     id: 1,
     year: 2023,
     university: "ADA",
-    link: "https://tkta.edu.az/files/Akkreditasiya%20hesabatları/ADA%20Yekun%20Hesabat.pdf",
+    link: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1739534516/accreditation/institutional/unxunbsmqpheajd0nnbc.pdf",
+    imageLink:
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/f_auto,q_auto/v1/accreditation/institutional/unxunbsmqpheajd0nnbc",
   },
   {
     id: 2,
     year: 2023,
     university: "ADPU",
-    link: "https://tkta.edu.az/files/Akkreditasiya%20hesabatları/ADPU%20Yekun%20Hesabat%20-%20PDF.PDF",
+    link: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1739539048/accreditation/institutional/rukow5vc7ioks1uqgwg3.pdf",
+    imageLink:
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/f_auto,q_auto/v1/accreditation/institutional/rukow5vc7ioks1uqgwg3",
   },
   {
     id: 3,
     year: 2023,
     university: "ATU",
-    link: "https://tkta.edu.az/files/Akkreditasiya%20hesabatları/ATU%20Yekun%20Hesabat.pdf",
+    link: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1739539060/accreditation/institutional/ttouvrokssusu4tutabu.pdf",
+    imageLink:
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/f_auto,q_auto/v1/accreditation/institutional/ttouvrokssusu4tutabu",
   },
   {
     id: 4,
     year: 2023,
     university: "AzTU",
-    link: "https://tkta.edu.az/files/Akkreditasiya%20hesabatları/AzTU_Yekun%20Hesabat_TKTA_sayt.pdf",
+    link: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1739539070/accreditation/institutional/agyouu8dbe9emz2eehlv.pdf",
+    imageLink:
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/f_auto,q_auto/v1/accreditation/institutional/agyouu8dbe9emz2eehlv",
   },
   {
     id: 5,
     year: 2023,
     university: "BDU",
-    link: "https://tkta.edu.az/files/Akkreditasiya%20hesabatları/BDU.PDF",
+    link: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1739539078/accreditation/institutional/ytihkp1gzcfw6wgvdckw.pdf",
+    imageLink:
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/f_auto,q_auto/v1/accreditation/institutional/ytihkp1gzcfw6wgvdckw",
   },
   {
     id: 6,
     year: 2023,
     university: "BMU",
-    link: "https://tkta.edu.az/files/Akkreditasiya%20hesabatları/BMU%20Yekun%20Hesabat_.pdf",
+    link: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1739539086/accreditation/institutional/on3myx3ojjfrcq69ly42.pdf",
+    imageLink:
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/f_auto,q_auto/v1/accreditation/institutional/on3myx3ojjfrcq69ly42",
   },
   {
     id: 7,
     year: 2023,
     university: "SDU",
-    link: "https://tkta.edu.az/files/Akkreditasiya%20hesabatları/SDU.PDF",
+    link: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1739539092/accreditation/institutional/mhdp3iymjoajm6lbailu.pdf",
+    imageLink:
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/f_auto,q_auto/v1/accreditation/institutional/mhdp3iymjoajm6lbailu",
   },
   {
     id: 8,
     year: 2023,
     university: "UNEC",
-    link: "https://tkta.edu.az/files/Akkreditasiya%20hesabatları/UNEC%20-%20YH%20-%2004.07.2023.pdf",
+    link: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1739539100/accreditation/institutional/ugbnfydbmxxxmermf5w0.pdf",
+    imageLink:
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/f_auto,q_auto/v1/accreditation/institutional/ugbnfydbmxxxmermf5w0",
   },
   {
     id: 9,
     year: 2023,
     university: "AzMIU",
-    link: "https://tkta.edu.az/files/Akkreditasiya%20hesabatları/AzMİU%20YH.pdf",
+    link: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1739539113/accreditation/institutional/frfxessyqnqamwfcofsl.pdf",
+    imageLink:
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/f_auto,q_auto/v1/accreditation/institutional/frfxessyqnqamwfcofsl",
   },
   {
     id: 10,
     year: 2023,
     university: "LDU",
-    link: "https://tkta.edu.az/files/Akkreditasiya%20hesabatları/LDU%20YH.pdf",
+    link: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1739539121/accreditation/institutional/aobhnf0wvw9vqhlqpz2i.pdf",
+    imageLink:
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/f_auto,q_auto/v1/accreditation/institutional/aobhnf0wvw9vqhlqpz2i",
   },
   {
     id: 11,
     year: 2023,
     university: "UNEC Zaqatala",
-    link: "https://tkta.edu.az/files/Akkreditasiya%20hesabatları/UNEC%20Zaqatala%20YH.pdf",
+    link: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1739539126/accreditation/institutional/pfsd2ooqk4uj1g4zp6db.pdf",
+    imageLink:
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/f_auto,q_auto/v1/accreditation/institutional/pfsd2ooqk4uj1g4zp6db",
   },
   {
     id: 12,
     year: 2023,
     university: "BDU Qazax",
-    link: "https://tkta.edu.az/files/Akkreditasiya%20hesabatları/BDU%20Qazax%20YH.pdf",
+    link: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1739539135/accreditation/institutional/zpv2fcdanyvrc1en42on.pdf",
+    imageLink:
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/f_auto,q_auto/v1/accreditation/institutional/zpv2fcdanyvrc1en42on",
   },
   {
     id: 13,
     year: 2023,
     university: "Xəzər",
-    link: "https://tkta.edu.az/files/Akkreditasiya%20hesabatları/X%C9%99z%C9%99r%20YH.pdf",
+    link: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1739539144/accreditation/institutional/j1gixroguwbavtnsv2kg.pdf",
+    imageLink:
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/f_auto,q_auto/v1/accreditation/institutional/j1gixroguwbavtnsv2kg",
   },
   {
     id: 14,
     year: 2024,
     university: "ADA-GW",
-    link: "https://tkta.edu.az/files/Akkreditasiya%20hesabatlari%202024/ADA-GW%20-%20Yekun%20Hesabat%20-%2028.11.2024.pdf",
+    link: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1739539149/accreditation/institutional/zr34zjoqkg952bk6crem.pdf",
+    imageLink:
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/f_auto,q_auto/v1/accreditation/institutional/zr34zjoqkg952bk6crem",
   },
   {
     id: 15,
     year: 2024,
     university: "ADAU-EGE",
-    link: "https://tkta.edu.az/files/Akkreditasiya%20hesabatlari%202024/ADAU-EGE-%20Yekun%20Hesabat%20-%2028.11.2024.pdf",
+    link: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1739539153/accreditation/institutional/efygxd0sgxszmqdwih7e.pdf",
+    imageLink:
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/f_auto,q_auto/v1/accreditation/institutional/efygxd0sgxszmqdwih7e",
   },
   {
     id: 16,
     year: 2024,
     university: "ADNSU",
-    link: "https://tkta.edu.az/files/Akkreditasiya%20hesabatlari%202024/ADNSU%20-%20Yekun%20Hesabat%20-%2028.11.2024.pdf",
+    link: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1739539164/accreditation/institutional/qam1iyz0bdcilymtbbqz.pdf",
+    imageLink:
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/f_auto,q_auto/v1/accreditation/institutional/qam1iyz0bdcilymtbbqz",
   },
   {
     id: 17,
     year: 2024,
     university: "ADA-GW",
-    link: "https://tkta.edu.az/files/Akkreditasiya%20hesabatlari%202024/ADA-GW%20-%20Yekun%20Hesabat%20-%2028.11.2024.pdf",
+    link: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1739539169/accreditation/institutional/mlei22oon42xwlvea1hh.pdf",
+    imageLink:
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/f_auto,q_auto/v1/accreditation/institutional/mlei22oon42xwlvea1hh",
   },
   {
     id: 18,
     year: 2024,
     university: "ADPU Şamaxı",
-    link: "https://tkta.edu.az/files/Akkreditasiya%20hesabatlari%202024/ADPU%20Samaxi%20filiali-%20ibtidai%20sinif%20m.%20-%20Yekun%20Hesabat%2028.11.2024.pdf",
+    link: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1739539174/accreditation/institutional/cfwluan8npssishsqpe9.pdf",
+    imageLink:
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/f_auto,q_auto/v1/accreditation/institutional/cfwluan8npssishsqpe9",
   },
   {
     id: 19,
     year: 2024,
     university: "ADPU-GW",
-    link: "https://tkta.edu.az/files/Akkreditasiya%20hesabatlari%202024/ADPU-GW%20-%20ikili%20diplom%20YH-%2028.11.2024.pdf",
+    link: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1739539230/accreditation/institutional/b4xjz1wknmrflbsbus1h.pdf",
+    imageLink:
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/f_auto,q_auto/v1/accreditation/institutional/b4xjz1wknmrflbsbus1h",
   },
   {
     id: 20,
     year: 2024,
     university: "BBU",
-    link: "https://tkta.edu.az/files/Akkreditasiya%20hesabatlari%202024/BBU%20-%20Yekun%20Hesabat%20-%2028.11.2024.pdf",
+    link: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1739539243/accreditation/institutional/bapcn52yxznmzjjtepte.pdf",
+    imageLink:
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/f_auto,q_auto/v1/accreditation/institutional/bapcn52yxznmzjjtepte",
   },
   {
     id: 21,
     year: 2024,
     university: "BMU-INHA",
-    link: "https://tkta.edu.az/files/Akkreditasiya%20hesabatlari%202024/BMU-İNHA%20-%20Yekun%20Hesabat%20-%2028.11.2024.pdf",
+    link: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1739539250/accreditation/institutional/bhdfiibkghlkmytgigv8.pdf",
+    imageLink:
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/f_auto,q_auto/v1/accreditation/institutional/bhdfiibkghlkmytgigv8",
   },
   {
     id: 22,
     year: 2024,
     university: "GDU İbtidai sinif",
-    link: "https://tkta.edu.az/files/Akkreditasiya%20hesabatlari%202024/GDU%20-%20İbtidai%20Sinif%20-%20Yekun%20hesabat%20-%2028.11.2024.pdf",
+    link: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1739539257/accreditation/institutional/tzerii6nmntyrvzbqmcs.pdf",
+    imageLink:
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/f_auto,q_auto/v1/accreditation/institutional/tzerii6nmntyrvzbqmcs",
   },
   {
     id: 23,
     year: 2024,
     university: "GDU Institutional",
-    link: "https://tkta.edu.az/files/Akkreditasiya%20hesabatlari%202024/GDU%20-%20İnstitusional%20Akkrd._Yekun%20Hesabat%20-%20%2028.11.2024.pdf",
+    link: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1739539268/accreditation/institutional/ajmvavmoktro1ank7dqk.pdf",
+    imageLink:
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/f_auto,q_auto/v1/accreditation/institutional/ajmvavmoktro1ank7dqk",
   },
   {
     id: 24,
     year: 2024,
     university: "NMI",
-    link: "https://tkta.edu.az/files/Akkreditasiya%20hesabatlari%202024/Naxcivan%20Muellimler-%20ibtidai%20sinif%20-%20Yekun%20Hesabat%20-%2028.11.2024.pdf",
+    link: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1739539273/accreditation/institutional/ywrt2oolfq525cdhdvue.pdf",
+    imageLink:
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/f_auto,q_auto/v1/accreditation/institutional/ywrt2oolfq525cdhdvue",
   },
   {
     id: 25,
     year: 2024,
     university: "QKU",
-    link: "https://tkta.edu.az/files/Akkreditasiya%20hesabatlari%202024/QKU%20-%20Yekun%20Hesabatı%20-%2028.11.2024.pdf",
+    link: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1739539282/accreditation/institutional/vv8fdgarves2sw2y3nfd.pdf",
+    imageLink:
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/f_auto,q_auto/v1/accreditation/institutional/vv8fdgarves2sw2y3nfd",
   },
   {
     id: 26,
     year: 2024,
     university: "ATMU",
-    link: "https://tkta.edu.az/files/Akkreditasiya%20hesabatlari%202024/ATMU_Yekun%20Hesabatı%206.12.2024.pdf",
+    link: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1739539289/accreditation/institutional/meveybrzh7buplqgxs3t.pdf",
+    imageLink:
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/f_auto,q_auto/v1/accreditation/institutional/meveybrzh7buplqgxs3t",
   },
 ];

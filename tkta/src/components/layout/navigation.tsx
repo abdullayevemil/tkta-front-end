@@ -39,7 +39,7 @@ export function Navigation() {
 
               <li>
                 <ListItem href="/agency/structure" title="Struktur">
-                  Agentliyin daxili quruluşu
+                  Departament və şöbələr
                 </ListItem>
               </li>
 
@@ -75,7 +75,7 @@ export function Navigation() {
 
         <NavigationMenuItem>
           <NavigationMenuTrigger className="font-helvetica text-base">
-            <Link href="/services">Fəaliyyət Sahələri</Link>
+            <Link href="/services">Fəaliyyət sahələri</Link>
           </NavigationMenuTrigger>
 
           <NavigationMenuContent className="left-0">
@@ -185,6 +185,49 @@ export function Navigation() {
                   </NavigationMenuItem>
                 </NavigationMenuList>
               </NavigationMenuSub>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <NavigationMenuTrigger className="font-helvetica text-base">
+            <Link href="/diploma-recognition">Diplom təsdiqi</Link>
+          </NavigationMenuTrigger>
+
+          <NavigationMenuContent className="left-0">
+            <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
+              <li>
+                <ListItem
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://apply.enic.edu.az/instructions/"
+                  title="Təlimat"
+                >
+                  Tanıma prosesi ilə bağlı izah
+                </ListItem>
+              </li>
+
+              <li>
+                <ListItem
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://apply.enic.edu.az/"
+                  title="Müraciət et"
+                >
+                  Tanıma üçün ərizə göndərilməsi
+                </ListItem>
+              </li>
+
+              <li>
+                <ListItem
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://apply.enic.edu.az/e-reference/"
+                  title="Dipomunu yoxla"
+                >
+                  Diplomun tanınma vəziyyətinin araşdırılması
+                </ListItem>
+              </li>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
@@ -326,7 +369,7 @@ export function Navigation() {
           </NavigationMenuTrigger>
 
           <NavigationMenuContent className="left-0">
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[300px] md:grid-cols-2 lg:w-[600px]">
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[300px] md:grid-cols-2 lg:w-[500px]">
               <li>
                 <ListItem href="/legislation/laws" title="Qanunlar">
                   Rəsmi qaydalar və hüquqi tələblər
@@ -435,49 +478,6 @@ export function Navigation() {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="font-helvetica text-base">
-            <Link href="/diploma-recognition">Diplom təsdiqi</Link>
-          </NavigationMenuTrigger>
-
-          <NavigationMenuContent className="left-0">
-            <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
-              <li>
-                <ListItem
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://apply.enic.edu.az/instructions/"
-                  title="Təlimat"
-                >
-                  Tanıma prosesi ilə bağlı izah
-                </ListItem>
-              </li>
-
-              <li>
-                <ListItem
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://apply.enic.edu.az/"
-                  title="Müraciət et"
-                >
-                  Tanıma üçün ərizə göndərilməsi
-                </ListItem>
-              </li>
-
-              <li>
-                <ListItem
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://apply.enic.edu.az/e-reference/"
-                  title="Dipomunu yoxla"
-                >
-                  Diplomun tanınma vəziyyətinin araşdırılması
-                </ListItem>
-              </li>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
           <Link
             href="/contact"
             legacyBehavior
@@ -497,7 +497,7 @@ export function Navigation() {
 
         <NavigationMenuItem>
           <Link
-            href="tel:146" 
+            href="tel:146"
             legacyBehavior
             passHref
             className="font-helvetica text-base"

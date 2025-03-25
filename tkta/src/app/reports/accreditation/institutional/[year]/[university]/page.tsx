@@ -19,7 +19,7 @@ const types = [
   },
 ];
 
-export async function generateStaticParams() {
+export async function generateParams() {
   return reports.map((report) => ({
     university: report.university.toLowerCase(),
   }));

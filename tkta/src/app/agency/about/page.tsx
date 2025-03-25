@@ -1,8 +1,4 @@
-import Image from "next/image";
-// import HeaderImage from "@/assets/images/principles/header-image.png";
-import CenterImage from "@/assets/images/about/center-image.png";
 import Link from "next/link";
-import { Card } from "@/components/ui/card";
 
 export default function AboutUs() {
   return (

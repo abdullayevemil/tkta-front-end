@@ -12,7 +12,7 @@ export default function Director() {
       <div className="px-[112px] w-full flex flex-row gap-6 items-center">
         <Card className="h-full bg-textPrimary w-1/3 p-4 flex flex-col items-center gap-6 hover:cursor-pointer">
           <Image
-            src="https://tkta.edu.az/files/r%C9%99hb%C9%99rlik.jpg"
+            src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1742935878/principles/xhwrn4ztqiqeivxhgfrq.jpg"
             alt="Director photo"
             width={500}
             height={500}
@@ -32,7 +32,7 @@ export default function Director() {
 
         <p className="w-2/3 text-justify whitespace-pre flex flex-col gap-2 tracking-wide leading-6">
           <span className="text-wrap">
-            Tural Əhmədov 1983-cü ildə anadan olub.
+            Tural Əhmədov
           </span>
           <span className="text-wrap">
             2000-2004-cü illərdə Azərbaycan Dillər Universitetində
@@ -53,7 +53,7 @@ export default function Director() {
             magistr dərəcəsi alıb.
           </span>
           <span className="text-wrap">
-            2008-ci ildə Brandeis Universitetində və Tel-Aviv Universitetində,
+            2008-ci ildə Brandeis Universitetində və Təl-Əviv Universitetində,
             2009-cu ildə Oslo Universitetində və Nansen Akademiyasında, 2011-ci
             ildə Şimali Karolina Dövlət Universitetində, 2015-ci ildə Avropa
             Kollecində (College of Europe) qısa müddətli təlimlərdə iştirak

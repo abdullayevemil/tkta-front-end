@@ -7,27 +7,16 @@ import { Card } from "@/components/ui/card";
 export default function AboutUs() {
   return (
     <div className="w-full flex flex-col gap-16 items-center">
-      {/* <Image src={HeaderImage} alt="header image" className="w-full" /> */}
 
-      <h1 className="uppercase text-5xl text-center pt-[]">HAQQIMIZDA</h1>
+      <h1 className="uppercase text-5xl text-center pt-16">HAQQIMIZDA</h1>
 
       <div className="px-[112px] w-full" >
-        <div className="w-2/3 h-fit">
-          <Card className="w-full h-fit float-left mr-8 mb-4">
-            <Image
-              src={CenterImage}
-              alt="center image"
-              className="rounded-xl w-full"
-            />
-          </Card>
-        </div>
-
         <p className="text-base w-full text-justify tracking-wide leading-7">
-          Azərbaycan Respublikası Prezidentinin 29.12.2019-cu il tarixdə
+          Azərbaycan Respublikası Prezidentinin 29.12.2019-cu il tarixində
           imzaladığı müvafiq Fərmana əsasən, Təhsil Nazirliyinin Akkreditasiya
           və Nostrifikasiya İdarəsi Təhsil Nazirliyinin tabeliyində publik
           hüquqi şəxs statusu olan Təhsildə Keyfiyyət Təminatı Agentliyinə
-          çevrilmə yolu ilə yenidən təşkil edilmişdir. Agentlik Azerbaycanda və
+          çevrilmə yolu ilə yenidən təşkil edilmişdir. Agentlik Azərbaycanda və
           beynəlxalq səviyyədə qəbul edilmiş standartlara əsaslanan ali, orta
           ixtisas və əlavə təhsilin keyfiyyətinin müstəqil qiymətləndirilməsi
           sahəsində peşəkar və mütəxəssis qurumdur. <br /> Təhsildə Keyfiyyət
@@ -36,7 +25,7 @@ export default function AboutUs() {
           təmin edir. Agentlik öz vəzifələrini yerinə yetirərkən və hüquqlarını
           həyata keçirərkən dövlət orqanları (qurumları) və bələdiyyələrlə,
           beynəlxalq və qeyri-hökumət təşkilatları, digər hüquqi və fiziki
-          şəxslərlə qarşılıqlı əlaqədə fəaliyyət göstərir. Azərbaycan Respublikası Təhsil Nazirliyinin fəaliyyətinin
+          şəxslərlə qarşılıqlı əlaqədə fəaliyyət göstərir.<br /> Azərbaycan Respublikası Təhsil Nazirliyinin fəaliyyətinin
           təkmilləşdirilməsi və “Azərbaycan Respublikasında bir sıra dövlət
           orqanlarının strukturunun optimallaşdırılması və idarə edilməsinin
           təkmilləşdirilməsi ilə bağlı əlavə tədbirlər haqqında” Azərbaycan

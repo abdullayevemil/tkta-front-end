@@ -26,11 +26,23 @@ export default function Footer() {
               </li>
 
               <li className="hover:text-textPrimary">
-                <Link href="/sercices">Fəaliyyət Sahələri</Link>
+                <Link href="/sercices">Fəaliyyət sahələri</Link>
+              </li>
+
+              <li className="hover:text-textPrimary">
+                <Link href="/diploma-recognition">Diplom Təsdiqi</Link>
               </li>
 
               <li className="hover:text-textPrimary">
                 <Link href="/internationalization">Beynəlmiləlləşmə</Link>
+              </li>
+
+              <li className="hover:text-textPrimary">
+                <Link href="/">Ən çox imtina alan universitetlər</Link>
+              </li>
+
+              <li className="hover:text-textPrimary">
+                <Link href="">Tanınmayan universitetlər</Link>
               </li>
 
               <li className="hover:text-textPrimary">
@@ -47,18 +59,6 @@ export default function Footer() {
 
               <li className="hover:text-textPrimary">
                 <Link href="/media">Media</Link>
-              </li>
-
-              <li className="hover:text-textPrimary">
-                <Link href="/diploma-recognition">Diplom Təsdiqi</Link>
-              </li>
-
-              <li className="hover:text-textPrimary">
-                <Link href="/">İmtina alan universitetlər</Link>
-              </li>
-
-              <li className="hover:text-textPrimary">
-                <Link href="">Tanınmayan universitetlər</Link>
               </li>
 
               <li className="hover:text-textPrimary">

@@ -20,7 +20,7 @@ export default function LinkCard({ name, imageUrl, url }: Props) {
           className="h-[90px] w-auto object-contain"
         />
 
-        <h3 className="text-textPrimary text-sm text-center">{name}</h3>
+        <h3 className="text-textPrimary text-sm text-center capitalize">{name}</h3>
       </Card>
     </Link>
   );

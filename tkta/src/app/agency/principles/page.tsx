@@ -14,7 +14,7 @@ export default function Principles() {
       <div className="px-[112px] w-full flex flex-row gap-6 items-center">
         <Card className="h-full bg-textPrimary w-1/3 p-4 flex flex-col items-center gap-6 hover:cursor-pointer">
           <Image
-            src="https://tkta.edu.az/files/r%C9%99hb%C9%99rlik.jpg"
+            src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1742935878/principles/xhwrn4ztqiqeivxhgfrq.jpg"
             alt="Director photo"
             width={500}
             height={500}
@@ -34,7 +34,7 @@ export default function Principles() {
 
         <p className="w-2/3 text-justify whitespace-pre flex flex-col gap-2 tracking-wide leading-6">
           <span className="text-wrap">
-            Tural Əhmədov 1983-cü ildə anadan olub.
+            Tural Əhmədov
           </span>
           <span className="text-wrap">
             2000-2004-cü illərdə Azərbaycan Dillər Universitetində
@@ -55,7 +55,7 @@ export default function Principles() {
             magistr dərəcəsi alıb.
           </span>
           <span className="text-wrap">
-            2008-ci ildə Brandeis Universitetində və Tel-Aviv Universitetində,
+            2008-ci ildə Brandeis Universitetində və Təl-Əviv Universitetində,
             2009-cu ildə Oslo Universitetində və Nansen Akademiyasında, 2011-ci
             ildə Şimali Karolina Dövlət Universitetində, 2015-ci ildə Avropa
             Kollecində (College of Europe) qısa müddətli təlimlərdə iştirak
@@ -86,7 +86,7 @@ export default function Principles() {
       <div className="px-[112px] w-full flex flex-row gap-6 items-center">
         <Card className="h-full bg-textPrimary w-1/3 p-4 flex flex-col items-center gap-6 hover:cursor-pointer">
           <Image
-            src="https://miras.blob.core.windows.net/multimedia/Kamran%20mu%CC%88%C9%99llim-2.jpg"
+            src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1742936194/principles/uu0lnxbin3ngx5gmwbl9.png"
             alt="Director photo"
             width={500}
             height={500}
@@ -106,7 +106,7 @@ export default function Principles() {
 
         <p className="w-2/3 text-justify whitespace-pre flex flex-col gap-2 tracking-wide leading-6">
           <span className="text-wrap">
-            Kamran Rəsulov 1987-ci ildə anadan olub.
+            Kamran Rəsulov
           </span>
           <span className="text-wrap">
             2005-2010-cu illərdə Türkiyənin paytaxtı Ankara şəhərində Hacəttəpə

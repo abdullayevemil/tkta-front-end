@@ -35,7 +35,7 @@ const PersonalRoom = () => {
   const client = useStreamVideoClient();
   const { toast } = useToast();
 
-  const meetingId = user?.id;
+  const meetingId = `${user?.id}`;
 
   const { call } = useGetCallById(meetingId!);
 

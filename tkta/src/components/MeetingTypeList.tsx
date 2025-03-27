@@ -54,7 +54,7 @@ const MeetingTypeList = () => {
       });
       setCallDetail(call);
       if (!values.description) {
-        router.push(`/meeting/${call.id}`);
+        router.push(`/video-call/meeting/${call.id}`);
       }
       toast({
         title: "Meeting Created",
@@ -70,7 +70,7 @@ const MeetingTypeList = () => {
   const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${callDetail?.id}`;
 
   return (
-    <section className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+    <section className="flex flex-row px-28 gap-5 justify-between md:grid-cols-2 xl:grid-cols-4">
       <HomeCard
         img="/icons/add-meeting.svg"
         title="New Meeting"
@@ -80,7 +80,7 @@ const MeetingTypeList = () => {
       <HomeCard
         img="/icons/join-meeting.svg"
         title="Join Meeting"
-        description="via invitation link"
+        description="Via invitation link"
         className="bg-blue-1"
         handleClick={() => setMeetingState("isJoiningMeeting")}
       />
@@ -96,7 +96,7 @@ const MeetingTypeList = () => {
         title="View Recordings"
         description="Meeting Recordings"
         className="bg-yellow-1"
-        handleClick={() => router.push("/recordings")}
+        handleClick={() => router.push("/video-call/recordings")}
       />
 
       {!callDetail ? (

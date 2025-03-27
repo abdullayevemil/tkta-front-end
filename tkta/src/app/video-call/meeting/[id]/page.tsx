@@ -4,7 +4,6 @@ import { useState } from "react";
 import { StreamCall, StreamTheme } from "@stream-io/video-react-sdk";
 import { useParams } from "next/navigation";
 import { Loader } from "lucide-react";
-
 import { useGetCallById } from "@/hooks/useGetCallById";
 import Alert from "@/components/Alert";
 import MeetingSetup from "@/components/MeetingSetup";
@@ -40,7 +39,7 @@ const MeetingPage = () => {
   return (
     <main className="h-screen w-full">
       <StreamCall call={call}>
-        <StreamTheme>
+        <StreamTheme as="main">
           {!isSetupComplete ? (
             <MeetingSetup setIsSetupComplete={setIsSetupComplete} />
           ) : (

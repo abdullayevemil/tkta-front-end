@@ -26,8 +26,8 @@ export const useGetCalls = () => {
           filter_conditions: {
             starts_at: { $exists: true },
             $or: [
-              { created_by_user_id: user.id },
-              { members: { $in: [user.id] } },
+              { created_by_user_id: `${user.id}` },
+              { members: { $in: [`${user.id}`] } },
             ],
           },
         });

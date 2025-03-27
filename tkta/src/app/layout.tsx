@@ -10,6 +10,9 @@ import Head from "next/head";
 import { FontSizeProvider } from "@/context/font-size-context";
 import { ColorModeProvider } from "@/context/color-mode-context";
 import { Analytics } from "@vercel/analytics/next";
+import "@stream-io/video-react-sdk/dist/css/styles.css";
+import "react-datepicker/dist/react-datepicker.css";
+import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

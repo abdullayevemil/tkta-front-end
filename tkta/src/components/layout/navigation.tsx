@@ -20,7 +20,7 @@ export function Navigation() {
       <NavigationMenuList className="w-full justify-evenly max-w-full">
         <NavigationMenuItem>
           <NavigationMenuTrigger className="font-helvetica text-base">
-            <Link href="/agency">Agentlik</Link>
+            Agentlik
           </NavigationMenuTrigger>
 
           <NavigationMenuContent className="left-0">
@@ -75,7 +75,7 @@ export function Navigation() {
 
         <NavigationMenuItem>
           <NavigationMenuTrigger className="font-helvetica text-base">
-            <Link href="/services">Fəaliyyət sahələri</Link>
+            Fəaliyyət sahələri
           </NavigationMenuTrigger>
 
           <NavigationMenuContent className="left-0">
@@ -191,7 +191,7 @@ export function Navigation() {
 
         <NavigationMenuItem>
           <NavigationMenuTrigger className="font-helvetica text-base">
-            <Link href="/diploma-recognition">Diplom təsdiqi</Link>
+            Diplom təsdiqi
           </NavigationMenuTrigger>
 
           <NavigationMenuContent className="left-0">
@@ -252,7 +252,7 @@ export function Navigation() {
 
         <NavigationMenuItem>
           <NavigationMenuTrigger className="font-helvetica text-base">
-            <Link href="/announcements">Elanlar</Link>
+            Elanlar
           </NavigationMenuTrigger>
 
           <NavigationMenuContent className="left-0">
@@ -286,7 +286,7 @@ export function Navigation() {
 
         <NavigationMenuItem>
           <NavigationMenuTrigger className="font-helvetica text-base">
-            <Link href="/reports">Hesabatlar</Link>
+            Hesabatlar
           </NavigationMenuTrigger>
 
           <NavigationMenuContent className="left-0">
@@ -365,7 +365,7 @@ export function Navigation() {
 
         <NavigationMenuItem>
           <NavigationMenuTrigger className="font-helvetica text-base">
-            <Link href="/legislation">Qanunvericilik</Link>
+            Qanunvericilik
           </NavigationMenuTrigger>
 
           <NavigationMenuContent className="left-0">
@@ -445,7 +445,7 @@ export function Navigation() {
 
         <NavigationMenuItem>
           <NavigationMenuTrigger className="font-helvetica text-base">
-            <Link href="/media">Media</Link>
+            Media
           </NavigationMenuTrigger>
 
           <NavigationMenuContent className="left-0">

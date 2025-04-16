@@ -15,7 +15,7 @@ const news = [
     title:
       "Bakı Biznes Universitetinə institusional akkreditasiya şəhadətnaməsi təqdim edilib",
     date: "2024-11-27",
-  },
+  }, 
   {
     id: 3,
     title:

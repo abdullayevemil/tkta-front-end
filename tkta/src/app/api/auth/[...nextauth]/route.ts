@@ -32,7 +32,7 @@ const handler = NextAuth({
           };
         }
 
-        return null;
+        return null; 
       },
     }),
   ],

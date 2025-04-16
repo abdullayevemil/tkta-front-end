@@ -1,8 +1,8 @@
-import { reports } from "@/data/acccreditation_reports";
 import Folder from "@/assets/icons/reports/Folder.png";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
+import sql from "@/lib/db";
 
 const types = [
   {
@@ -20,6 +20,8 @@ const types = [
 ];
 
 export async function generateStaticParams() {
+  const reports = await sql`SELECT * FROM institutional_accreditation_reports`;
+  
   return reports.map((report) => ({
     university: report.university.toLowerCase(),
   }));

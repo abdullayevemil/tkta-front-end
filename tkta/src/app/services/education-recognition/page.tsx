@@ -470,7 +470,7 @@ export default function EducationRecognition() {
             className="w-1/3 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value="partners"
           >
-            Tərəfdaşlar
+            Peşə təcrübəsinin tanınması
           </TabsTrigger>
         </TabsList>
 

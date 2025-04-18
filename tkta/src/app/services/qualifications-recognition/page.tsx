@@ -56,6 +56,13 @@ export default function HomePage() {
           >
             Kadr bankı
           </TabsTrigger>
+
+          <TabsTrigger
+            className="w-1/4 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
+            value="education-document-recognition"
+          >
+            Təhsil sənədinin tanınması
+          </TabsTrigger>
         </TabsList>
         <TabsContent className="text-justify" value="general-information">
           <div className="flex flex-col gap-4">
@@ -519,6 +526,8 @@ export default function HomePage() {
             </li>
           </ol>
         </TabsContent>
+
+        <TabsContent value="education-document-recognition"></TabsContent>
       </Tabs>
     </section>
   );

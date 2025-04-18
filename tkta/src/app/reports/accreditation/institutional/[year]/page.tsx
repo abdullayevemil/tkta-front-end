@@ -5,7 +5,7 @@ import Link from "next/link";
 import sql from "@/lib/db";
 
 export async function generateStaticParams() {
-  const reports = await sql`SELECT * FROM institutional_accreditation_reports`;
+  const reports = await sql`SELECT * FROM institutional_accreditation_final_reports`;
 
   return reports.map((report) => ({
     year: report.year.toString(),
@@ -19,7 +19,7 @@ export default async function Accreditations({
 }) {
   const { year } = await params;
 
-  const reports = await sql`SELECT * FROM institutional_accreditation_reports`;
+  const reports = await sql`SELECT * FROM institutional_accreditation_final_reports`;
 
   return (
     <div className="grid grid-cols-4 px-16 gap-6 w-full">

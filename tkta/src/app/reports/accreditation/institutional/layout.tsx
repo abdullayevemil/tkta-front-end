@@ -7,7 +7,7 @@ export default function HomeLayout({
     <main className="flex flex-col gap-20 h-full w-full">
       <section className="w-full flex flex-col gap-16 items-center">
         <h1 className="uppercase text-5xl text-center w-full px-[112px]">
-          ATMlərin İnstİtusİonal akkredİtasİya hesabatları
+          ATM-lərİn İnstİtusİonal akkredİtasİya hesabatları
         </h1>
 
         {children}

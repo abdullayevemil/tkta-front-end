@@ -12,7 +12,7 @@ export default async function Accreditations({
   const { year, university } = await params;
 
   const report = await sql`
-  SELECT * FROM institutional_accreditation_reports
+  SELECT * FROM institutional_accreditation_final_reports
   WHERE year = ${year}
     AND LOWER(university) = LOWER(${university})
   `;

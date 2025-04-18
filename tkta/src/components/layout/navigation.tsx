@@ -85,7 +85,7 @@ export function Navigation() {
                   href="/services/qualifications-recognition"
                   title="Xarici kvalifikasiyaların tanınması"
                 >
-                  Diplom və sənəd tanınması
+                  Təhsil sənədlərinin tanınması
                 </ListItem>
               </li>
 
@@ -94,7 +94,7 @@ export function Navigation() {
                   href="/services/education-recognition"
                   title="Qeyri formal və informal təhsilin tanınması"
                 >
-                  Sertifikatsız təhsilin təsdiqi
+                  Peşə təcrübəsinin tanınması
                 </ListItem>
               </li>
 
@@ -149,8 +149,36 @@ export function Navigation() {
                       <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                         <li>
                           <ListItem
+                            href="/services/training-methodology/support"
+                            title="Təlim və metodoloji dəstək"
+                          ></ListItem>
+                        </li>
+
+                        <li>
+                          <ListItem
+                            href="/services/training-methodology/methodology-documents"
+                            title="Metodoloji sənədlər"
+                          ></ListItem>
+                        </li>
+
+                        <li>
+                          <ListItem
+                            href="/services/training-methodology/experts-preparation"
+                            title="Ekspert hazırlığı"
+                          ></ListItem>
+                        </li>
+
+                        <li>
+                          <ListItem
                             href="/services/training-methodology/experts-registration"
                             title="Ekspertların qeydiyyatı"
+                          ></ListItem>
+                        </li>
+
+                        <li>
+                          <ListItem
+                            href="/services/training-methodology/quality-ambassador"
+                            title="Keyfiyyət elçisi"
                           ></ListItem>
                         </li>
                       </ul>
@@ -330,14 +358,14 @@ export function Navigation() {
                         <li>
                           <ListItem
                             href="/reports/accreditation/institutional"
-                            title="ATMlərin İnstitusional akkreditasiya hesabatları"
+                            title="ATM-lərin İnstitusional akkreditasiya hesabatları"
                           ></ListItem>
                         </li>
 
                         <li>
                           <ListItem
                             href="/reports/accreditation/program"
-                            title="ATMlərin Proqram akkreditasiya hesabatları"
+                            title="ATM-lərin Proqram akkreditasiya hesabatları"
                           ></ListItem>
                         </li>
 
@@ -471,6 +499,18 @@ export function Navigation() {
               <li>
                 <ListItem href="/media/faq" title="FAQ">
                   Müntəzəm verilən suallar
+                </ListItem>
+              </li>
+
+              <li>
+                <ListItem href="/media/multimedia" title="Multimedia">
+                  Foto və video arxiv
+                </ListItem>
+              </li>
+
+              <li>
+                <ListItem href="/media/video-instructions" title="Video təlimatlar">
+                  Video formatında izahlar
                 </ListItem>
               </li>
             </ul>

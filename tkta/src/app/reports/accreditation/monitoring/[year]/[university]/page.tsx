@@ -1,21 +1,12 @@
-import { reports } from "@/data/acccreditation_reports";
 import Folder from "@/assets/icons/reports/Folder.png";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
-
-const types = [
-  {
-    title: "Fəaliyyət planı",
-    link: "plan",
-  },
-  {
-    title: "Monitorinq hesabatı",
-    link: "monitoring",
-  },
-];
+import sql from "@/lib/db";
 
 export async function generateStaticParams() {
+  const reports = await sql`SELECT * FROM activity_plan`;
+
   return reports.map((report) => ({
     university: report.university.toLowerCase(),
   }));
@@ -28,20 +19,79 @@ export default async function Accreditations({
 }) {
   const { year, university } = await params;
 
+  const reports =
+    await sql`SELECT * FROM monitoring_reports WHERE year = ${year} AND LOWER(university) = LOWER(${university})`;
+
+  const plans =
+    await sql`SELECT * FROM activity_plan WHERE year = ${year} AND LOWER(university) = LOWER(${university})`;
+
   return (
-      <div className="grid grid-cols-4 px-16 gap-6 w-full">
-        {types.map((type, index) => (
-          <Link
-            key={index}
-            href={`/reports/accreditation/monitoring/${year}/${university}/${type.link}`}
-          >
-            <Card className="p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
+    <div className="flex flex-row items-center justify-evenly px-16 gap-6 w-full">
+      {reports[0] ? (
+        <Link
+          className="w-1/4"
+          target="_blank"
+          rel="noopener noreferrer"
+          href={reports[0].link}
+        >
+          {reports[0].imagelink ? (
+            <Card className="h-[27.5rem] w-full p-4 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
+              <Image
+                src={reports[0].imagelink}
+                alt="document preview"
+                width={150}
+                height={150}
+                className="w-full max-h-[21.25rem] object-cover"
+              />
+
+              <span className="text-lg text-center text-textPrimary font-bold font-bold">
+                Monitorinq Hesabatı
+              </span>
+            </Card>
+          ) : (
+            <Card className="h-[27.5rem] p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
               <Image src={Folder} alt="folder icon" width={120} height={120} />
 
-              <span className="text-center text-textPrimary">{type.title}</span>
+              <span className="text-lg text-center text-textPrimary font-bold font-bold">
+                {reports[0].university} Monitorinq Hesabatı
+              </span>
             </Card>
-          </Link>
-        ))}
-      </div>
+          )}
+        </Link>
+      ) : null}
+
+      {plans[0] ? (
+        <Link
+          className="w-1/4"
+          target="_blank"
+          rel="noopener noreferrer"
+          href={plans[0].link}
+        >
+          {plans[0].imagelink ? (
+            <Card className="h-[27.5rem] p-4 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
+              <Image
+                src={plans[0].imagelink}
+                alt="document preview"
+                width={150}
+                height={150}
+                className="w-full max-h-[21.25rem] object-cover"
+              />
+
+              <span className="text-lg text-center text-textPrimary font-bold font-bold">
+                Fəaliyyət Planı
+              </span>
+            </Card>
+          ) : (
+            <Card className="h-[26.25rem] p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
+              <Image src={Folder} alt="folder icon" width={120} height={120} />
+
+              <span className="text-lg text-center text-textPrimary font-bold font-bold">
+                {plans[0].university} Fəaliyyət Planı
+              </span>
+            </Card>
+          )}
+        </Link>
+      ) : null}
+    </div>
   );
 }

@@ -21,44 +21,6 @@ export default function Header() {
           <Image src={Logo} alt="TKTA logo" className="w-[194.4px] h-18" />
         </Link>
 
-        <ul className="flex flex-row gap-4 items-center">
-          <li>
-            <Link href="">
-              <InstagramIcon width={24} height={24} />
-            </Link>
-          </li>
-
-          <li>
-            <Link href="">
-              <FacebookIcon width={24} height={24} />
-            </Link>
-          </li>
-
-          <li>
-            <Link href="">
-              <LinkedinIcon width={24} height={24} />
-            </Link>
-          </li>
-
-          <li>
-            <Link href="">
-              <TelegramIcon width={24} height={24} />
-            </Link>
-          </li>
-
-          <li>
-            <Link href="">
-              <XIcon width={24} height={24} />
-            </Link>
-          </li>
-        </ul>
-
-        <div className="flex flex-row gap-2 items-center border border-gray-300 rounded-xl p-0.5 px-2 h-fit flex-1 focus:border focus:border-textPrimary">
-          <SearchIcon width={24} height={24} className="text-gray-500" />
-
-          <Input className="border-none outline-none focus:outline-none focus:border-none shadow-none focus-visible:ring-0" />
-        </div>
-
         <div className="flex flex-row gap-4 items-center">
           <div className="flex flex-row gap-4">
             <Link
@@ -75,13 +37,51 @@ export default function Header() {
               Tanınmayan universitetlər
             </Link>
           </div>
-
-          <ColorSwitch />
-
-          <FontSelector />
-
-          <LanguageSelector />
         </div>
+
+        <ul className="flex flex-row gap-4 items-center">
+          <li>
+            <Link href="">
+              <InstagramIcon color="var(--gold-border-color)" width={24} height={24} />
+            </Link>
+          </li>
+
+          <li>
+            <Link href="">
+              <FacebookIcon color="var(--gold-border-color)" width={24} height={24} />
+            </Link>
+          </li>
+
+          <li>
+            <Link href="">
+              <LinkedinIcon color="var(--gold-border-color)" width={24} height={24} />
+            </Link>
+          </li>
+
+          <li>
+            <Link href="">
+              <TelegramIcon color="var(--gold-border-color)" width={24} height={24} />
+            </Link>
+          </li>
+
+          <li>
+            <Link href="">
+              <XIcon color="var(--gold-border-color)" width={24} height={24} />
+            </Link>
+          </li>
+        </ul>
+
+        <div className="flex flex-row gap-2 items-center border border-gray-300 rounded-xl p-0.5 px-2 h-fit flex-1 focus:border focus:border-textPrimary">
+          <SearchIcon width={24} height={24} className="text-gray-500" />
+
+          <Input className="border-none outline-none focus:outline-none focus:border-none shadow-none focus-visible:ring-0" />
+        </div>
+
+        <ColorSwitch />
+
+        <FontSelector />
+
+        <LanguageSelector />
       </div>
 
       <Navigation />

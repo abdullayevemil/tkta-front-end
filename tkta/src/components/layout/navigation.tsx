@@ -98,121 +98,29 @@ export function Navigation() {
                 </ListItem>
               </li>
 
-              <NavigationMenuSub defaultValue="sub1" className="w-full">
-                <NavigationMenuList className="w-full">
-                  <NavigationMenuItem className="w-full">
-                    <NavigationMenuTrigger className="h-fit font-helvetica w-full flex flex-row justify-left p-0 text-left">
-                      <ListItem
-                        href="/services/accreditation"
-                        title="Akkreditasiya və lisenziya"
-                        className="hover:bg-transparent"
-                      >
-                        Rəsmi təsdiq və qiymətləndirmə
-                      </ListItem>
-                    </NavigationMenuTrigger>
+              <li>
+                <ListItem
+                  href="/services/accreditation"
+                  title="Akkreditasiya və lisenziya"
+                >
+                  Rəsmi təsdiq və qiymətləndirmə
+                </ListItem>
+              </li>
 
-                    <NavigationMenuContent className="left-64 top-0 z-50">
-                      <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
-                        <li>
-                          <ListItem
-                            href="/services/accreditation/council"
-                            title="Akkreditasiya şurası"
-                          ></ListItem>
-                        </li>
+              <li>
+                <ListItem
+                  href="/services/training-methodology"
+                  title="Təlim və metodologiya"
+                >
+                  Öyrətmə üsul və yanaşmaları
+                </ListItem>
+              </li> 
 
-                        <li>
-                          <ListItem
-                            href="/services/accreditation/appeal"
-                            title="Appelyasiya komissiyası"
-                          ></ListItem>
-                        </li>
-                      </ul>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenuSub>
-
-              <NavigationMenuSub defaultValue="sub1" className="w-full">
-                <NavigationMenuList className="w-full">
-                  <NavigationMenuItem className="w-full">
-                    <NavigationMenuTrigger className="h-fit font-helvetica w-full flex flex-row justify-left p-0 text-left">
-                      <ListItem
-                        href="/services/training-methodology"
-                        title="Təlim və metodologiya"
-                        className="hover:bg-transparent"
-                      >
-                        Öyrətmə üsul və yanaşmaları
-                      </ListItem>
-                    </NavigationMenuTrigger>
-
-                    <NavigationMenuContent className="left-64 top-0 z-50">
-                      <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
-                        <li>
-                          <ListItem
-                            href="/services/training-methodology/support"
-                            title="Təlim və metodoloji dəstək"
-                          ></ListItem>
-                        </li>
-
-                        <li>
-                          <ListItem
-                            href="/services/training-methodology/methodology-documents"
-                            title="Metodoloji sənədlər"
-                          ></ListItem>
-                        </li>
-
-                        <li>
-                          <ListItem
-                            href="/services/training-methodology/experts-preparation"
-                            title="Ekspert hazırlığı"
-                          ></ListItem>
-                        </li>
-
-                        <li>
-                          <ListItem
-                            href="/services/training-methodology/experts-registration"
-                            title="Ekspertların qeydiyyatı"
-                          ></ListItem>
-                        </li>
-
-                        <li>
-                          <ListItem
-                            href="/services/training-methodology/quality-ambassador"
-                            title="Keyfiyyət elçisi"
-                          ></ListItem>
-                        </li>
-                      </ul>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenuSub>
-
-              <NavigationMenuSub defaultValue="sub1" className="w-full">
-                <NavigationMenuList className="w-full">
-                  <NavigationMenuItem className="w-full">
-                    <NavigationMenuTrigger className="h-fit font-helvetica w-full flex flex-row justify-left p-0 text-left">
-                      <ListItem
-                        href="/services/analysis"
-                        title="Analitik təhlil"
-                        className="hover:bg-transparent"
-                      >
-                        Məlumatın analitik analizi
-                      </ListItem>
-                    </NavigationMenuTrigger>
-
-                    <NavigationMenuContent className="z-50 left-64 top-0">
-                      <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
-                        <li>
-                          <ListItem
-                            href="/services/analysis/thematic"
-                            title="Tematik təhlil"
-                          ></ListItem>
-                        </li>
-                      </ul>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenuSub>
+              <li>
+                <ListItem href="/services/analysis" title="Analitik təhlil">
+                  Məlumatın analitik analizi
+                </ListItem>
+              </li>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
@@ -357,15 +265,8 @@ export function Navigation() {
                       <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                         <li>
                           <ListItem
-                            href="/reports/accreditation/institutional"
-                            title="ATM-lərin İnstitusional akkreditasiya hesabatları"
-                          ></ListItem>
-                        </li>
-
-                        <li>
-                          <ListItem
-                            href="/reports/accreditation/program"
-                            title="ATM-lərin Proqram akkreditasiya hesabatları"
+                            href="/reports/accreditation/atm"
+                            title="ATM üzrə akkreditasiya hesabatları"
                           ></ListItem>
                         </li>
 
@@ -497,20 +398,23 @@ export function Navigation() {
               </li>
 
               <li>
-                <ListItem href="/media/faq" title="FAQ">
-                  Müntəzəm verilən suallar
-                </ListItem>
-              </li>
-
-              <li>
                 <ListItem href="/media/multimedia" title="Multimedia">
                   Foto və video arxiv
                 </ListItem>
               </li>
 
               <li>
-                <ListItem href="/media/video-instructions" title="Video təlimatlar">
+                <ListItem
+                  href="/media/video-instructions"
+                  title="Video təlimatlar"
+                >
                   Video formatında izahlar
+                </ListItem>
+              </li>
+
+              <li>
+                <ListItem href="/media/faq" title="FAQ">
+                  Müntəzəm verilən suallar
                 </ListItem>
               </li>
             </ul>

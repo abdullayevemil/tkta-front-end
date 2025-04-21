@@ -18,7 +18,11 @@ export default async function Accreditations({
 }: {
   params: Promise<{ year: string; university: string }>;
 }) {
-  const { year, university } = await params;
+  const _params = await params;
+
+  const university = decodeURIComponent(_params.university);
+
+  const year = _params.year;
 
   const report = await sql`
   SELECT * FROM institutional_accreditation_final_reports
@@ -40,7 +44,7 @@ export default async function Accreditations({
 
   return (
     <div className="flex flex-row items-center justify-evenly px-16 gap-6 w-full">
-      {report ? (
+      {report[0] ? (
         <Link
           className="w-1/4"
           target="_blank"
@@ -57,7 +61,7 @@ export default async function Accreditations({
                 className="w-full max-h-[21.25rem] object-cover"
               />
 
-              <span className="text-center text-textPrimary">
+              <span className="text-lg text-center text-textPrimary font-bold font-bold">
                 Yekun Hesabat
               </span>
             </Card>
@@ -65,7 +69,7 @@ export default async function Accreditations({
             <Card className="h-[27.5rem] p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
               <Image src={Folder} alt="folder icon" width={120} height={120} />
 
-              <span className="text-center text-textPrimary">
+              <span className="text-lg text-center text-textPrimary font-bold font-bold">
                 {report[0].university} Yekun Hesabat
               </span>
             </Card>
@@ -73,7 +77,7 @@ export default async function Accreditations({
         </Link>
       ) : null}
 
-      {self_analysis ? (
+      {self_analysis[0] ? (
         <Link
           className="w-1/4"
           target="_blank"
@@ -90,7 +94,7 @@ export default async function Accreditations({
                 className="w-full max-h-[21.25rem] object-cover"
               />
 
-              <span className="text-center text-textPrimary">
+              <span className="text-lg text-center text-textPrimary font-bold font-bold">
                 Özünü Təhlil Hesabatı
               </span>
             </Card>
@@ -98,7 +102,7 @@ export default async function Accreditations({
             <Card className="h-[26.25rem] p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
               <Image src={Folder} alt="folder icon" width={120} height={120} />
 
-              <span className="text-center text-textPrimary">
+              <span className="text-lg text-center text-textPrimary font-bold font-bold">
                 {self_analysis[0].university} Özünü Təhlil Hesabatı
               </span>
             </Card>
@@ -106,7 +110,7 @@ export default async function Accreditations({
         </Link>
       ) : null}
 
-      {certificate ? (
+      {certificate[0] ? (
         <Link
           className="w-1/4"
           target="_blank"
@@ -123,13 +127,15 @@ export default async function Accreditations({
                 className="w-full max-h-[21.25rem] object-cover"
               />
 
-              <span className="text-center text-textPrimary">Sertifikat</span>
+              <span className="text-lg text-center text-textPrimary font-bold font-bold">
+                Sertifikat
+              </span>
             </Card>
           ) : (
             <Card className="h-[26.25rem] p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
               <Image src={Folder} alt="folder icon" width={120} height={120} />
 
-              <span className="text-center text-textPrimary">
+              <span className="text-lg text-center text-textPrimary font-bold font-bold">
                 {certificate[0].university} Sertifikat
               </span>
             </Card>

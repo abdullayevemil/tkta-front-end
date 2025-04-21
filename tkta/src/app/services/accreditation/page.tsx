@@ -42,7 +42,7 @@ export default function Accreditation() {
             className="w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value="commission"
           >
-            Akkreditasiya komissiyası
+            Apellyasiya komissiyası
           </TabsTrigger>
         </TabsList>
 

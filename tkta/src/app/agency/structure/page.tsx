@@ -4,6 +4,7 @@ import React, { useMemo, useState } from "react";
 import { Position, ReactFlow } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
 import NavigationNode from "@/components/home/footer-node";
+import EmptyNode from "@/components/home/empty-node";
 import { EdgeSelector } from "@/components/structure/edge-selector";
 
 const initialNodes = [
@@ -11,23 +12,23 @@ const initialNodes = [
     id: "1",
     position: { x: 550, y: 0 },
     data: {
-      label: "Rəhbərlik",
-      link: "/agency/principles",
+      label: "İdarə heyətinin sədri",
+      link: "/agency/principles/director",
       targetPosition: Position.Top,
       sourcePosition: Position.Bottom,
     },
     type: "navigationNode",
   },
   {
-    id: "2",
-    position: { x: 550, y: 150 },
+    id: "18",
+    position: { x: 550, y: 200 },
     data: {
-      link: "/agency/principles/director",
-      targetPosition: Position.Top,
+      label: "",
+      link: "",
+      targetPosition: Position.Bottom,
       sourcePosition: Position.Bottom,
-      label: "İH-nin sədri",
     },
-    type: "navigationNode",
+    type: "emptyNode",
   },
   {
     id: "3",
@@ -42,7 +43,7 @@ const initialNodes = [
   },
   {
     id: "4",
-    position: { x: 750, y: 250 },
+    position: { x: 750, y: 300 },
     data: {
       link: "/agency/principles",
       targetPosition: Position.Top,
@@ -53,7 +54,7 @@ const initialNodes = [
   },
   {
     id: "5",
-    position: { x: 950, y: 250 },
+    position: { x: 350, y: 300 },
     data: {
       link: "/agency/principles",
       targetPosition: Position.Top,
@@ -64,7 +65,7 @@ const initialNodes = [
   },
   {
     id: "6",
-    position: { x: 1150, y: 250 },
+    position: { x: 1150, y: 300 },
     data: {
       link: "/agency/principles",
       targetPosition: Position.Top,
@@ -75,7 +76,7 @@ const initialNodes = [
   },
   {
     id: "7",
-    position: { x: 350, y: 250 },
+    position: { x: 550, y: 300 },
     data: {
       link: "/agency/principles",
       targetPosition: Position.Top,
@@ -86,7 +87,7 @@ const initialNodes = [
   },
   {
     id: "8",
-    position: { x: 550, y: 250 },
+    position: { x: 950, y: 300 },
     data: {
       link: "/agency/principles",
       targetPosition: Position.Top,
@@ -97,7 +98,7 @@ const initialNodes = [
   },
   {
     id: "9",
-    position: { x: 150, y: 250 },
+    position: { x: 150, y: 300 },
     data: {
       link: "/agency/principles",
       targetPosition: Position.Top,
@@ -108,7 +109,7 @@ const initialNodes = [
   },
   {
     id: "10",
-    position: { x: 550, y: 450 },
+    position: { x: 650, y: 425 },
     data: {
       link: "/agency/principles",
       targetPosition: Position.Top,
@@ -119,7 +120,7 @@ const initialNodes = [
   },
   {
     id: "11",
-    position: { x: 750, y: 450 },
+    position: { x: 850, y: 425 },
     data: {
       link: "/agency/principles",
       targetPosition: Position.Top,
@@ -130,7 +131,7 @@ const initialNodes = [
   },
   {
     id: "12",
-    position: { x: 850, y: 350 },
+    position: { x: 350, y: 425 },
     data: {
       link: "/agency/principles",
       targetPosition: Position.Top,
@@ -141,12 +142,12 @@ const initialNodes = [
   },
   {
     id: "13",
-    position: { x: 1050, y: 350 },
+    position: { x: 1050, y: 425 },
     data: {
       link: "/agency/principles",
       targetPosition: Position.Top,
       sourcePosition: Position.Bottom,
-      label: "Kvalifikasiyaların tanınması departamenti",
+      label: "Xarici kvalifikasiyaların tanınması şöbəsi",
     },
     type: "navigationNode",
   },
@@ -183,29 +184,42 @@ const initialNodes = [
     },
     type: "navigationNode",
   },
+  {
+    id: "17",
+    position: { x: 1250, y: 425 },
+    data: {
+      link: "/agency/principles",
+      targetPosition: Position.Top,
+      sourcePosition: Position.Bottom,
+      label: "Qeyri-formal və informal təhsilin tanınması şöbəsi",
+    },
+    type: "navigationNode",
+  },
 ];
 
 export default function Structure() {
-  const nodeTypes = useMemo(() => ({ navigationNode: NavigationNode }), []);
+  const nodeTypes = useMemo(() => ({ navigationNode: NavigationNode, emptyNode: EmptyNode }), []);
 
   const [value, setValue] = useState<string>("default");
 
   const initialEdges = [
     { id: "e1-2", source: "1", target: "2", type: value },
     { id: "e1-3", source: "1", target: "3", type: value },
-    { id: "e2-4", source: "2", target: "4", type: value },
-    { id: "e2-5", source: "2", target: "5", type: value },
-    { id: "e2-6", source: "2", target: "6", type: value },
-    { id: "e2-7", source: "2", target: "7", type: value },
-    { id: "e2-8", source: "2", target: "8", type: value },
+    { id: "e2-4", source: "18", target: "4", type: value },
+    { id: "e2-5", source: "18", target: "5", type: value },
+    { id: "e2-6", source: "18", target: "6", type: value },
+    { id: "e2-7", source: "18", target: "7", type: value },
+    { id: "e2-8", source: "18", target: "8", type: value },
     { id: "e3-9", source: "3", target: "9", type: value },
     { id: "e4-10", source: "4", target: "10", type: value },
     { id: "e4-11", source: "4", target: "11", type: value },
     { id: "e5-12", source: "5", target: "12", type: value },
     { id: "e6-13", source: "6", target: "13", type: value },
+    { id: "e6-17", source: "6", target: "17", type: value },
     { id: "e1-14", source: "1", target: "14", type: value },
     { id: "e1-15", source: "1", target: "15", type: value },
     { id: "e1-16", source: "1", target: "16", type: value },
+    { id: "e1-18", source: "1", target: "18", type: value },
   ];
 
   return (

@@ -19,16 +19,15 @@ export default async function Accreditations({
 }) {
   const { year } = await params;
 
-  const reports = await sql`SELECT * FROM institutional_accreditation_final_reports`;
+  const reports = await sql`SELECT * FROM institutional_accreditation_final_reports WHERE year = ${year}`;
 
   return (
     <div className="grid grid-cols-4 px-16 gap-6 w-full">
       {reports
-        .filter((report) => report.year === Number(year))
         .map((report, index) => (
           <Link
             key={index}
-            href={`/reports/accreditation/institutional/${year}/${report.university.toLowerCase()}`}
+            href={`/reports/accreditation/atm/institutional/${year}/${report.university.toLowerCase()}`}
           >
             <Card className="p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
               <Image src={Folder} alt="folder icon" width={120} height={120} />

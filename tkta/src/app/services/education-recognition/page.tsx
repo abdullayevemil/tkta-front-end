@@ -463,14 +463,14 @@ export default function EducationRecognition() {
             className="w-1/4 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value="video-tutorial"
           >
-            Video dərslik
+            Video bələdçi
           </TabsTrigger>
 
           <TabsTrigger
             className="w-1/3 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value="partners"
           >
-            Peşə təcrübəsinin tanınması
+            Tərəfdaşlar
           </TabsTrigger>
         </TabsList>
 

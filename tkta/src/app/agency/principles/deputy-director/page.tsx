@@ -21,7 +21,7 @@ export default function Principles() {
 
           <div className="flex flex-col gap-2">
             <h3 className="text-white text-2xl font-semibold text-center">
-              KAMRAN ƏLİ AĞA OĞLU RƏSULOV
+              KAMRAN AĞA ƏLİ OĞLU RƏSULOV
             </h3>
 
             <h4 className="text-white/[0.7] text-base font-semibold text-center">

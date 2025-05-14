@@ -30,7 +30,7 @@ export default function ExternalLinks() {
 
         <LinkCard
           name="Heydər Əliyev Fondu"
-          imageUrl="https://tkta.edu.az/files/Az%C9%99rbaycan%20Universitetl%C9%99ri/Doc1%20(1).jpg"
+          imageUrl="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1746868198/external%20link/khoqarsf30akyibvomjo.png"
           url="https://heydar-aliyev-foundation.org/az"
         />
       </div>
@@ -38,19 +38,19 @@ export default function ExternalLinks() {
       <div className="flex flex-row w-full justify-center items-center h-[240px] gap-6">
         <LinkCard
           name="Heydər Əliyev Mərkəzi"
-          imageUrl="https://www.tkta.edu.az/files/thumbnail_HA_center.png"
+          imageUrl="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1746867845/external%20link/nrqgk6m3ro0iny3xlu3z.png"
           url="https://heydaraliyevcenter.az"
         />
 
         <LinkCard
           name="Azərbaycanda təhsil"
-          imageUrl="https://www.tkta.edu.az/files/thumbnail_study%20in%20aze%203.png"
+          imageUrl="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1746867871/external%20link/ynxqixsj3jzprazp1s63.png"
           url="https://studyinazerbaijan.edu.az"
         />
 
         <LinkCard
           name="Enic-Naric"
-          imageUrl="https://www.tkta.edu.az/files/thumbnail_study%20in%20aze%203.png"
+          imageUrl="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1746868003/external%20link/ue8icsshiidzvh6fffol.svg"
           url="https://www.enic-naric.net"
         />
       </div>

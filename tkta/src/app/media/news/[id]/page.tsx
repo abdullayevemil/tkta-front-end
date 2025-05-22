@@ -9,7 +9,7 @@ export default async function NewsPage({
   const { id } = await params;
 
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/media/news/${id}`,
+    `/api/media/news/${id}`,
     {
       cache: "no-store",
     }

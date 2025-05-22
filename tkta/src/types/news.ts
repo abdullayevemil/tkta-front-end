@@ -2,7 +2,7 @@ export interface News {
   id: number;
   title: string;
   content: string;
-  imageUrl?: string;
-  creationDate: string;
+  headerimageurl?: string;
+  date: string;
   note?: string;
 }

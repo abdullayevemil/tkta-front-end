@@ -34,7 +34,8 @@ export default function News() {
               <NewsCard
                 id={news.id}
                 title={news.title}
-                creationDate={news.date}
+                date={news.date}
+                href=""
                 content=""
               />
             </Link>

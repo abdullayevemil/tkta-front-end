@@ -85,7 +85,8 @@ export default function EducationRecognition() {
               <NewsCard
                 id={vacancy.id}
                 title={vacancy.title}
-                creationDate={vacancy.date}
+                date={vacancy.date}
+                href=""
                 content=""
               />
             </Link>

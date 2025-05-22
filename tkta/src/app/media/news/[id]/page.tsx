@@ -1,60 +1,62 @@
-import sql from "@/lib/db";
-import Image from "next/image";
+import ImagePreviewer from "@/components/news/news-carousel";
+import { notFound } from "next/navigation";
 
-export async function generateStaticParams() {
-  const news = await sql`SELECT * FROM news`;
-
-  return news.map((n) => ({
-    id: n.id.toString(),
-  }));
-}
-
-export default async function News({
+export default async function NewsPage({
   params,
 }: {
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
 
-  const news = await sql`SELECT * FROM news WHERE id = ${id}`;
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/media/news/${id}`,
+    {
+      cache: "no-store",
+    }
+  );
 
-  if (news.length === 0) {
-    return <div>News not found</div>;
-  }
+  if (!res.ok) return notFound();
 
-  const { title, content, imageUrl, creationDate, note } = news[0];
+  const news = await res.json();
+
+  if (!news) return notFound();
+
+  const { title, content, date, note, photos } = news;
 
   return (
-    <section className="w-full flex flex-col gap-16 items-center">
-      <h1 className="uppercase text-5xl text-center w-full px-[112px]">
-        {title}
-      </h1>
+    <section className="w-full flex flex-col gap-16 items-center px-4 md:px-24 pt-12">
+      <h1 className="uppercase text-4xl text-center font-bold">{title}</h1>
 
-      <div className="w-full flex flex-col gap-6 px-16">
-        {imageUrl ? (
-          <Image
-            src={imageUrl}
-            alt={`${title} image`}
-            width={40}
-            height={40}
-            className="w-full"
-          />
+      <div
+        className="w-full text-justify"
+        dangerouslySetInnerHTML={{ __html: content }}
+      />
+
+      <div className="w-full flex flex-col gap-6">
+        {photos?.length > 0 ? (
+          <div className="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
+            {photos.map((photo: { url: string }, i: number) => (
+              <div
+                key={i}
+                className="break-inside-avoid overflow-hidden rounded-lg"
+              >
+                <ImagePreviewer imageUrl={photo.url} />
+              </div>
+            ))}
+          </div>
         ) : (
-          <div className="flex items-center justify-center text-textPrimary text-5xl pt-20 pb-12">
+          <div className="flex items-center justify-center text-4xl pt-20 pb-12 text-muted-foreground font-semibold">
             TKTA
           </div>
         )}
 
-        <p className="text-base">{content}</p>
-
-        <div className="flex flex-row justify-between items-center">
-          {note ? (
-            <div className="text-sm font-semibold text-red-700">{note}</div>
-          ) : (
-            <div></div>
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+          {note && (
+            <div className="text-sm font-semibold text-destructive">{note}</div>
           )}
-
-          <div className="text-xs text-textSecondary">{creationDate}</div>
+          <div className="text-xs text-muted-foreground ml-auto">
+            {date.split("T")[0].split("-").reverse().join("-")}
+          </div>
         </div>
       </div>
     </section>

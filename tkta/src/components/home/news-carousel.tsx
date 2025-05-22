@@ -16,7 +16,7 @@ interface NewsProps {
 
 export default function NewsCarousel({ news }: NewsProps) {
   return (
-    <Carousel 
+    <Carousel
       className="px-4 w-full border-8 border-goldBorderColor border-solid border-x-0"
       opts={{
         loop: true,
@@ -30,12 +30,15 @@ export default function NewsCarousel({ news }: NewsProps) {
       <CarouselContent>
         {news.map((n) => (
           <CarouselItem key={n.id} className="basis-1/3">
-            <Link href={`/news/${n.id}`}>
+            <Link href={`/media/news/${n.id}`}>
               <NewsCard
                 id={n.id}
+                href={`/media/news/${n.id}`}
                 title={n.title}
-                content={n.content}
-                creationDate={n.creationDate}
+                date={new Date(n.date).toISOString().split("T")[0]}
+                headerimageurl={n.headerimageurl}
+                note={n.note}
+                content=""
               />
             </Link>
           </CarouselItem>

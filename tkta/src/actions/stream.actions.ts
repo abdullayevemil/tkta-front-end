@@ -2,7 +2,7 @@
 
 import { users } from "@/data/users";
 import { StreamClient } from "@stream-io/node-sdk";
-import { getServerSession } from "next-auth";
+import { getServerSession } from "next-auth/next";
 
 const STREAM_API_KEY = process.env.NEXT_PUBLIC_STREAM_API_KEY;
 

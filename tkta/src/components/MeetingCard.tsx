@@ -5,6 +5,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import { useToast } from "./ui/use-toast";
+import { format } from "date-fns";
 
 interface MeetingCardProps {
   title: string;
@@ -36,7 +37,9 @@ const MeetingCard = ({
         <div className="flex justify-between">
           <div className="flex flex-col gap-2">
             <h1 className="text-2xl font-bold">{title}</h1>
-            <p className="text-base font-normal">{date}</p>
+            <p className="text-base font-normal">
+              {format(new Date(date.toString()), "dd-MM-yyyy")}
+            </p>
           </div>
         </div>
       </article>

@@ -63,7 +63,8 @@ export default function Vacancies() {
               <NewsCard
                 id={vacancy.id}
                 title={vacancy.title}
-                creationDate={vacancy.date}
+                date={vacancy.date}
+                href=""
                 content=""
               />
             </Link>

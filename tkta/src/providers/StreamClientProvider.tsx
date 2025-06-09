@@ -31,8 +31,6 @@ const StreamVideoProvider = ({ children }: { children: ReactNode }) => {
       tokenProvider,
     });
 
-    console.log("client: ", client);
-
     setVideoClient(client);
   }, [user]);
 

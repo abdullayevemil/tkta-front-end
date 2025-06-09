@@ -20,7 +20,6 @@ function getLocale(request: NextRequest): string {
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Skip static files and API routes
   if (
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api") ||
@@ -29,17 +28,14 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Check if the pathname already has a valid locale
   const pathnameHasLocale = locales.some(
-    (locale) =>
-      pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)
+    (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)
   );
 
   if (pathnameHasLocale) {
-    return NextResponse.next(); // ✅ already localized, don’t redirect again
+    return NextResponse.next();
   }
 
-  // Else, detect user preferred locale and redirect to it
   const locale = getLocale(request);
   const url = request.nextUrl.clone();
   url.pathname = `/${locale}${pathname}`;
@@ -48,5 +44,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next|.*\\..*|api).*)"], // only match non-static routes
+  matcher: ["/((?!_next|.*\\..*|api).*)"],
 };

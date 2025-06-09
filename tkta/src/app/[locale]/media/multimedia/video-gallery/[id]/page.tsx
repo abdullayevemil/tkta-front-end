@@ -3,7 +3,6 @@
 import { use, useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { format } from "date-fns";
-import { getTranslation } from "@/lib/i18n";
 import { Skeleton } from "@/components/ui/skeleton";
 
 interface Video {

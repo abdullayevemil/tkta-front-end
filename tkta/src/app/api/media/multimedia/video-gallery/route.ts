@@ -1,5 +1,5 @@
 import sql from "@/lib/db";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
@@ -55,4 +55,29 @@ export async function GET(req: Request) {
     gallery,
     total: Number(count[0].count),
   });
+}
+
+export async function POST(req: NextRequest) {
+  try {
+    const body = await req.json();
+    const { title, titleEnglish, headerviewurl } = body;
+
+    if (!title || !titleEnglish || !headerviewurl) {
+      return NextResponse.json(
+        { error: "Missing required fields" },
+        { status: 400 }
+      );
+    }
+
+    const [inserted] = await sql`
+      INSERT INTO video_gallery (title, titleenglish, headerviewurl)
+      VALUES (${title}, ${titleEnglish}, ${headerviewurl})
+      RETURNING id;
+    `;
+
+    return NextResponse.json({ id: inserted.id }, { status: 201 });
+  } catch (error) {
+    console.error("Insert error:", error);
+    return NextResponse.json({ error: "Database error" }, { status: 500 });
+  }
 }

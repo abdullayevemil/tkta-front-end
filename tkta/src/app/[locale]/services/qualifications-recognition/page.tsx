@@ -19,7 +19,7 @@ export default function HomePage() {
 
       <Tabs
         defaultValue="general-information"
-        className="w-full px-[112px] flex flex-col gap-16"
+        className="w-full px-16 flex flex-col gap-16"
       >
         <TabsList className="justify-evenly">
           <TabsTrigger
@@ -55,6 +55,13 @@ export default function HomePage() {
             value="personnel-bank"
           >
             Kadr bankı
+          </TabsTrigger>
+
+          <TabsTrigger
+            className="w-1/4 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
+            value="recongition-types"
+          >
+            Tanınma növləri
           </TabsTrigger>
         </TabsList>
         <TabsContent className="text-justify" value="general-information">
@@ -518,6 +525,69 @@ export default function HomePage() {
               müraciət etməyiniz xahiş olunur.
             </li>
           </ol>
+        </TabsContent>
+
+        <TabsContent value="recongition-types">
+          <ul className="flex flex-col gap-6 text-justify">
+            <li>
+              <span className="font-bold">Tanınma – </span>
+              xarici dövlətlərin səlahiyyətli orqanları tərəfindən verilən və
+              verildiyi ölkədə ali təhsil pilləsinə qəbul olunmaq və ya ali
+              təhsilin növbəti səviyyələri üzrə təhsilini davam etdirmək və (və
+              ya) ixtisasına uyğun əmək fəaliyyəti ilə məşğul olmaq hüququ
+              verən, həmçinin şəxsin müvafiq standartlara uyğun bilik, bacarıq,
+              səriştə və təcrübəyə malik olduğunu təsdiq edən təhsil haqqında
+              sənədlərin (bundan sonra – xarici dövlətlərin ali təhsilə aid
+              kvalifikasiyası) Azərbaycan Respublikasının ərazisində qüvvədə
+              olmasının təsdiqi
+            </li>
+
+            <li>
+              <span className="font-bold">Alternativ tanınma – </span>
+              xarici dövlətin ali təhsilə aid Azərbaycan Respublikasında mövcud
+              olmayan kvalifikasiyanın həmin xarici dövlətdə aid olduğu təhsil
+              pilləsindən (səviyyəsindən) daha aşağı pillə (səviyyə) üzrə və ya
+              eyni pillə (səviyyə) üzrə, lakin fərqli kvalifikasiyaya uyğun
+              olaraq həyata keçirilən akademik tanınma növü
+            </li>
+
+            <li>
+              <span className="font-bold">Akademik tanınma – </span>xarici
+              dövlətin səlahiyyətli orqanları tərəfindən verilmiş ali təhsilə
+              aid kvalifikasiyanın sahibinə Azərbaycan Respublikasında təhsilin
+              növbəti pilləsində (səviyyəsində) təhsilini davam etdirmək
+              hüququnun verilməsi
+            </li>
+
+            <li>
+              <span className="font-bold">Peşə tanınması – </span>xarici
+              dövlətin səlahiyyətli orqanları tərəfindən verilmiş ali təhsilə
+              aid kvalifikasiyanın sahibinə Azərbaycan Respublikasının Əmək
+              Məcəlləsinə əsasən əmək müqaviləsi bağlanılarkən onun əmək
+              funksiyasının xüsusiyyətlərinə uyğun olan peşə hazırlığının və ya
+              təhsilin olması zəruri sayılan hallarda işəgötürənə təqdim edilən
+              təhsil sənədində qeyd edilən müvafiq peşə fəaliyyəti göstərmək
+              hüququnun verilməsi
+            </li>
+
+            <li>
+              <span className="font-bold">Qismən tanınma – </span>xarici
+              dövlətin ali təhsil müəssisəsində təhsil alan şəxsin natamam ali
+              təhsilinin qalan hissəsini Azərbaycan Respublikasının ali təhsil
+              müəssisələrinin birində davam etdirə bilməsi üçün həyata keçirilən
+              akademik tanınma növü
+            </li>
+
+            <li>
+              <span className="font-bold">Şərti tanınma – </span>ali təhsilin
+              bakalavriat (əsas (baza ali) tibb təhsilinə) və magistratura
+              səviyyələri üçün müəyyən edilmiş minimal kredit sayından az
+              toplayan ərizəçiyə ixtisasına uyğun Azərbaycan Respublikasının ali
+              təhsil müəssisələrinin birində mühazirələrdə (praktik
+              məşğələlərdə) iştirak etməklə mövcud əhəmiyyətli fərqi aradan
+              qaldırmaq hüququ verən akademik tanınma növü.
+            </li>
+          </ul>
         </TabsContent>
       </Tabs>
     </section>

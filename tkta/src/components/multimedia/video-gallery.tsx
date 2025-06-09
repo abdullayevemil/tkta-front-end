@@ -66,7 +66,7 @@ export function VideoGallery({ locale }: { locale: string }) {
     params.append("page", page.toString());
 
     try {
-      const res = await fetch(`/api/media/video-gallery?${params.toString()}`);
+      const res = await fetch(`/api/media/multimedia/video-gallery?${params.toString()}`);
       if (!res.ok) throw new Error("Failed to fetch");
       const data = await res.json();
       setGallery(data.gallery);
@@ -83,7 +83,7 @@ export function VideoGallery({ locale }: { locale: string }) {
   async function handleDelete() {
     if (!deleteId) return;
     try {
-      const res = await fetch(`/api/media/video-gallery/${deleteId}`, {
+      const res = await fetch(`/api/media/multimedia/video-gallery/${deleteId}`, {
         method: "DELETE",
       });
       if (!res.ok) throw new Error("Delete failed");
@@ -183,7 +183,7 @@ export function VideoGallery({ locale }: { locale: string }) {
       {isAdmin && (
         <div className="w-full flex justify-end">
           <Link
-            href="/media/video-gallery/create"
+            href="/media/multimedia/video-gallery/create"
             className="bg-textPrimary rounded shadow-md text-white px-4 py-2 flex items-center gap-2"
           >
             <PlusIcon className="w-4 h-4" />

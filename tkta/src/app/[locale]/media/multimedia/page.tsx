@@ -1,5 +1,3 @@
-import Image from "next/image";
-import HeaderImage from "@/assets/images/media/header-image.png";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PhotoGallery } from "@/components/multimedia/photo-gallery";
 import { VideoGallery } from "@/components/multimedia/video-gallery";
@@ -15,8 +13,6 @@ export default async function News({ params }: Props) {
 
   return (
     <section className="w-full flex flex-col gap-16 items-center">
-      <Image src={HeaderImage} alt="header image" className="w-full" />
-
       <h1 className="uppercase text-5xl text-center w-full px-[112px]">
         Multİmedİa
       </h1>

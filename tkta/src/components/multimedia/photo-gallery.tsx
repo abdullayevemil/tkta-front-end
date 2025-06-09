@@ -56,7 +56,7 @@ export function PhotoGallery() {
     params.append("page", page.toString());
 
     try {
-      const res = await fetch(`/api/media/photo-gallery?${params.toString()}`);
+      const res = await fetch(`/api/media/multimedia/photo-gallery?${params.toString()}`);
       if (!res.ok) throw new Error("Failed to fetch");
       const data = await res.json();
       setGallery(data.gallery);
@@ -73,7 +73,7 @@ export function PhotoGallery() {
   async function handleDelete() {
     if (!deleteId) return;
     try {
-      const res = await fetch(`/api/media/photo-gallery/${deleteId}`, {
+      const res = await fetch(`/api/media/multimedia/photo-gallery/${deleteId}`, {
         method: "DELETE",
       });
       if (!res.ok) throw new Error("Delete failed");

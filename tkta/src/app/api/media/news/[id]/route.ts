@@ -59,8 +59,11 @@ export async function PUT(
   const formData = await req.formData();
 
   const title = formData.get("title") as string;
+  const titleEnglish = formData.get("titleEnglish") as string;
   const note = formData.get("note") as string;
+  const noteEnglish = formData.get("noteEnglish") as string;
   const content = formData.get("content") as string;
+  const contentEnglish = formData.get("contentEnglish") as string;
   const date = formData.get("date") as string;
   const headerImage = formData.get("headerImage") as File;
 
@@ -82,8 +85,11 @@ export async function PUT(
   await sql`
     UPDATE news SET
       title = ${title},
+      titleEnglish = ${titleEnglish},
       note = ${note},
+      noteEnglish = ${noteEnglish},
       content = ${content},
+      contentEnglish = ${contentEnglish},
       date = ${date},
       headerImageUrl = ${headerImageUrl}
     WHERE id = ${idNumber}

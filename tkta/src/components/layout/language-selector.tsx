@@ -17,6 +17,8 @@ import {
 } from "@/components/ui/popover";
 import AzIcon from "@/assets/icons/flags/AZ.svg";
 import EnIcon from "@/assets/icons/flags/GB.svg";
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 const icons = [AzIcon, EnIcon];
 
@@ -32,9 +34,29 @@ const languages = [
 ];
 
 export function LanguageSelector() {
+  const router = useRouter();
+
+  const pathname = usePathname();
+
   const [open, setOpen] = React.useState(false);
 
   const [value, setValue] = React.useState(0);
+
+  const handleLocaleChange = (newLocale: string) => {
+    const segments = pathname.split("/");
+
+    segments[1] = newLocale;
+
+    const newPath = segments.join("/");
+
+    router.push(newPath);
+  };
+
+  useEffect(() => {
+    const segments = pathname.split("/");
+
+    setValue(segments[1] === "az" ? 0 : 1);
+  });
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -65,6 +87,9 @@ export function LanguageSelector() {
                       Number.parseInt(currentValue) === value
                         ? 0
                         : Number.parseInt(currentValue)
+                    );
+                    handleLocaleChange(
+                      Number.parseInt(currentValue) === 0 ? "az" : "en"
                     );
                     setOpen(false);
                   }}

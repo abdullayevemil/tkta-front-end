@@ -34,36 +34,21 @@ export async function GET(req: Request) {
   const conditions = [];
 
   if (search) {
+    const similarity = sql`(SIMILARITY(title, ${search}) > 0 OR SIMILARITY(titleEnglish, ${search}) > 0)`;
+
     if (from) {
       if (to) {
         conditions.push(
-          sql`SIMILARITY(title, ${search}) > 0 AND date >= ${from} AND date <= ${to}`
+          sql`${similarity} AND date >= ${from} AND date <= ${to}`
         );
       } else {
-        conditions.push(
-          sql`SIMILARITY(title, ${search}) > 0 AND date >= ${from}`
-        );
+        conditions.push(sql`${similarity} AND date >= ${from}`);
       }
     } else {
       if (to) {
-        conditions.push(
-          sql`SIMILARITY(title, ${search}) > 0 AND date <= ${to}`
-        );
+        conditions.push(sql`${similarity} AND date <= ${to}`);
       } else {
-        conditions.push(sql`SIMILARITY(title, ${search}) > 0`);
-      }
-    }
-  } else {
-    if (from) {
-      if (to) {
-        conditions.push(sql`date >= ${from} AND date <= ${to}`);
-      } else {
-        conditions.push(sql`date >= ${from}`);
-      }
-    } else {
-      if (to) {
-        conditions.push(sql`date <= ${to}`);
-      } else {
+        conditions.push(similarity);
       }
     }
   }
@@ -72,7 +57,7 @@ export async function GET(req: Request) {
 
   const news = await sql`SELECT * FROM news
     ${whereClause}
-    ORDER BY SIMILARITY(title, ${search}) DESC, date ${sort}
+    ORDER BY SIMILARITY(title, ${search}) DESC, SIMILARITY(titleEnglish, ${search}) DESC, date ${sort}
     LIMIT ${ITEMS_PER_PAGE} OFFSET ${offset}
   `;
 
@@ -92,14 +77,20 @@ export async function POST(req: NextRequest) {
     const formData = await req.formData();
 
     const title = formData.get("title")?.toString() || "";
-    
+
     const content = formData.get("content")?.toString() || "";
-    
+
+    const titleEnglish = formData.get("titleEnglish")?.toString() || "";
+
+    const contentEnglish = formData.get("contentEnglish")?.toString() || "";
+
     const date = new Date(formData.get("date")?.toString() || Date.now());
 
     const headerImage = formData.get("headerImage") as File;
-    
+
     const note = formData.get("note")?.toString() || "";
+
+    const noteEnglish = formData.get("noteEnglish")?.toString() || "";
 
     const galleryImages = formData.getAll("galleryImages") as File[];
 
@@ -119,8 +110,8 @@ export async function POST(req: NextRequest) {
     const headerImageUrl = uploadedHeader.secure_url;
 
     const [news] = await sql`
-      INSERT INTO news (title, content, date, headerImageUrl, note)
-      VALUES (${title}, ${content}, ${date}, ${headerImageUrl}, ${note})
+      INSERT INTO news (title, content, date, headerImageUrl, note, titleEnglish, contentEnglish, noteEnglish)
+      VALUES (${title}, ${content}, ${date}, ${headerImageUrl}, ${note}, ${titleEnglish}, ${contentEnglish}, ${noteEnglish})
       RETURNING id
     `;
 

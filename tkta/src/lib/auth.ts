@@ -18,7 +18,7 @@ export const authOptions: NextAuthOptions = {
       async authorize(credentials) {
         const { email, password } = credentials || {};
         const response = await axios.get(`https://tkta-front-end.vercel.app/api/users?email=${email}`);
-        const user = response.data;
+        const user = response.data[0];
 
         if (user?.password === password) {
           return {

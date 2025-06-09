@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Link from "next/link";
 import {
   NavigationMenu,
@@ -13,454 +15,554 @@ import {
 import ListItem from "./navigation-link";
 import { cn } from "@/lib/utils";
 import CallIcon from "@/assets/icons/footer/call.svg";
+import { getTranslation } from "@/lib/i18n";
+import { Menu, X } from "lucide-react";
 
-export function Navigation() {
+export function Navigation({ locale }: { locale: string }) {
+  const t = getTranslation(locale);
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <NavigationMenu className="w-full max-w-full">
-      <NavigationMenuList className="w-full justify-evenly max-w-full">
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="font-helvetica text-base">
-            Agentlik
-          </NavigationMenuTrigger>
+    <nav className="w-full">
+      <div className="lg:hidden flex justify-end p-4">
+        <button onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
 
-          <NavigationMenuContent className="left-0">
-            <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
-              <li>
-                <ListItem href="/agency/about" title="Haqqımızda">
-                  Agentlik haqqında məlumat
-                </ListItem>
-              </li>
+      <div
+        className={cn(
+          "lg:flex w-full",
+          isOpen ? "block" : "hidden",
+          "lg:block"
+        )}
+      >
+        <NavigationMenu className="w-full max-w-full">
+          <NavigationMenuList className="w-full flex-col lg:flex-row lg:justify-evenly max-w-full">
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="font-helvetica text-base">
+                {t.header.navigation.agency.title}
+              </NavigationMenuTrigger>
 
-              <li>
-                <ListItem href="/agency/principles" title="Rəhbərlik">
-                  Komanda və idarəçilər
-                </ListItem>
-              </li>
+              <NavigationMenuContent className="left-0">
+                <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
+                  <li>
+                    <ListItem
+                      href="/agency/about"
+                      title={t.header.navigation.agency.about}
+                    >
+                      {t.header.navigation.agency.aboutDescription}
+                    </ListItem>
+                  </li>
 
-              <li>
-                <ListItem href="/agency/structure" title="Struktur">
-                  Departament və şöbələr
-                </ListItem>
-              </li>
+                  <li>
+                    <ListItem
+                      href="/agency/principles"
+                      title={t.header.navigation.agency.principles}
+                    >
+                      {t.header.navigation.agency.principlesDescription}
+                    </ListItem>
+                  </li>
 
-              <NavigationMenuSub defaultValue="sub1" className="w-full">
-                <NavigationMenuList className="w-full">
-                  <NavigationMenuItem className="w-full">
-                    <NavigationMenuTrigger className="h-fit font-helvetica w-full flex flex-row justify-left p-0 text-left">
-                      <ListItem
-                        className="hover:bg-transparent"
-                        href="/agency/inner-quality"
-                        title="Daxili keyfiyyət təminatı sistemi"
-                      >
-                        Agentliyin daxili nəzarəti
-                      </ListItem>
-                    </NavigationMenuTrigger>
+                  <li>
+                    <ListItem
+                      href="/agency/structure"
+                      title={t.header.navigation.agency.structure}
+                    >
+                      {t.header.navigation.agency.structureDescription}
+                    </ListItem>
+                  </li>
 
-                    <NavigationMenuContent className="left-64 top-0 z-50">
-                      <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
-                        <li>
+                  <li>
+                    <ListItem
+                      href="/agency/inner-quality"
+                      title={
+                        t.header.navigation.agency.internalQualityAssurance
+                      }
+                    >
+                      {
+                        t.header.navigation.agency
+                          .internalQualityAssuranceDescription
+                      }
+                    </ListItem>
+                  </li>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="font-helvetica text-base">
+                {t.header.navigation.services.title}
+              </NavigationMenuTrigger>
+
+              <NavigationMenuContent className="left-0">
+                <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
+                  <li>
+                    <ListItem
+                      href="/services/qualifications-recognition"
+                      title={
+                        t.header.navigation.services
+                          .foreignQualificationsRecognition
+                      }
+                    >
+                      {
+                        t.header.navigation.services
+                          .foreignQualificationsRecognitionDescription
+                      }
+                    </ListItem>
+                  </li>
+
+                  <li>
+                    <ListItem
+                      href="/services/education-recognition"
+                      title={
+                        t.header.navigation.services
+                          .nonInformalaeducationRecognition
+                      }
+                    >
+                      {
+                        t.header.navigation.services
+                          .nonInformalaeducationRecognitionDescription
+                      }
+                    </ListItem>
+                  </li>
+
+                  <li>
+                    <ListItem
+                      href="/services/accreditation"
+                      title={t.header.navigation.services.accreditation}
+                    >
+                      {t.header.navigation.services.accreditationDescription}
+                    </ListItem>
+                  </li>
+
+                  <li>
+                    <ListItem
+                      href="/services/training-methodology"
+                      title={t.header.navigation.services.training}
+                    >
+                      {t.header.navigation.services.trainingDescription}
+                    </ListItem>
+                  </li>
+
+                  <li>
+                    <ListItem
+                      href="/services/analysis"
+                      title={t.header.navigation.services.analysis}
+                    >
+                      {t.header.navigation.services.analysisDescription}
+                    </ListItem>
+                  </li>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="font-helvetica text-base">
+                {t.header.navigation.diplomaConfirmation.title}
+              </NavigationMenuTrigger>
+
+              <NavigationMenuContent className="left-0">
+                <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
+                  <li>
+                    <ListItem
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://apply.enic.edu.az/instructions/"
+                      title={
+                        t.header.navigation.diplomaConfirmation.instructions
+                      }
+                    >
+                      {
+                        t.header.navigation.diplomaConfirmation
+                          .instructionsDescription
+                      }
+                    </ListItem>
+                  </li>
+
+                  <li>
+                    <ListItem
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://apply.enic.edu.az/"
+                      title={t.header.navigation.diplomaConfirmation.apply}
+                    >
+                      {t.header.navigation.diplomaConfirmation.applyDescription}
+                    </ListItem>
+                  </li>
+
+                  <li>
+                    <ListItem
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://apply.enic.edu.az/e-reference/"
+                      title={
+                        t.header.navigation.diplomaConfirmation.checkDiploma
+                      }
+                    >
+                      {
+                        t.header.navigation.diplomaConfirmation
+                          .checkDiplomaDescription
+                      }
+                    </ListItem>
+                  </li>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <Link
+                href="/internationalization"
+                legacyBehavior
+                passHref
+                className="font-helvetica text-base"
+              >
+                <NavigationMenuLink
+                  className={cn(
+                    navigationMenuTriggerStyle(),
+                    "font-helvetica text-base"
+                  )}
+                >
+                  {t.header.navigation.internationalization}
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="font-helvetica text-base">
+                {t.header.navigation.announcements.title}
+              </NavigationMenuTrigger>
+
+              <NavigationMenuContent className="left-0">
+                <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
+                  <li>
+                    <ListItem
+                      href="/announcements/vacancies"
+                      title={t.header.navigation.announcements.vacancies}
+                    >
+                      {t.header.navigation.announcements.vacanciesDescription}
+                    </ListItem>
+                  </li>
+
+                  <li>
+                    <ListItem
+                      href="/announcements/qualification-recognition"
+                      title={
+                        t.header.navigation.announcements.documentSubmission
+                      }
+                    >
+                      {
+                        t.header.navigation.announcements
+                          .documentSubmissionDescription
+                      }
+                    </ListItem>
+                  </li>
+
+                  <li>
+                    <ListItem
+                      href="/announcements/cooperation"
+                      title={
+                        t.header.navigation.announcements
+                          .collaborationOpportunities
+                      }
+                    >
+                      {
+                        t.header.navigation.announcements
+                          .collaborationOpportunitiesDescription
+                      }
+                    </ListItem>
+                  </li>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="font-helvetica text-base">
+                {t.header.navigation.reports.title}
+              </NavigationMenuTrigger>
+
+              <NavigationMenuContent className="left-0">
+                <ul className="grid w-[200px] gap-3 p-4 md:w-[150px] md:grid-cols-1 lg:w-[300px]">
+                  <li>
+                    <ListItem
+                      href="/reports/annual"
+                      title={t.header.navigation.reports.annualReports}
+                    >
+                      {t.header.navigation.reports.annualReportsDescription}
+                    </ListItem>
+                  </li>
+
+                  <li>
+                    <ListItem
+                      href="/reports/financial"
+                      title={t.header.navigation.reports.financialReports}
+                    >
+                      {t.header.navigation.reports.financialReportsDescription}
+                    </ListItem>
+                  </li>
+
+                  <li>
+                    <ListItem
+                      href="/reports/accreditation/monitoring"
+                      title={t.header.navigation.reports.monitoringReports}
+                    >
+                      {t.header.navigation.reports.monitoringReportsDescription}
+                    </ListItem>
+                  </li>
+
+                  <NavigationMenuSub defaultValue="sub1" className="w-full">
+                    <NavigationMenuList className="w-full">
+                      <NavigationMenuItem className="w-full">
+                        <NavigationMenuTrigger className="h-fit font-helvetica w-full flex flex-row justify-left p-0 text-left">
                           <ListItem
-                            href="/agency/inner-quality/plan"
-                            title="Strateji plan"
-                          ></ListItem>
-                        </li>
-                      </ul>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenuSub>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
+                            href="/reports/accreditation"
+                            title={
+                              t.header.navigation.reports.accreditationReports
+                            }
+                            className="hover:bg-transparent"
+                          >
+                            {
+                              t.header.navigation.reports
+                                .accreditationReportsDescription
+                            }
+                          </ListItem>
+                        </NavigationMenuTrigger>
 
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="font-helvetica text-base">
-            Fəaliyyət sahələri
-          </NavigationMenuTrigger>
+                        <NavigationMenuContent className="z-50 left-64 top-0">
+                          <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
+                            <li>
+                              <ListItem
+                                href="/reports/accreditation/atm"
+                                title={
+                                  t.header.navigation.reports
+                                    .atmAccreditationReports
+                                }
+                              ></ListItem>
+                            </li>
 
-          <NavigationMenuContent className="left-0">
-            <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
-              <li>
-                <ListItem
-                  href="/services/qualifications-recognition"
-                  title="Xarici kvalifikasiyaların tanınması"
+                            <li>
+                              <ListItem
+                                href="/reports/accreditation/professional"
+                                title={
+                                  t.header.navigation.reports
+                                    .professionalEducationReports
+                                }
+                              ></ListItem>
+                            </li>
+
+                            <li>
+                              <ListItem
+                                href="/reports/accreditation/international"
+                                title={
+                                  t.header.navigation.reports
+                                    .internationalAccreditationReports
+                                }
+                              ></ListItem>
+                            </li>
+                          </ul>
+                        </NavigationMenuContent>
+                      </NavigationMenuItem>
+                    </NavigationMenuList>
+                  </NavigationMenuSub>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="font-helvetica text-base">
+                {t.header.navigation.laws.title}
+              </NavigationMenuTrigger>
+
+              <NavigationMenuContent className="left-0">
+                <ul className="grid w-[400px] gap-3 p-4 md:w-[300px] md:grid-cols-2 lg:w-[500px]">
+                  <li>
+                    <ListItem
+                      href="/legislation/laws"
+                      title={t.header.navigation.laws.laws}
+                    >
+                      {t.header.navigation.laws.lawsDescription}
+                    </ListItem>
+                  </li>
+
+                  <li>
+                    <ListItem
+                      href="/legislation/president-requirements"
+                      title={t.header.navigation.laws.prezidentLaws}
+                    >
+                      {t.header.navigation.laws.prezidentLawsDescription}
+                    </ListItem>
+                  </li>
+
+                  <li>
+                    <ListItem
+                      href="/legislation/cabinet_of_ministers"
+                      title={t.header.navigation.laws.cabinetDecisions}
+                    >
+                      {t.header.navigation.laws.cabinetDecisionsDescription}
+                    </ListItem>
+                  </li>
+
+                  <li>
+                    <ListItem
+                      href="/legislation/education"
+                      title={t.header.navigation.laws.ministryDecisions}
+                    >
+                      {t.header.navigation.laws.ministryDecisionsDescription}
+                    </ListItem>
+                  </li>
+
+                  <li>
+                    <ListItem
+                      href="/legislation/others"
+                      title={t.header.navigation.laws.otherLegalActs}
+                    >
+                      {t.header.navigation.laws.otherLegalActsDescription}
+                    </ListItem>
+                  </li>
+
+                  <li>
+                    <ListItem
+                      href="/legislation/accreditation-parameters"
+                      title={t.header.navigation.laws.accreditationCriteria}
+                    >
+                      {
+                        t.header.navigation.laws
+                          .accreditationCriteriaDescription
+                      }
+                    </ListItem>
+                  </li>
+
+                  <li>
+                    <ListItem
+                      href="/legislation/accreditation-regulations"
+                      title={t.header.navigation.laws.accreditationRules}
+                    >
+                      {t.header.navigation.laws.accreditationRulesDescription}
+                    </ListItem>
+                  </li>
+
+                  <li>
+                    <ListItem
+                      href="/legislation/agency-regulations"
+                      title={t.header.navigation.laws.agencyCharter}
+                    >
+                      {t.header.navigation.laws.agencyCharterDescription}
+                    </ListItem>
+                  </li>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="font-helvetica text-base">
+                {t.header.navigation.media.title}
+              </NavigationMenuTrigger>
+
+              <NavigationMenuContent className="left-0">
+                <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
+                  <li>
+                    <ListItem
+                      href="/media/news"
+                      title={t.header.navigation.media.news}
+                    >
+                      {t.header.navigation.media.newsDescription}
+                    </ListItem>
+                  </li>
+
+                  <li>
+                    <ListItem
+                      href="/media/interviews"
+                      title={t.header.navigation.media.interviews}
+                    >
+                      {t.header.navigation.media.interviewsDescription}
+                    </ListItem>
+                  </li>
+
+                  <li>
+                    <ListItem
+                      href="/media/disclosures"
+                      title={t.header.navigation.media.statements}
+                    >
+                      {t.header.navigation.media.statementsDescription}
+                    </ListItem>
+                  </li>
+
+                  <li>
+                    <ListItem
+                      href="/media/multimedia"
+                      title={t.header.navigation.media.multimedia}
+                    >
+                      {t.header.navigation.media.multimediaDescription}
+                    </ListItem>
+                  </li>
+
+                  <li>
+                    <ListItem
+                      href="/media/video-instructions"
+                      title={t.header.navigation.media.videoTutorials}
+                    >
+                      {t.header.navigation.media.videoTutorialsDescription}
+                    </ListItem>
+                  </li>
+
+                  <li>
+                    <ListItem
+                      href="/media/faq"
+                      title={t.header.navigation.media.faq}
+                    >
+                      {t.header.navigation.media.faqDescription}
+                    </ListItem>
+                  </li>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <Link
+                href="/contact"
+                legacyBehavior
+                passHref
+                className="font-helvetica text-base"
+              >
+                <NavigationMenuLink
+                  className={cn(
+                    navigationMenuTriggerStyle(),
+                    "font-helvetica text-base"
+                  )}
                 >
-                  Təhsil sənədlərinin tanınması
-                </ListItem>
-              </li>
+                  {t.header.navigation.contact.title}
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
 
-              <li>
-                <ListItem
-                  href="/services/education-recognition"
-                  title="Qeyri formal və informal təhsilin tanınması"
+            <NavigationMenuItem>
+              <Link
+                href="tel:146"
+                legacyBehavior
+                passHref
+                className="font-helvetica text-base"
+              >
+                <NavigationMenuLink
+                  className={cn(
+                    navigationMenuTriggerStyle(),
+                    "font-helvetica text-base"
+                  )}
                 >
-                  Peşə təcrübəsinin tanınması
-                </ListItem>
-              </li>
+                  <div className="flex flex-row justify-between items-center gap-2">
+                    <CallIcon
+                      width={20}
+                      height={20}
+                      color="var(--primary-color)"
+                    />
 
-              <li>
-                <ListItem
-                  href="/services/accreditation"
-                  title="Akkreditasiya və lisenziya"
-                >
-                  Rəsmi təsdiq və qiymətləndirmə
-                </ListItem>
-              </li>
-
-              <li>
-                <ListItem
-                  href="/services/training-methodology"
-                  title="Təlim və metodologiya"
-                >
-                  Öyrətmə üsul və yanaşmaları
-                </ListItem>
-              </li> 
-
-              <li>
-                <ListItem href="/services/analysis" title="Analitik təhlil">
-                  Məlumatın analitik analizi
-                </ListItem>
-              </li>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="font-helvetica text-base">
-            Diplom təsdiqi
-          </NavigationMenuTrigger>
-
-          <NavigationMenuContent className="left-0">
-            <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
-              <li>
-                <ListItem
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://apply.enic.edu.az/instructions/"
-                  title="Təlimat"
-                >
-                  Tanıma prosesi ilə bağlı izah
-                </ListItem>
-              </li>
-
-              <li>
-                <ListItem
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://apply.enic.edu.az/"
-                  title="Müraciət et"
-                >
-                  Tanıma üçün ərizə göndərilməsi
-                </ListItem>
-              </li>
-
-              <li>
-                <ListItem
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://apply.enic.edu.az/e-reference/"
-                  title="Dipomunu yoxla"
-                >
-                  Diplomun tanınma vəziyyətinin araşdırılması
-                </ListItem>
-              </li>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <Link
-            href="/internationalization"
-            legacyBehavior
-            passHref
-            className="font-helvetica text-base"
-          >
-            <NavigationMenuLink
-              className={cn(
-                navigationMenuTriggerStyle(),
-                "font-helvetica text-base"
-              )}
-            >
-              Beynəlmiləlləşmə
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="font-helvetica text-base">
-            Elanlar
-          </NavigationMenuTrigger>
-
-          <NavigationMenuContent className="left-0">
-            <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
-              <li>
-                <ListItem href="/announcements/vacancies" title="Vakansiyalar">
-                  Agentlikdə mövcud vakansiyalar
-                </ListItem>
-              </li>
-
-              <li>
-                <ListItem
-                  href="/announcements/qualification-recognition"
-                  title="Peşə ixtisasının tanınması üzrə sənəd qəbulu"
-                >
-                  İxtisas uyğunluğunun təsdiqi üçün sənədlərin qəbulu
-                </ListItem>
-              </li>
-
-              <li>
-                <ListItem
-                  href="/announcements/cooperation"
-                  title="Əməkdaşlıq imkanları"
-                >
-                  Birgə fəaliyyət perspektivləri
-                </ListItem>
-              </li>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="font-helvetica text-base">
-            Hesabatlar
-          </NavigationMenuTrigger>
-
-          <NavigationMenuContent className="left-0">
-            <ul className="grid w-[200px] gap-3 p-4 md:w-[150px] md:grid-cols-1 lg:w-[300px]">
-              <li>
-                <ListItem href="/reports/annual" title="İllik hesabatlar">
-                  İllər üzrə hesabatlar
-                </ListItem>
-              </li>
-
-              <li>
-                <ListItem href="/reports/financial" title="Maliyyə hesabatları">
-                  Rəsmi maliyyə məlumatları
-                </ListItem>
-              </li>
-
-              <li>
-                <ListItem
-                  href="/reports/accreditation/monitoring"
-                  title="Monitorinq hesabatları"
-                >
-                  İllik nəzarət hesabatları
-                </ListItem>
-              </li>
-
-              <NavigationMenuSub defaultValue="sub1" className="w-full">
-                <NavigationMenuList className="w-full">
-                  <NavigationMenuItem className="w-full">
-                    <NavigationMenuTrigger className="h-fit font-helvetica w-full flex flex-row justify-left p-0 text-left">
-                      <ListItem
-                        href="/reports/accreditation"
-                        title="Akkreditasiya hesabatları"
-                        className="hover:bg-transparent"
-                      >
-                        Rəsmi akkreditasiya sənədləri
-                      </ListItem>
-                    </NavigationMenuTrigger>
-
-                    <NavigationMenuContent className="z-50 left-64 top-0">
-                      <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
-                        <li>
-                          <ListItem
-                            href="/reports/accreditation/atm"
-                            title="ATM üzrə akkreditasiya hesabatları"
-                          ></ListItem>
-                        </li>
-
-                        <li>
-                          <ListItem
-                            href="/reports/accreditation/professional"
-                            title="Peşə Təhsili üzrə hesabatlar"
-                          ></ListItem>
-                        </li>
-
-                        <li>
-                          <ListItem
-                            href="/reports/accreditation/international"
-                            title="Beynəlxalq akkreditasiya hesabatları"
-                          ></ListItem>
-                        </li>
-                      </ul>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenuSub>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="font-helvetica text-base">
-            Qanunvericilik
-          </NavigationMenuTrigger>
-
-          <NavigationMenuContent className="left-0">
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[300px] md:grid-cols-2 lg:w-[500px]">
-              <li>
-                <ListItem href="/legislation/laws" title="Qanunlar">
-                  Rəsmi qaydalar və hüquqi tələblər
-                </ListItem>
-              </li>
-
-              <li>
-                <ListItem
-                  href="/legislation/president-requirements"
-                  title="AR Prezidentinin fərmanaları"
-                >
-                  Rəsmi sərəncamlar və hüquqi qərarlar
-                </ListItem>
-              </li>
-
-              <li>
-                <ListItem
-                  href="/legislation/cabinet_of_ministers"
-                  title="AR Nazirlər Kabinetinin qərarları"
-                >
-                  Dövlət idarəçiliyi və hüquqi tənzimləmə qərarları
-                </ListItem>
-              </li>
-
-              <li>
-                <ListItem
-                  href="/legislation/education"
-                  title="Elm və Təhsil Nazirliyinin qərarları"
-                >
-                  Təhsil və elmi fəaliyyətlə bağlı rəsmi qərarlar
-                </ListItem>
-              </li>
-
-              <li>
-                <ListItem
-                  href="/legislation/others"
-                  title="Digər qanun qüvvəli aktlar"
-                >
-                  Hüquqi tənzimləməyə aid əlavə normativ aktlar
-                </ListItem>
-              </li>
-
-              <li>
-                <ListItem
-                  href="/legislation/accreditation-parameters"
-                  title="Akkreditasiya Meyarları"
-                >
-                  Təhsil və qurumların qiymətləndirilməsi meyarları
-                </ListItem>
-              </li>
-
-              <li>
-                <ListItem
-                  href="/legislation/accreditation-regulations"
-                  title="Akkreditasiya Qaydaları"
-                >
-                  Akkreditasiya prosesinin tənzimlənmə qaydaları.
-                </ListItem>
-              </li>
-
-              <li>
-                <ListItem
-                  href="/legislation/agency-regulations"
-                  title="Agentliyin Nizamnaməsi"
-                >
-                  Agentliyin fəaliyyəti və səlahiyyətlərini müəyyən edən əsas
-                  sənəd
-                </ListItem>
-              </li>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="font-helvetica text-base">
-            Media
-          </NavigationMenuTrigger>
-
-          <NavigationMenuContent className="left-0">
-            <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
-              <li>
-                <ListItem href="/media/news" title="Xəbərlər">
-                  Ən son yeniliklər
-                </ListItem>
-              </li>
-
-              <li>
-                <ListItem href="/media/interviews" title="Müsahibələr">
-                  Tanınmış şəxslərlə söhbətlər
-                </ListItem>
-              </li>
-
-              <li>
-                <ListItem href="/media/disclosures" title="Açıqlamalar">
-                  Rəsmi məlumat və izahlar
-                </ListItem>
-              </li>
-
-              <li>
-                <ListItem href="/media/multimedia" title="Multimedia">
-                  Foto və video arxiv
-                </ListItem>
-              </li>
-
-              <li>
-                <ListItem
-                  href="/media/video-instructions"
-                  title="Video təlimatlar"
-                >
-                  Video formatında izahlar
-                </ListItem>
-              </li>
-
-              <li>
-                <ListItem href="/media/faq" title="FAQ">
-                  Müntəzəm verilən suallar
-                </ListItem>
-              </li>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <Link
-            href="/contact"
-            legacyBehavior
-            passHref
-            className="font-helvetica text-base"
-          >
-            <NavigationMenuLink
-              className={cn(
-                navigationMenuTriggerStyle(),
-                "font-helvetica text-base"
-              )}
-            >
-              Əlaqə
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <Link
-            href="tel:146"
-            legacyBehavior
-            passHref
-            className="font-helvetica text-base"
-          >
-            <NavigationMenuLink
-              className={cn(
-                navigationMenuTriggerStyle(),
-                "font-helvetica text-base"
-              )}
-            >
-              <div className="flex flex-row justify-between items-center gap-2">
-                <CallIcon width={20} height={20} color="var(--primary-color)" />
-
-                <span>146-8</span>
-              </div>
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-      </NavigationMenuList>
-    </NavigationMenu>
+                    <span>146-8</span>
+                  </div>
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+      </div>
+    </nav>
   );
 }

@@ -1,23 +1,29 @@
-import { News } from "@/types/news";
 import { Card } from "../ui/card";
 import Image from "next/image";
 import { format } from "date-fns";
+import { Badge } from "../ui/badge";
 
-interface Props extends News {
+interface Props {
   href: string;
+  id: number;
+  title: string;
+  content: string;
+  headerimageurl?: string;
+  date: string;
+  note?: string;
 }
 
 export default function NewsCard({ title, date, headerimageurl, note }: Props) {
   return (
     <Card className="w-full h-full flex flex-col bg-transparent">
-      <div className="h-3/5 w-full">
+      <div className="h-3/5 w-full h-[16rem]">
         {headerimageurl ? (
           <Image
             src={headerimageurl}
             alt={`${title} image`}
             width={400}
             height={400}
-            className="w-full h-[16rem] object-cover rounded-t-xl"
+            className="w-full object-cover rounded-t-xl h-full max-w-full"
           />
         ) : (
           <div className="flex items-center h-[16rem] justify-center text-textPrimary text-5xl">
@@ -31,7 +37,7 @@ export default function NewsCard({ title, date, headerimageurl, note }: Props) {
 
         <div className="flex flex-row justify-between items-center">
           {note ? (
-            <div className="text-sm font-semibold text-red-700">{note}</div>
+            <Badge variant="destructive" className="py-1.5">{note}</Badge>
           ) : (
             <div></div>
           )}

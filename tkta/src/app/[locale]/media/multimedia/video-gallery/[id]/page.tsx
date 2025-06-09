@@ -35,7 +35,7 @@ export default function News({ params }: Props) {
   useEffect(() => {
     if (!type || !id) return;
 
-    fetch(`/api/media/${type}/${id}`)
+    fetch(`/api/media/multimedia/${type}/${id}`)
       .then(async (res) => {
         if (!res.ok) {
           const errorData = await res.json();

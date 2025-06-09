@@ -66,7 +66,8 @@ export default function LoginPage() {
     try {
       toast.loading("Logging in...");
 
-      console.log("Login attempt with data:", data);
+      if (data) {
+      }
 
       const isSuccess = false;
 

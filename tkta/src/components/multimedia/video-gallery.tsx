@@ -29,6 +29,7 @@ import { CalendarIcon, EditIcon, PlusIcon, Trash2Icon } from "lucide-react";
 import { Calendar } from "../ui/calendar";
 import { getTranslation } from "@/lib/i18n";
 import { Card } from "../ui/card";
+import NewsSkeleton from "../news/skeleton";
 
 type GalleryItem = {
   id: number;
@@ -192,7 +193,7 @@ export function VideoGallery({ locale }: { locale: string }) {
       )}
 
       {gallery.length === 0 ? (
-        <p className="text-center mt-16">No videos found.</p>
+        <NewsSkeleton />
       ) : (
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
           {gallery.map((item) => (

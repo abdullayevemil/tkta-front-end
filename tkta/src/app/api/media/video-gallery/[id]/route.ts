@@ -7,8 +7,6 @@ export async function GET(
 ) {
   const { id } = await params;
 
-  console.log(req);
-
   const video = await sql`
     SELECT * FROM video_gallery WHERE id = ${id}
   `;

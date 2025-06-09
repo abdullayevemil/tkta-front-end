@@ -1,30 +1,35 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
-
-interface Photo {
-  id: number;
-  title: string;
-  description: string;
-  imageUrl: string;
-  createdAt: string;
-}
+import { format } from "date-fns";
+import { getTranslation } from "@/lib/i18n";
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface Video {
   id: number;
   title: string;
-  description: string;
+  titleenglish: string;
   headerviewurl: string;
-  createdAt: string;
+  date: string;
 }
 
-export default function MediaDetailPage() {
-  const { type, id } = useParams() as {
-    type: "photo-gallery" | "video-gallery";
+type Props = {
+  params: Promise<{
+    locale: string;
+  }>;
+};
+
+export default function News({ params }: Props) {
+  const { locale } = use(params);
+
+  const { id } = useParams() as {
     id: string;
   };
-  const [data, setData] = useState<Photo | Video | null>(null);
+
+  const type = "video-gallery";
+
+  const [data, setData] = useState<Video | null>(null);
   const [error, setError] = useState<string | null>(null);
   const router = useRouter();
 
@@ -56,30 +61,25 @@ export default function MediaDetailPage() {
   }
 
   if (!data) {
-    return <p className="p-8 text-center">Loading...</p>;
+    return <Skeleton className="w-full h-[700px] rounded-xl" />;
   }
 
   return (
-    <section className="max-w-4xl mx-auto p-8">
-      <h1 className="text-3xl font-bold mb-4">{data.title}</h1>
-      <p className="mb-6">{data.description}</p>
+    <section className="px-16 mx-auto p-8 flex flex-col items-center gap-16 pt-16">
+      <h1 className="text-3xl font-semibold text-textPrimary mb-4 text-center">
+        {locale === 'az' ? data.title : data.titleenglish}
+      </h1>
 
-      {type === "photo-gallery" ? (
-        <img
-          src={(data as Photo).imageUrl}
-          alt={data.title}
-          className="w-full rounded shadow"
-        />
-      ) : (
-        <video
+      <div className="w-full px-16">
+        <iframe
           src={(data as Video).headerviewurl}
-          controls
-          className="w-full rounded shadow"
+          height={"700"}
+          className="w-full rounded-xl shadow"
         />
-      )}
+      </div>
 
-      <p className="mt-4 text-sm text-gray-600">
-        Uploaded: {new Date(data.createdAt).toLocaleDateString()}
+      <p className="text-sm text-gray-600 w-full text-right">
+        {format(new Date(data.date.toString()), "dd-MM-yyyy")}
       </p>
     </section>
   );

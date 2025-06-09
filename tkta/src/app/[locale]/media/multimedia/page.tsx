@@ -4,7 +4,15 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PhotoGallery } from "@/components/multimedia/photo-gallery";
 import { VideoGallery } from "@/components/multimedia/video-gallery";
 
-export default function News() {
+type Props = {
+  params: Promise<{
+    locale: string;
+  }>;
+};
+
+export default async function News({ params }: Props) {
+  const { locale } = await params;
+
   return (
     <section className="w-full flex flex-col gap-16 items-center">
       <Image src={HeaderImage} alt="header image" className="w-full" />
@@ -15,7 +23,7 @@ export default function News() {
 
       <Tabs
         defaultValue="photo-gallery"
-        className="w-full px-[112px] flex flex-col gap-16"
+        className="w-full px-16 flex flex-col gap-16"
       >
         <TabsList>
           <TabsTrigger
@@ -38,7 +46,7 @@ export default function News() {
         </TabsContent>
 
         <TabsContent value="video-gallery">
-          <VideoGallery />
+          <VideoGallery locale={locale} />
         </TabsContent>
       </Tabs>
     </section>

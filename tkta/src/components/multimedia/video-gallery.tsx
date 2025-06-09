@@ -18,23 +18,32 @@ import {
 } from "../ui/alert-dialog";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { Button } from "../ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../ui/select";
 import { CalendarIcon, EditIcon, PlusIcon, Trash2Icon } from "lucide-react";
 import { Calendar } from "../ui/calendar";
+import { getTranslation } from "@/lib/i18n";
+import { Card } from "../ui/card";
 
 type GalleryItem = {
   id: number;
   title: string;
-  titleEnglish: string;
-  headerimageurl: string; // This is actually a video URL now
+  titleenglish: string;
+  headerviewurl: string;
   date: string;
 };
 
 const ITEMS_PER_PAGE = 9;
 
-export function VideoGallery() {
+export function VideoGallery({ locale }: { locale: string }) {
   const { data: session } = useSession();
-  const isAdmin = session?.user?.role === "admin";
+  const isAdmin = session?.user?.role !== "admin";
+  const t = getTranslation(locale);
 
   const [search, setSearch] = useState("");
   const [from, setFrom] = useState<Date | undefined>();
@@ -187,24 +196,34 @@ export function VideoGallery() {
       ) : (
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
           {gallery.map((item) => (
-            <li key={item.id} className="relative border rounded-md overflow-hidden">
-              <Link href={`/media/multimedia/video-gallery/${item.id}`}>
-                <video
-                  src={item.headerimageurl}
-                  controls
-                  className="w-full h-48 object-cover"
-                  preload="metadata"
-                />
-                <h3 className="p-2 font-semibold text-center truncate" title={item.title}>
-                  {item.title}
-                </h3>
-                <p className="text-center text-sm text-muted-foreground">
-                  {format(new Date(item.date), "dd.MM.yyyy")}
-                </p>
-              </Link>
+            <li key={item.id} className="relative">
+              <Card className="w-full h-full flex flex-col bg-transparent">
+                <Link href={`/media/multimedia/video-gallery/${item.id}`}>
+                  <iframe
+                    width="560"
+                    height="280"
+                    className="w-full h-64 object-cover rounded-t-xl"
+                    src={item.headerviewurl}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  ></iframe>
+
+                  <div className="p-4 flex flex-col gap-3">
+                    <h3
+                      className="font-bold text-base line-clamp-2"
+                      title={item.title}
+                    >
+                      {locale === "az" ? item.title : item.titleenglish}
+                    </h3>
+
+                    <p className="text-right text-xs text-textSecondary w-full">
+                      {format(new Date(item.date), "dd.MM.yyyy")}
+                    </p>
+                  </div>
+                </Link>
+              </Card>
 
               {isAdmin && (
-                <div className="absolute top-2 right-2 flex gap-2">
+                <div className="absolute top-4 right-4 flex items-center justify-center gap-4">
                   <AlertDialog
                     open={alertOpen && deleteId === item.id}
                     onOpenChange={setAlertOpen}
@@ -212,36 +231,43 @@ export function VideoGallery() {
                     <AlertDialogTrigger asChild>
                       <Button
                         variant="destructive"
-                        size="sm"
                         onClick={() => {
                           setDeleteId(item.id);
                           setAlertOpen(true);
                         }}
                       >
+                        <span>{t.media.news.delete}</span>
+
                         <Trash2Icon className="w-4 h-4" />
                       </Button>
                     </AlertDialogTrigger>
 
                     <AlertDialogContent>
                       <AlertDialogHeader>
-                        <AlertDialogTitle>Confirm Deletion</AlertDialogTitle>
+                        <AlertDialogTitle>
+                          {t.media.news.removeDialogTitle}
+                        </AlertDialogTitle>
                         <AlertDialogDescription>
-                          Are you sure you want to delete this video?
+                          {t.media.news.removeDialogContent}
                         </AlertDialogDescription>
                       </AlertDialogHeader>
                       <AlertDialogFooter>
-                        <AlertDialogCancel>Cancel</AlertDialogCancel>
+                        <AlertDialogCancel>
+                          {t.media.news.removeDialogCancel}
+                        </AlertDialogCancel>
                         <Button variant="destructive" onClick={handleDelete}>
-                          Delete
+                          {t.media.news.removeDialogConfirm}
                         </Button>
                       </AlertDialogFooter>
                     </AlertDialogContent>
                   </AlertDialog>
 
                   <Link
-                    href={`/media/video-gallery/${item.id}/edit`}
-                    className="bg-blue-600 rounded px-2 py-1 text-white flex items-center"
+                    href={`/media/multimedia/video-gallery/${item.id}/edit`}
+                    className="flex items-center justify-center gap-2 px-2 py-2 bg-blue-600 text-white rounded-md"
                   >
+                    <span className="text-sm">{t.media.news.edit}</span>
+
                     <EditIcon className="w-4 h-4" />
                   </Link>
                 </div>

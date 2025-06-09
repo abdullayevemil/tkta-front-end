@@ -1,0 +1,175 @@
+{
+  "header": {
+    "colorSwitch": {
+      "color": "Rəng",
+      "on": "açıq",
+      "off": "sönülü"
+    },
+    "mostRejectedUniversities": "Ən çox imtina alan universitetlər",
+    "nonRecognizedUniversities": "Tanınmayan universitetlər",
+    "navigation": {
+      "agency": {
+        "title": "Agentlik",
+        "about": "Haqqımızda",
+        "aboutDescription": "Agentlik haqqında məlumat",
+        "principles": "Rəhbərlik",
+        "principlesDescription": "Komanda və idarəçilər",
+        "structure": "Struktur",
+        "structureDescription": "Departament və şöbələr",
+        "internalQualityAssurance": "Daxili keyfiyyət təminatı sistemi",
+        "internalQualityAssuranceDescription": "Agentliyin daxili nəzarəti"
+      },
+      "services": {
+        "title": "Fəaliyyət sahələri",
+        "foreignQualificationsRecognition": "Xarici kvalifikasiyaların tanınması",
+        "foreignQualificationsRecognitionDescription": "Təhsil sənədlərinin tanınması",
+        "nonInformalaeducationRecognition": "Qeyri formal və informal təhsilin tanınması",
+        "nonInformalaeducationRecognitionDescription": "Peşə təcrübəsinin tanınması",
+        "accreditation": "Akkreditasiya və lisenziya",
+        "accreditationDescription": "Rəsmi təsdiq və qiymətləndirmə",
+        "training": "Təlim və metodologiya",
+        "trainingDescription": "Öyrətmə üsul və yanaşmaları",       
+        "analysis": "Analitik təhlil",
+        "analysisDescription": "Məlumatların təhlili və hesabatlılığı"
+      },
+      "diplomaConfirmation": {
+        "title": "Diplom təsdiqi",
+        "instructions": "Təlimat",
+        "instructionsDescription": "Tanıma prosesi ilə bağlı izah",
+        "apply": "Müraciət et",
+        "applyDescription": "Tanıma üçün ərizə göndərilməsi",
+        "checkDiploma": "Diplomunu yoxla",
+        "checkDiplomaDescription": "Diplomun tanınma vəziyyətinin araşdırılması"
+      },
+      "internationalization": "Beynəlmiləlləşmə",
+      "announcements": {
+        "title": "Elanlar",
+        "vacancies": "Vakansiyalar",
+        "vacanciesDescription": "Agentlikdə mövcud vakansiyalar",
+        "documentSubmission": "Peşə ixtisasının tanınması üzrə sənəd qəbulu",
+        "documentSubmissionDescription": "İxtisas uyğunluğunun təsdiqi üçün sənədlərin qəbulu",
+        "collaborationOpportunities": "Əməkdaşlıq imkanları",
+        "collaborationOpportunitiesDescription": "Birgə fəaliyyət perspektivləri"
+      },
+      "reports": {
+        "title": "Hesabatlar",
+        "annualReports": "İllik hesabatlar",
+        "annualReportsDescription": "İllər üzrə hesabatlar",
+        "financialReports": "Maliyyə hesabatları",
+        "financialReportsDescription": "Rəsmi maliyyə məlumatları",
+        "monitoringReports": "Monitorinq hesabatları",
+        "monitoringReportsDescription": "İllik nəzarət hesabatları",
+        "accreditationReports": "Akkreditasiya hesabatları",
+        "accreditationReportsDescription": "Rəsmi akkreditasiya sənədləri",
+        "atmAccreditationReports": "ATM üzrə akkreditasiya hesabatları",
+        "professionalEducationReports": "Peşə təhsili hesabatları",
+        "internationalAccreditationReports": "Beynəlxalq akkreditasiya hesabatları"
+      },
+      "laws": {
+        "title": "Qanunvericilik",
+        "laws": "Qanunlar",
+        "lawsDescription": "Rəsmi qaydalar və hüquqi tələblər",
+        "prezidentLaws": "AR Prezidentinin fərmanları",
+        "prezidentLawsDescription": "Rəsmi sərəncamlar və hüquqi qərarlar",
+        "cabinetDecisions": "AR Nazirlər Kabinetinin qərarları",
+        "cabinetDecisionsDescription": "Dövlət idarəçiliyi və hüquqi tənzimləmə qərarları",
+        "ministryDecisions": "Elm və Təhsil Nazirliyinin qərarları",
+        "ministryDecisionsDescription": "Təhsil və elmi fəaliyyətlə bağlı rəsmi qərarlar",
+        "otherLegalActs": "Digər qanun qüvvəli aktlar",
+        "otherLegalActsDescription": "Hüquqi tənzimləməyə aid əlavə normativ aktlar",
+        "accreditationCriteria": "Akkreditasiya meyarları",
+        "accreditationCriteriaDescription": "Təhsil və qurumların qiymətləndirilməsi meyarları",
+        "accreditationRules": "Akkreditasiya qaydaları",
+        "accreditationRulesDescription": "Akkreditasiya prosesinin tənzimlənmə qaydaları",
+        "agencyCharter": "Agentliyin Nizamnaməsi",
+        "agencyCharterDescription": "Agentliyin fəaliyyəti və səlahiyyətlərini müəyyən edən əsas sənəd"
+      },
+      "media": {
+        "title": "Media",
+        "news": "Xəbərlər",
+        "newsDescription": "Ən son yeniliklər",
+        "interviews": "Müsahibələr",
+        "interviewsDescription": "Tanınmış şəxslərlə söhbətlər",
+        "statements": "Açıqlamalar",
+        "statementsDescription": "Rəsmi məlumat və izahlar",
+        "multimedia": "Multimedia",
+        "multimediaDescription": "Foto və video arxiv",
+        "videoTutorials": "Video təlimatlar",
+        "videoTutorialsDescription": "Video formatında izahlar",
+        "faq": "FAQ",
+        "faqDescription": "Müntəzəm verilən suallar"
+      },
+      "contact": {
+        "title": "Əlaqə"
+      }
+    }
+  },
+  "agency": {
+    "about": {
+      "title": "HAQQIMIZDA",
+      "description": "Azərbaycan Respublikası Prezidentinin 29.12.2019-cu il tarixində imzaladığı müvafiq Fərmana əsasən, Təhsil Nazirliyinin Akkreditasiya və Nostrifikasiya İdarəsi Təhsil Nazirliyinin tabeliyində publik hüquqi şəxs statusu olan Təhsildə Keyfiyyət Təminatı Agentliyinə çevrilmə yolu ilə yenidən təşkil edilmişdir. Agentlik Azərbaycanda və beynəlxalq səviyyədə qəbul edilmiş standartlara əsaslanan ali, orta ixtisas və əlavə təhsilin keyfiyyətinin müstəqil qiymətləndirilməsi sahəsində peşəkar və mütəxəssis qurumdur. Təhsildə Keyfiyyət Təminatı Agentliyi (TKTA) təhsil proqramlarının keyfiyyət səviyyələrinin müəyyənləşdirilməsi və tələblərin həyata keçirilməsini təmin edir. Agentlik öz vəzifələrini yerinə yetirərkən və hüquqlarını həyata keçirərkən dövlət orqanları (qurumları) və bələdiyyələrlə, beynəlxalq və qeyri-hökumət təşkilatları, digər hüquqi və fiziki şəxslərlə qarşılıqlı əlaqədə fəaliyyət göstərir. Azərbaycan Respublikası Təhsil Nazirliyinin fəaliyyətinin təkmilləşdirilməsi və “Azərbaycan Respublikasında bir sıra dövlət orqanlarının strukturunun optimallaşdırılması və idarə edilməsinin təkmilləşdirilməsi ilə bağlı əlavə tədbirlər haqqında” Azərbaycan Respublikası Prezidentinin 2019-cu il 17 yanvar tarixli 479 nömrəli Fərmanında dəyişiklik edilməsi barədə",
+      "link": "NİZAMNAMƏYƏ KEÇİD"
+    }
+  },
+  "media": {
+    "news": {
+      "title": "XƏBƏRLƏR",
+      "search": "Axtarış",
+      "from": "Tarixdən",
+      "to": "Tarixə qədər",
+      "newFirst": "Ən yenilər",
+      "oldFirst": "Ən köhnələr",
+      "createNews": "Xəbər yarat",
+      "delete": "Sil",
+      "edit": "Düzəliş et",
+      "removeDialogTitle": "Xəbəri silmək istəyirsiniz?",
+      "removeDialogContent": "Bu xəbəri silmək istədiyinizə əminsinizmi? Bu əməliyyat geri qaytarıla bilməz.",
+      "removeDialogCancel": "Ləğv et",
+      "removeDialogConfirm": "Bəli, sil",
+      "success": {
+        "create": "Xəbər uğurla yaradıldı.",  
+        "update": "Xəbər uğurla yeniləndi.",
+        "delete": "Xəbər uğurla silindi."
+      },
+      "error": {
+        "create": "Xəbər yaradılarkən xəta baş verdi.",
+        "update": "Xəbər yenilənərkən xəta baş verdi.",
+        "delete": "Xəbər silinərkən xəta baş verdi.",
+        "loading": "Xəbərlər yüklənərkən xəta baş verdi."
+      },
+      "create": {
+        "title": "Xəbər Yarat",
+        "titlePlaceholder": "Başlıq",
+        "titleInputPlaceholder": "Xəbər başlığını daxil edin",
+        "titleEnglishInputPlaceholder": "Xəbər başlığını ingilis dilində daxil edin",
+        "contentPlaceholder": "Məzmun",
+        "contentInputPlaceholder": "Xəbər məzmununu daxil edin",
+        "contentEnglishInputPlaceholder": "Xəbər məzmununu ingilis dilində daxil edin",
+        "datePlaceholder": "Tarix",
+        "submit": "Xəbəri yarat",
+        "headerImage": "Başlıq Şəkli (tək)",
+        "headerImageDescription": "Buraya tək şəkli sürüşdürüb buraxın və ya seçmək üçün klikləyin",
+        "images": "Qalereya Şəkilləri (bir neçə)",
+        "imagesDescription": "Buraya bir neçə şəkli sürüşdürüb buraxın və ya seçmək üçün klikləyin",
+        "note": "Qeyd (mütləq deyil)",
+        "noteInputPlaceholder": "Əlavə qeydləriniz varsa daxil edin",
+        "noteInputEnglishPlaceholder": "Əlavə qeydləriniz varsa ingilis dilində daxil edin",
+        "titleEnglish": "Başlıq (İngilis dilində)",
+        "contentEnglish": "Məzmun (İngilis dilində)",
+        "noteEnglish": "Qeyd (İngilis dilində, mütləq deyil)",
+        "formErrors": {
+          "titleRequired": "Başlıq mütləqdir.",
+          "contentRequired": "Məzmun mütləqdir.",
+          "dateRequired": "Tarix mütləqdir."
+        }
+      },
+      "editPage": {
+        "title": "Xəbəri Redaktə Et",
+        "submit": "Xəbəri Yadda Saxla"
+      }
+    }
+  },
+  "page": "Səhifə",
+  "next": "Növbəti",
+  "previous": "Əvvəlki"
+}

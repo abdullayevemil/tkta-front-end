@@ -2,9 +2,12 @@ import sql from "@/lib/db";
 import { NextResponse } from "next/server";
 
 export async function GET(
-  { params }: { params: { id: string } }
+  req: Request,
+  { params }: { params: Promise<{ id: string }> }
 ) {
-  const { id } = params;
+  const { id } = await params;
+
+  console.log(req);
 
   const video = await sql`
     SELECT * FROM video_gallery WHERE id = ${id}

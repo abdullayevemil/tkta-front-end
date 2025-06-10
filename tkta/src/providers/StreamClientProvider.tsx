@@ -16,8 +16,7 @@ const StreamVideoProvider = ({ children }: { children: ReactNode }) => {
   const user = session?.user;
 
   useEffect(() => {
-    if (!user || user?.image) return;
-
+    if (!user) return;
 
     if (!API_KEY) throw new Error("Stream API key is missing");
 

@@ -12,6 +12,24 @@ export const tokenProvider = async () => {
 
   const user = session?.user;
 
+  let id;
+
+  await fetch(`${process.env.NEXTAUTH_URL}/api/users?email=${user?.email}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error(`Failed to fetch user: ${res.statusText}`);
+      }
+      return res.json();
+    })
+    .then((body) => {
+      id = body[0].id;
+    });
+
   if (!user) throw new Error("User is not authenticated");
 
   if (!STREAM_API_KEY) throw new Error("Stream API key secret is missing");
@@ -24,7 +42,7 @@ export const tokenProvider = async () => {
 
   const issuedAt = Math.floor(Date.now() / 1000) - 60;
 
-  const token = streamClient.createToken(user.id!, expirationTime, issuedAt);
+  const token = streamClient.createToken(id!, expirationTime, issuedAt);
 
   return token;
 };

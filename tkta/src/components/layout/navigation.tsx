@@ -48,7 +48,7 @@ export function Navigation({ locale }: { locale: string }) {
                 <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                   <li>
                     <ListItem
-                      href="/agency/about"
+                      href={`/${locale}/agency/about`}
                       title={t.header.navigation.agency.about}
                     >
                       {t.header.navigation.agency.aboutDescription}
@@ -57,7 +57,7 @@ export function Navigation({ locale }: { locale: string }) {
 
                   <li>
                     <ListItem
-                      href="/agency/principles"
+                      href={`/${locale}/agency/principles`}
                       title={t.header.navigation.agency.principles}
                     >
                       {t.header.navigation.agency.principlesDescription}
@@ -66,7 +66,7 @@ export function Navigation({ locale }: { locale: string }) {
 
                   <li>
                     <ListItem
-                      href="/agency/structure"
+                      href={`/${locale}/agency/structure`}
                       title={t.header.navigation.agency.structure}
                     >
                       {t.header.navigation.agency.structureDescription}
@@ -75,7 +75,7 @@ export function Navigation({ locale }: { locale: string }) {
 
                   <li>
                     <ListItem
-                      href="/agency/inner-quality"
+                      href={`/${locale}/agency/inner-quality`}
                       title={
                         t.header.navigation.agency.internalQualityAssurance
                       }
@@ -99,7 +99,7 @@ export function Navigation({ locale }: { locale: string }) {
                 <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                   <li>
                     <ListItem
-                      href="/services/qualifications-recognition"
+                      href={`/${locale}/services/qualifications-recognition`}
                       title={
                         t.header.navigation.services
                           .foreignQualificationsRecognition
@@ -114,7 +114,7 @@ export function Navigation({ locale }: { locale: string }) {
 
                   <li>
                     <ListItem
-                      href="/services/education-recognition"
+                      href={`/${locale}/services/education-recognition`}
                       title={
                         t.header.navigation.services
                           .nonInformalaeducationRecognition
@@ -129,7 +129,7 @@ export function Navigation({ locale }: { locale: string }) {
 
                   <li>
                     <ListItem
-                      href="/services/accreditation"
+                      href={`/${locale}/services/accreditation`}
                       title={t.header.navigation.services.accreditation}
                     >
                       {t.header.navigation.services.accreditationDescription}
@@ -138,7 +138,7 @@ export function Navigation({ locale }: { locale: string }) {
 
                   <li>
                     <ListItem
-                      href="/services/training-methodology"
+                      href={`/${locale}/services/training-methodology`}
                       title={t.header.navigation.services.training}
                     >
                       {t.header.navigation.services.trainingDescription}
@@ -147,7 +147,7 @@ export function Navigation({ locale }: { locale: string }) {
 
                   <li>
                     <ListItem
-                      href="/services/analysis"
+                      href={`/${locale}/services/analysis`}
                       title={t.header.navigation.services.analysis}
                     >
                       {t.header.navigation.services.analysisDescription}
@@ -212,7 +212,7 @@ export function Navigation({ locale }: { locale: string }) {
 
             <NavigationMenuItem>
               <Link
-                href="/internationalization"
+                href={`/${locale}/internationalization`}
                 legacyBehavior
                 passHref
                 className="font-helvetica text-base"
@@ -237,7 +237,7 @@ export function Navigation({ locale }: { locale: string }) {
                 <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                   <li>
                     <ListItem
-                      href="/announcements/vacancies"
+                      href={`/${locale}/announcements/vacancies`}
                       title={t.header.navigation.announcements.vacancies}
                     >
                       {t.header.navigation.announcements.vacanciesDescription}
@@ -246,7 +246,7 @@ export function Navigation({ locale }: { locale: string }) {
 
                   <li>
                     <ListItem
-                      href="/announcements/qualification-recognition"
+                      href={`/${locale}/announcements/qualification-recognition`}
                       title={
                         t.header.navigation.announcements.documentSubmission
                       }
@@ -260,7 +260,7 @@ export function Navigation({ locale }: { locale: string }) {
 
                   <li>
                     <ListItem
-                      href="/announcements/cooperation"
+                      href={`/${locale}/announcements/cooperation`}
                       title={
                         t.header.navigation.announcements
                           .collaborationOpportunities
@@ -285,7 +285,7 @@ export function Navigation({ locale }: { locale: string }) {
                 <ul className="grid w-[200px] gap-3 p-4 md:w-[150px] md:grid-cols-1 lg:w-[300px]">
                   <li>
                     <ListItem
-                      href="/reports/annual"
+                      href={`/${locale}/reports/annual`}
                       title={t.header.navigation.reports.annualReports}
                     >
                       {t.header.navigation.reports.annualReportsDescription}
@@ -294,7 +294,7 @@ export function Navigation({ locale }: { locale: string }) {
 
                   <li>
                     <ListItem
-                      href="/reports/financial"
+                      href={`/${locale}/reports/financial`}
                       title={t.header.navigation.reports.financialReports}
                     >
                       {t.header.navigation.reports.financialReportsDescription}
@@ -303,7 +303,7 @@ export function Navigation({ locale }: { locale: string }) {
 
                   <li>
                     <ListItem
-                      href="/reports/accreditation/monitoring"
+                      href={`/${locale}/reports/accreditation/monitoring`}
                       title={t.header.navigation.reports.monitoringReports}
                     >
                       {t.header.navigation.reports.monitoringReportsDescription}
@@ -315,7 +315,7 @@ export function Navigation({ locale }: { locale: string }) {
                       <NavigationMenuItem className="w-full">
                         <NavigationMenuTrigger className="h-fit font-helvetica w-full flex flex-row justify-left p-0 text-left">
                           <ListItem
-                            href="/reports/accreditation"
+                            href={`/${locale}/reports/accreditation`}
                             title={
                               t.header.navigation.reports.accreditationReports
                             }
@@ -332,7 +332,7 @@ export function Navigation({ locale }: { locale: string }) {
                           <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                             <li>
                               <ListItem
-                                href="/reports/accreditation/atm"
+                                href={`/${locale}/reports/accreditation/atm`}
                                 title={
                                   t.header.navigation.reports
                                     .atmAccreditationReports
@@ -342,7 +342,7 @@ export function Navigation({ locale }: { locale: string }) {
 
                             <li>
                               <ListItem
-                                href="/reports/accreditation/professional"
+                                href={`/${locale}/reports/accreditation/professional`}
                                 title={
                                   t.header.navigation.reports
                                     .professionalEducationReports
@@ -352,7 +352,7 @@ export function Navigation({ locale }: { locale: string }) {
 
                             <li>
                               <ListItem
-                                href="/reports/accreditation/international"
+                                href={`/${locale}/reports/accreditation/international`}
                                 title={
                                   t.header.navigation.reports
                                     .internationalAccreditationReports
@@ -377,77 +377,58 @@ export function Navigation({ locale }: { locale: string }) {
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[300px] md:grid-cols-2 lg:w-[500px]">
                   <li>
                     <ListItem
-                      href="/legislation/laws"
+                      href={`/${locale}/legislation/laws`}
                       title={t.header.navigation.laws.laws}
-                    >
-                      {t.header.navigation.laws.lawsDescription}
-                    </ListItem>
+                    ></ListItem>
                   </li>
 
                   <li>
                     <ListItem
-                      href="/legislation/president-requirements"
+                      href={`/${locale}/legislation/president-requirements`}
                       title={t.header.navigation.laws.prezidentLaws}
-                    >
-                      {t.header.navigation.laws.prezidentLawsDescription}
-                    </ListItem>
+                    ></ListItem>
                   </li>
 
                   <li>
                     <ListItem
-                      href="/legislation/cabinet_of_ministers"
+                      href={`/${locale}/legislation/cabinet_of_ministers`}
                       title={t.header.navigation.laws.cabinetDecisions}
-                    >
-                      {t.header.navigation.laws.cabinetDecisionsDescription}
-                    </ListItem>
+                    ></ListItem>
                   </li>
 
                   <li>
                     <ListItem
-                      href="/legislation/education"
+                      href={`/${locale}/legislation/education`}
                       title={t.header.navigation.laws.ministryDecisions}
-                    >
-                      {t.header.navigation.laws.ministryDecisionsDescription}
-                    </ListItem>
+                    ></ListItem>
                   </li>
 
                   <li>
                     <ListItem
-                      href="/legislation/others"
+                      href={`/${locale}/legislation/others`}
                       title={t.header.navigation.laws.otherLegalActs}
-                    >
-                      {t.header.navigation.laws.otherLegalActsDescription}
-                    </ListItem>
+                    ></ListItem>
                   </li>
 
                   <li>
                     <ListItem
-                      href="/legislation/accreditation-parameters"
+                      href={`/${locale}/legislation/accreditation-parameters`}
                       title={t.header.navigation.laws.accreditationCriteria}
-                    >
-                      {
-                        t.header.navigation.laws
-                          .accreditationCriteriaDescription
-                      }
-                    </ListItem>
+                    ></ListItem>
                   </li>
 
                   <li>
                     <ListItem
-                      href="/legislation/accreditation-regulations"
+                      href={`/${locale}/legislation/accreditation-regulations`}
                       title={t.header.navigation.laws.accreditationRules}
-                    >
-                      {t.header.navigation.laws.accreditationRulesDescription}
-                    </ListItem>
+                    ></ListItem>
                   </li>
 
                   <li>
                     <ListItem
-                      href="/legislation/agency-regulations"
+                      href={`/${locale}/legislation/agency-regulations`}
                       title={t.header.navigation.laws.agencyCharter}
-                    >
-                      {t.header.navigation.laws.agencyCharterDescription}
-                    </ListItem>
+                    ></ListItem>
                   </li>
                 </ul>
               </NavigationMenuContent>
@@ -462,7 +443,7 @@ export function Navigation({ locale }: { locale: string }) {
                 <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                   <li>
                     <ListItem
-                      href="/media/news"
+                      href={`/${locale}/media/news`}
                       title={t.header.navigation.media.news}
                     >
                       {t.header.navigation.media.newsDescription}
@@ -471,7 +452,7 @@ export function Navigation({ locale }: { locale: string }) {
 
                   <li>
                     <ListItem
-                      href="/media/interviews"
+                      href={`/${locale}/media/interviews`}
                       title={t.header.navigation.media.interviews}
                     >
                       {t.header.navigation.media.interviewsDescription}
@@ -480,7 +461,7 @@ export function Navigation({ locale }: { locale: string }) {
 
                   <li>
                     <ListItem
-                      href="/media/disclosures"
+                      href={`/${locale}/media/disclosures`}
                       title={t.header.navigation.media.statements}
                     >
                       {t.header.navigation.media.statementsDescription}
@@ -489,7 +470,7 @@ export function Navigation({ locale }: { locale: string }) {
 
                   <li>
                     <ListItem
-                      href="/media/multimedia"
+                      href={`/${locale}/media/multimedia`}
                       title={t.header.navigation.media.multimedia}
                     >
                       {t.header.navigation.media.multimediaDescription}
@@ -498,7 +479,7 @@ export function Navigation({ locale }: { locale: string }) {
 
                   <li>
                     <ListItem
-                      href="/media/video-instructions"
+                      href={`/${locale}/media/video-instructions`}
                       title={t.header.navigation.media.videoTutorials}
                     >
                       {t.header.navigation.media.videoTutorialsDescription}
@@ -507,7 +488,7 @@ export function Navigation({ locale }: { locale: string }) {
 
                   <li>
                     <ListItem
-                      href="/media/faq"
+                      href={`/${locale}/media/faq`}
                       title={t.header.navigation.media.faq}
                     >
                       {t.header.navigation.media.faqDescription}
@@ -519,7 +500,7 @@ export function Navigation({ locale }: { locale: string }) {
 
             <NavigationMenuItem>
               <Link
-                href="/contact"
+                href={`/${locale}/contact`}
                 legacyBehavior
                 passHref
                 className="font-helvetica text-base"

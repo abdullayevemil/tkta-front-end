@@ -17,6 +17,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
+import { use } from "react";
 
 const MAX_ATTEMPTS = 3;
 const LOCK_DURATION = 15 * 60 * 1000; // 15 minutes
@@ -39,8 +41,16 @@ const loginSchema = z.object({
 
 type LoginFormValues = z.infer<typeof loginSchema>;
 
-export default function LoginPage() {
+export default function LoginPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const [locked, setLocked] = React.useState(false);
+
+  const router = useRouter();
+
+  const { locale } = use(params);
 
   React.useEffect(() => {
     const data = localStorage.getItem("login-lock");
@@ -69,7 +79,8 @@ export default function LoginPage() {
       if (data) {
       }
 
-      const isSuccess = false;
+      const isSuccess =
+        data.userId === "AA1234567" && data.identityNo === "ABC1234";
 
       toast.dismiss();
 
@@ -100,6 +111,7 @@ export default function LoginPage() {
       // On success:
       localStorage.removeItem("login-lock");
       toast.success("Logged in successfully");
+      router.push(`/${locale}/video-call/book-call`);
     } catch {
       toast.dismiss();
       toast.error("Unexpected error. Try again.");

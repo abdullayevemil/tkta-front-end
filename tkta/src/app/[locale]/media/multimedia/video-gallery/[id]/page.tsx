@@ -66,7 +66,7 @@ export default function News({ params }: Props) {
   return (
     <section className="px-16 mx-auto p-8 flex flex-col items-center gap-16 pt-16">
       <h1 className="text-3xl font-semibold text-textPrimary mb-4 text-center">
-        {locale === 'az' ? data.title : data.titleenglish}
+        {locale === "az" ? data.title : data.titleenglish}
       </h1>
 
       <div className="w-full px-16">

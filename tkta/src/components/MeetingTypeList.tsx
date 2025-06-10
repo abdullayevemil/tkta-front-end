@@ -29,6 +29,8 @@ const MeetingTypeList = () => {
   const session = useSession();
 
   const user = session.data?.user;
+
+  console.log("user", user);
   const { toast } = useToast();
 
   const createMeeting = async () => {

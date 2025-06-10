@@ -1,6 +1,5 @@
 "use server";
 
-import { users } from "@/data/users";
 import { StreamClient } from "@stream-io/node-sdk";
 import { getServerSession } from "next-auth/next";
 
@@ -12,8 +11,6 @@ export const tokenProvider = async () => {
   const session = await getServerSession();
 
   const user = session?.user;
-
-  const id = users.find(u => u.email == user?.email)?.id;
 
   if (!user) throw new Error("User is not authenticated");
 
@@ -27,7 +24,7 @@ export const tokenProvider = async () => {
 
   const issuedAt = Math.floor(Date.now() / 1000) - 60;
 
-  const token = streamClient.createToken(id!, expirationTime, issuedAt);
+  const token = streamClient.createToken(user.id!, expirationTime, issuedAt);
 
   return token;
 };

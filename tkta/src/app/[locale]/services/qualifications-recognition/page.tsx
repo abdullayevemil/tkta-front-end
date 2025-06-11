@@ -1,5 +1,4 @@
 import Image from "next/image";
-import HeaderImage from "@/assets/images/qualifications-recognition/header-image.png";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
 import ApplicationForm from "@/assets/images/qualifications-recognition/application-form.png";
@@ -11,7 +10,7 @@ import ProfilePhoto3 from "@/assets/images/qualifications-recognition/profile-ph
 export default function HomePage() {
   return (
     <section className="w-full flex flex-col gap-16 items-center">
-      <Image src={HeaderImage} alt="header image" className="w-full" />
+      
 
       <h1 className="uppercase text-5xl text-center">
         Xarİcİ kvalİfİkasİyaların tanınması

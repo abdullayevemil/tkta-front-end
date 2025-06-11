@@ -374,7 +374,7 @@ export function Navigation({ locale }: { locale: string }) {
               </NavigationMenuTrigger>
 
               <NavigationMenuContent className="left-0">
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[300px] md:grid-cols-2 lg:w-[500px]">
+                <ul className="grid w-[200px] gap-3 p-4 md:w-[150px] md:grid-cols-1 lg:w-[300px]">
                   <li>
                     <ListItem
                       href={`/${locale}/legislation/laws`}

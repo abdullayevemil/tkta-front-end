@@ -1,8 +1,6 @@
 "use client";
 
-import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import HeaderImage from "@/assets/images/qualifications-recognition/header-image.png";
 import Link from "next/link";
 import { CldImage } from "next-cloudinary";
 import {
@@ -434,9 +432,9 @@ export default function EducationRecognition() {
 
   return (
     <section className="w-full flex flex-col gap-16 items-center">
-      <Image src={HeaderImage} alt="header image" className="w-full" />
+      
 
-      <h1 className="uppercase text-5xl text-center w-full px-[112px]">
+      <h1 className="uppercase text-5xl text-center w-full px-[112px] pt-16">
         QEYRİ-FORMAL VƏ İNFORMAL TƏHSİLİN TANINMASI
       </h1>
 

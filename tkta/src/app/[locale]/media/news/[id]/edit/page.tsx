@@ -198,7 +198,7 @@ export default function EditNewsPage() {
 
   return (
     <div className="flex flex-col gap-12 items-center px-28 w-full py-8 bg-white text-textPrimary font-sans">
-      <h1 className="uppercase text-5xl text-center w-full px-[112px]">
+      <h1 className="uppercase text-5xl text-center w-full px-[112px] pt-16">
         {t.media.news.editPage.title}
       </h1>
 

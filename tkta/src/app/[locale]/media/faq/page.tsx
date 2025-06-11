@@ -1,5 +1,3 @@
-import Image from "next/image";
-import HeaderImage from "@/assets/images/media/header-image.png";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Accordion,
@@ -195,7 +193,7 @@ const faq = [
     title: "Qeyri-formal və informal təhsil nədir?",
     answer:
       "Qeyri-formal təhsil - formal təhsil mühitindən kənarda baş verən, yəni müxtəlif kurslarda, dərnəklərdə, təlim və ya fərdi məşğələlərdə, o cümlədən iş mühitində əldə edilən bilik, bacarıq və səriştələrin məcmusudur. İnformal təhsil - özünütəhsil yolu ilə biliklərə yiyələnmənin formasıdır. Belə ki, gündəlik həyatımızda müxtəlif mənbələrdən maraq dairəmizə, yaxud da ehtiyaclarımıza uyğun olaraq (daha çox təcrübəyə əsaslanan) əldə edilən bütün səriştələr bura aid edilə bilər.",
-    category: "Qeyri formal və informal təhsil",
+    category: "Qeyri-formal və informal təhsil",
   },
   {
     id: 25,
@@ -203,7 +201,7 @@ const faq = [
       "Test imtahanında neçə sual olur və qiymətləndirilməsi neçə bal üzərindən olur?",
     answer:
       "Peşə ixtisasının hər bir modulu üzrə 10 sual olur. Hər bir düzgün cavab 1 (bir) balla qiymətləndirilir.",
-    category: "Qeyri formal və informal təhsil",
+    category: "Qeyri-formal və informal təhsil",
   },
   {
     id: 26,
@@ -211,35 +209,35 @@ const faq = [
       "Ərizəçi imtahan nəticələri ilə razılaşmadıqda və ya şikayəti olduğu təqdirdə nəzərə alınırmı?",
     answer:
       "Bəli, qiymətləndirilmə və tanınmanın nəticələri ilə bağlı ərizəçinin şikayətinə baxılması üçün Agentlik tərəfindən Apelyasiya Komissiyası yaradılır və məsələyə yenidən baxılır.",
-    category: "Qeyri formal və informal təhsil",
+    category: "Qeyri-formal və informal təhsil",
   },
   {
     id: 27,
     title: "İmtahan sualları, əsasən, hansı mövzuları əhatə edir?",
     answer:
       "Suallar ixtisas və baza modullarını əhatə edir. Suallar hazırlanarkən peşə standartları və müvafiq ixtisas üzrə kurikulumlar nəzərə alınaraq hazırlanır. Ərizəçilər qeydiyyat bölməsində hər ixtisas üzrə tərtib edilmiş metodik vəsait hissəsindən müvafiq modullarla tanış ola bilərlər.",
-    category: "Qeyri formal və informal təhsil",
+    category: "Qeyri-formal və informal təhsil",
   },
   {
     id: 28,
     title: "Formal, informal və qeyri-formal təhsil arasında fərqlər nələrdir?",
     answer:
       "Formal təhsil dövlət təhsil sənədinin verilməsi ilə başa çatan təhsil formasıdır. Ümumi təhsil, ilk peşə təhsili, orta ixtisas təhsili, ali təhsil, yenidənhazırlanma təhsili, təkrar ali və ya orta ixtisas təhsili dövlət təhsil sənədinin verilməsi ilə başa çatdığı üçün formal təhsil hesab edilir. Qeyri-formal təhsil formal təhsil mühitindən kənarda baş verən yəni, müxtəlif kurslarda, dərnəklərdə, təlim və ya fərdi məşğələlərdə, o cümlədən, iş mühitində əldə edilən bilik, bacarıq və səriştələrin məcmusudur. İnformal təhsil isə özünütəhsil yolu ilə biliklərə yiyələnmənin formasıdır. Yəni, gündəlik həyatımızda müxtəlif mənbələrdən maraq dairəmizə, yaxud da ehtiyaclarımıza uyğun olaraq (daha çox təcrübəyə əsaslanan) əldə edilən bütün səriştələr bura aid edilə bilər. Formal təhsildən fərqli olaraq qeyri-formal və informal təhsil dövlət təhsil sənədinin verilməsi ilə müşayiət olunmur.",
-    category: "Qeyri formal və informal təhsil",
+    category: "Qeyri-formal və informal təhsil",
   },
   {
     id: 29,
     title: "İmtahanlarda keçid balı neçədir?",
     answer:
       "Birinci, yəni nəzəri imtahanda sualların 50 faizindən çoxunu düzgün cavablandıran ərizəçi praktiki imtahana yəni bacarıq, səriştə və təcrübənin qiymətləndirilməsi mərhələsinə buraxılır. Bacarıq, səriştə və təcrübənin qiymətləndirilməsi mərhələsində tapşırığın ən azı 50 faizini düzgün icra edən ərizəçi “məqbul”, 50 faizindən az hissəsini düzgün icra edən ərizəçi isə “qeyri-məqbul” alır.",
-    category: "Qeyri formal və informal təhsil",
+    category: "Qeyri-formal və informal təhsil",
   },
   {
     id: 30,
     title: "İmtahandan “qeyri-məqbul” aldıqda yenidən imtahan vermək olurmu?",
     answer:
       "Nəzəri imtahan mərhələsində “qeyri-məqbul” aldıqda heç bir məhdudiyyət olmadan ərizəçi yenidən imtahan üçün müraciət edə bilər. Praktiki imtahan, yəni bacarıq, səriştə və təcrübənin qiymətləndirilməsi mərhələsində “qeyri-məqbul” nəticə göstərən ərizəçi isə eyni modul üzrə qiymətləndirilmə üçün Agentliyə 6 (altı) aydan sonra təkrar müraciət edə bilər.",
-    category: "Qeyri formal və informal təhsil",
+    category: "Qeyri-formal və informal təhsil",
   },
   {
     id: 31,
@@ -247,7 +245,7 @@ const faq = [
       "Peşə təhsili üzrə qeyri-formal və informal təhsil formaları vasitəsilə əldə edilmiş bilik, bacarıq, səriştə və təcrübənin qiymətləndirilməsi və tanınması prosesi hansı qaydalarla tənzimlənir?",
     answer:
       "Bu proses Nazirlər Kabinetinin 2020-ci il 5 avqust tarixli qərarı ilə təsdiqlənmiş “Vətəndaşların peşə təhsili üzrə qeyri-formal və informal təhsil formaları vasitəsilə əldə etdikləri bilik, bacarıq, səriştə və təcrübənin qiymətləndirilməsi və tanınması məqsədilə imtahanın keçirilməsi və onlara peşə ixtisasını təsdiq edən sənədin verilməsi Qaydası” əsasında həyata keçirilir.",
-    category: "Qeyri formal və informal təhsil",
+    category: "Qeyri-formal və informal təhsil",
   },
   {
     id: 32,
@@ -255,7 +253,7 @@ const faq = [
       "Peşə təhsili üzrə qeyri-formal və informal təhsil formaları vasitəsilə əldə edilmiş bilik, bacarıq, səriştə və təcrübənin qiymətləndirilməsi və tanınması üçün kimlər müraciət edə bilər?",
     answer:
       "Ümumi orta təhsili səviyyəsini ən az 4 (dörd) il əvvəl və ya tam orta təhsil səviyyəsini ən az 2 (iki) il əvvəl bitirərək, müraciət etdiyi müvafiq ixtisas üzrə azı 2 (iki) il qeyri-formal və informal təhsil formaları vasitəsilə bilik, bacarıq, səriştə və təcrübə əldə edən vətəndaşlar qiymətləndirilmə və tanınma üçün müraciət edə bilərlər.",
-    category: "Qeyri formal və informal təhsil",
+    category: "Qeyri-formal və informal təhsil",
   },
   {
     id: 33,
@@ -263,7 +261,7 @@ const faq = [
       "Hansı ixtisaslar üzrə qeyri-formal və informal təhsilin qiymətləndirilməsi və tanınması həyata keçirilir?",
     answer:
       "Qeyri-formal və informal təhsilin qiymətləndirilməsi və tanınması yalnız peşə təhsili ixtisasları üzrə həyata keçirilir.",
-    category: "Qeyri formal və informal təhsil",
+    category: "Qeyri-formal və informal təhsil",
   },
   {
     id: 34,
@@ -271,7 +269,7 @@ const faq = [
       "Vətəndaşlar qeyri-formal və informal təhsil formaları vasitəsilə əldə etdikləri bilik, bacarıq, səriştə və təcrübənin qiymətləndirilməsi və tanınması üçün nə etməlidirlər?",
     answer:
       "Peşə təhsili üzrə qeyri-formal və informal formaları vasitəsilə əldə edilmiş bilik, bacarıq, səriştə və təcrübənin qiymətləndirilməsi və tanınması üçün Təhsildə Keyfiyyət Təminatı Agentliyinin veb saytına daxil olaraq, Kvalifikasiyaların tanınması hissəsinə daxil olub Qeyri-formal və informal təhsilin tanınmasını seçirik. Qiymətləndirmə və tanınma üçün müraciət elektron qaydada həyata keçirilir.",
-    category: "Qeyri formal və informal təhsil",
+    category: "Qeyri-formal və informal təhsil",
   },
   {
     id: 35,
@@ -279,7 +277,7 @@ const faq = [
       "Peşə təhsili üzrə qeyri-formal və informal təhsil formaları vasitəsilə əldə edilmiş bilik, bacarıq, səriştə və təcrübənin qiymətləndirilməsi və tanınması üçün hansı sənədlər tələb olunur?",
     answer:
       "İlkin baxışın aparılması üçün müvafiq ixtisas üzrə bilik, bacarıq, səriştə və təcrübəni özündə əks etdirən aşağıdakı sənədlərin və materialların qeydiyyatdan keçən zaman təqdim olunması tələb edilir. Şəxsiyyəti təsdiq edən sənədin surəti; Təhsil haqqında dövlət sənədinin surəti (attestat və yaxud diplom); Bilik, bacarıq, səriştə və təcrübəni əks etdirən sənədlər (fotoşəkillər) Əmək kitabçası (olduğu halda); İş təcrübəsi haqqında arayış və müvafiq sertifikatlar (olduğu halda); Məcburi dövlət sosial sığorta şəhadətnaməsi (olduğu halda).",
-    category: "Qeyri formal və informal təhsil",
+    category: "Qeyri-formal və informal təhsil",
   },
   {
     id: 36,
@@ -287,7 +285,7 @@ const faq = [
       "İmtahan neçə mərhələdən ibarətdir və kimlər tərəfindən qiymətləndirilir?",
     answer:
       "İmtahanlar ixtisas üzrə təyin edilmiş ekspertlər tərəfindən qiymətləndirilir. İmtahan 2 mərhələdən ibarətdir: Nəzəri və praktiki mərhələ. Birinci, yəni nəzəri imtahanın suallarının 50 faizindən çoxunu düzgün cavablandıran ərizəçi ikinci imtahana, yəni bacarıq, səriştə və təcrübənin qiymətləndirilməsi mərhələsinə buraxılır. Bacarıq, səriştə və təcrübənin qiymətləndirilməsi nəticəsində tapşırığın ən azı 50 faizini düzgün icra edən ərizəçi “məqbul”, 50 faizindən az hissəsini düzgün icra edən ərizəçi isə “qeyri-məqbul” alır.",
-    category: "Qeyri formal və informal təhsil",
+    category: "Qeyri-formal və informal təhsil",
   },
   {
     id: 37,
@@ -295,7 +293,7 @@ const faq = [
       "Qeyri-formal və informal təhsilin tanınması üçün ödəniş məbləği nə qədərdir?",
     answer:
       "Azərbaycan Respublikası Nazirlər Kabinetinin 25 dekabr 2020-ci il tarixili 508 nömrəli qərarına əsasən müvafiq ixtisas üzrə biliklərin qiymətləndirilməsi üçün 100 AZN , bacarıq, səriştə və təcrübənin qiymətləndirilməsi üçün isə hər modul üzrə 80 AZN məbləğində ödəniş tələb olunur.",
-    category: "Qeyri formal və informal təhsil",
+    category: "Qeyri-formal və informal təhsil",
   },
   {
     id: 38,
@@ -303,7 +301,7 @@ const faq = [
       "Qeyri-formal və informal təhsilin tanınması zamanı ödəniş hansı mərhələdə həyata keçirilir?",
     answer:
       "Müraciət üçün heç bir ödəniş tələb olunmur. Yalnız ilkin baxış mərhələsindən uğurla keçən ərizəçilərdən müvafiq ixtisas üzrə biliklərin qiymətləndirilməsi üçün 100 AZN məbləğində ödəniş qəbzi, nəzəri biliklərin qiymətləndirilməsi mərhələsindən də uğurla keçərsə bacarıq, səriştə və təcrübənin qiymətləndirilməsi mərhələsi iştirak etmək üçün imtahan veriləcək hər modula görə 80 AZN məbləğində ödəniş qəbzi tələb olunur.",
-    category: "Qeyri formal və informal təhsil",
+    category: "Qeyri-formal və informal təhsil",
   },
   {
     id: 39,
@@ -311,7 +309,7 @@ const faq = [
       "Qeyri-formal və informal təhsilin tanınması üzrə xidmət haqqını necə ödəyə bilərəm?",
     answer:
       "Təhsildə Keyfiyyət Təminatı Agentliyinin büdcə üzrə hesab rekvizitləri ilə birlikdə istənilən bank filialına yaxınlaşmağınız və ödənişi Nazirliyin hesabına köçürməyiniz, eləcə də, ABB Mobile proqramı vasitəsilə onlayn qaydada ödəniş etməyiniz mümkündür.",
-    category: "Qeyri formal və informal təhsil",
+    category: "Qeyri-formal və informal təhsil",
   },
   {
     id: 40,
@@ -505,9 +503,9 @@ const faq = [
 export default function FAQ() {
   return (
     <section className="w-full flex flex-col gap-16 items-center">
-      <Image src={HeaderImage} alt="header image" className="w-full" />
+      
 
-      <h1 className="uppercase text-5xl text-center w-full px-[112px]">
+      <h1 className="uppercase text-5xl text-center w-full px-[112px] pt-16">
         MÜNTƏZƏM VERİLƏN SUALLAR (FAQ)
       </h1>
 
@@ -527,7 +525,7 @@ export default function FAQ() {
             className="w-1/4 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value="informal-education"
           >
-            Qeyri formal və informal təhsil
+            Qeyri-formal və informal təhsil
           </TabsTrigger>
 
           <TabsTrigger
@@ -561,7 +559,7 @@ export default function FAQ() {
           <div className="flex flex-col gap-4">
             <Accordion type="single" collapsible className="w-full">
               {faq
-                .filter((q) => q.category === "Qeyri formal və informal təhsil")
+                .filter((q) => q.category === "Qeyri-formal və informal təhsil")
                 .map((question) => (
                   <AccordionItem
                     key={question.id}

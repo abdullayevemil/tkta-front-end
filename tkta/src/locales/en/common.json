@@ -108,7 +108,20 @@
     "about": {
       "title": "ABOUT US",
       "description": "According to the relevant decree signed by the President of the Republic of Azerbaijan on 29.12.2019, the Accreditation and Nostrifikatsiya Department of the Ministry of Education was reorganized into the Education Quality Assurance Agency, a public legal entity under the Ministry of Education. The Agency is a professional and expert institution in the independent evaluation of the quality of higher, secondary specialized and additional education based on standards accepted in Azerbaijan and internationally. The Education Quality Assurance Agency (EQAA) ensures the determination of quality levels of educational programs and the implementation of requirements. While fulfilling its duties and exercising its rights, the Agency operates in cooperation with state bodies (institutions), municipalities, international and non-governmental organizations, and other legal and physical persons. About the improvement of the activity of the Ministry of Education of the Republic of Azerbaijan and amendments to the Decree No. 479 dated January 17, 2019 of the President of the Republic of Azerbaijan on additional measures related to the optimization of the structure and management of a number of state bodies in the Republic of Azerbaijan.",
-      "link": "GO TO STATUTE"
+      "link": "GO TO STATUTE",
+      "services": {
+        "title": "Our Fields of Activity",
+        "services": [
+          "Carrying out accreditation of educational institutions",
+          "Recognizing qualifications related to higher education of foreign countries",
+          "Assessing and recognizing knowledge, skills, competencies, and experience obtained through non-formal and informal forms of vocational education",
+          "Preparing recommendations and organizing training for the implementation of accreditation of educational institutions",
+          "Organizing consulting and methodological support services for the establishment and development of internal quality assurance systems in educational institutions",
+          "Promoting the continuous development of the education system and state standards in this field, as well as improving the reputation of educational institutions and the quality of specialist training",
+          "Participating in giving opinions for the licensing of educational activities",
+          "Studying and applying advanced international practices in the relevant field"
+        ]
+      }
     }
   },
   "media": {

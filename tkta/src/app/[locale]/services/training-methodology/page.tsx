@@ -1,14 +1,12 @@
-import Image from "next/image";
-import HeaderImage from "@/assets/images/qualifications-recognition/header-image.png";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
 
 export default function TrainingAndMethodology() {
   return (
     <section className="w-full flex flex-col gap-16 items-center">
-      <Image src={HeaderImage} alt="header image" className="w-full" />
+      
 
-      <h1 className="uppercase text-5xl text-center w-full px-[112px]">
+      <h1 className="uppercase text-5xl text-center w-full px-[112px] pt-16">
         TƏLİM VƏ METODOLOGİYA
       </h1>
 
@@ -49,7 +47,7 @@ export default function TrainingAndMethodology() {
             className="w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value="expert-registration"
           >
-            Ekspertların qeydiyyatı
+            Ekspertlərin qeydiyyatı
           </TabsTrigger>
 
           <TabsTrigger

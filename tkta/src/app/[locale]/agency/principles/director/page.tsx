@@ -1,13 +1,13 @@
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
-import HeaderImage from "@/assets/images/principles/header-image.png";
+
 
 export default function Director() {
   return (
     <div className="w-full flex flex-col justify-center gap-20">
-      <Image src={HeaderImage} alt="header image" className="w-full" />
+      
 
-      <h1 className="uppercase text-5xl text-center text-textPrimary">İdarə Heyətİnİn sədrİ</h1>
+      <h1 className="uppercase text-5xl text-center text-textPrimary pt-16">İdarə Heyətİnİn sədrİ</h1>
 
       <div className="px-[112px] w-full flex flex-row gap-6 items-center">
         <Card className="h-full bg-textPrimary w-1/3 p-4 flex flex-col items-center gap-6 hover:cursor-pointer">

@@ -84,7 +84,7 @@ export default function ContactForm() {
 
   return (
     <section className="w-full flex flex-col gap-16 items-center pt-16">
-      <h1 className="uppercase text-5xl text-center">Əlaqə</h1>
+      <h1 className="uppercase text-4xl text-center">Əlaqə</h1>
 
       <Tabs
         defaultValue="contact"

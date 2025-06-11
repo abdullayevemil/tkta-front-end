@@ -7,7 +7,7 @@ export default function Principles() {
     <div className="w-full flex flex-col justify-center gap-20">
       
 
-      <h1 className="uppercase text-5xl text-center text-textPrimary pt-16">İdarə Heyətİnİn sədr müavİnİ</h1>
+      <h1 className="uppercase text-4xl text-center text-textPrimary pt-16">İdarə Heyətİnİn sədr müavİnİ</h1>
 
       <div className="px-16 w-full flex flex-row gap-6 items-center">
         <Card className="h-full bg-textPrimary w-1/3 p-4 flex flex-col items-center gap-6 hover:cursor-pointer">

@@ -26,7 +26,7 @@ export default function NewsCard({ title, date, headerimageurl, note }: Props) {
             className="w-full object-cover rounded-t-xl h-full max-w-full"
           />
         ) : (
-          <div className="flex items-center h-[16rem] justify-center text-textPrimary text-5xl">
+          <div className="flex items-center h-[16rem] justify-center text-textPrimary text-4xl">
             TKTA
           </div>
         )}

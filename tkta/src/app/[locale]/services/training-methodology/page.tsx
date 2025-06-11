@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function TrainingAndMethodology() {
   return (
     <section className="w-full flex flex-col gap-16 items-center">
-      <h1 className="uppercase text-5xl text-center w-full px-16 pt-16">
+      <h1 className="uppercase text-4xl text-center w-full px-16 pt-16">
         TƏLİM VƏ METODOLOGİYA
       </h1>
 
@@ -451,12 +451,12 @@ export default function TrainingAndMethodology() {
               <p>
                 Peşə təhsil müəssisələrinin akkreditasiya qiymətləndirilməsini
                 icra etmək üçün təşkil olunan ekspert bankına üzv olmaq
-                istəyənlər link{" "}
+                istəyənlər{" "}
                 <Link
                   href="https://forms.office.com/r/9vudjSgfZc"
                   className="italic text-textPrimary hover:underline"
                 >
-                  (https://forms.office.com/r/9vudjSgfZc)
+                  link
                 </Link>{" "}
                 vasitəsi ilə qeydiyyatdan keçə bilərlər.
               </p>
@@ -557,51 +557,51 @@ export default function TrainingAndMethodology() {
                 <li>Ali təhsil</li>
 
                 <li>
-                  • Peşə təhsili sahəsində mövcud qanunvericilik, dövlət
+                  Peşə təhsili sahəsində mövcud qanunvericilik, dövlət
                   proqramları, qaydalar və tənzimləmələr haqqında biliklər
                 </li>
 
                 <li>
-                  • Peşə təhsili sahəsində minimum 3 il iş təcrübəsi (rəhbər
+                  Peşə təhsili sahəsində minimum 3 il iş təcrübəsi (rəhbər
                   vəzifədə çalışmaq və peşə təhsili sahəsində pedaqoji təcrübə
                   arzuolunandır)
                 </li>
 
                 <li>
-                  • Peşə təhsili müəssisələrində keyfiyyətin qiymətləndirilməsi
+                  Peşə təhsili müəssisələrində keyfiyyətin qiymətləndirilməsi
                   sahəsində beynəlxalq təcrübəni araşdırmaq bacarığı
                 </li>
 
                 <li>
-                  • Azərbaycan dilində peşəkar şifahi və yazılı kommunikasiya
+                  Azərbaycan dilində peşəkar şifahi və yazılı kommunikasiya
                   bacarığı
                 </li>
 
-                <li>• Analitik düşünmə və problem həlletmə bacarığı</li>
+                <li>Analitik düşünmə və problem həlletmə bacarığı</li>
 
                 <li>
-                  • Statistik məlumatların toplanması, təhlili və
+                  Statistik məlumatların toplanması, təhlili və
                   qiymətləndirilməsi bacarığı
                 </li>
 
-                <li>• Təşkilatçılıq bacarığı</li>
+                <li>Təşkilatçılıq bacarığı</li>
 
-                <li>• Komandada işləmək bacarığı</li>
+                <li>Komandada işləmək bacarığı</li>
 
-                <li>• Zərurət olduqda, ölkə üzrə ezamiyyətdə olmaq imkanı</li>
+                <li>Zərurət olduqda, ölkə üzrə ezamiyyətdə olmaq imkanı</li>
 
-                <li>• Minimum yaş həddi 25 yaş</li>
+                <li>Minimum yaş həddi 25 yaş</li>
               </ul>
 
               <p>
                 Peşə təhsil müəssisələrinin akkreditasiya qiymətləndirilməsini
                 icra etmək üçün təşkil olunan ekspert bankına üzv olmaq
-                istəyənlər link{" "}
+                istəyənlər{" "}
                 <Link
                   href="https://forms.office.com/r/9vudjSgfZc"
                   className="italic text-textPrimary hover:underline"
                 >
-                  (https://forms.office.com/r/9vudjSgfZc)
+                  link
                 </Link>{" "}
                 vasitəsi ilə qeydiyyatdan keçə bilərlər.
               </p>

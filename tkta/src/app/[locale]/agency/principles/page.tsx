@@ -7,7 +7,7 @@ export default function Principles() {
     <div className="w-full flex flex-col justify-center gap-20">
       
 
-      <h1 className="uppercase text-5xl text-center text-textPrimary pt-16">
+      <h1 className="uppercase text-4xl text-center text-textPrimary pt-16">
         RƏHBƏRLİK
       </h1>
 

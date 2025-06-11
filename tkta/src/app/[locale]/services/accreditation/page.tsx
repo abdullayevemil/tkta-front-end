@@ -5,8 +5,6 @@ import Link from "next/link";
 export default function Accreditation() {
   return (
     <section className="w-full flex flex-col gap-16 items-center">
-      
-
       <h1 className="uppercase text-5xl text-center w-full px-16 pt-16">
         Akkredİtasİya
       </h1>
@@ -43,6 +41,13 @@ export default function Accreditation() {
           >
             Apellyasiya komissiyası
           </TabsTrigger>
+
+          <TabsTrigger
+            className="w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
+            value="licence"
+          >
+            lisen
+          </TabsTrigger>
         </TabsList>
 
         <TabsContent value="accreditation-process">
@@ -52,7 +57,7 @@ export default function Accreditation() {
               ayrılır.
             </h2>
 
-            <ol className="list-decimal flex flex-col gap-4">
+            <ol className="list-decimal flex flex-col gap-4 list-inside">
               <li>
                 <div className="flex flex-col gap-3">
                   <h3 className="font-bold">İnstitusional akkreditasiya</h3>
@@ -151,7 +156,7 @@ export default function Accreditation() {
         </TabsContent>
 
         <TabsContent value="council">
-          <div className="flex flex-col gap-4  px-16">
+          <div className="flex flex-col gap-4 px-16">
             <div>
               <span className="font-bold">Akkreditasiya şurası</span> -
               Akkreditasiya şurası akkreditasiyanın nəticələrinə dair yekun
@@ -167,7 +172,7 @@ export default function Accreditation() {
               edilirlər:
             </h4>
 
-            <ol className="list-decimal pl-6">
+            <ol className="list-decimal pl-6 list-inside">
               <li>
                 yerli və xarici təhsil və ya müvafiq elmi tədqiqat sahələrinin
                 mütəxəssisləri;
@@ -203,7 +208,7 @@ export default function Accreditation() {
               hərəkətləri yerinə yetirir:
             </div>
 
-            <ul className="list-disc pl-6">
+            <ul className="list-disc pl-6 list-inside">
               <li>
                 Akkreditasiya Komissiyası tərəfindən tərtib edilmiş Yekun
                 Hesabatların müzakirəsini həyata keçirir;
@@ -229,7 +234,35 @@ export default function Accreditation() {
           </div>
         </TabsContent>
 
-        <TabsContent value="commission"></TabsContent>
+        <TabsContent value="commission">
+          <div className="flex flex-col gap-4">
+            <p>
+              Azərbaycan Respublikası Nazirlər Kabinetinin 2010-cu il 28
+              sentyabr tarixli, 167 nömrəli qərarı ilə təsdiq edilmiş “Təhsil
+              müəssisələrinin akkreditasiyası Qaydaları”na əsasən Agentlik
+              tərəfindən Akkreditasiya Komissiyasının fəaliyyətinə dair
+              şikayətlərə baxan kollegial orqan, Apellyasiya Komissiyası
+              yaradılır. Bununla bağlı olaraq, Agentliyin 07.11.2024-cü il
+              tarixli, 3-29-61/3-2-167F/2024 nömrəli və 15.11.2024-cü il
+              tarixli, 3-29-61/3-2-169F/2024 nömrəli əmrləri ilə müvafiq olaraq
+              Apellyasiya Komissiyasının tərkibi və Əsasnaməsi yenidən təsdiq
+              edilmişdir.
+            </p>
+
+            <p>
+              Azərbaycan Respublikası Nazirlər Kabinetinin 2010-cu il 28
+              sentyabr tarixli, 167 nömrəli qərarı ilə təsdiq edilmiş “Təhsil
+              müəssisələrinin akkreditasiyası Qaydaları”na əsasən Agentlik
+              tərəfindən Akkreditasiya Komissiyasının fəaliyyətinə dair
+              şikayətlərə baxan kollegial orqan, Apellyasiya Komissiyası
+              yaradılır. Bununla bağlı olaraq, Agentliyin 07.11.2024-cü il
+              tarixli, 3-29-61/3-2-167F/2024 nömrəli və 15.11.2024-cü il
+              tarixli, 3-29-61/3-2-169F/2024 nömrəli əmrləri ilə müvafiq olaraq
+              Apellyasiya Komissiyasının tərkibi və Əsasnaməsi yenidən təsdiq
+              edilmişdir.
+            </p>
+          </div>
+        </TabsContent>
       </Tabs>
     </section>
   );

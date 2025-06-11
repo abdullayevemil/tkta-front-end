@@ -10,9 +10,7 @@ import ProfilePhoto3 from "@/assets/images/qualifications-recognition/profile-ph
 export default function HomePage() {
   return (
     <section className="w-full flex flex-col gap-16 items-center">
-      
-
-      <h1 className="uppercase text-5xl text-center">
+      <h1 className="uppercase text-5xl text-center pt-16">
         Xarİcİ kvalİfİkasİyaların tanınması
       </h1>
 

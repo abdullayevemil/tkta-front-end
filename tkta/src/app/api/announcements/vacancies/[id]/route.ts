@@ -32,7 +32,7 @@ export async function GET(
   const vacancies = vacanciesResult[0];
 
   const photosResult = await sql`
-    SELECT id, url, caption 
+    SELECT id, url 
     FROM vacancies_photos 
     WHERE vacancy_id = ${idNumber}
   `;

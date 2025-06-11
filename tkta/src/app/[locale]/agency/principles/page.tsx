@@ -11,7 +11,7 @@ export default function Principles() {
         RƏHBƏRLİK
       </h1>
 
-      <div className="px-[112px] w-full flex flex-row gap-6 items-center">
+      <div className="px-16 w-full flex flex-row gap-6 items-center">
         <Card className="h-full bg-textPrimary w-1/3 p-4 flex flex-col items-center gap-6 hover:cursor-pointer">
           <Image
             src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1742935878/principles/xhwrn4ztqiqeivxhgfrq.jpg"
@@ -79,11 +79,11 @@ export default function Principles() {
         </p>
       </div>
 
-      <div className="px-[112px]">
+      <div className="px-16">
         <hr></hr>
       </div>
 
-      <div className="px-[112px] w-full flex flex-row gap-6 items-center">
+      <div className="px-16 w-full flex flex-row gap-6 items-center">
         <Card className="h-full bg-textPrimary w-1/3 p-4 flex flex-col items-center gap-6 hover:cursor-pointer">
           <Image
             src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1742936194/principles/uu0lnxbin3ngx5gmwbl9.png"

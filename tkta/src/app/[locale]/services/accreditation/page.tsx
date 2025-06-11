@@ -1,14 +1,13 @@
 import Image from "next/image";
-import HeaderImage from "@/assets/images/qualifications-recognition/header-image.png";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
 
 export default function Accreditation() {
   return (
     <section className="w-full flex flex-col gap-16 items-center">
-      <Image src={HeaderImage} alt="header image" className="w-full" />
+      
 
-      <h1 className="uppercase text-5xl text-center w-full px-[112px]">
+      <h1 className="uppercase text-5xl text-center w-full px-[112px] pt-16">
         Akkredİtasİya
       </h1>
 
@@ -69,16 +68,7 @@ export default function Accreditation() {
                     müəssisəsinin akkreditasiyası Təhsildə Keyfiyyət Təminatı
                     Agentliyi tərəfindən 5 ildən bir həyata keçirilir. Müvafiq
                     keyfiyyət sənədinin – şəhadətnamənin verilməsi ilə başa
-                    çatır. Təhsil müəssisələrinin akkreditasiya
-                    qiymətləndirməsində istinad edilən{" "}
-                    <Link
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-textPrimary italic hover:underline"
-                      href="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1737958967/documents/e6txsswvt5fa0up7tejh.pdf"
-                    >
-                      Normativ hüquqi sənədlər
-                    </Link>
+                    çatır.
                   </div>
 
                   <h4 className="font-bold">

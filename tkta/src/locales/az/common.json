@@ -23,12 +23,12 @@
         "title": "Fəaliyyət sahələri",
         "foreignQualificationsRecognition": "Xarici kvalifikasiyaların tanınması",
         "foreignQualificationsRecognitionDescription": "Təhsil sənədlərinin tanınması",
-        "nonInformalaeducationRecognition": "Qeyri formal və informal təhsilin tanınması",
+        "nonInformalaeducationRecognition": "Qeyri-formal və informal təhsilin tanınması",
         "nonInformalaeducationRecognitionDescription": "Peşə təcrübəsinin tanınması",
         "accreditation": "Akkreditasiya və lisenziya",
         "accreditationDescription": "Rəsmi təsdiq və qiymətləndirmə",
         "training": "Təlim və metodologiya",
-        "trainingDescription": "Öyrətmə üsul və yanaşmaları",       
+        "trainingDescription": "Öyrətmə üsul və yanaşmaları",
         "analysis": "Analitik təhlil",
         "analysisDescription": "Məlumatların təhlili və hesabatlılığı"
       },
@@ -108,7 +108,20 @@
     "about": {
       "title": "HAQQIMIZDA",
       "description": "Azərbaycan Respublikası Prezidentinin 29.12.2019-cu il tarixində imzaladığı müvafiq Fərmana əsasən, Təhsil Nazirliyinin Akkreditasiya və Nostrifikasiya İdarəsi Təhsil Nazirliyinin tabeliyində publik hüquqi şəxs statusu olan Təhsildə Keyfiyyət Təminatı Agentliyinə çevrilmə yolu ilə yenidən təşkil edilmişdir. Agentlik Azərbaycanda və beynəlxalq səviyyədə qəbul edilmiş standartlara əsaslanan ali, orta ixtisas və əlavə təhsilin keyfiyyətinin müstəqil qiymətləndirilməsi sahəsində peşəkar və mütəxəssis qurumdur. Təhsildə Keyfiyyət Təminatı Agentliyi (TKTA) təhsil proqramlarının keyfiyyət səviyyələrinin müəyyənləşdirilməsi və tələblərin həyata keçirilməsini təmin edir. Agentlik öz vəzifələrini yerinə yetirərkən və hüquqlarını həyata keçirərkən dövlət orqanları (qurumları) və bələdiyyələrlə, beynəlxalq və qeyri-hökumət təşkilatları, digər hüquqi və fiziki şəxslərlə qarşılıqlı əlaqədə fəaliyyət göstərir. Azərbaycan Respublikası Təhsil Nazirliyinin fəaliyyətinin təkmilləşdirilməsi və “Azərbaycan Respublikasında bir sıra dövlət orqanlarının strukturunun optimallaşdırılması və idarə edilməsinin təkmilləşdirilməsi ilə bağlı əlavə tədbirlər haqqında” Azərbaycan Respublikası Prezidentinin 2019-cu il 17 yanvar tarixli 479 nömrəli Fərmanında dəyişiklik edilməsi barədə",
-      "link": "NİZAMNAMƏYƏ KEÇİD"
+      "link": "NİZAMNAMƏYƏ KEÇİD",
+      "services": {
+        "title": "Fəaliyyət istiqamətlərimiz",
+        "services": [
+          "Təhsil müəssisələrinin akkreditasiyasını həyata keçirmək",
+          "Xarici dövlətlərin ali təhsilə aid kvalifikasiyalarının tanınmasını həyata keçirmək",
+          "Peşə təhsili üzrə qeyri-formal və informal təhsil formaları vasitəsilə əldə edilmiş bilik, bacarıq, səriştə və təcrübənin qiymətləndirilməsi və tanınmasını həyata keçirmək",
+          "Təhsil müəssisələrinin akkreditasiyasının həyata keçirilməsi üçün tövsiyələr hazırlamaq və təlimlər təşkil etmək",
+          "Təhsil müəssisələrində daxili keyfiyyət təminatı sistemlərinin qurulması və inkişaf etdirilməsi ilə bağlı məsləhət və metodiki dəstək xidmətləri təşkil etmək",
+          "Təhsil sisteminin və bu sahədə dövlət standartlarının davamlı inkişafını, təhsil müəssisələrinin nüfuzunun və mütəxəssis hazırlığının keyfiyyətinin artırılmasını təşviq etmək",
+          "Təhsil fəaliyyətinin lisenziyalaşdırılması məqsədilə rəy verilməsində iştirak etmək",
+          "Müvafiq sahədə qabaqcıl beynəlxalq təcrübəni öyrənmək və tətbiq etmək"
+        ]
+      }
     }
   },
   "media": {
@@ -127,7 +140,7 @@
       "removeDialogCancel": "Ləğv et",
       "removeDialogConfirm": "Bəli, sil",
       "success": {
-        "create": "Xəbər uğurla yaradıldı.",  
+        "create": "Xəbər uğurla yaradıldı.",
         "update": "Xəbər uğurla yeniləndi.",
         "delete": "Xəbər uğurla silindi."
       },

@@ -2,14 +2,13 @@ import Folder from "@/assets/icons/reports/Folder.png";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
-import HeaderImage from "@/assets/images/reports/header-image.png";
 
 export default function AnnualReports() {
   return (
     <section className="w-full flex flex-col gap-16 items-center">
-      <Image src={HeaderImage} alt="header image" className="w-full" />
+      
 
-      <h1 className="uppercase text-5xl text-center w-full px-[112px]">
+      <h1 className="uppercase text-5xl text-center w-full px-[112px] pt-16">
         İllİk hesabatlar
       </h1>
 

@@ -1,6 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
-import HeaderImage from "@/assets/images/law/header-image.png";
 import { Card } from "@/components/ui/card";
 import LawIcon from "@/assets/icons/law/law.svg";
 
@@ -16,9 +14,9 @@ const laws = [
 export default function Laws() {
   return (
     <section className="w-full flex flex-col gap-16 items-center">
-      <Image src={HeaderImage} alt="header image" className="w-full" />
+      
 
-      <h1 className="uppercase text-5xl text-center w-full px-[112px]">
+      <h1 className="uppercase text-5xl text-center w-full px-[112px] pt-16">
       Akkredİtasİya Qaydaları
       </h1>
 

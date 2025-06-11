@@ -1,5 +1,3 @@
-import Image from "next/image";
-import HeaderImage from "@/assets/images/announcements/header-image.png";
 import NewsCard from "@/components/home/news-card";
 import Link from "next/link";
 
@@ -68,9 +66,9 @@ const vacancies = [
 export default function Cooperation() {
   return (
     <section className="w-full flex flex-col gap-16 items-center">
-      <Image src={HeaderImage} alt="header image" className="w-full" />
+      
 
-      <h1 className="uppercase text-5xl text-center w-full px-[112px]">
+      <h1 className="uppercase text-5xl text-center w-full px-[112px] pt-16">
         ƏMƏKDAŞLIQ İMKANLARI
       </h1>
 

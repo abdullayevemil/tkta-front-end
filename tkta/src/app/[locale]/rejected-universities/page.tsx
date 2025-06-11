@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import HeaderImage from "@/assets/images/qualifications-recognition/header-image.png";
 import * as React from "react";
 import {
   ColumnDef,
@@ -464,9 +462,9 @@ export default function DataTableDemo() {
 
   return (
     <section className="w-full flex flex-col gap-16 items-center">
-      <Image src={HeaderImage} alt="header image" className="w-full" />
+      
 
-      <h1 className="uppercase text-5xl text-center w-full px-[112px]">
+      <h1 className="uppercase text-5xl text-center w-full px-[112px] pt-16">
         İmtİna alan unİversİtetlər
       </h1>
 

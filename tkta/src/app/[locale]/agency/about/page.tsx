@@ -29,6 +29,16 @@ export default async function AboutUs({ params }: Props) {
           </Link>
         </p>
       </div>
+
+      <div className="px-16 w-full flex flex-col gap-8">
+        <h2 className="text-2xl text-textPrimary text-center font-semibold">{t.agency.about.services.title}</h2>
+
+        <ul className="list-disc list-inside text-base flex flex-col gap-2">
+          {t.agency.about.services.services.map((service, index) => (
+            <li key={index}>{service}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

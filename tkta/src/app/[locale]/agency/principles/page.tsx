@@ -1,13 +1,13 @@
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
-import HeaderImage from "@/assets/images/principles/header-image.png";
+
 
 export default function Principles() {
   return (
     <div className="w-full flex flex-col justify-center gap-20">
-      <Image src={HeaderImage} alt="header image" className="w-full" />
+      
 
-      <h1 className="uppercase text-5xl text-center text-textPrimary">
+      <h1 className="uppercase text-5xl text-center text-textPrimary pt-16">
         RƏHBƏRLİK
       </h1>
 
@@ -99,7 +99,7 @@ export default function Principles() {
             </h3>
 
             <h4 className="text-white/[0.7] text-base font-semibold text-center">
-              İdarə Heyətinin sədr müavini
+              İdarə Heyəti sədrinin müavini
             </h4>
           </div>
         </Card>
@@ -144,7 +144,7 @@ export default function Principles() {
           </span>
           <span className="text-wrap">
             2022-ci ildən etibarən Təhsildə Keyfiyyət Təminatı Agentliyinin
-            İdarə Heyətinin sədrinin müavini vəzifəsində çalışır.
+            İdarə Heyəti sədrinin müavini vəzifəsində çalışır.
           </span>
           <span className="text-wrap">Ailəlidir, 2 övladı var.</span>
         </p>

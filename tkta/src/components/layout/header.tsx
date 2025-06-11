@@ -43,37 +43,77 @@ export default function Header({ locale }: { locale: string }) {
 
         <ul className="flex flex-wrap gap-3 items-center justify-center">
           <li>
-            <Link href="https://www.facebook.com/tkta.edu.az">
-              <FacebookIcon color="var(--gold-border-color)" width={24} height={24} />
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.facebook.com/tkta.edu.az"
+            >
+              <FacebookIcon
+                color="var(--gold-border-color)"
+                width={24}
+                height={24}
+              />
             </Link>
           </li>
-         
+
           <li>
-            <Link href="https://x.com/home">
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://x.com/home"
+            >
               <XIcon color="var(--gold-border-color)" width={24} height={24} />
             </Link>
           </li>
-         
+
           <li>
-            <Link href="https://www.instagram.com/tktaeduaz/">
-              <InstagramIcon color="var(--gold-border-color)" width={24} height={24} />
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/tktaeduaz/"
+            >
+              <InstagramIcon
+                color="var(--gold-border-color)"
+                width={24}
+                height={24}
+              />
             </Link>
           </li>
-         
+
           <li>
-            <Link href="">
-              <TelegramIcon color="var(--gold-border-color)" width={24} height={24} />
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://t.me/tktaeduaz"
+            >
+              <TelegramIcon
+                color="var(--gold-border-color)"
+                width={24}
+                height={24}
+              />
             </Link>
           </li>
-         
+
           <li>
-            <Link href="https://www.linkedin.com/company/54113705/admin/page-posts/published/">
-              <LinkedinIcon color="var(--gold-border-color)" width={24} height={24} />
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/company/54113705/admin/page-posts/published/"
+            >
+              <LinkedinIcon
+                color="var(--gold-border-color)"
+                width={24}
+                height={24}
+              />
             </Link>
           </li>
-         
+
           <li>
-            <Link href="">
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.youtube.com/@thsildkeyfiyyttminatagentl1977"
+            >
               <YoutubeIcon color="var(--gold-border-color)" height={24} />
             </Link>
           </li>
@@ -82,15 +122,15 @@ export default function Header({ locale }: { locale: string }) {
         <div className="flex flex-col sm:flex-row gap-2 items-stretch sm:items-center w-full sm:w-auto">
           <div className="flex flex-row gap-2 items-center border border-gray-300 rounded-xl p-0.5 px-2 w-full sm:w-auto focus-within:border-textPrimary">
             <SearchIcon width={24} height={24} className="text-gray-500" />
-         
+
             <Input className="border-none outline-none focus:outline-none focus:border-none shadow-none focus-visible:ring-0 w-full" />
           </div>
 
           <div className="flex flex-row gap-2 items-center justify-center">
             <ColorSwitch locale={locale} />
-         
+
             <FontSelector />
-         
+
             <LanguageSelector />
           </div>
         </div>

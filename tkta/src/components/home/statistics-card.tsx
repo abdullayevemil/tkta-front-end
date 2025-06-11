@@ -8,7 +8,7 @@ export default function StatisticsCard({ name, number, iconUrl }: Statistics) {
       <Image src={iconUrl} alt={`${name} icon`} width={96} height={96} />
 
       <div className="flex flex-col gap-1">
-        <h3 className="text-5xl text-center">{number}</h3>
+        <h3 className="text-4xl text-center">{number}</h3>
 
         <div className="text-base text-center">{name}</div>
       </div>

@@ -80,7 +80,7 @@ export default function LoginPage({
       }
 
       const isSuccess =
-        data.userId === "AA1234567" && data.identityNo === "ABC1234";
+        data.userId === "AA3969432" && data.identityNo === "7G4XHKP";
 
       toast.dismiss();
 

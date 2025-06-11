@@ -14,7 +14,7 @@ export default async function AboutUs({ params }: Props) {
 
   return (
     <div className="w-full flex flex-col gap-16 items-center">
-      <h1 className="uppercase text-5xl text-center pt-16">
+      <h1 className="uppercase text-4xl text-center pt-16">
         {t.agency.about.title}
       </h1>
 

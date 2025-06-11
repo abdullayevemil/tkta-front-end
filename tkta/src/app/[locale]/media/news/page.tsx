@@ -213,7 +213,7 @@ export default function News({ params }: Props) {
       {isAdmin && (
         <div className="w-full px-16">
           <Link
-            href="/media/news/create"
+            href={`/${locale}/media/news/create`}
             className="bg-textPrimary w-fit rounded shadow-md text-white px-4 py-2 flex items-center gap-2"
           >
             <span>{t.media.news.createNews}</span>

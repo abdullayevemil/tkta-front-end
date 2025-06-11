@@ -3,7 +3,7 @@ import sql from "@/lib/db";
 import { News } from "@/types/news";
 
 export default async function Video() {
-  const news: News[] = await sql`SELECT * FROM news`;
+  const news: News[] = await sql`SELECT * FROM news ORDER BY date DESC LIMIT 5`;
 
   return (
     <div className="w-full relative">

@@ -216,7 +216,7 @@ export default function News({ params }: Props) {
             href={`/${locale}/announcements/vacancies/create`}
             className="bg-textPrimary w-fit rounded shadow-md text-white px-4 py-2 flex items-center gap-2"
           >
-            <span>Vakansiya yatat</span>
+            <span>Vakansiya yarat</span>
 
             <PlusIcon className="w-4 h-4" />
           </Link>

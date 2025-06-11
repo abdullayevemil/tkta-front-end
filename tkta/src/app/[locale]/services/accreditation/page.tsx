@@ -42,12 +42,6 @@ export default function Accreditation() {
             Apellyasiya komissiyası
           </TabsTrigger>
 
-          <TabsTrigger
-            className="w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
-            value="licence"
-          >
-            lisen
-          </TabsTrigger>
         </TabsList>
 
         <TabsContent value="accreditation-process">

@@ -68,7 +68,7 @@ export default function Cooperation() {
     <section className="w-full flex flex-col gap-16 items-center">
       
 
-      <h1 className="uppercase text-5xl text-center w-full px-[112px] pt-16">
+      <h1 className="uppercase text-5xl text-center w-full px-16 pt-16">
         ƏMƏKDAŞLIQ İMKANLARI
       </h1>
 

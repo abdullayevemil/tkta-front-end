@@ -21,7 +21,7 @@ export default function Header({ locale }: { locale: string }) {
   return (
     <header className="border-b border-gray-100 bg-white flex flex-col items-center justify-center gap-8 py-6 px-4 md:px-16 font-helvetica sticky top-0 left-0 z-50 w-full">
       <div className="w-full flex flex-wrap justify-between items-center gap-4">
-        <Link href="/home" className="hover:cursor-pointer">
+        <Link href={`/${locale}/home`} className="hover:cursor-pointer">
           <Image src={Logo} alt="TKTA logo" className="w-[194.4px] h-18" />
         </Link>
 

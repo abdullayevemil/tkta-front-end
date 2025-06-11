@@ -73,7 +73,7 @@ export function Navigation({ locale }: { locale: string }) {
                     </ListItem>
                   </li>
 
-                  <li>
+                  {/* <li>
                     <ListItem
                       href={`/${locale}/agency/inner-quality`}
                       title={
@@ -85,7 +85,7 @@ export function Navigation({ locale }: { locale: string }) {
                           .internalQualityAssuranceDescription
                       }
                     </ListItem>
-                  </li>
+                  </li> */}
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>

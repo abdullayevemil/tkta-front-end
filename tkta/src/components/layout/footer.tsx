@@ -4,7 +4,7 @@ import GoogleMapComponent from "@/components/maps/google-map";
 import { Card } from "@/components/ui/card";
 import ExternalLinks from "./external-links";
 import Link from "next/link";
-import { Clock, Mail, MapPinned, Phone } from "lucide-react";
+import { Mail, MapPinned, Phone } from "lucide-react";
 
 export default function Footer() {
   const currentDate = new Date();
@@ -67,67 +67,65 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="flex flex-col gap-6">
-            <div className="text-textPrimary font-semibold text-center">
-              Əlaqə
-            </div>
+          <div className="flex gap-12 items-start rounded-xl border-2 items-center border-textPrimary p-8">
+            <div className="flex flex-col gap-8">
+              <h3 className="text-5xl pb-8 border-b-2 border-textPrimary">
+                Əlaqə
+              </h3>
 
-            <div className="flex flex-col gap-6 items-start justfy-left">
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                href="mailto:info@tkta.edu.az"
-                className="flex flex-row gap-2"
-              >
-                <Mail width={60} color="var(--primary-color)" />
-
-                <div className="text-textPrimary text-base text-justify">
-                  info@tkta.edu.az
-                </div>
-              </Link>
-
-              <div className="flex flex-row justify-between gap-16">
+              <div className="flex flex-row gap-4 items-start justfy-left items-stretch">
                 <Link
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="tel:146-8"
-                  className="flex flex-row gap-2"
+                  href="mailto:info@tkta.edu.az"
+                  className="flex flex-col gap-3 items-center justify-between p-4 border-2 border-textPrimary rounded-xl"
                 >
-                  <Phone width={60} color="var(--primary-color)" />
+                  <Mail width={60} color="var(--primary-color)" />
 
-                  <div className="text-textPrimary text-base text-justify">
-                    146-8
+                  <div className="text-textPrimary text-sm text-justify">
+                    info@tkta.edu.az
                   </div>
                 </Link>
 
-                <div className="flex flex-row gap-2">
-                  <Clock width={60} color="var(--primary-color)" />
+                  <Link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="tel:146-8"
+                    className="flex flex-col gap-3 items-center justify-between p-4 border-2 border-textPrimary rounded-xl"
+                  >
+                    <Phone width={60} color="var(--primary-color)" />
 
-                  <div className="text-textPrimary text-base text-justify">
-                    09:00 - 18:00
+                    <div className="text-textPrimary text-sm text-justify">
+                      146-8
+                    </div>
+                    <div className="flex flex-row gap-2">
+
+                    <div className="text-textPrimary text-sm text-justify">
+                      09:00 - 18:00
+                    </div>
                   </div>
-                </div>
+                  </Link>
+
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://maps.app.goo.gl/FTyJY73SYT4YvKfJ6"
+                  className="flex flex-col gap-3 items-center justify-between p-4 border-2 border-textPrimary rounded-xl"
+                >
+                  <MapPinned width={60} color="var(--primary-color)" />
+
+                  <div className="text-textPrimary text-[0.6875rem] text-justify text-wrap max-w-64">
+                    Q.Qarayev prospekti 2B (Bakı Texniki Kolleci). AZ 1060,
+                    Azərbaycan, Bakı. Agentliyə giriş Kamil Balakişiyev küçəsi.
+                  </div>
+                </Link>
               </div>
-
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://maps.app.goo.gl/FTyJY73SYT4YvKfJ6"
-                className="flex flex-row gap-2"
-              >
-                <MapPinned width={60} color="var(--primary-color)" />
-
-                <div className="text-textPrimary text-base text-justify text-wrap max-w-80">
-                  Q.Qarayev prospekti 2B (Bakı Texniki Kolleci). AZ 1060,
-                  Azərbaycan, Bakı. Agentliyə giriş Kamil Balakişiyev küçəsi.
-                </div>
-              </Link>
             </div>
-          </div>
 
-          <Card className="flex justify-right">
-            <GoogleMapComponent />
-          </Card>
+            <Card className="flex justify-right">
+              <GoogleMapComponent />
+            </Card>
+          </div>
         </div>
 
         <ExternalLinks />

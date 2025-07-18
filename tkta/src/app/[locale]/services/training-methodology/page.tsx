@@ -299,7 +299,7 @@ export default function TrainingAndMethodology() {
                   maliyyə və insan resurslarının idarə olunması, tədrisin
                   təşkili və idarə olunması kimi sahələrin ən azı biri üzrə
                   təcrübəsinin olması
-                </li>
+                </li> 
 
                 <li>Yüksək səviyyədə Azərbaycan dili biliyi</li>
 

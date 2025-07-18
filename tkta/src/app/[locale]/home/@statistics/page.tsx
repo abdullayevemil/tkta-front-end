@@ -59,7 +59,7 @@ const majorEducationData = [
 
 const majorEducationConfig = {
   value: {
-    label: "Peşə təhsili müəssisələr ",
+    label: "Peşə təhsili müəssisələri",
     color: "var(--primary-color)",
   },
 } satisfies ChartConfig;

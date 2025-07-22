@@ -87,24 +87,23 @@ export default function Footer() {
                   </div>
                 </Link>
 
-                  <Link
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="tel:146-8"
-                    className="flex flex-col gap-3 items-center justify-between p-4 border-2 border-textPrimary rounded-xl"
-                  >
-                    <Phone width={60} color="var(--primary-color)" />
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="tel:146-8"
+                  className="flex flex-col gap-3 items-center justify-between p-4 border-2 border-textPrimary rounded-xl"
+                >
+                  <Phone width={60} color="var(--primary-color)" />
 
-                    <div className="text-textPrimary text-sm text-justify">
-                      146-8
-                    </div>
-                    <div className="flex flex-row gap-2">
-
+                  <div className="text-textPrimary text-sm text-justify">
+                    146-8
+                  </div>
+                  <div className="flex flex-row gap-2">
                     <div className="text-textPrimary text-sm text-justify">
                       09:00 - 18:00
                     </div>
                   </div>
-                  </Link>
+                </Link>
 
                 <Link
                   target="_blank"

@@ -16,6 +16,8 @@ import { SearchIcon } from "lucide-react";
 import { getTranslation } from "@/lib/i18n";
 
 export default function Header({ locale }: { locale: string }) {
+  locale = locale || "az";
+  
   const t = getTranslation(locale);
 
   return (

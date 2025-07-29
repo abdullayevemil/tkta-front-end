@@ -122,10 +122,7 @@ export default function Iternationalization() {
           </div>
         </TabsContent>
 
-        <TabsContent
-          value="employee-exchange"
-          className="flex flex-col gap-20"
-        >
+        <TabsContent value="employee-exchange" className="flex flex-col gap-20">
           <div className="flex flex-col gap-6">
             <h2 className="text-2xl text-textPrimary">
               TKTA nümayəndəsi Keyfiyyət təminatı üzrə Bolonya Tematik Qrupunun
@@ -417,7 +414,7 @@ export default function Iternationalization() {
                 height={700}
                 className="rounded-xl w-1/5 float-right ml-8"
                 src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180879/Picture12_hutzqb.jpg"
-                alt="iamge from serbia"
+                alt="image from serbia"
               />
 
               <p className="mb-4">
@@ -444,7 +441,7 @@ export default function Iternationalization() {
                 height={700}
                 className="rounded-xl w-1/5 float-left mr-8"
                 src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180879/Picture13_i9fsbd.jpg"
-                alt="iamge from serbia"
+                alt="image from serbia"
               />
 
               <p className="mb-4">
@@ -460,7 +457,7 @@ export default function Iternationalization() {
                 height={700}
                 className="rounded-xl w-1/5 float-right ml-8"
                 src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180879/Picture14_m9lrjv.jpg"
-                alt="iamge from serbia"
+                alt="image from serbia"
               />
 
               <p className="mb-4">
@@ -478,8 +475,200 @@ export default function Iternationalization() {
 
         <TabsContent
           value="international-events"
-          className="flex flex-col gap-4"
-        ></TabsContent>
+          className="flex flex-col gap-20"
+        >
+          <div className="flex flex-col gap-6">
+            <h2 className="text-2xl text-textPrimary"></h2>
+
+            <div className="text-justify tracking-wide leading-7 text-base">
+              <Image
+                width={700}
+                height={700}
+                className="rounded-xl w-1/5 float-left mr-8"
+                src=""
+                alt="iamge from bolonya"
+              />
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-6">
+            <h2 className="text-2xl text-textPrimary"></h2>
+
+            <div className="text-justify tracking-wide leading-7 text-base">
+              <Image
+                width={700}
+                height={700}
+                className="rounded-xl w-1/5 float-left mr-8"
+                src=""
+                alt="iamge from bolonya"
+              />
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-6">
+            <h2 className="text-2xl text-textPrimary"></h2>
+
+            <div className="text-justify tracking-wide leading-7 text-base">
+              <Image
+                width={700}
+                height={700}
+                className="rounded-xl w-1/5 float-left mr-8"
+                src=""
+                alt="image from bolonya"
+              />
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-6">
+            <h2 className="text-2xl text-textPrimary"></h2>
+
+            <div className="text-justify tracking-wide leading-7 text-base">
+              <Image
+                width={700}
+                height={700}
+                className="rounded-xl w-1/5 float-left mr-8"
+                src=""
+                alt="iamge from bolonya"
+              />
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-6">
+            <h2 className="text-2xl text-textPrimary"></h2>
+
+            <div className="text-justify tracking-wide leading-7 text-base">
+              <Image
+                width={700}
+                height={700}
+                className="rounded-xl w-1/5 float-left mr-8"
+                src=""
+                alt="iamge from bolonya"
+              />
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-6">
+            <h2 className="text-2xl text-textPrimary"></h2>
+
+            <div className="text-justify tracking-wide leading-7 text-base">
+              <Image
+                width={700}
+                height={700}
+                className="rounded-xl w-1/5 float-left mr-8"
+                src=""
+                alt="iamge from bolonya"
+              />
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-6">
+            <h2 className="text-2xl text-textPrimary"></h2>
+
+            <div className="text-justify tracking-wide leading-7 text-base">
+              <Image
+                width={700}
+                height={700}
+                className="rounded-xl w-1/5 float-left mr-8"
+                src=""
+                alt="iamge from bolonya"
+              />
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-6">
+            <h2 className="text-2xl text-textPrimary"></h2>
+
+            <div className="text-justify tracking-wide leading-7 text-base">
+              <Image
+                width={700}
+                height={700}
+                className="rounded-xl w-1/5 float-left mr-8"
+                src=""
+                alt="iamge from bolonya"
+              />
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+
+              <p className="mb-4"></p>
+            </div>
+          </div>
+        </TabsContent>
       </Tabs>
     </section>
   );

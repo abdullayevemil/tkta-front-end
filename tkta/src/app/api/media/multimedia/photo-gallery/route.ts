@@ -1,5 +1,97 @@
+import { NextRequest, NextResponse } from "next/server";
+import { v2 as cloudinary, UploadApiResponse } from "cloudinary";
 import sql from "@/lib/db";
-import { NextResponse } from "next/server";
+
+export const config = {
+  api: {
+    bodyParser: false,
+  },
+};
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME!,
+  api_key: process.env.CLOUDINARY_API_KEY!,
+  api_secret: process.env.CLOUDINARY_API_SECRET!,
+});
+
+export async function POST(req: NextRequest) {
+  try {
+    const formData = await req.formData();
+    
+    // Extract text fields
+    const title = formData.get('title') as string;
+    const titleEnglish = formData.get('titleEnglish') as string;
+    const headerPhotoFile = formData.get('headerPhoto') as File;
+    const date = formData.get('date') as string;
+    const imageFiles = formData.getAll('images') as File[];
+
+    // Validate required fields
+    if (!title || !titleEnglish || !headerPhotoFile || !date || !imageFiles || imageFiles.length === 0) {
+      return NextResponse.json(
+        { error: "Missing required fields: title, titleEnglish, headerPhoto, date, and at least one image" },
+        { status: 400 }
+      );
+    }
+
+    // Upload header photo to Cloudinary
+    const headerPhotoBuffer = Buffer.from(await headerPhotoFile.arrayBuffer());
+    const headerPhotoUpload = await new Promise<UploadApiResponse>((resolve, reject) => {
+      cloudinary.uploader.upload_stream(
+        {
+          folder: 'photo-gallery/headers',
+          resource_type: 'image',
+        },
+        (error, result) => {
+          if (error) reject(error);
+          else resolve(result!);
+        }
+      ).end(headerPhotoBuffer);
+    });
+
+    // Upload all images to Cloudinary
+    const uploadedImages = await Promise.all(
+      imageFiles.map(async (file) => {
+        const buffer = Buffer.from(await file.arrayBuffer());
+        return new Promise<UploadApiResponse>((resolve, reject) => {
+          cloudinary.uploader.upload_stream(
+            {
+              folder: 'photo-gallery/images',
+              resource_type: 'image',
+            },
+            (error, result) => {
+              if (error) reject(error);
+              else resolve(result!);
+            }
+          ).end(buffer);
+        });
+      })
+    );
+
+    const [gallery] = await sql`
+      INSERT INTO photo_gallery (title, titleEnglish, headerPhotoUrl, date)
+      VALUES (${title}, ${titleEnglish}, ${headerPhotoUpload.secure_url}, ${date})
+      RETURNING id
+    `;
+
+    uploadedImages.forEach(async (image) => {
+      await sql`
+        INSERT INTO photo_gallery_images (gallery_id, url)
+        VALUES (${gallery.id}, ${image.secure_url})
+      `;
+    });
+
+    return NextResponse.json({
+      message: "Photo gallery created successfully"
+    }, { status: 201 });
+
+  } catch (error) {
+    console.error("Error creating photo gallery:", error);
+    return NextResponse.json(
+      { error: "Internal server error" },
+      { status: 500 }
+    );
+  }
+}
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);

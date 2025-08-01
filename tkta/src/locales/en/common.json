@@ -180,6 +180,55 @@
         "title": "Edit News",
         "submit": "Save News"
       }
+    },
+    "multimedia": {
+      "title": "MULTIMEDIA",
+      "photoGallery": "Photo Gallery",
+      "videoGallery": "Video Gallery",
+      "search": "Search",
+      "from": "From date",
+      "to": "To date",
+      "newFirst": "Newest first",
+      "oldFirst": "Oldest first",
+      "addPhoto": "Add Photo",
+      "addVideo": "Add Video",
+      "delete": "Delete",
+      "edit": "Edit",
+      "removeDialogTitle": "Do you want to delete this photo gallery?",
+      "removeDialogContent": "Are you sure you want to delete this photo gallery? This action cannot be undone.",
+      "removeDialogCancel": "Cancel",
+      "removeDialogConfirm": "Yes, delete",
+      "success": {
+        "create": "Photo gallery created successfully.",
+        "update": "Photo gallery updated successfully.",
+        "delete": "Photo gallery deleted successfully."
+      },
+      "error": {
+        "create": "An error occurred while creating the photo gallery.",
+        "update": "An error occurred while updating the photo gallery.",
+        "delete": "An error occurred while deleting the photo gallery.",
+        "loading": "An error occurred while loading the photo galleries."
+      },
+      "create": {
+        "title": "Create Photo Gallery",
+        "titlePlaceholder": "Title",
+        "titleInputPlaceholder": "Enter gallery title",
+        "titleEnglishInputPlaceholder": "Enter gallery title in English",
+        "datePlaceholder": "Date",
+        "submit": "Create Gallery",
+        "creating": "Creating...",
+        "headerPhoto": "Header Photo",
+        "headerPhotoDescription": "Drag and drop header photo here or click to select",
+        "galleryImages": "Gallery Images",
+        "galleryImagesDescription": "Drag and drop gallery images here or click to select",
+        "formErrors": {
+          "titleRequired": "Title is required.",
+          "titleEnglishRequired": "Title in English is required.",
+          "headerPhotoRequired": "Header photo is required.",
+          "imagesRequired": "At least one image is required.",
+          "dateRequired": "Date is required."
+        }
+      }
     }
   },
   "page": "Page",

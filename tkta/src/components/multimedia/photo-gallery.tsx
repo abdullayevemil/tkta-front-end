@@ -21,20 +21,25 @@ import { Button } from "../ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../ui/select";
 import { CalendarIcon, EditIcon, PlusIcon, Trash2Icon } from "lucide-react";
 import { Calendar } from "../ui/calendar";
+import { getTranslation } from "@/lib/i18n";
+import { Card } from "../ui/card";
+import NewsSkeleton from "../news/skeleton";
+import Image from "next/image";
 
 type GalleryItem = {
   id: number;
   title: string;
-  titleEnglish: string;
-  headerimageurl: string;
+  titleenglish: string;
+  headerphotourl: string;
   date: string;
 };
 
 const ITEMS_PER_PAGE = 9;
 
-export function PhotoGallery() {
+export function PhotoGallery({ locale }: { locale: string }) {
   const { data: session } = useSession();
-  const isAdmin = session?.user?.role === "admin";
+  const isAdmin = session?.user?.role !== "admin";
+  const t = getTranslation(locale);
 
   const [search, setSearch] = useState("");
   const [from, setFrom] = useState<Date | undefined>();
@@ -50,8 +55,8 @@ export function PhotoGallery() {
     const params = new URLSearchParams();
 
     if (search) params.append("search", search);
-    if (from) params.append("from", from.toISOString());
-    if (to) params.append("to", to.toISOString());
+    if (from) params.append("from", from.toISOString().split('T')[0]);
+    if (to) params.append("to", to.toISOString().split('T')[0]);
     if (sort) params.append("sort", sort);
     params.append("page", page.toString());
 
@@ -61,8 +66,9 @@ export function PhotoGallery() {
       const data = await res.json();
       setGallery(data.gallery);
       setTotal(data.total);
+      console.log(data);  
     } catch {
-      toast.error("Failed to load gallery");
+      toast.error(t.media.multimedia.error.loading);
     }
   }
 
@@ -77,12 +83,12 @@ export function PhotoGallery() {
         method: "DELETE",
       });
       if (!res.ok) throw new Error("Delete failed");
-      toast.success("Deleted successfully");
+      toast.success(t.media.multimedia.success.delete);
       setAlertOpen(false);
       setDeleteId(null);
       fetchGallery();
     } catch {
-      toast.error("Delete failed");
+      toast.error(t.media.multimedia.error.delete);
     }
   }
 
@@ -92,7 +98,7 @@ export function PhotoGallery() {
     <div className="w-full flex flex-col gap-12 items-center">
       <div className="w-full flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
         <Input
-          placeholder="Search..."
+          placeholder={t.media.multimedia.search}
           className="w-full flex-1"
           value={search}
           onChange={(e) => {
@@ -111,7 +117,7 @@ export function PhotoGallery() {
                 }`}
               >
                 <CalendarIcon className="mr-2 h-4 w-4" />
-                {from ? format(from, "dd.MM.yyyy") : "From"}
+                {from ? format(from, "dd.MM.yyyy") : t.media.multimedia.from}
               </Button>
             </PopoverTrigger>
             <PopoverContent align="start" className="w-auto p-0">
@@ -136,7 +142,7 @@ export function PhotoGallery() {
                 }`}
               >
                 <CalendarIcon className="mr-2 h-4 w-4" />
-                {to ? format(to, "dd.MM.yyyy") : "To"}
+                {to ? format(to, "dd.MM.yyyy") : t.media.multimedia.to}
               </Button>
             </PopoverTrigger>
             <PopoverContent align="start" className="w-auto p-0">
@@ -163,8 +169,8 @@ export function PhotoGallery() {
               <SelectValue placeholder="Sort" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="new">Newest First</SelectItem>
-              <SelectItem value="old">Oldest First</SelectItem>
+              <SelectItem value="new">{t.media.multimedia.newFirst}</SelectItem>
+              <SelectItem value="old">{t.media.multimedia.oldFirst}</SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -173,38 +179,47 @@ export function PhotoGallery() {
       {isAdmin && (
         <div className="w-full flex justify-end">
           <Link
-            href="/media/photo-gallery/create"
+            href={`/${locale}/media/multimedia/photo-gallery/create`}
             className="bg-textPrimary rounded shadow-md text-white px-4 py-2 flex items-center gap-2"
           >
             <PlusIcon className="w-4 h-4" />
-            Add Photo
+            {t.media.multimedia.addPhoto}
           </Link>
         </div>
       )}
 
       {gallery.length === 0 ? (
-        <p className="text-center mt-16">No photos found.</p>
+        <NewsSkeleton />
       ) : (
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
           {gallery.map((item) => (
-            <li key={item.id} className="relative border rounded-md overflow-hidden">
-              <Link href={`/media/photo-gallery/${item.id}`}>
-                <img
-                  src={item.headerimageurl}
-                  alt={item.title}
-                  className="w-full h-48 object-cover"
-                  loading="lazy"
-                />
-                <h3 className="p-2 font-semibold text-center truncate" title={item.title}>
-                  {item.title}
-                </h3>
-                <p className="text-center text-sm text-muted-foreground">
-                  {format(new Date(item.date), "dd.MM.yyyy")}
-                </p>
-              </Link>
+            <li key={item.id} className="relative">
+              <Card className="w-full h-full flex flex-col bg-transparent">
+                <Link href={`/${locale}/media/multimedia/photo-gallery/${item.id}`}>
+                  <Image
+                    src={item.headerphotourl}
+                    alt={item.title}
+                    className="w-full h-64 object-cover rounded-t-xl"
+                    loading="lazy"
+                    width={900}
+                    height={900}
+                  />
+                  <div className="p-4 flex flex-col gap-3">
+                    <h3
+                      className="font-bold text-base line-clamp-2"
+                      title={item.title}
+                    >
+                      {locale === "az" ? item.title : item.titleenglish}
+                    </h3>
+                    <p className="text-right text-xs text-textSecondary w-full">
+                      {format(new Date(item.date), "dd.MM.yyyy")}
+                    </p>
+                  </div>
+                </Link>
+              </Card>
 
               {isAdmin && (
-                <div className="absolute top-2 right-2 flex gap-2">
+                <div className="absolute top-4 right-4 flex items-center justify-center gap-4">
                   <AlertDialog
                     open={alertOpen && deleteId === item.id}
                     onOpenChange={setAlertOpen}
@@ -212,36 +227,41 @@ export function PhotoGallery() {
                     <AlertDialogTrigger asChild>
                       <Button
                         variant="destructive"
-                        size="sm"
                         onClick={() => {
                           setDeleteId(item.id);
                           setAlertOpen(true);
                         }}
                       >
+                        <span>{t.media.multimedia.delete}</span>
                         <Trash2Icon className="w-4 h-4" />
                       </Button>
                     </AlertDialogTrigger>
 
                     <AlertDialogContent>
                       <AlertDialogHeader>
-                        <AlertDialogTitle>Confirm Deletion</AlertDialogTitle>
+                        <AlertDialogTitle>
+                          {t.media.multimedia.removeDialogTitle}
+                        </AlertDialogTitle>
                         <AlertDialogDescription>
-                          Are you sure you want to delete this photo?
+                          {t.media.multimedia.removeDialogContent}
                         </AlertDialogDescription>
                       </AlertDialogHeader>
                       <AlertDialogFooter>
-                        <AlertDialogCancel>Cancel</AlertDialogCancel>
+                        <AlertDialogCancel>
+                          {t.media.multimedia.removeDialogCancel}
+                        </AlertDialogCancel>
                         <Button variant="destructive" onClick={handleDelete}>
-                          Delete
+                          {t.media.multimedia.removeDialogConfirm}
                         </Button>
                       </AlertDialogFooter>
                     </AlertDialogContent>
                   </AlertDialog>
 
                   <Link
-                    href={`/media/photo-gallery/${item.id}/edit`}
-                    className="bg-blue-600 rounded px-2 py-1 text-white flex items-center"
+                    href={`/media/multimedia/photo-gallery/${item.id}/edit`}
+                    className="flex items-center justify-center gap-2 px-2 py-2 bg-blue-600 text-white rounded-md"
                   >
+                    <span className="text-sm">{t.media.multimedia.edit}</span>
                     <EditIcon className="w-4 h-4" />
                   </Link>
                 </div>
@@ -258,17 +278,17 @@ export function PhotoGallery() {
             disabled={page === 1}
             onClick={() => setPage((p) => p - 1)}
           >
-            Previous
+            {t.previous}
           </Button>
           <span className="self-center">
-            Page {page} of {totalPages}
+            {t.page} {page} of {totalPages}
           </span>
           <Button
             variant="outline"
             disabled={page === totalPages}
             onClick={() => setPage((p) => p + 1)}
           >
-            Next
+            {t.next}
           </Button>
         </div>
       )}

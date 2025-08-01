@@ -38,7 +38,7 @@ export default async function News({ params }: Props) {
         </TabsList>
 
         <TabsContent value="photo-gallery">
-          <PhotoGallery />
+          <PhotoGallery locale={locale} />
         </TabsContent>
 
         <TabsContent value="video-gallery">

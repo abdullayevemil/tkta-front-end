@@ -180,6 +180,55 @@
         "title": "Xəbəri Redaktə Et",
         "submit": "Xəbəri Yadda Saxla"
       }
+    },
+    "multimedia": {
+      "title": "MULTİMEDİA",
+      "photoGallery": "Foto qalereya",
+      "videoGallery": "Video qalereya",
+      "search": "Axtarış",
+      "from": "Tarixdən",
+      "to": "Tarixə qədər",
+      "newFirst": "Ən yenilər",
+      "oldFirst": "Ən köhnələr",
+      "addPhoto": "Foto əlavə et",
+      "addVideo": "Video əlavə et",
+      "delete": "Sil",
+      "edit": "Düzəliş et",
+      "removeDialogTitle": "Foto qalereyanı silmək istəyirsiniz?",
+      "removeDialogContent": "Bu foto qalereyanı silmək istədiyinizə əminsinizmi? Bu əməliyyat geri qaytarıla bilməz.",
+      "removeDialogCancel": "Ləğv et",
+      "removeDialogConfirm": "Bəli, sil",
+      "success": {
+        "create": "Foto qalereya uğurla yaradıldı.",
+        "update": "Foto qalereya uğurla yeniləndi.",
+        "delete": "Foto qalereya uğurla silindi."
+      },
+      "error": {
+        "create": "Foto qalereya yaradılarkən xəta baş verdi.",
+        "update": "Foto qalereya yenilənərkən xəta baş verdi.",
+        "delete": "Foto qalereya silinərkən xəta baş verdi.",
+        "loading": "Foto qalereyalar yüklənərkən xəta baş verdi."
+      },
+      "create": {
+        "title": "Foto Qalereya Yarat",
+        "titlePlaceholder": "Başlıq",
+        "titleInputPlaceholder": "Qalereya başlığını daxil edin",
+        "titleEnglishInputPlaceholder": "Qalereya başlığını ingilis dilində daxil edin",
+        "datePlaceholder": "Tarix",
+        "submit": "Qalereya yarat",
+        "creating": "Yaradılır...",
+        "headerPhoto": "Başlıq Şəkli",
+        "headerPhotoDescription": "Başlıq şəklini buraya sürüşdürüb buraxın və ya seçmək üçün klikləyin",
+        "galleryImages": "Qalereya Şəkilləri",
+        "galleryImagesDescription": "Qalereya şəkillərini buraya sürüşdürüb buraxın və ya seçmək üçün klikləyin",
+        "formErrors": {
+          "titleRequired": "Başlıq mütləqdir.",
+          "titleEnglishRequired": "İngilis dilində başlıq mütləqdir.",
+          "headerPhotoRequired": "Başlıq şəkli mütləqdir.",
+          "imagesRequired": "Ən azı bir şəkil əlavə edin.",
+          "dateRequired": "Tarix mütləqdir."
+        }
+      }
     }
   },
   "page": "Səhifə",

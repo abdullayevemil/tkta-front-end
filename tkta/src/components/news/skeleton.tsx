@@ -3,7 +3,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 export default function NewsSkeleton({ count = 3 }: { count?: number }) {
   return (
-    <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-16 w-full">
+    <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
       {Array.from({ length: count }).map((_, i) => (
         <li key={i}>
           <Card className="w-full h-full flex flex-col bg-transparent animate-pulse">

@@ -228,6 +228,11 @@
           "imagesRequired": "Ən azı bir şəkil əlavə edin.",
           "dateRequired": "Tarix mütləqdir."
         }
+      },
+      "editPage": {
+        "title": "Foto Qalereyanı Redaktə Et",
+        "submit": "Qalereyanı Yadda Saxla",
+        "updating": "Yenilənir..."
       }
     }
   },

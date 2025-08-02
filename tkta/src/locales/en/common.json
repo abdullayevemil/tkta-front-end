@@ -228,6 +228,11 @@
           "imagesRequired": "At least one image is required.",
           "dateRequired": "Date is required."
         }
+      },
+      "editPage": {
+        "title": "Edit Photo Gallery",
+        "submit": "Save Gallery",
+        "updating": "Updating..."
       }
     }
   },

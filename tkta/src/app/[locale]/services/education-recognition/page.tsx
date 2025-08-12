@@ -505,7 +505,7 @@ export default function EducationRecognition() {
         </TabsList>
 
         <TabsContent value="general-information">
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 text-justify">
             <div className="flex flex-col gap-6">
               <div className="flex flex-col gap-3">
                 <h2 className="font-bold text-textPrimary">

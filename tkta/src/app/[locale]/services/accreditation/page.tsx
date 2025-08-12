@@ -44,7 +44,7 @@ export default function Accreditation() {
 
         </TabsList>
 
-        <TabsContent value="accreditation-process">
+        <TabsContent value="accreditation-process" className="text-justify">
           <div className="flex flex-col gap-4">
             <h2 className="font-bold">
               Akkreditasiya prosesi institusional və proqram olmaqla iki növə
@@ -150,7 +150,7 @@ export default function Accreditation() {
         </TabsContent>
 
         <TabsContent value="council">
-          <div className="flex flex-col gap-4 px-16">
+          <div className="flex flex-col gap-4 px-16 text-justify">
             <div>
               <span className="font-bold">Akkreditasiya şurası</span> -
               Akkreditasiya şurası akkreditasiyanın nəticələrinə dair yekun
@@ -229,20 +229,7 @@ export default function Accreditation() {
         </TabsContent>
 
         <TabsContent value="commission">
-          <div className="flex flex-col gap-4">
-            <p>
-              Azərbaycan Respublikası Nazirlər Kabinetinin 2010-cu il 28
-              sentyabr tarixli, 167 nömrəli qərarı ilə təsdiq edilmiş “Təhsil
-              müəssisələrinin akkreditasiyası Qaydaları”na əsasən Agentlik
-              tərəfindən Akkreditasiya Komissiyasının fəaliyyətinə dair
-              şikayətlərə baxan kollegial orqan, Apellyasiya Komissiyası
-              yaradılır. Bununla bağlı olaraq, Agentliyin 07.11.2024-cü il
-              tarixli, 3-29-61/3-2-167F/2024 nömrəli və 15.11.2024-cü il
-              tarixli, 3-29-61/3-2-169F/2024 nömrəli əmrləri ilə müvafiq olaraq
-              Apellyasiya Komissiyasının tərkibi və Əsasnaməsi yenidən təsdiq
-              edilmişdir.
-            </p>
-
+          <div className="flex flex-col gap-4 text-justify">
             <p>
               Azərbaycan Respublikası Nazirlər Kabinetinin 2010-cu il 28
               sentyabr tarixli, 167 nömrəli qərarı ilə təsdiq edilmiş “Təhsil

@@ -9,7 +9,7 @@ export default function Analysis() {
 
       <Tabs
         defaultValue="general-information"
-        className="w-full px-16 flex flex-col "
+        className="w-full px-16 flex flex-col text-justify"
       >
         <TabsList>
           <TabsTrigger

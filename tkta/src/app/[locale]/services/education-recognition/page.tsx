@@ -229,7 +229,8 @@ const data = [
   {
     title: "Təmirçi-çilingər",
     methodicalMaterial: "",
-    registration: "",
+    registration:
+      "https://docs.google.com/forms/d/e/1FAIpQLSclfuaGFZErqohmUrLwpOPvmIOpUtqRhmFVDZQn5jduWg4VJQ/viewform?usp=dialog",
     sampleQuestions: "https://qfitt.testportal.net/test.html?t=Ve9BeqCn4Hup",
   },
   {

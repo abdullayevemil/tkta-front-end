@@ -66,7 +66,9 @@ export function VideoGallery({ locale }: { locale: string }) {
     params.append("page", page.toString());
 
     try {
-      const res = await fetch(`/api/media/multimedia/video-gallery?${params.toString()}`);
+      const res = await fetch(
+        `/api/media/multimedia/video-gallery?${params.toString()}`
+      );
       if (!res.ok) throw new Error("Failed to fetch");
       const data = await res.json();
       setGallery(data.gallery);
@@ -83,9 +85,12 @@ export function VideoGallery({ locale }: { locale: string }) {
   async function handleDelete() {
     if (!deleteId) return;
     try {
-      const res = await fetch(`/api/media/multimedia/video-gallery/${deleteId}`, {
-        method: "DELETE",
-      });
+      const res = await fetch(
+        `/api/media/multimedia/video-gallery/${deleteId}`,
+        {
+          method: "DELETE",
+        }
+      );
       if (!res.ok) throw new Error("Delete failed");
       toast.success("Deleted successfully");
       setAlertOpen(false);

@@ -10,7 +10,7 @@ export default function TrainingAndMethodology() {
 
       <Tabs
         defaultValue="general-information"
-        className="w-full px-16 flex flex-col gap-16"
+        className="w-full px-16 flex flex-col gap-16 text-justify"
       >
         <TabsList>
           <TabsTrigger

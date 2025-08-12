@@ -330,7 +330,7 @@ export default function HomePage() {
         </TabsContent>
 
         <TabsContent value="recognition-certificate">
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 text-justify">
             <div>
               Ekspertizanın yekununda müsbət rəylə qiymətləndirilmiş
               ərizəçilərə, müvafiq olaraq elektron şəhadətnamə təqdim olunur.
@@ -364,7 +364,7 @@ export default function HomePage() {
         </TabsContent>
 
         <TabsContent value="legalisation">
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 text-justify">
             <div>
               Azərbaycan Respublikası Nazirlər Kabinetinin 03.02.2023-cü il
               tarixli qərarı ilə təsdiq olunmuş “Xarici dövlətlərin ali təhsilə

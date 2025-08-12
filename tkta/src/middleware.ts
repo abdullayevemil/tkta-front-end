@@ -3,7 +3,7 @@ import Negotiator from "negotiator";
 import { match } from "@formatjs/intl-localematcher";
 
 const locales = ["en", "az"];
-const defaultLocale = "en";
+const defaultLocale = "az";
 
 function getLocale(request: NextRequest): string {
   const headers: Record<string, string> = {};

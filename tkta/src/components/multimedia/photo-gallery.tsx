@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -18,7 +18,13 @@ import {
 } from "../ui/alert-dialog";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { Button } from "../ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../ui/select";
 import { CalendarIcon, EditIcon, PlusIcon, Trash2Icon } from "lucide-react";
 import { Calendar } from "../ui/calendar";
 import { getTranslation } from "@/lib/i18n";
@@ -55,18 +61,20 @@ export function PhotoGallery({ locale }: { locale: string }) {
     const params = new URLSearchParams();
 
     if (search) params.append("search", search);
-    if (from) params.append("from", from.toISOString().split('T')[0]);
-    if (to) params.append("to", to.toISOString().split('T')[0]);
+    if (from) params.append("from", from.toISOString().split("T")[0]);
+    if (to) params.append("to", to.toISOString().split("T")[0]);
     if (sort) params.append("sort", sort);
     params.append("page", page.toString());
 
     try {
-      const res = await fetch(`/api/media/multimedia/photo-gallery?${params.toString()}`);
+      const res = await fetch(
+        `/api/media/multimedia/photo-gallery?${params.toString()}`
+      );
       if (!res.ok) throw new Error("Failed to fetch");
       const data = await res.json();
       setGallery(data.gallery);
       setTotal(data.total);
-      console.log(data);  
+      console.log(data);
     } catch {
       toast.error(t.media.multimedia.error.loading);
     }
@@ -79,9 +87,12 @@ export function PhotoGallery({ locale }: { locale: string }) {
   async function handleDelete() {
     if (!deleteId) return;
     try {
-      const res = await fetch(`/api/media/multimedia/photo-gallery/${deleteId}`, {
-        method: "DELETE",
-      });
+      const res = await fetch(
+        `/api/media/multimedia/photo-gallery/${deleteId}`,
+        {
+          method: "DELETE",
+        }
+      );
       if (!res.ok) throw new Error("Delete failed");
       toast.success(t.media.multimedia.success.delete);
       setAlertOpen(false);
@@ -195,7 +206,9 @@ export function PhotoGallery({ locale }: { locale: string }) {
           {gallery.map((item) => (
             <li key={item.id} className="relative">
               <Card className="w-full h-full flex flex-col bg-transparent">
-                <Link href={`/${locale}/media/multimedia/photo-gallery/${item.id}`}>
+                <Link
+                  href={`/${locale}/media/multimedia/photo-gallery/${item.id}`}
+                >
                   <Image
                     src={item.headerphotourl}
                     alt={item.title}
@@ -258,7 +271,7 @@ export function PhotoGallery({ locale }: { locale: string }) {
                   </AlertDialog>
 
                   <Link
-                    href={`/media/multimedia/photo-gallery/${item.id}/edit`}
+                    href={`/${locale}/media/multimedia/photo-gallery/${item.id}/edit`}
                     className="flex items-center justify-center gap-2 px-2 py-2 bg-blue-600 text-white rounded-md"
                   >
                     <span className="text-sm">{t.media.multimedia.edit}</span>

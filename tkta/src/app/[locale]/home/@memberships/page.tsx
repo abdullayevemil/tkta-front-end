@@ -38,12 +38,12 @@ const partners = [
 
 export default function Memberships() {
   return (
-    <div className="flex flex-col gap-20 w-full justify-center">
-      <h2 className="text-textPrimary font-bold text-4xl w-full justify-center text-center uppercase">
+    <div className="flex flex-col gap-8 sm:gap-12 md:gap-16 lg:gap-20 w-full justify-center">
+      <h2 className="text-textPrimary font-bold text-2xl sm:text-3xl md:text-4xl w-full justify-center text-center uppercase px-4">
         Üzv olduğumuz təşkİlatlar
       </h2>
 
-      <div className="px-16 flex flex-col gap-6">
+      <div className="px-4 sm:px-8 md:px-12 lg:px-16 flex flex-col gap-4 sm:gap-6">
         <Carousel
           opts={{
             loop: true,
@@ -58,7 +58,7 @@ export default function Memberships() {
             {partners.map((partner) => (
               <CarouselItem
                 key={partner.id}
-                className="basis-1/3 flex items-center justify-center"
+                className="basis-1/1 sm:basis-1/2 md:basis-1/3 flex items-center justify-center"
               >
                 <Link href="">
                   <CldImage
@@ -66,6 +66,7 @@ export default function Memberships() {
                     width="200"
                     alt="image"
                     height="200"
+                    className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-[200px] lg:h-[200px] object-contain"
                   />
                 </Link>
               </CarouselItem>

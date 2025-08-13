@@ -19,7 +19,7 @@ export default function HomeLayout({
 
   return (
     <main
-      className="flex flex-col gap-20 h-full w-full"
+      className="flex flex-col gap-8 sm:gap-12 md:gap-16 lg:gap-20 h-full w-full"
       style={{ fontSize: `${fontSize}px` }}
     >
       <section>{video}</section>

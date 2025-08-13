@@ -66,14 +66,14 @@ const majorEducationConfig = {
 
 export default function Statistics() {
   return (
-    <div className="flex flex-col gap-20 w-full justify-center">
-      <h2 className="text-textPrimary font-bold text-4xl w-full justify-center text-center uppercase">
+    <div className="flex flex-col gap-8 sm:gap-12 md:gap-16 lg:gap-20 w-full justify-center">
+      <h2 className="text-textPrimary font-bold text-2xl sm:text-3xl md:text-4xl w-full justify-center text-center uppercase px-4">
         Statİstİka
       </h2>
 
-      <div className="px-16 flex flex-col gap-6">
-        <ul className="flex flex-row gap-6 justify-evenly w-full">
-          <li className="w-1/4">
+      <div className="px-4 sm:px-8 md:px-12 lg:px-16 flex flex-col gap-4 sm:gap-6">
+        <ul className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-evenly w-full">
+          <li className="w-full sm:w-1/2 lg:w-1/4">
             <StatisticsAreaChart
               chartConfig={higherEducationConfig}
               chartData={higherEducationData}
@@ -81,7 +81,7 @@ export default function Statistics() {
             />
           </li>
 
-          <li className="w-1/4">
+          <li className="w-full sm:w-1/2 lg:w-1/4">
             <StatisticsBarChart
               chartConfig={schoolConfig}
               chartData={schoolData}
@@ -89,7 +89,7 @@ export default function Statistics() {
             />
           </li>
 
-          <li className="w-1/4">
+          <li className="w-full sm:w-1/2 lg:w-1/4">
             <StatisticsAreaChart
               chartConfig={middleEducationConfig}
               chartData={middleEducationData}
@@ -97,7 +97,7 @@ export default function Statistics() {
             />
           </li>
 
-          <li className="w-1/4">
+          <li className="w-full sm:w-1/2 lg:w-1/4">
             <StatisticsBarChart
               chartConfig={majorEducationConfig}
               chartData={majorEducationData}
@@ -106,20 +106,20 @@ export default function Statistics() {
           </li>
         </ul>
 
-        <div className="text-black/[0.5] text-sm w-full text-right flex flex-row justify-between">
-          <span className="flex flex-row gap-2 w-fit">
+        <div className="text-black/[0.5] text-xs sm:text-sm w-full text-center sm:text-right flex flex-col sm:flex-row justify-between gap-2 sm:gap-0">
+          <span className="flex flex-col sm:flex-row gap-1 sm:gap-2 w-full sm:w-fit">
             <span>Mənbə:</span>
             <Link
               target="_blank"
               rel="noopener noreferrer"
-              className="text-left text-textPrimary hover:cursor-pointer italic hover:underline"
+              className="text-center sm:text-left text-textPrimary hover:cursor-pointer italic hover:underline"
               href="https://www.stat.gov.az/source/education/#"
             >
               Azərbaycan Respublikasının Dövlət Statistika Komitəsi
             </Link>
           </span>
 
-          <span className="w-fit">Son yenilənmə: 18.09.2024</span>
+          <span className="w-full sm:w-fit">Son yenilənmə: 18.09.2024</span>
         </div>
       </div>
     </div>

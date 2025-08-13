@@ -43,7 +43,7 @@ const partners = [
   },
   {
     id: 9,
-    url: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1737921600/partners/rjsz0waxxpt3vck5ceh3.png",
+    url: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1737921600/partners/rjsz8lwyi12jpg18udv.png",
   },
   {
     id: 10,
@@ -121,12 +121,12 @@ const partners = [
 
 export default function Partners() {
   return (
-    <div className="flex flex-col gap-20 w-full justify-center">
-      <h2 className="text-textPrimary font-bold text-4xl w-full justify-center text-center uppercase">
+    <div className="flex flex-col gap-8 sm:gap-12 md:gap-16 lg:gap-20 w-full justify-center">
+      <h2 className="text-textPrimary font-bold text-2xl sm:text-3xl md:text-4xl w-full justify-center text-center uppercase px-4">
         Tərəfdaşlar
       </h2>
 
-      <div className="px-16 flex flex-col gap-6">
+      <div className="px-4 sm:px-8 md:px-12 lg:px-16 flex flex-col gap-4 sm:gap-6">
         <Carousel
           opts={{
             loop: true,
@@ -141,9 +141,15 @@ export default function Partners() {
             {partners.map((partner) => (
               <CarouselItem
                 key={partner.id}
-                className="basis-1/5 flex items-center justify-center"
+                className="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5 flex items-center justify-center"
               >
-                <Image src={partner.url} width="150" alt="image" height="150" />
+                <Image 
+                  src={partner.url} 
+                  width="150" 
+                  alt="image" 
+                  height="150" 
+                  className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-[150px] lg:h-[150px] object-contain"
+                />
               </CarouselItem>
             ))}
           </CarouselContent>

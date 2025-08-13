@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Logo from "@/assets/images/logo.png";
 import { Navigation } from "./navigation";
@@ -14,11 +16,29 @@ import XIcon from "@/assets/icons/footer/social-media/x.svg";
 import { Input } from "../ui/input";
 import { SearchIcon } from "lucide-react";
 import { getTranslation } from "@/lib/i18n";
+import { Button } from "../ui/button";
+import { useState } from "react";
 
 export default function Header({ locale }: { locale: string }) {
   locale = locale || "az";
-  
+
   const t = getTranslation(locale);
+
+  const [searchValue, setSearchValue] = useState("");
+
+  const handleSearch = () => {
+    if (!searchValue.trim()) return;
+
+    const query = encodeURIComponent(searchValue);
+
+    window.open(`https://tkta.edu.az/search?key=${query}`, "_blank");
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      handleSearch();
+    }
+  };
 
   return (
     <header className="border-b border-gray-100 bg-white flex flex-col items-center justify-center gap-8 py-6 px-4 md:px-16 font-helvetica sticky top-0 left-0 z-50 w-full">
@@ -125,7 +145,16 @@ export default function Header({ locale }: { locale: string }) {
           <div className="flex flex-row gap-2 items-center border border-gray-300 rounded-xl p-0.5 px-2 w-full sm:w-auto focus-within:border-textPrimary">
             <SearchIcon width={24} height={24} className="text-gray-500" />
 
-            <Input className="border-none outline-none focus:outline-none focus:border-none shadow-none focus-visible:ring-0 w-full" />
+            <Input
+              value={searchValue}
+              onChange={(e) => setSearchValue(e.target.value)}
+              onKeyDown={handleKeyDown}
+              className="border-none outline-none focus:outline-none focus:border-none shadow-none focus-visible:ring-0 w-full"
+            />
+
+            <Button variant="ghost" size="sm" onClick={handleSearch}>
+              Search
+            </Button>
           </div>
 
           <div className="flex flex-row gap-2 items-center justify-center">

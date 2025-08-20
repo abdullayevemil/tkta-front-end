@@ -123,12 +123,11 @@ export default function News({ params }: Props) {
   const totalPages = Math.ceil(total / ITEMS_PER_PAGE);
 
   return (
-    <div className="w-full flex flex-col gap-12 items-center">
-      <h1 className="uppercase text-4xl text-center w-full px-16 pt-16">
+    <div className="w-full flex flex-col gap-8 sm:gap-10 md:gap-12 items-center">
+      <h1 className="uppercase text-2xl sm:text-3xl md:text-4xl text-center w-full px-4 sm:px-8 md:px-16 pt-8 sm:pt-12 md:pt-16">
         VAKANSİYALAR
       </h1>
-
-      <div className="w-full px-16 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+      <div className="w-full px-4 sm:px-8 md:px-16 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
         <Input
           placeholder={`${t.media.news.search}...`}
           className="w-full flex-1"
@@ -138,7 +137,6 @@ export default function News({ params }: Props) {
             setSearchQuery(e.target.value);
           }}
         />
-
         <div className="flex flex-wrap gap-4">
           <Popover>
             <PopoverTrigger asChild>
@@ -211,13 +209,12 @@ export default function News({ params }: Props) {
       </div>
 
       {isAdmin && (
-        <div className="w-full px-16">
+        <div className="w-full px-4 sm:px-8 md:px-16">
           <Link
             href={`/${locale}/announcements/vacancies/create`}
             className="bg-textPrimary w-fit rounded shadow-md text-white px-4 py-2 flex items-center gap-2"
           >
             <span>Vakansiya yarat</span>
-
             <PlusIcon className="w-4 h-4" />
           </Link>
         </div>
@@ -226,7 +223,7 @@ export default function News({ params }: Props) {
       {news.length === 0 ? (
         <NewsSkeleton />
       ) : (
-        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-16 w-full">
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-8 md:px-16 w-full">
           {news.map((item) => (
             <li key={item.id} className="relative">
               <Link href={`/announcements/vacancies/${item.id}`}>

@@ -24,7 +24,7 @@ export function Navigation({ locale }: { locale: string }) {
 
   return (
     <nav className="w-full">
-      <div className="lg:hidden flex justify-end p-4">
+      <div className="lg:hidden flex justify-end p-2 sm:p-4">
         <button onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>

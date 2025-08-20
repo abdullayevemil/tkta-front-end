@@ -147,12 +147,11 @@ function AddNewsPage({ params }: Props) {
   };
 
   return (
-    <div className="flex flex-col gap-12 items-center px-28 w-full py-8 bg-white text-textPrimary font-sans">
-      <h1 className="uppercase text-4xl text-center w-full px-16 pt-16">
+    <div className="flex flex-col gap-8 sm:gap-10 md:gap-12 items-center px-4 sm:px-8 md:px-16 w-full py-8 bg-white text-textPrimary font-sans">
+      <h1 className="uppercase text-2xl sm:text-3xl md:text-4xl text-center w-full px-4 sm:px-8 md:px-16 pt-8 sm:pt-12 md:pt-16">
         {t.media.news.create.title}
       </h1>
-
-      <div className="w-full flex flex-col md:flex-row gap-8">
+      <form className="w-full flex flex-col md:flex-row gap-8" onSubmit={handleSubmit}>
         <div className="md:w-2/5 flex flex-col gap-6">
           <div className="flex flex-col gap-1">
             <Label htmlFor="title" className="text-sm font-medium">
@@ -425,13 +424,12 @@ function AddNewsPage({ params }: Props) {
             )}
           </div>
         </div>
-      </div>
-
+      </form>
       <Button
         variant={"default"}
         type="submit"
         onClick={handleSubmit}
-        className="mt-auto bg-textSecondary hover:bg-textPrimary text-white font-semibold py-2 rounded-md shadow-md transition w-fit px-16"
+        className="mt-auto bg-textSecondary hover:bg-textPrimary text-white font-semibold py-2 rounded-md shadow-md transition w-fit px-8 sm:px-12 md:px-16"
       >
         {t.media.news.create.submit}
       </Button>

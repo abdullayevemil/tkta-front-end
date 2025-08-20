@@ -4,15 +4,15 @@ import Image from "next/image";
 
 export default function Principles() {
   return (
-    <div className="w-full flex flex-col justify-center gap-20">
+    <div className="w-full flex flex-col justify-center gap-8 sm:gap-12 md:gap-20">
       
 
-      <h1 className="uppercase text-4xl text-center text-textPrimary pt-16">
+      <h1 className="uppercase text-2xl sm:text-3xl md:text-4xl text-center text-textPrimary pt-8 sm:pt-12 md:pt-16">
         RƏHBƏRLİK
       </h1>
 
-      <div className="px-16 w-full flex flex-row gap-6 items-center">
-        <Card className="h-full bg-textPrimary w-1/3 p-4 flex flex-col items-center gap-6 hover:cursor-pointer">
+      <div className="px-4 sm:px-8 md:px-16 w-full flex flex-col md:flex-row gap-6 items-center">
+        <Card className="h-full bg-textPrimary w-full md:w-1/3 p-4 flex flex-col items-center gap-6 hover:cursor-pointer">
           <Image
             src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1742935878/principles/xhwrn4ztqiqeivxhgfrq.jpg"
             alt="Director photo"
@@ -22,7 +22,7 @@ export default function Principles() {
           />
 
           <div className="flex flex-col gap-2">
-            <h3 className="text-white text-2xl font-semibold text-center">
+            <h3 className="text-white text-xl sm:text-2xl font-semibold text-center">
               TURAL TEYMUR OĞLU ƏHMƏDOV
             </h3>
 
@@ -32,7 +32,7 @@ export default function Principles() {
           </div>
         </Card>
 
-        <p className="w-2/3 text-justify whitespace-pre flex flex-col gap-2 tracking-wide leading-6">
+        <p className="w-full md:w-2/3 text-justify whitespace-pre flex flex-col gap-2 tracking-wide leading-6 mt-6 md:mt-0">
           <span className="text-wrap">
             Tural Əhmədov
           </span>
@@ -79,12 +79,12 @@ export default function Principles() {
         </p>
       </div>
 
-      <div className="px-16">
+      <div className="px-4 sm:px-8 md:px-16">
         <hr></hr>
       </div>
 
-      <div className="px-16 w-full flex flex-row gap-6 items-center">
-        <Card className="h-full bg-textPrimary w-1/3 p-4 flex flex-col items-center gap-6 hover:cursor-pointer">
+      <div className="px-4 sm:px-8 md:px-16 w-full flex flex-col md:flex-row gap-6 items-center">
+        <Card className="h-full bg-textPrimary w-full md:w-1/3 p-4 flex flex-col items-center gap-6 hover:cursor-pointer">
           <Image
             src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1742936194/principles/uu0lnxbin3ngx5gmwbl9.png"
             alt="Director photo"
@@ -94,7 +94,7 @@ export default function Principles() {
           />
 
           <div className="flex flex-col gap-2">
-            <h3 className="text-white text-2xl font-semibold text-center">
+            <h3 className="text-white text-xl sm:text-2xl font-semibold text-center">
               KAMRAN AĞA ƏLİ OĞLU RƏSULOV
             </h3>
 
@@ -104,7 +104,7 @@ export default function Principles() {
           </div>
         </Card>
 
-        <p className="w-2/3 text-justify whitespace-pre flex flex-col gap-2 tracking-wide leading-6">
+        <p className="w-full md:w-2/3 text-justify whitespace-pre flex flex-col gap-2 tracking-wide leading-6 mt-6 md:mt-0">
           <span className="text-wrap">
             Kamran Rəsulov
           </span>

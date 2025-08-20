@@ -10,9 +10,9 @@ export default function Footer() {
   const currentDate = new Date();
 
   return (
-    <footer className="flex flex-col gap-6 w-full items-end p-16">
-      <div className="flex flex-col gap-20 w-full items-end">
-        <div className="w-full h-full flex flex-row justify-between">
+    <footer className="flex flex-col gap-6 w-full items-end p-4 sm:p-8 md:p-16">
+      <div className="flex flex-col gap-10 sm:gap-20 w-full items-end">
+        <div className="w-full h-full flex flex-col md:flex-row justify-between gap-8 md:gap-0">
           <div className="flex flex-col gap-4">
             <div className="text-textPrimary font-semibold">Sürətli keçid</div>
 
@@ -67,13 +67,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="flex gap-12 items-start rounded-xl border-2 items-center border-textPrimary p-8">
-            <div className="flex flex-col gap-8">
-              <h3 className="text-5xl pb-8 border-b-2 border-textPrimary">
+          <div className="flex flex-col sm:flex-row gap-8 sm:gap-12 items-start rounded-xl border-2 items-center border-textPrimary p-4 sm:p-8">
+            <div className="flex flex-col gap-8 w-full sm:w-auto">
+              <h3 className="text-3xl sm:text-5xl pb-4 sm:pb-8 border-b-2 border-textPrimary">
                 Əlaqə
               </h3>
 
-              <div className="flex flex-row gap-4 items-start justfy-left items-stretch">
+              <div className="flex flex-col sm:flex-row gap-4 items-start justify-left items-stretch">
                 <Link
                   target="_blank"
                   rel="noopener noreferrer"
@@ -120,8 +120,7 @@ export default function Footer() {
                 </Link>
               </div>
             </div>
-
-            <Card className="flex justify-right">
+            <Card className="flex justify-right w-full sm:w-auto">
               <GoogleMapComponent />
             </Card>
           </div>

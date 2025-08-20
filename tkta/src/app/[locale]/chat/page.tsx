@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import axios from "axios";
 
 interface Message {
@@ -11,6 +11,8 @@ interface Message {
 export default function Chat() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState<string>("");
+  const messagesContainerRef = useRef<HTMLDivElement | null>(null);
+  const bottomRef = useRef<HTMLDivElement | null>(null);
 
   const sendMessage = async () => {
     if (!input.trim()) return;
@@ -34,9 +36,24 @@ export default function Chat() {
     setInput("");
   };
 
+  useLayoutEffect(() => {
+    const container = messagesContainerRef.current;
+    if (!container) return;
+    requestAnimationFrame(() => {
+      container.scrollTop = container.scrollHeight;
+      if (bottomRef.current) {
+        bottomRef.current.scrollIntoView({ behavior: "auto", block: "end" });
+      }
+    });
+  }, [messages]);
+
   return (
-    <div className="p-4">
-      <div className="mb-4 border p-4 rounded bg-gray-100 h-96 overflow-y-auto">
+    <div className="p-4 flex flex-col h-[80vh]">
+      <div
+        ref={messagesContainerRef}
+        className="mb-4 border p-4 rounded bg-gray-100 flex-1 min-h-0 max-h-full overflow-y-scroll scroll-smooth overscroll-contain touch-pan-y"
+        style={{ WebkitOverflowScrolling: "touch", overflowAnchor: "none" }}
+      >
         {messages.map((msg, idx) => (
           <div
             key={idx}
@@ -53,6 +70,7 @@ export default function Chat() {
             </p>
           </div>
         ))}
+        <div ref={bottomRef} />
       </div>
       <div className="flex">
         <input

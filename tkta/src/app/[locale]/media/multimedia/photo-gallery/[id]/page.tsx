@@ -78,13 +78,11 @@ export default function PhotoGalleryPage({ params }: Props) {
   }
 
   return (
-    <section className="px-16 mx-auto flex flex-col items-center gap-16 pt-16">
-      <h1 className="w-full text-3xl font-semibold text-textPrimary mb-4 text-center">
+    <section className="px-4 sm:px-8 md:px-16 mx-auto flex flex-col items-center gap-8 sm:gap-12 md:gap-16 pt-8 sm:pt-12 md:pt-16">
+      <h1 className="w-full text-2xl sm:text-3xl md:text-4xl font-semibold text-textPrimary mb-2 sm:mb-4 text-center">
         {locale === "az" ? data.title : data.titleenglish}
       </h1>
-
-      <div className="w-full flex flex-col gap-8">
-        {/* Main selected image */}
+      <div className="w-full flex flex-col gap-6 sm:gap-8">
         {selectedImage && (
           <div className="w-full">
             <Image
@@ -92,24 +90,20 @@ export default function PhotoGalleryPage({ params }: Props) {
               alt={locale === "az" ? data.title : data.titleenglish}
               width={1200}
               height={800}
-              className="w-full h-[600px] object-cover rounded-xl shadow-lg"
+              className="w-full h-64 sm:h-96 md:h-[600px] object-cover rounded-xl shadow-lg"
             />
           </div>
         )}
-
-        {/* Image gallery grid */}
         {data.images && data.images.length > 0 && (
           <div className="w-full">
-            <h3 className="text-xl font-semibold text-textPrimary mb-4">
+            <h3 className="text-lg sm:text-xl font-semibold text-textPrimary mb-2 sm:mb-4">
               {t.media.multimedia.photoGallery}
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
               {data.images.map((image, index) => (
                 <div
                   key={image.id}
-                  className={`relative cursor-pointer transition-all duration-200 hover:scale-105 ${
-                    selectedImage === image.url ? 'ring-4 ring-textPrimary rounded-lg' : ''
-                  }`}
+                  className={`relative cursor-pointer transition-all duration-200 hover:scale-105 ${selectedImage === image.url ? 'ring-4 ring-textPrimary rounded-lg' : ''}`}
                   onClick={() => setSelectedImage(image.url)}
                 >
                   <Image
@@ -117,7 +111,7 @@ export default function PhotoGalleryPage({ params }: Props) {
                     alt={`${locale === "az" ? data.title : data.titleenglish} - ${index + 1}`}
                     width={300}
                     height={200}
-                    className="w-full h-48 object-cover rounded-lg shadow-md"
+                    className="w-full h-28 sm:h-40 md:h-48 object-cover rounded-lg shadow-md"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-all duration-200 rounded-lg flex items-center justify-center">
                     <span className="text-white opacity-0 hover:opacity-100 font-semibold">
@@ -130,7 +124,6 @@ export default function PhotoGalleryPage({ params }: Props) {
           </div>
         )}
       </div>
-
       <p className="text-sm text-gray-600 w-full text-right">
         {format(new Date(data.date.toString()), "dd-MM-yyyy")}
       </p>

@@ -17,7 +17,6 @@ export default function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState<string>("");
 
-  // Ref for auto-scrolling
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {

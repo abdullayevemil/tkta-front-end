@@ -12,27 +12,18 @@ export default async function News({ params }: Props) {
   const { locale } = await params;
 
   return (
-    <section className="w-full flex flex-col gap-16 items-center">
-      <h1 className="uppercase text-4xl text-center w-full px-16 pt-16">
+    <section className="w-full flex flex-col gap-8 sm:gap-12 md:gap-16 items-center">
+      <h1 className="uppercase text-2xl sm:text-3xl md:text-4xl text-center w-full px-4 sm:px-8 md:px-16 pt-8 sm:pt-12 md:pt-16">
         Multİmedİa
       </h1>
 
-      <Tabs
-        defaultValue="photo-gallery"
-        className="w-full px-16 flex flex-col gap-16"
-      >
-        <TabsList>
-          <TabsTrigger
-            className="w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
-            value="photo-gallery"
-          >
+      <Tabs defaultValue="photo-gallery" className="w-full px-4 sm:px-8 md:px-16 flex flex-col gap-8 sm:gap-12 md:gap-16">
+        <TabsList className="grid grid-cols-2 w-full sm:w-auto">
+          <TabsTrigger className="px-2 py-2 text-sm sm:text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold" value="photo-gallery">
             Foto qalereya
           </TabsTrigger>
 
-          <TabsTrigger
-            className="w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
-            value="video-gallery"
-          >
+          <TabsTrigger className="px-2 py-2 text-sm sm:text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold" value="video-gallery">
             Video qalereya
           </TabsTrigger>
         </TabsList>

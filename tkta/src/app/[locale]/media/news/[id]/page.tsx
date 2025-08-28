@@ -92,8 +92,8 @@ export default function NewsPage({
   console.log(photos);
 
   return (
-    <section className="w-full flex flex-col gap-16 items-center px-4 md:px-24 pt-12">
-      <h1 className="uppercase text-4xl text-center font-semibold text-textPrimary">
+    <section className="w-full flex flex-col gap-8 sm:gap-12 md:gap-16 items-center px-4 sm:px-8 md:px-24 pt-8 sm:pt-12">
+      <h1 className="uppercase text-2xl sm:text-3xl md:text-4xl text-center font-semibold text-textPrimary">
         {locale === "az" ? title : titleenglish}
       </h1>
 
@@ -105,17 +105,15 @@ export default function NewsPage({
       />
 
       <div className="w-full flex flex-col gap-6">
-        <div className="w-full flex flex-col gap-8">
+        <div className="w-full flex flex-col gap-6 sm:gap-8">
           {/* Image gallery grid */}
           {photos && headerimageurl && photos.length > 0 && (
             <div className="w-full">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
                 <div
                   key={0}
                   className={`relative cursor-pointer transition-all duration-200 hover:scale-105 ${
-                    selectedImage === headerimageurl
-                      ? "ring-4 ring-textPrimary rounded-lg"
-                      : ""
+                    selectedImage === headerimageurl ? "ring-4 ring-textPrimary rounded-lg" : ""
                   }`}
                   onClick={() => setSelectedImage(headerimageurl)}
                 >
@@ -124,22 +122,17 @@ export default function NewsPage({
                     alt={`${locale === "az" ? title : titleenglish}`}
                     width={300}
                     height={200}
-                    className="w-full h-48 object-cover rounded-lg shadow-md"
+                    className="w-full h-28 sm:h-40 md:h-48 object-cover rounded-lg shadow-md"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-all duration-200 rounded-lg flex items-center justify-center">
-                    <span className="text-white opacity-0 hover:opacity-100 font-semibold">
-                      {0}
-                    </span>
+                    <span className="text-white opacity-0 hover:opacity-100 font-semibold">0</span>
                   </div>
                 </div>
-
                 {photos.map((image: Photo, index: number) => (
                   <div
                     key={index + 1}
                     className={`relative cursor-pointer transition-all duration-200 hover:scale-105 ${
-                      selectedImage === image.url
-                        ? "ring-4 ring-textPrimary rounded-lg"
-                        : ""
+                      selectedImage === image.url ? "ring-4 ring-textPrimary rounded-lg" : ""
                     }`}
                     onClick={() => setSelectedImage(image.url)}
                   >
@@ -148,12 +141,10 @@ export default function NewsPage({
                       alt={`${locale === "az" ? title : titleenglish}`}
                       width={300}
                       height={200}
-                      className="w-full h-48 object-cover rounded-lg shadow-md"
+                      className="w-full h-28 sm:h-40 md:h-48 object-cover rounded-lg shadow-md"
                     />
                     <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-all duration-200 rounded-lg flex items-center justify-center">
-                      <span className="text-white opacity-0 hover:opacity-100 font-semibold">
-                        {index + 1}
-                      </span>
+                      <span className="text-white opacity-0 hover:opacity-100 font-semibold">{index + 1}</span>
                     </div>
                   </div>
                 ))}
@@ -168,7 +159,7 @@ export default function NewsPage({
                 alt={locale === "az" ? title : titleenglish}
                 width={1200}
                 height={800}
-                className="w-full h-auto object-cover rounded-xl shadow-lg"
+                className="w-full h-64 sm:h-96 md:h-[600px] object-cover rounded-xl shadow-lg"
               />
             </div>
           )}

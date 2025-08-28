@@ -34,9 +34,9 @@ export default async function NewsPage({
   } = news;
 
   return (
-    <section className="w-full flex flex-col gap-16 items-center px-4 md:px-24 pt-12">
+    <section className="w-full flex flex-col gap-8 sm:gap-12 md:gap-16 items-center px-4 sm:px-8 md:px-24 pt-8 sm:pt-12">
       {headerimageurl && (
-        <div className="w-full max-h-[500px] overflow-hidden rounded-xl">
+        <div className="w-full max-h-[300px] sm:max-h-[400px] md:max-h-[500px] overflow-hidden rounded-xl">
           <Image
             src={headerimageurl}
             alt="Xəbər başlıq şəkli"
@@ -47,39 +47,32 @@ export default async function NewsPage({
           />
         </div>
       )}
-
-      <h1 className="uppercase text-4xl text-center font-semibold text-textPrimary">
+      <h1 className="uppercase text-2xl sm:text-3xl md:text-4xl text-center font-semibold text-textPrimary">
         {locale === "az" ? title : titleenglish}
       </h1>
-
       <div
         className="w-full text-justify"
         dangerouslySetInnerHTML={{
           __html: locale === "az" ? content : contentenglish,
         }}
       />
-
       <div className="w-full flex flex-col gap-6">
         {photos?.length > 0 ? (
-          <div className="columns-1 sm:columns-2 md:columns-3 gap-16 space-y-4">
+          <div className="columns-1 sm:columns-2 md:columns-3 gap-6 sm:gap-10 md:gap-16 space-y-4">
             {photos.map((photo: { url: string }, i: number) => (
-              <div
-                key={i}
-                className="break-inside-avoid overflow-hidden rounded-lg"
-              >
+              <div key={i} className="break-inside-avoid overflow-hidden rounded-lg">
                 <ImagePreviewer imageUrl={photo.url} />
               </div>
             ))}
           </div>
         ) : null}
-
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
           {note && (
             <div className="text-sm font-semibold text-destructive">
               {locale === "az" ? note : noteenglish}
             </div>
           )}
-          <div className="text-xs text-muted-foreground ml-auto">
+          <div className="text-xs text-muted-foreground sm:ml-auto">
             {date.split("T")[0].split("-").reverse().join("-")}
           </div>
         </div>

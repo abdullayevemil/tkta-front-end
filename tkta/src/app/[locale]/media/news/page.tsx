@@ -123,12 +123,11 @@ export default function News({ params }: Props) {
   const totalPages = Math.ceil(total / ITEMS_PER_PAGE);
 
   return (
-    <div className="w-full flex flex-col gap-12 items-center">
-      <h1 className="uppercase text-4xl text-center w-full px-16 pt-16">
+    <div className="w-full flex flex-col gap-8 sm:gap-10 md:gap-12 items-center">
+      <h1 className="uppercase text-2xl sm:text-3xl md:text-4xl text-center w-full px-4 sm:px-8 md:px-16 pt-8 sm:pt-12 md:pt-16">
         {t.media.news.title}
       </h1>
-
-      <div className="w-full px-16 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+      <div className="w-full px-4 sm:px-8 md:px-16 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
         <Input
           placeholder={`${t.media.news.search}...`}
           className="w-full flex-1"
@@ -138,7 +137,6 @@ export default function News({ params }: Props) {
             setSearchQuery(e.target.value);
           }}
         />
-
         <div className="flex flex-wrap gap-4">
           <Popover>
             <PopoverTrigger asChild>
@@ -165,7 +163,6 @@ export default function News({ params }: Props) {
               />
             </PopoverContent>
           </Popover>
-
           <Popover>
             <PopoverTrigger asChild>
               <Button
@@ -191,7 +188,6 @@ export default function News({ params }: Props) {
               />
             </PopoverContent>
           </Popover>
-
           <Select
             value={sort}
             onValueChange={(val) => {
@@ -209,24 +205,21 @@ export default function News({ params }: Props) {
           </Select>
         </div>
       </div>
-
       {isAdmin && (
-        <div className="w-full px-16">
+        <div className="w-full px-4 sm:px-8 md:px-16">
           <Link
             href={`/${locale}/media/news/create`}
             className="bg-textPrimary w-fit rounded shadow-md text-white px-4 py-2 flex items-center gap-2"
           >
             <span>{t.media.news.createNews}</span>
-
             <PlusIcon className="w-4 h-4" />
           </Link>
         </div>
       )}
-
       {news.length === 0 ? (
         <NewsSkeleton />
       ) : (
-        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-16 w-full">
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-8 md:px-16 w-full">
           {news.map((item) => (
             <li key={item.id} className="relative">
               <Link href={`/media/news/${item.id}`}>
@@ -240,13 +233,9 @@ export default function News({ params }: Props) {
                   content=""
                 />
               </Link>
-
               {isAdmin && (
                 <div className="absolute top-4 right-4 flex items-center justify-center gap-4">
-                  <AlertDialog
-                    open={open && deleteId === item.id}
-                    onOpenChange={setOpen}
-                  >
+                  <AlertDialog open={open && deleteId === item.id} onOpenChange={setOpen}>
                     <AlertDialogTrigger asChild>
                       <Button
                         variant="destructive"
@@ -256,7 +245,6 @@ export default function News({ params }: Props) {
                         }}
                       >
                         <span>{t.media.news.delete}</span>
-
                         <Trash2Icon className="w-4 h-4" />
                       </Button>
                     </AlertDialogTrigger>
@@ -279,13 +267,11 @@ export default function News({ params }: Props) {
                       </AlertDialogFooter>
                     </AlertDialogContent>
                   </AlertDialog>
-
                   <Link
                     href={`/media/news/${item.id}/edit`}
                     className="flex items-center justify-center gap-2 px-2 py-2 bg-blue-600 text-white rounded-md"
                   >
                     <span className="text-sm">{t.media.news.edit}</span>
-
                     <EditIcon className="w-4 h-4" />
                   </Link>
                 </div>
@@ -294,25 +280,15 @@ export default function News({ params }: Props) {
           ))}
         </ul>
       )}
-
       {totalPages > 1 && (
         <div className="flex gap-4 mt-8">
-          <Button
-            disabled={page === 1}
-            onClick={() => setPage((p) => p - 1)}
-            variant="outline"
-          >
+          <Button disabled={page === 1} onClick={() => setPage((p) => p - 1)} variant="outline">
             {t.previous}
           </Button>
           <span className="self-center">
             {t.page} {page} / {totalPages}
           </span>
-
-          <Button
-            disabled={page === totalPages}
-            onClick={() => setPage((p) => p + 1)}
-            variant="outline"
-          >
+          <Button disabled={page === totalPages} onClick={() => setPage((p) => p + 1)} variant="outline">
             {t.next}
           </Button>
         </div>

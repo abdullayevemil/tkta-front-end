@@ -202,32 +202,32 @@ export default function Iternationalization() {
                 sahəsində Finlandiya təcrübəsi ilə bağlı təqdimat
                 dinlənilmişdir.
               </p>
+            </div>
 
-              <div className="flex justify-center mt-4">
-                <Image
-                  width={700}
-                  height={700}
-                  className="rounded-xl w-full float-left mr-8"
-                  src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180879/Picture3_bvupyl.jpg"
-                  alt="TKTA logo"
-                />
+            <div className="flex justify-center mt-4">
+              <Image
+                width={700}
+                height={700}
+                className="rounded-xl w-full float-left mr-8"
+                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180879/Picture3_bvupyl.jpg"
+                alt="TKTA logo"
+              />
 
-                <Image
-                  width={700}
-                  height={700}
-                  className="rounded-xl w-full float-left mr-8"
-                  src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180879/Picture4_pb5ahy.jpg"
-                  alt="TKTA logo"
-                />
+              <Image
+                width={700}
+                height={700}
+                className="rounded-xl w-full float-left mr-8"
+                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180879/Picture4_pb5ahy.jpg"
+                alt="TKTA logo"
+              />
 
-                <Image
-                  width={700}
-                  height={700}
-                  className="rounded-xl w-full float-left mr-8"
-                  src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180879/Picture5_gfvmvc.jpg"
-                  alt="TKTA logo"
-                />
-              </div>
+              <Image
+                width={700}
+                height={700}
+                className="rounded-xl w-full float-left mr-8"
+                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180879/Picture5_gfvmvc.jpg"
+                alt="TKTA logo"
+              />
             </div>
           </div>
 
@@ -478,146 +478,361 @@ export default function Iternationalization() {
           className="flex flex-col gap-20"
         >
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary"></h2>
+            <h2 className="text-2xl text-textPrimary">
+              Ali Təhsildə Keyfiyyət Təminatı Agentliklərinin Mərkəzi və Şərqi
+              Avropa şəbəkəsinin (CEENQA) Baş Assambleyası öz işini
+              yekunlaşdırıb
+            </h2>
 
             <div className="text-justify tracking-wide leading-7 text-base">
               <Image
                 width={700}
                 height={700}
                 className="rounded-xl w-1/5 float-left mr-8"
-                src=""
+                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293841/1_ymqcmk.jpg"
                 alt="iamge from bolonya"
               />
 
-              <p className="mb-4"></p>
+              <p className="mb-4">
+                18 may 2024-cü il tarixində Bakıda keçirilən Mərkəzi və Şərqi
+                Avropa Ölkələrinin Keyfiyyət Təminatı Agentlikləri Şəbəkəsinin
+                (CEENQA) Baş Assambleyası öz işini yekunlaşdırıb.
+              </p>
 
-              <p className="mb-4"></p>
+              <Image
+                width={700}
+                height={700}
+                className="rounded-xl w-1/5 float-right ml-8"
+                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293842/3_ct0lf2.jpg"
+                alt="iamge from bolonya"
+              />
 
-              <p className="mb-4"></p>
+              <p className="mb-4">
+                Assambleyanın ikinci günündə İdarə Heyətinin üzvləri CEENQA-nın
+                yeni strategiyasını və növbəti illərə dair fəaliyyət planını
+                müzakirə ediblər.Eyni zamanda İdarə Heyəti tərəfindən qurumun
+                yeni prezidenti olaraq Xorvatiyanın Elm və Ali Təhsil
+                Agentliyinin direktor müavini Vesna Dodiković-Jurković,
+                vitse-prezidenti olaraq isə Beynəlxalq Biznes İdarəetmə
+                Akkreditasiyası Fondunun (FIBAA) icraçı direktoru Diane
+                Freiberger seçilib.
+              </p>
 
-              <p className="mb-4"></p>
+              <p className="mb-4">
+                Qeyd edək ki, CEENQA Baş Assambleyasında Almaniya, Estoniya,
+                Latviya, Litva, Çexiya, Slovakiya, Macarıstan, Rumıniya,
+                Moldova, Sloveniya, Bosniya və Herseqovina, Serbiya,
+                Bolqarıstan, Birləşmiş Krallıq, Türkiyə, Ukrayna və
+                Qazaxıstandan keyfiyyət təminatı agentliklərinin rəhbərləri,
+                eləcə də Avropa Ali Təhsil Məkanında Keyfiyyət Təminatı üzrə
+                Assosiasiyayanın (ENQA), Ali Təhsil üzrə Avropa Keyfiyyət
+                Təminatı Reyestri (EQAR) və Ali Təhsildə Keyfiyyət Təminatı
+                Agentliklərinin Beynəlxalq Şəbəkəsinin (INQAAHE) nümayyəndələri
+                iştirak edib.
+              </p>
 
-              <p className="mb-4"></p>
+              <Image
+                width={700}
+                height={700}
+                className="rounded-xl w-1/5 float-left mr-8"
+                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293842/2_ixq1pf.jpg"
+                alt="iamge from bolonya"
+              />
+
+              <p className="mb-4">
+                Tədbirdə həmçinin, növbəti CEENQA Baş Assambleyasının Tallinn
+                şəhərində keçirilməsi qərarlaşdırılıb.
+              </p>
+
+              <p className="mb-4">
+                26 ölkədən 41 agentliyin qoşulduğu təşkilat Avropa ali təhsil
+                məkanında keyfiyyət təminatı üzrə standart və təlimatlar (ESG)
+                bələdçisinə uyğun daxili və xarici keyfiyyət təminatı sisteminin
+                təkmilləşdirilməsinə töhvə verməklə yanaşı, üzv təşkilatlar
+                arasında təcrübə mübadiləsi və müştərək layihələrin həyata
+                keçirilməsini təşviq etməkdədir.
+              </p>
+
+              <p className="mb-4">
+                Onu da bildiririk ki, TKTA 2021-ci ilin oktyabr ayından
+                CEENQA-nın tam hüquqlu üzvüdür.
+              </p>
+
+              <div className="grid grid-cols-3 gap-8">
+                <Image
+                  width={700}
+                  height={700}
+                  className="rounded-xl"
+                  src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293842/4_od7czb.jpg"
+                  alt="image from bolonya"
+                />
+
+                <Image
+                  width={700}
+                  height={700}
+                  className="rounded-xl"
+                  src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293842/5_l3vbki.jpg"
+                  alt="image from bolonya"
+                />
+
+                <Image
+                  width={700}
+                  height={700}
+                  className="rounded-xl"
+                  src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293841/6_mrz4ya.jpg"
+                  alt="image from bolonya"
+                />
+              </div>
             </div>
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary"></h2>
+            <h2 className="text-2xl text-textPrimary">
+              TKTA nümayəndəsi “Lissabon Tanınma Konvensiyası” üzrə Boloniya
+              prosesinin Tematik İşçi Qrupunun 7-ci görüşündə iştirak edib
+            </h2>
 
             <div className="text-justify tracking-wide leading-7 text-base">
               <Image
                 width={700}
                 height={700}
                 className="rounded-xl w-1/5 float-left mr-8"
-                src=""
+                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293842/7_finvjl.jpg"
                 alt="iamge from bolonya"
               />
 
-              <p className="mb-4"></p>
+              <p className="mb-4">
+                Təhsildə Keyfiyyət Təminatı Agentliyinin departament direktoru
+                Aysel Kərimli İtaliyanın Roma şəhərində kvalifikasiyaların
+                tanınması sahəsində İtaliyanın əsas Milli Məlumat Mərkəzi olan
+                CIMEA-nın təşkilatçılığı ilə “Lissabon Tanınma Konvensiyası”
+                üzrə Boloniya prosesinin Tematik İşçi Qrupunun 7-ci görüşündə
+                iştirak edib.
+              </p>
 
-              <p className="mb-4"></p>
+              <p className="mb-4">
+                Görüşdə “Alternativ tanınma yolları”, “Avtomatik tanınma”,
+                “Rəqəmsal texnologiyanın potensialından tanınma prosesində
+                istifadə olunması” kimi mövzular ətrafında detallı müzakirələr
+                aparılıb.
+              </p>
 
-              <p className="mb-4"></p>
-
-              <p className="mb-4"></p>
-
-              <p className="mb-4"></p>
+              <p className="mb-4">
+                Görüşün ilk günü Lissabon Tanınma Konvensiyasının həyata
+                keçirilməsinə şərait yaradan hüquqi bazanın yaradılması, qaçqın
+                və məcburi köçkünlərin kvalifikasiyalarının tanınması,
+                kvalifikasiyaların akdemik tanınması kimi mövzular müzakirə
+                edilib. Regional tanınma konvensiyalarının əsas prioritetləri
+                mövzusuna həsr olunmuş iclasın ikinci günü Tematik İşçi Qrupunun
+                ötən il ərzində gördüyü işlərə dair hesabatla yekunlaşıb.
+              </p>
             </div>
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary"></h2>
+            <h2 className="text-2xl text-textPrimary">
+              TKTA-nın nümayəndə heyəti beynəlxalq konfransda iştirak edib
+            </h2>
 
             <div className="text-justify tracking-wide leading-7 text-base">
               <Image
                 width={700}
                 height={700}
                 className="rounded-xl w-1/5 float-left mr-8"
-                src=""
+                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293842/8_tedrx3.jpg"
                 alt="image from bolonya"
               />
 
-              <p className="mb-4"></p>
+              <p className="mb-4">
+                25-26 aprel 2024-cü il tarixlərində Türkiyə Respublikasının
+                Ankara şəhərində Türkiyə Ali Təhsildə Keyfiyyət Təminatı
+                Şurasının (YÖKAK) və Hacı Bayram Vəli Universitetinin
+                təşkilatçılığı ilə “YÖKAK 2024-Keyfiyyət təminatı və
+                akkreditasiya” adlı beynəlxalq konfransı keçirilib.
+              </p>
 
-              <p className="mb-4"></p>
+              <p className="mb-4">
+                Təhsildə Keyfiyyət Təminatı Agentliyinin nümayəndələrinin də
+                iştirak etdiyi tədbirdə bir sıra xarici ölkələrin və keyfiyyət
+                təminatı sahəsində nüfuzlu beynəlxalq təşkilatların məsul
+                şəxsləri yer alıb.
+              </p>
 
-              <p className="mb-4"></p>
+              <p className="mb-4">
+                Tədbirin açılış mərasimində Türkiyə Respublikası Ali Təhsil
+                Şurasının sədri cənab Erol Özvar, Ali Təhsildə Keyfiyyət
+                Təminatı Şurasının sədri cənab Ümit Kocabıçak, Avropa Ali Təhsil
+                Məkanında Keyfiyyətin Təminatı üzrə Assosiasiyanın (ENQA)
+                vitse-prezidenti xanım Doris Herrman çıxış edib, Ali Təhsil üzrə
+                Avropa Keyfiyyət Təminatı Reyestri (EQAR) prezidenti cənab
+                Stephan Lauwick-in konfransa videomüraciəti yayımlanıb.
+              </p>
 
-              <p className="mb-4"></p>
+              <p className="mb-4">
+                Çıxış edən məruzəçilər beynəlxalq səviyyədə keyfiyyət təminatı
+                prosesinin ümumi vəziyyəti və inkişaf perspektivlərinə toxunub,
+                beynəlxalq akademik mobilliyin və beynəlxalq kvalifikasiyaların
+                tanınması üçün keyfiyyət təminatının təkmilləşdirilməsinin önəmi
+                vurğulanıb.
+              </p>
 
-              <p className="mb-4"></p>
+              <p className="mb-4">
+                Keyfiyyət təminatında ölkələrin milli təcrübəsi barədə panel
+                müzakirələrdə məruzəçi kimi iştirak edən Təhsildə Keyfiyyət
+                Təminatı Agentliyinin idarə heyətinin sədri Tural Əhmədov yeni
+                dövrdə bir çox informal öyrənmə imkanlarının sürətlə
+                genişləndiyini və ənənəvi təhsil müəssisələrinin bu prosesə
+                çevik adaptasiyasının önəmini vurğulayıb, həmçinin bir sıra ali
+                təhsil müəssisələrinin yerli akkreditasiya və digər xarici
+                keyfiyyət təminatı proseslərini keçmələrinə rəğmən həmin
+                müəssisələrdə təşkil olunan tədrisin keyfiyyəti və təqdim olunan
+                ali təhsil kvalifikasiyaların əmək bazarında rəqabətə davamlı
+                olmadığını qeyd edib.
+              </p>
+
+              <p className="mb-4">
+                Tədbirin ikinci günündə Agentliyin hüquqi məsələlərin
+                tənzimlənməsi şöbəsinin müdiri Sabir Mirzəzadə &quot;Keyfiyyət
+                təminatının tətbiqi və problemləri&quot; sessiyasında &quot;Xarici ali
+                təhsil ixtisaslarının tanınmasında təhsil proqramlarının
+                uyğunluğunun qiymətləndirilməsində yeni çətinliklər və həll
+                yolları&quot; adlı təqdimatla çıxış edib.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-3 gap-8">
+              <Image
+                width={700}
+                height={700}
+                className="rounded-xl float-left mr-8"
+                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293842/9_tohx2y.jpg"
+                alt="image from bolonya"
+              />
+
+              <Image
+                width={700}
+                height={700}
+                className="rounded-xl float-left mr-8"
+                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293843/10_t6lgzl.jpg"
+                alt="image from bolonya"
+              />
+
+              <Image
+                width={700}
+                height={700}
+                className="rounded-xl float-left mr-8"
+                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293842/11_odpv47.jpg"
+                alt="image from bolonya"
+              />
             </div>
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary"></h2>
+            <h2 className="text-2xl text-textPrimary">
+              TKTA-nın rəhbər heyəti Almaniyada işgüzar səfərdə olub
+            </h2>
 
             <div className="text-justify tracking-wide leading-7 text-base">
               <Image
                 width={700}
                 height={700}
                 className="rounded-xl w-1/5 float-left mr-8"
-                src=""
+                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293843/12_jul9oo.jpg"
                 alt="iamge from bolonya"
               />
 
-              <p className="mb-4"></p>
+              <p className="mb-4">
+                Almaniyanın Mərkəzi Qiymətləndirmə və Akkreditasiya Agentliyinin
+                (ZEvA) təşkilati dəstəyi ilə 17-18 aprel 2024-cü il tarixlərində
+                Almaniyanın Hannover şəhərində keçirilən Avropa Ali Təhsil
+                Məkanında Keyfiyyətin Təminatı üzrə Assosiasiyanın (ENQA) Baş
+                Assambleyasında Təhsildə Keyfiyyət Təminatı Agentliyinin İdarə
+                Heyətinin sədri Tural Əhmədov, İdarə heyətinin üzvü, Keyfiyyət
+                təminatı departamentinin direktoru İlham Hümbətov və
+                Akkreditasiya və lisenziya şöbəsinin müdiri Elmar Mustafayev
+                iştirak edib.
+              </p>
 
-              <p className="mb-4"></p>
+              <p className="mb-4">
+                ENQA Üzvlərinin Forumu 2024 keyfiyyət təminatı agentlikləri və
+                təsisatları arasında əməkdaşlığın və Avropa ali təhsil məkanında
+                ali təhsil müstəvisində dialoqun təşviq edilməsində mühüm
+                tədbirlərdən biridir.
+              </p>
 
-              <p className="mb-4"></p>
-
-              <p className="mb-4"></p>
-
-              <p className="mb-4"></p>
+              <p className="mb-4">
+                Assambleyada transmilli təhsilin keyfiyyət təminatı, keyfiyyət
+                təminatında yeni yanaşmalar və ali təhsildə süni intellektin
+                inkişaf edən rolu ilə bağlı müzakirələr də daxil olmaqla bir
+                neçə mühüm plenar sessiyaslar keçirilib və iştirakçılar arasında
+                fikir mübadiləsi aparılıb.
+              </p>
             </div>
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary"></h2>
+            <h2 className="text-2xl text-textPrimary">TKTA-nın nümayəndələri Avropa Təlim Fondunun beynəlxalq tədbirində iştirak edib</h2>
 
             <div className="text-justify tracking-wide leading-7 text-base">
               <Image
                 width={700}
                 height={700}
                 className="rounded-xl w-1/5 float-left mr-8"
-                src=""
+                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293843/13_ogovzo.jpg"
                 alt="iamge from bolonya"
               />
 
-              <p className="mb-4"></p>
+              <p className="mb-4">Təhsildə Keyfiyyət Təminatı Agentliynin nümayəndələri Avropa Təlim Fondunun (ATF) təşkilatçılığı və Türkiyə Respublikasının Peşə Kvalifikasiyaları Agentliyinin tərəfdaşlığı ilə Ankara şəhərində keçirilən “Qeyri-formal və informal təhsilin tanınması mexanizmlərinin təkmilləşdirilməsi” adlı beynəlxalq tədbirdə iştirak ediblər.</p>
 
-              <p className="mb-4"></p>
+              <p className="mb-4">Tədbirin əsas məqsədi tərəfdaş ölkələrdə qeyri-formal və informal yollar ilə əldə edilən kvalifikasiyaların tanınması mexanizmlərinin təkmilləşdirilməsi istiqamətində şəbəkələşmə qrupunun yaradılması, Avorpa İttifaqına (Aİ) üzv və tərəfdaş ölkələrin ən yaxşı təcrübələrinin öyrənilməsi, qarşılıqlı fikir mübadiləsinin aparılması, Avropa İttifaqı tərəfindən hazırlanmış metodoloji vəsaitlərin müzakirə olunması, eyni zamanda Türkiyə Respublikasının ən yaxşı təcrübələri ilə iştirakçıları yaxından tanış etmək olub.</p>
 
-              <p className="mb-4"></p>
+              <p className="mb-4">Sonda Avropa Təlim Fondunun təşəbbüsü ilə Fondun tərəfdaş ölkələrinin müvafiq qurumlarının iştirakı ilə birgə şəbəkənin yaradılması haqqında ilkin razılıq əldə edilib və gələcək planlar müzakirə olunub.</p>
+            </div>
 
-              <p className="mb-4"></p>
+            <div className="grid grid-cols-3 gap-8">
+              <Image
+                width={700}
+                height={700}
+                className="rounded-xl float-left mr-8"
+                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293843/14_cektlh.jpg"
+                alt="image from bolonya"
+              />
 
-              <p className="mb-4"></p>
+              <Image
+                width={700}
+                height={700}
+                className="rounded-xl float-left mr-8"
+                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293844/15_w0dwsn.jpg"
+                alt="image from bolonya"
+              />
+
+              <Image
+                width={700}
+                height={700}
+                className="rounded-xl float-left mr-8"
+                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293845/16_npuwk5.jpg"
+                alt="image from bolonya"
+              />
             </div>
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary"></h2>
+            <h2 className="text-2xl text-textPrimary">TKTA nümayəndələri Avropa Keyfiyyət Təminatı Forumunda iştirak edib</h2>
 
             <div className="text-justify tracking-wide leading-7 text-base">
               <Image
                 width={700}
                 height={700}
                 className="rounded-xl w-1/5 float-left mr-8"
-                src=""
+                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293845/17_mmq784.jpg"
                 alt="iamge from bolonya"
               />
 
-              <p className="mb-4"></p>
+              <p className="mb-4">TKTA-nın İdarə Heyətinin üzvü İlham Hümbətov və Qeyri-formal və informal təhsilin tanınması şöbəsinin müdiri Könül Əhmədova Portuqaliyada baş tutan Avropa Keyfiyyət Təminatı Forumunda (EQAF) iştirak edib.</p>
 
-              <p className="mb-4"></p>
+              <p className="mb-4">Avropa Keyfiyyət Təminatı Forumu ali təhsildə keyfiyyət təminatının beynəlmiləlləşdirilməsinə, transmilli təhsil və əməkdaşlıq sahəsində yaranan problemlərin və imkanların həlli üçün yeni siyasətlərin, tendensiyaların və təcrübələrin araşdırılmasına yönəldilib.</p>
 
-              <p className="mb-4"></p>
-
-              <p className="mb-4"></p>
-
-              <p className="mb-4"></p>
+              <p className="mb-4">Səfər çərçivəsində Agentliyin əməkdaşları müxtəlif mövzularda keçirilən plenar müzakirələrdə iştirak edib.</p>
             </div>
           </div>
 

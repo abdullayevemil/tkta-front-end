@@ -13,23 +13,16 @@ const laws = [
 
 export default function Laws() {
   return (
-    <section className="w-full flex flex-col gap-16 items-center">
-      <h1 className="uppercase text-4xl text-center w-full px-16 pt-16">
+    <section className="w-full flex flex-col gap-8 sm:gap-12 md:gap-16 items-center">
+      <h1 className="uppercase text-2xl sm:text-3xl md:text-4xl text-center w-full px-4 sm:px-8 md:px-16 pt-8 sm:pt-12 md:pt-16">
       Akkredİtasİya Qaydaları
       </h1>
-
-      <ul className="grid grid-cols-4 gap-4 px-16">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 px-4 sm:px-8 md:px-16 w-full">
         {laws.map((law) => (
           <li key={law.id}>
-            <Link
-              className="hover:text-textPrimary"
-              target="_blank"
-              rel="noopener noreferrer"
-              href={law.link}
-            >
+            <Link className="hover:text-textPrimary" target="_blank" rel="noopener noreferrer" href={law.link}>
               <Card className="p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-semibold hover:text-textPrimary text-base">
                 <LawIcon width="30%" color="var(--primary-color)" />
-
                 <div className="text-center">
                   <div className="line-clamp-4">{law.title}</div>
                 </div>

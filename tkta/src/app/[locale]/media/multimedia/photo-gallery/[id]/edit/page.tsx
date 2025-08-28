@@ -181,8 +181,8 @@ export default function EditPhotoGalleryPage({ params }: { params: Promise<{ loc
   };
 
   return (
-    <div className="flex flex-col gap-12 items-center px-28 w-full py-8 bg-white text-textPrimary font-sans">
-      <h1 className="uppercase text-4xl text-center w-full px-16 pt-16">
+    <div className="flex flex-col gap-8 sm:gap-10 md:gap-12 items-center px-4 sm:px-8 md:px-16 w-full py-8 bg-white text-textPrimary font-sans">
+      <h1 className="uppercase text-2xl sm:text-3xl md:text-4xl text-center w-full px-4 sm:px-8 md:px-16 pt-8 sm:pt-12 md:pt-16">
         {t.media.multimedia.editPage?.title || "Edit Photo Gallery"}
       </h1>
 
@@ -395,7 +395,7 @@ export default function EditPhotoGalleryPage({ params }: { params: Promise<{ loc
       <Button
         variant="default"
         onClick={handleSubmit}
-        className="mt-auto bg-textSecondary hover:bg-textPrimary text-white font-semibold py-2 rounded-md shadow-md transition w-fit px-16"
+        className="mt-auto bg-textSecondary hover:bg-textPrimary text-white font-semibold py-2 rounded-md shadow-md transition w-fit px-8 sm:px-12 md:px-16"
         disabled={loading}
       >
         {loading ? (t.media.multimedia.editPage?.updating || "Updating...") : (t.media.multimedia.editPage?.submit || "Update")}

@@ -64,19 +64,16 @@ export default function News({ params }: Props) {
   }
 
   return (
-    <section className="px-16 mx-auto p-8 flex flex-col items-center gap-16 pt-16">
-      <h1 className="text-3xl font-semibold text-textPrimary mb-4 text-center">
+    <section className="px-4 sm:px-8 md:px-16 mx-auto flex flex-col items-center gap-8 sm:gap-12 md:gap-16 pt-8 sm:pt-12 md:pt-16">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-textPrimary mb-2 sm:mb-4 text-center">
         {locale === "az" ? data.title : data.titleenglish}
       </h1>
-
-      <div className="w-full px-16">
+      <div className="w-full">
         <iframe
           src={(data as Video).headerviewurl}
-          height={"700"}
-          className="w-full rounded-xl shadow"
+          className="w-full rounded-xl shadow h-64 sm:h-96 md:h-[700px]"
         />
       </div>
-
       <p className="text-sm text-gray-600 w-full text-right">
         {format(new Date(data.date.toString()), "dd-MM-yyyy")}
       </p>

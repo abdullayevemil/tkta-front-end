@@ -104,7 +104,7 @@ export function VideoGallery({ locale }: { locale: string }) {
   const totalPages = Math.ceil(total / ITEMS_PER_PAGE);
 
   return (
-    <div className="w-full flex flex-col gap-12 items-center">
+    <div className="w-full flex flex-col gap-8 sm:gap-10 md:gap-12 items-center">
       <div className="w-full flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
         <Input
           placeholder="Search..."

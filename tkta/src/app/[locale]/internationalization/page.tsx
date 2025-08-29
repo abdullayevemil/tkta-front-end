@@ -693,10 +693,10 @@ export default function Iternationalization() {
               <p className="mb-4">
                 Tədbirin ikinci günündə Agentliyin hüquqi məsələlərin
                 tənzimlənməsi şöbəsinin müdiri Sabir Mirzəzadə &quot;Keyfiyyət
-                təminatının tətbiqi və problemləri&quot; sessiyasında &quot;Xarici ali
-                təhsil ixtisaslarının tanınmasında təhsil proqramlarının
-                uyğunluğunun qiymətləndirilməsində yeni çətinliklər və həll
-                yolları&quot; adlı təqdimatla çıxış edib.
+                təminatının tətbiqi və problemləri&quot; sessiyasında
+                &quot;Xarici ali təhsil ixtisaslarının tanınmasında təhsil
+                proqramlarının uyğunluğunun qiymətləndirilməsində yeni
+                çətinliklər və həll yolları&quot; adlı təqdimatla çıxış edib.
               </p>
             </div>
 
@@ -771,7 +771,10 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary">TKTA-nın nümayəndələri Avropa Təlim Fondunun beynəlxalq tədbirində iştirak edib</h2>
+            <h2 className="text-2xl text-textPrimary">
+              TKTA-nın nümayəndələri Avropa Təlim Fondunun beynəlxalq tədbirində
+              iştirak edib
+            </h2>
 
             <div className="text-justify tracking-wide leading-7 text-base">
               <Image
@@ -782,11 +785,33 @@ export default function Iternationalization() {
                 alt="iamge from bolonya"
               />
 
-              <p className="mb-4">Təhsildə Keyfiyyət Təminatı Agentliynin nümayəndələri Avropa Təlim Fondunun (ATF) təşkilatçılığı və Türkiyə Respublikasının Peşə Kvalifikasiyaları Agentliyinin tərəfdaşlığı ilə Ankara şəhərində keçirilən “Qeyri-formal və informal təhsilin tanınması mexanizmlərinin təkmilləşdirilməsi” adlı beynəlxalq tədbirdə iştirak ediblər.</p>
+              <p className="mb-4">
+                Təhsildə Keyfiyyət Təminatı Agentliynin nümayəndələri Avropa
+                Təlim Fondunun (ATF) təşkilatçılığı və Türkiyə Respublikasının
+                Peşə Kvalifikasiyaları Agentliyinin tərəfdaşlığı ilə Ankara
+                şəhərində keçirilən “Qeyri-formal və informal təhsilin tanınması
+                mexanizmlərinin təkmilləşdirilməsi” adlı beynəlxalq tədbirdə
+                iştirak ediblər.
+              </p>
 
-              <p className="mb-4">Tədbirin əsas məqsədi tərəfdaş ölkələrdə qeyri-formal və informal yollar ilə əldə edilən kvalifikasiyaların tanınması mexanizmlərinin təkmilləşdirilməsi istiqamətində şəbəkələşmə qrupunun yaradılması, Avorpa İttifaqına (Aİ) üzv və tərəfdaş ölkələrin ən yaxşı təcrübələrinin öyrənilməsi, qarşılıqlı fikir mübadiləsinin aparılması, Avropa İttifaqı tərəfindən hazırlanmış metodoloji vəsaitlərin müzakirə olunması, eyni zamanda Türkiyə Respublikasının ən yaxşı təcrübələri ilə iştirakçıları yaxından tanış etmək olub.</p>
+              <p className="mb-4">
+                Tədbirin əsas məqsədi tərəfdaş ölkələrdə qeyri-formal və
+                informal yollar ilə əldə edilən kvalifikasiyaların tanınması
+                mexanizmlərinin təkmilləşdirilməsi istiqamətində şəbəkələşmə
+                qrupunun yaradılması, Avorpa İttifaqına (Aİ) üzv və tərəfdaş
+                ölkələrin ən yaxşı təcrübələrinin öyrənilməsi, qarşılıqlı fikir
+                mübadiləsinin aparılması, Avropa İttifaqı tərəfindən hazırlanmış
+                metodoloji vəsaitlərin müzakirə olunması, eyni zamanda Türkiyə
+                Respublikasının ən yaxşı təcrübələri ilə iştirakçıları yaxından
+                tanış etmək olub.
+              </p>
 
-              <p className="mb-4">Sonda Avropa Təlim Fondunun təşəbbüsü ilə Fondun tərəfdaş ölkələrinin müvafiq qurumlarının iştirakı ilə birgə şəbəkənin yaradılması haqqında ilkin razılıq əldə edilib və gələcək planlar müzakirə olunub.</p>
+              <p className="mb-4">
+                Sonda Avropa Təlim Fondunun təşəbbüsü ilə Fondun tərəfdaş
+                ölkələrinin müvafiq qurumlarının iştirakı ilə birgə şəbəkənin
+                yaradılması haqqında ilkin razılıq əldə edilib və gələcək
+                planlar müzakirə olunub.
+              </p>
             </div>
 
             <div className="grid grid-cols-3 gap-8">
@@ -817,7 +842,10 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary">TKTA nümayəndələri Avropa Keyfiyyət Təminatı Forumunda iştirak edib</h2>
+            <h2 className="text-2xl text-textPrimary">
+              TKTA nümayəndələri Avropa Keyfiyyət Təminatı Forumunda iştirak
+              edib
+            </h2>
 
             <div className="text-justify tracking-wide leading-7 text-base">
               <Image
@@ -828,11 +856,25 @@ export default function Iternationalization() {
                 alt="iamge from bolonya"
               />
 
-              <p className="mb-4">TKTA-nın İdarə Heyətinin üzvü İlham Hümbətov və Qeyri-formal və informal təhsilin tanınması şöbəsinin müdiri Könül Əhmədova Portuqaliyada baş tutan Avropa Keyfiyyət Təminatı Forumunda (EQAF) iştirak edib.</p>
+              <p className="mb-4">
+                TKTA-nın İdarə Heyətinin üzvü İlham Hümbətov və Qeyri-formal və
+                informal təhsilin tanınması şöbəsinin müdiri Könül Əhmədova
+                Portuqaliyada baş tutan Avropa Keyfiyyət Təminatı Forumunda
+                (EQAF) iştirak edib.
+              </p>
 
-              <p className="mb-4">Avropa Keyfiyyət Təminatı Forumu ali təhsildə keyfiyyət təminatının beynəlmiləlləşdirilməsinə, transmilli təhsil və əməkdaşlıq sahəsində yaranan problemlərin və imkanların həlli üçün yeni siyasətlərin, tendensiyaların və təcrübələrin araşdırılmasına yönəldilib.</p>
+              <p className="mb-4">
+                Avropa Keyfiyyət Təminatı Forumu ali təhsildə keyfiyyət
+                təminatının beynəlmiləlləşdirilməsinə, transmilli təhsil və
+                əməkdaşlıq sahəsində yaranan problemlərin və imkanların həlli
+                üçün yeni siyasətlərin, tendensiyaların və təcrübələrin
+                araşdırılmasına yönəldilib.
+              </p>
 
-              <p className="mb-4">Səfər çərçivəsində Agentliyin əməkdaşları müxtəlif mövzularda keçirilən plenar müzakirələrdə iştirak edib.</p>
+              <p className="mb-4">
+                Səfər çərçivəsində Agentliyin əməkdaşları müxtəlif mövzularda
+                keçirilən plenar müzakirələrdə iştirak edib.
+              </p>
             </div>
           </div>
 

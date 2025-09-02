@@ -1,5 +1,5 @@
 "use client";
-
+ 
 import { useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -11,24 +11,30 @@ import { toast } from "react-toastify";
 
 export default function EditVideoGalleryPage() {
   const { id } = useParams();
+
   const router = useRouter();
 
   const [title, setTitle] = useState("");
+
   const [titleEnglish, setTitleEnglish] = useState("");
+
   const [errors, setErrors] = useState<{ title: string; titleEnglish: string }>(
     { title: "", titleEnglish: "" }
   );
+
   const [loading, setLoading] = useState(false);
 
-  // Fetch video details on load
   useEffect(() => {
     const fetchVideo = async () => {
       try {
         const res = await axios.get(
           `/api/media/multimedia/video-gallery/${id}`
         );
+        
         const video = res.data;
+        
         setTitle(video.title || "");
+        
         setTitleEnglish(video.titleenglish || "");
       } catch {
         toast.error("Failed to load video data");
@@ -43,23 +49,30 @@ export default function EditVideoGalleryPage() {
 
     if (!title || !titleEnglish) {
       const newErrors = { title: "", titleEnglish: "" };
+
       if (!title) newErrors.title = "Title is required";
+
       if (!titleEnglish) newErrors.titleEnglish = "Title (English) is required";
+
       setErrors(newErrors);
+
       return;
     }
 
     try {
       setLoading(true);
+
       await axios.put(`/api/media/multimedia/video-gallery/${id}`, {
         title,
         titleEnglish,
       });
 
       toast.success("Video updated successfully!");
+
       router.push("/media/multimedia/video-gallery");
     } catch (err) {
       toast.error("Error updating video");
+
       console.error(err);
     } finally {
       setLoading(false);
@@ -78,6 +91,7 @@ export default function EditVideoGalleryPage() {
             <Label htmlFor="title" className="text-sm font-medium">
               Title
             </Label>
+            
             <Input
               id="title"
               type="text"
@@ -98,6 +112,7 @@ export default function EditVideoGalleryPage() {
             <Label htmlFor="titleEnglish" className="text-sm font-medium">
               Title (English)
             </Label>
+
             <Input
               id="titleEnglish"
               type="text"

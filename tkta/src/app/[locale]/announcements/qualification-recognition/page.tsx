@@ -70,8 +70,6 @@ const vacancies = [
 export default function EducationRecognition() {
   return (
     <section className="w-full flex flex-col gap-8 sm:gap-12 md:gap-16 items-center">
-      
-
       <h1 className="uppercase text-2xl sm:text-3xl md:text-4xl text-center w-full px-4 sm:px-8 md:px-16 pt-8 sm:pt-12 md:pt-16">
         PEŞƏ İXTİSASININ TANINMASI ÜZRƏ SƏNƏD QƏBULU
       </h1>

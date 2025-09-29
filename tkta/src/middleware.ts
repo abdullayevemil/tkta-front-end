@@ -7,11 +7,13 @@ const defaultLocale = "az";
 
 function getLocale(request: NextRequest): string {
   const headers: Record<string, string> = {};
+
   request.headers.forEach((value, key) => {
     headers[key] = value;
   });
 
   const negotiator = new Negotiator({ headers });
+
   const languages = negotiator.languages();
 
   return match(languages, locales, defaultLocale);
@@ -37,7 +39,9 @@ export function middleware(request: NextRequest) {
   }
 
   const locale = getLocale(request);
+
   const url = request.nextUrl.clone();
+
   url.pathname = `/${locale}${pathname}`;
 
   return NextResponse.redirect(url);

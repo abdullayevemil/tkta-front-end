@@ -17,6 +17,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+import Link from "next/link";
 
 const ContactSchema = z.object({
   fullName: z.string().min(1, {
@@ -205,103 +206,11 @@ export default function ContactForm() {
         </TabsContent>
 
         <TabsContent value="meet_citizens">
-          <div className="flex flex-col gap-4">
-            <Form {...form}>
-              <form
-                onSubmit={form.handleSubmit(onSubmit)}
-                className="space-y-6 px-16 mx-auto w-full"
-              >
-                <div className="flex flex-row justify-between gap-6">
-                  <FormField
-                    control={form.control}
-                    name="fullName"
-                    render={({ field }) => (
-                      <FormItem className="w-1/2">
-                        <FormLabel>Ad və Soyad</FormLabel>
-                        <FormControl>
-                          <Input
-                            placeholder="Adınızı və soyadınızı daxil edin"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name="contactNumber"
-                    render={({ field }) => (
-                      <FormItem className="w-1/2">
-                        <FormLabel>Əlaqə nömrəsi</FormLabel>
-                        <FormControl>
-                          <Input
-                            placeholder="Əlaqə nömrənizi daxil edin"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>E-poçt ünvanı</FormLabel>
-                      <FormControl>
-                        <Input
-                          type="email"
-                          placeholder="E-poçtunuzu daxil edin"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="content"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Mesaj</FormLabel>
-                      <FormControl>
-                        <Textarea
-                          placeholder="Mesajınızı daxil edin"
-                          {...field}
-                          className="focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-textPrimary"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <ReCAPTCHA
-                  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
-                  ref={recaptchaRef}
-                  onChange={handleChange}
-                  onExpired={handleExpired}
-                />
-
-                <Button
-                  type="submit"
-                  className="w-full bg-textPrimary hover:bg-textPrimary font-semibold"
-                  disabled={!isVerified}
-                >
-                  Göndər
-                </Button>
-              </form>
-            </Form>
-          </div>
+          <Link href="https://www.qebul.edu.az/?page=add_ticket" target="_blank" className="hover:underline text-textPrimary">
+            Vətəndaş qəbulu üçün bura klikləyin
+          </Link>
         </TabsContent>
       </Tabs>
     </section>
-  );
+  ); 
 }

@@ -6,8 +6,8 @@ export default function Structure() {
     <Image
       src={StructureImage}
       alt="Agency Structure"
-      width={800}
-      height={600}
+      width={1400}
+      height={1400}
       priority
       className="w-full h-auto"
     ></Image>

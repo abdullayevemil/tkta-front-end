@@ -1,4 +1,5 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function TrainingAndMethodology() {
@@ -299,7 +300,7 @@ export default function TrainingAndMethodology() {
                   maliyyə və insan resurslarının idarə olunması, tədrisin
                   təşkili və idarə olunması kimi sahələrin ən azı biri üzrə
                   təcrübəsinin olması
-                </li> 
+                </li>
 
                 <li>Yüksək səviyyədə Azərbaycan dili biliyi</li>
 
@@ -527,6 +528,32 @@ export default function TrainingAndMethodology() {
               komissiyalarının tərkibində müstəqil bir üzv kimi çalışmağa cəlb
               edilirlər.
             </p>
+
+            <div className="grid grid-cols-3 gap-8">
+              <Image
+                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1759169651/WhatsApp_Image_2025-08-20_at_09.01.11_klgpog.jpg"
+                alt=""
+                width={1200}
+                height={1200}
+                className="w-full rounded-xl"
+              />
+
+              <Image
+                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1759169651/WhatsApp_Image_2025-08-20_at_09.01.12_1_g5yeaq.jpg"
+                alt=""
+                width={1200}
+                height={1200}
+                className="w-full rounded-xl"
+              />
+
+              <Image
+                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1759169652/WhatsApp_Image_2025-08-20_at_09.01.12_swofyd.jpg"
+                alt=""
+                width={1200}
+                height={1200}
+                className="w-full rounded-xl"
+              />
+            </div>
           </div>
         </TabsContent>
       </Tabs>

@@ -204,7 +204,7 @@ export default function Iternationalization() {
               </p>
             </div>
 
-            <div className="flex justify-center mt-4">
+            {/* <div className="flex justify-center mt-4">
               <Image
                 width={700}
                 height={700}
@@ -228,7 +228,7 @@ export default function Iternationalization() {
                 src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180879/Picture5_gfvmvc.jpg"
                 alt="TKTA logo"
               />
-            </div>
+            </div> */}
           </div>
 
           <div className="flex flex-col gap-6">
@@ -259,13 +259,13 @@ export default function Iternationalization() {
                 olmaq məqsədilə həmin ölkəyə səfər ediblər.
               </p>
 
-              <Image
+              {/* <Image
                 width={700}
                 height={700}
                 className="rounded-xl w-1/5 float-right ml-8"
                 src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180878/Picture7_t34mrb.jpg"
                 alt="image from tukiye"
-              />
+              /> */}
 
               <p className="mb-4">
                 Səfər çərçivəsində MYK-nun sədri, professor Nəcmi İlhan və həmin
@@ -290,13 +290,13 @@ export default function Iternationalization() {
                 təcrübəsi yaxından öyrənilib.{" "}
               </p>
 
-              <Image
+              {/* <Image
                 width={700}
                 height={700}
                 className="rounded-xl w-1/5 float-left mr-8"
                 src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180878/Picture8_ptk9lo.jpg"
                 alt="image from tukiye"
-              />
+              /> */}
 
               <p className="mb-4">
                 Daha sonra YÖK-ün tabeliyində fəaliyyət göstərən
@@ -342,14 +342,14 @@ export default function Iternationalization() {
                 (NAKVIS/SQAA) təcrübəsi ilə tanışlıq və qarşılıqlı əməkdaşlıq
                 imkanlarının müzakirəsi olub.
               </p>
-
+              {/* 
               <Image
                 width={700}
                 height={700}
                 className="rounded-xl w-1/5 float-right ml-8"
                 src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180878/Picture9_mvcvvg.jpg"
                 alt="iamge from bolonya"
-              />
+              /> */}
 
               <p className="mb-4">
                 Səfər çərçivəsində o, NAKVIS-in direktoru və agentliyin müxtəlif
@@ -370,13 +370,13 @@ export default function Iternationalization() {
                 tutub.
               </p>
 
-              <Image
+              {/* <Image
                 width={700}
                 height={700}
                 className="rounded-xl w-1/5 float-left mr-8"
                 src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180878/Picture10_woovuy.jpg"
                 alt="iamge from bolonya"
-              />
+              /> */}
 
               <p className="mb-4">
                 Agentliyin akkreditasiya qiymətləndirilməsi prosesində
@@ -409,13 +409,13 @@ export default function Iternationalization() {
                 alt="iamge from serbia"
               />
 
-              <Image
+              {/* <Image
                 width={700}
                 height={700}
                 className="rounded-xl w-1/5 float-right ml-8"
                 src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180879/Picture12_hutzqb.jpg"
                 alt="image from serbia"
-              />
+              /> */}
 
               <p className="mb-4">
                 27-28 may 2025-ci il tarixlərində SEQA-ESG 2 layihəsi
@@ -436,13 +436,13 @@ export default function Iternationalization() {
                 üzrə qabaqcıl təcrübələr təqdim edilib.{" "}
               </p>
 
-              <Image
+              {/* <Image
                 width={700}
                 height={700}
                 className="rounded-xl w-1/5 float-left mr-8"
                 src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180879/Picture13_i9fsbd.jpg"
                 alt="image from serbia"
-              />
+              /> */}
 
               <p className="mb-4">
                 Tədbir çərçivəsində iştirakçı tərəflər qeyd olunan standartların
@@ -452,13 +452,13 @@ export default function Iternationalization() {
                 olduğu müəyyən olub.
               </p>
 
-              <Image
+              {/* <Image
                 width={700}
                 height={700}
                 className="rounded-xl w-1/5 float-right ml-8"
                 src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180879/Picture14_m9lrjv.jpg"
                 alt="image from serbia"
-              />
+              /> */}
 
               <p className="mb-4">
                 Məlumat üçün bildiririk ki, sözügedən təlim SEQA-ESG 2 layihəsi
@@ -499,13 +499,13 @@ export default function Iternationalization() {
                 (CEENQA) Baş Assambleyası öz işini yekunlaşdırıb.
               </p>
 
-              <Image
+              {/* <Image
                 width={700}
                 height={700}
                 className="rounded-xl w-1/5 float-right ml-8"
                 src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293842/3_ct0lf2.jpg"
                 alt="iamge from bolonya"
-              />
+              /> */}
 
               <p className="mb-4">
                 Assambleyanın ikinci günündə İdarə Heyətinin üzvləri CEENQA-nın
@@ -531,13 +531,13 @@ export default function Iternationalization() {
                 iştirak edib.
               </p>
 
-              <Image
+              {/* <Image
                 width={700}
                 height={700}
                 className="rounded-xl w-1/5 float-left mr-8"
                 src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293842/2_ixq1pf.jpg"
                 alt="iamge from bolonya"
-              />
+              /> */}
 
               <p className="mb-4">
                 Tədbirdə həmçinin, növbəti CEENQA Baş Assambleyasının Tallinn
@@ -558,7 +558,7 @@ export default function Iternationalization() {
                 CEENQA-nın tam hüquqlu üzvüdür.
               </p>
 
-              <div className="grid grid-cols-3 gap-8">
+              {/* <div className="grid grid-cols-3 gap-8">
                 <Image
                   width={700}
                   height={700}
@@ -582,7 +582,7 @@ export default function Iternationalization() {
                   src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293841/6_mrz4ya.jpg"
                   alt="image from bolonya"
                 />
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -700,7 +700,7 @@ export default function Iternationalization() {
               </p>
             </div>
 
-            <div className="grid grid-cols-3 gap-8">
+            {/* <div className="grid grid-cols-3 gap-8">
               <Image
                 width={700}
                 height={700}
@@ -724,7 +724,7 @@ export default function Iternationalization() {
                 src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293842/11_odpv47.jpg"
                 alt="image from bolonya"
               />
-            </div>
+            </div> */}
           </div>
 
           <div className="flex flex-col gap-6">
@@ -814,7 +814,7 @@ export default function Iternationalization() {
               </p>
             </div>
 
-            <div className="grid grid-cols-3 gap-8">
+            {/* <div className="grid grid-cols-3 gap-8">
               <Image
                 width={700}
                 height={700}
@@ -838,7 +838,7 @@ export default function Iternationalization() {
                 src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293845/16_npuwk5.jpg"
                 alt="image from bolonya"
               />
-            </div>
+            </div> */}
           </div>
 
           <div className="flex flex-col gap-6">
@@ -879,50 +879,359 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary"></h2>
+            <h2 className="text-2xl text-textPrimary">
+              TKTA tərəfindən “Ümumi təhsildə davamlı keyfiyyət təminatı” adlı
+              beynəlxalq elmi-praktik konfrans keçirilib
+            </h2>
 
             <div className="text-justify tracking-wide leading-7 text-base">
               <Image
                 width={700}
                 height={700}
                 className="rounded-xl w-1/5 float-left mr-8"
-                src=""
+                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293845/18_trrzuk.jpg"
                 alt="iamge from bolonya"
               />
 
-              <p className="mb-4"></p>
+              <p className="mb-4">
+                20 noyabr 2023-cü il tarixində Təhsildə Keyfiyyət Təminatı
+                Agentliyinin (TKTA) təşkilatçılığı ilə{" "}
+                <b>“Ümumi təhsildə davamlı keyfiyyət təminatı”</b> adlı konfrans
+                təşkil edilib.
+              </p>
 
-              <p className="mb-4"></p>
+              <p className="mb-4">
+                Konfransın əsas məqsədi Azərbaycanda ümumi təhsildə xarici və
+                daxili keyfiyyət təminatı istiqamətində görülmüş işlər və əldə
+                olunmuş nəticələrin paylaşılması, bu sahədəki qabaqcıl
+                təcrübələrin öyrənilməsi, həmçinin ümumi təhsildə keyfiyyət
+                təminatının mühüm aspektləri ətrafında müzakirələrin təşkil
+                edilməsidir.
+              </p>
 
-              <p className="mb-4"></p>
+              <p className="mb-4">
+                Tədbirdə Azərbaycan Respublikasının elm və təhsil nazirinin
+                müavini Həsən Həsənli, nazirliyin səlahiyyətli nümayəndələri,
+                yerli ümumi, orta və ali təhsil müəssisələrinin rəhbərləri, və
+                digər aidiyyəti qurumların nümayəndələri, eləcə də bu sahə üzrə
+                beynəlxalq ekspertlər yer alıb.
+              </p>
 
-              <p className="mb-4"></p>
+              <p className="mb-4">
+                Agentliyin İdarə Heyətinin sədrinin müavini, sədr vəzifəsini
+                müvəqqəti icra edən Kamran Rəsulov açılış nitqi ilə çıxış
+                edərək, qonaqları salamlayıb və əlaqəli sahədə bugünə kimi
+                görülmüş işlər barədə məlumatı konfrans iştirakçılarının
+                diqqətinə çatdırıb.
+              </p>
 
-              <p className="mb-4"></p>
+              <p className="mb-4">
+                Tədbirdə çıxış edən elm və təhsil nazirinin müavini Həsən
+                Həsənli öz çıxışında ümumi təhsil sahəsində aparılan
+                islahatlardan danışıb, müasir dövrün tələbinə uyğun yeni
+                çağırışlar və onların həlli istiqamətində diqqət yetirilməli
+                məqamları vurğulayıb.
+              </p>
+
+              <p className="mb-4">
+                Tədbir Azərbaycan Respublikasının Elm və Təhsil nazirliyi Ümumi
+                və məktəbəqədər təhsilin təşkili və idarə olunması şöbəsinin
+                müdiri, Azərbaycan Respublikası Təhsil İnstitutunun direktor
+                səlahiyyətlərini icra edən Elnur Əliyev, Başkənt Universitetinin
+                Təhsil Elmləri İnstitutunun Direktoru, Prof. Dr. Sərvət Özdəmir,
+                Birləşmiş Krallıq Parlamentinin İcmalar Palatasının Təhsil
+                Komitəsinin məsləhətçisi, Məktəb inspeksiyasına dair nəşrlərin
+                müəllifi və Ülyahəzrət Kraliçanın sabiq Məktəb Müfəttişi, Adrian
+                Gray və Türkiyə Respublikası Təhsil Nazirliyinin Təlim Tərbiyyə
+                Şurasının keçmiş sədri, Prof. Dr. Bürhanətdin Dönməzin çıxışları
+                ilə davam edib.
+              </p>
+
+              <p className="mb-4">
+                Konfrans yerli və beynəlxalq ekspertlərin spikerliyi ilə
+                “Ümumtəhsildə keyfiyyət modelləri vasitəsilə keyfiyyətə aparan
+                yol” və “Ümumtəhsildə daxili keyfiyyət sisteminlərinin inkişaf
+                etdirilməsi: Problemlər və Perspektivlər” adlı panel
+                müzakirələrlə davam edib.
+              </p>
             </div>
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary"></h2>
+            <h2 className="text-2xl text-textPrimary">
+              TKTA rəhbərliyi ENQA Baş Assambleyasında iştirak edib
+            </h2>
 
             <div className="text-justify tracking-wide leading-7 text-base">
               <Image
                 width={700}
                 height={700}
                 className="rounded-xl w-1/5 float-left mr-8"
-                src=""
+                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293851/28_nsh1en.jpg"
                 alt="iamge from bolonya"
               />
 
-              <p className="mb-4"></p>
+              <p className="mb-4">
+                23-25 oktyabr 2024-cü il tarixlərində Malta Respublikasının
+                Sent-Culians şəhərində Malta Əlavə və Ali Təhsil Təşkilatının
+                (MFHEA) ev sahibliyi etdiyi Avropa Ali Təhsil üzrə Keyfiyyət
+                Təminatı Assosiasiyasının (ENQA) Baş Assambleyası keçirilib.
+              </p>
 
-              <p className="mb-4"></p>
+              <p className="mb-4">
+                Tədbirdə Malta təhsil, idman, gənclər, tədqiqat və innovasiya
+                naziri Klifton Qrima, ENQA-nın prezidenti Duqlas Blakstok və
+                direktoru Anna Qover, MFHEA-nın baş icraçı direktoru Rouz Ane
+                Kuşier, eləcə də ENQA-ya üzv və müşahidəçi statusunda olan
+                keyfiyyət təminatı agentliklərinin rəhbər şəxsləri və
+                nümayəndələri iştirak edib.
+              </p>
 
-              <p className="mb-4"></p>
+              <p className="mb-4">
+                Tədbirdə Avropa keyfiyyət təminatı üzrə standartlar və
+                təlimatlar sənədinin (ESG) təkmilləşdirilməsi, keyfiyyət
+                təminatında tədqiqat, rəqəmsallaşma, data-əsaslı qərarvermə,
+                keyfiyyət təminatı agentlikləri arasında əməkdaşlıq kimi mühüm
+                mövzular müzakirə olunub. Eyni zamanda, Baş Assambleya
+                çərçivəsində ENQA İdarə Heyətinə seçkilər keçirilib.
+              </p>
 
-              <p className="mb-4"></p>
+              <p className="mb-4">
+                Bildiririk ki, ENQA-nın dəstəyi ilə həyata keçirilən SEGA-ESG II
+                layihəsi çərçivəsində digər 3 ölkədə (Bosniya-Herseqovina,
+                Serbiya və Ukrayna) olduğu kimi Azərbaycanda da milli keyfiyyət
+                təminatı agentliyi olan TKTA-nın ENQA-ya tamhüquqlu üzvlüyünün
+                dəyərləndirilməsi məqsədilə fəaliyyət planı hazırlanıb və
+                aidiyyəti üzrə ENQA-ya təqdim olunub. Növbəti il ərzində
+                TKTA-nın ENQA-ya üzvlük prosesi ilə əlaqəli Özünütəhlil
+                hesabatının hazırlanması və ENQA-nın müvafiq komissiyasının
+                TKTA-ya sahə səfəri planlaşdırılır.{" "}
+              </p>
+            </div>
+          </div>
 
-              <p className="mb-4"></p>
+          <div className="flex flex-col gap-6">
+            <h2 className="text-2xl text-textPrimary">
+              TKTA əməkdaşları SEQA-ESG II layihəsi çərçivəsində tədbirdə
+              iştirak edib
+            </h2>
+
+            <div className="text-justify tracking-wide leading-7 text-base">
+              <p className="mb-4">
+                Təhsildə Keyfiyyət Təminatı Agentliyinin (TKTA) Akkreditasiya və
+                lisenziya şöbəsinin əməkdaşları Faina Qaçabəyova və Nigar
+                Əsgərova Avropa keyfiyyət təminatı agentliklərinin Avropa
+                keyfiyyət təminatı üzrə standartlar və təlimatlar sənədinə (ESG)
+                uyğunlaşmağa dəstək (SEQA-ESG II) layihəsi çərçivəsində
+                keçirilmiş beynəlxalq seminarda iştirak ediblər.
+              </p>
+
+              <p className="mb-4">
+                Tədbir Belçikanın Brüssel şəhərində ali təhsil müəssisələrinin
+                proqram akkreditasiyasını həyata keçirən VLUHR QA təşkilatının
+                ev sahibliyi ilə keçirilib. “SEQA-ESG II Ekspertlərin qarşılıqlı
+                öyrənmə seminar”ı başlığı altında təşkil olunmuş tədbirdə xarici
+                keyfiyyət təminatı proseslərinə cəlb edilən ekspertlərə
+                metodoloji istiqamətin verilməsi və onlarla səmərəli fəaliyyətin
+                həyata keçirilməsinə müvafiq dəstəyin göstərilməsi nəzərdə
+                tutulub.
+              </p>
+
+              <p className="mb-4">
+                TKTA əməkdaşları ilə yanaşı, Avstriya, Portuqaliya, Ukrayna,
+                Bosniya və Herseqovina və Serbiyanın müvafiq keyfiyyət təminatı
+                agentliklərindən tədbirə qoşulmuş nümayəndələr arasında təcrübə
+                mübadiləsi aparılıb. Həmçinin, layihə çərçivəsində digər
+                agentliklərlə yanaşı, TKTA tərəfindən icra edilən fəaliyyətlərə
+                dair məlumat tədbir iştirakçılarına təqdim edilib.
+              </p>
+
+              <p className="mb-4">
+                TKTA Azərbaycan ali təhsil müəssisələrində xarici keyfiyyət
+                təminatı, Agentliyin daxili keyfiyyət təminatı sisteminin
+                təkmilləşdirilməsi, eləcə də TKTA-nın Avropa Ali Təhsil üzrə
+                Keyfiyyət Təminatı Assosiasiyasına (ENQA) tamhüquqlu üzv olmaq
+                istiqamətində fəaliyyətləri icra etməyə davam edir.
+              </p>
+
+              <p className="mb-4">
+                Qeyd edək ki, SEQA-ESG II layihəsi Azərbaycan,
+                Bosniya-Herseqovina, Ukrayna və Serbiyanın keyfiyyət təminatı
+                agentliklərinin ENQA-ya müşahidəçi üzv statusundan tam hüquqlu
+                üzvə keçmək istiqamətində dəstək məqsədilə 2022-ci ilin dekabr
+                ayından etibarən 3 illik müddətində həyata keçirilir. Layihə
+                2025-ci il 30 noyabr tarixində bitdikdən sonra sözügedən
+                ölkələrdə fəaliyyət göstərən keyfiyyət təminatı agentliklərinin
+                ENQA-ya tam hüquqlu üzvlüyü dəyərləndiriləcəkdir.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-6">
+            <h2 className="text-2xl text-textPrimary">
+              Qazaxıstan Respublikasında Mərkəzi-Asiya Təhsildə Keyfiyyət
+              Təminatı VIII Beynəlxalq Forumu keçirilmişdir
+            </h2>
+
+            <div className="text-justify tracking-wide leading-7 text-base">
+              <Image
+                width={700}
+                height={700}
+                className="rounded-xl w-1/5 float-left mr-8"
+                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180878/Picture2_ksenjq.png"
+                alt="iamge from bolonya"
+              />
+
+              <p className="mb-4">
+                4-5 oktyabr tarixlərində Qazaxıstan Respublikasının Astana
+                şəhərində Qazaxıstanın Müstəqil Akkreditasiya və Reytinq
+                Agentliyi tərəfindən Astana IT Universitetində “İnformasiya
+                məkanında təhsildə keyfiyyətin yüksəldilməsi ali təhsil
+                müəssisələrinin strateji inkişaf fenomeni kimi” adlı
+                Mərkəzi-Asiya Təhsildə Keyfiyyət Təminatı VIII Beynəlxalq Forumu
+                keçirilmişdir.
+              </p>
+
+              <p className="mb-4">
+                Sözügedən tədbirdə Təhsildə Keyfiyyət Təminatı Agentliyinin
+                İdarə Heyətinin sədr müavini Kamran Rəsulov iştirak etmişdir.
+                Adıçəkilən tədbirdə Avropa Ali Təhsil Məkanında Keyfiyyət
+                Təminatı üzrə Assosiasiyanın (ENQA) prezidenti Duqlas Blakstok,
+                Ali Təhsil üzrə Avropa Keyfiyyət Təminatı Reyestrinin (EQAR)
+                prezidenti Stefan Lauvik, eləcə də dövlət rəsmiləri,
+                Mərkəzi-Asiya ölkələrindən müvafiq ali təhsil müəssisələrinin
+                rəhbər şəxsləri və beynəlxalq ali təhsil keyfiyyət təminatı
+                şəbəkələrinin nümayəndələri iştirak etmişlər.
+              </p>
+
+              <p className="mb-4">
+                Qeyd edək ki, hər il keçirilən Forumda təhsildə daxili və xarici
+                keyfiyyət təminatı sisteminin inkişafı, xarici təhsil
+                təşkilatları arasında əməkdaşlığın genişləndirilməsi, keyfiyyət
+                mədəniyyətinin inkişafı, elm icmasının konstruktiv inteqrasiyası
+                və süni intellektin təhsildə keyfiyyət təminatının inkişafına
+                təsiri haqqında müzakirələr aparılmışdır.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-6">
+            <h2 className="text-2xl text-textPrimary">
+              Ali Təhsildə Keyfiyyət Təminatı üzrə ilk Simpozium
+            </h2>
+
+            <div className="text-justify tracking-wide leading-7 text-base">
+              <Image
+                width={700}
+                height={700}
+                className="rounded-xl w-1/5 float-left mr-8"
+                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180878/Picture2_ksenjq.png"
+                alt="iamge from bolonya"
+              />
+
+              <p className="mb-4">
+                ADA Universiteti Təhsildə Keyfiyyətin Təminatı Agentliyi (TKTA)
+                ilə əməkdaşlıq çərçivəsində 2024-cü il 26-27 sentyabr
+                tarixlərində 31 ali təhsil müəssisəsindən 55 mütəxəssisin
+                iştirakı ilə ali təhsildə keyfiyyət təminatı üzrə ilk simpoziuma
+                ev sahibliyi etmişdir. Tədbirin açılış nitqində TKTA-nın İdarə
+                Heyətinin sədri Tural Əhmədov ali təhsil müəssisələrinin
+                institusional akkreditasiyası kontekstində keyfiyyət təminatının
+                əhəmiyyəti, əldə olunmuş təcrübə və ümumi tendensiyalar barədə
+                faktları iştirakçıların diqqətinə çatdırmışdır.
+              </p>
+
+              <p className="mb-4">
+                İki gün davam edən simpoziumda həm yerli, həm də beynəlxalq
+                ekspertlər tədrisin qiymətləndirilməsi, institusional
+                akkreditasiya sahəsindəki irəliləyişlər, tədrisə müasir
+                yanaşmalar, məlumatların hesabatlılığı və universitetlərdə
+                keyfiyyət təminatı mexanizmlərinin müxtəlif strukturları
+                haqqında fikirlərini bölüşüblər. Tədbir, ali təhsil müəssisələri
+                arasında əməkdaşlıq və fikir mübadiləsi üçün platforma rolunu
+                oynamışdır.
+              </p>
+
+              <p className="mb-4">
+                Tədbirdən sonra ADA Universitetinin Keyfiyyət Təminatı və
+                Akkreditasiya şöbəsinin rəhbəri Maurus Roller simpoziumun
+                uğurunu vurğulayaraq belə qeyd etmişdir: “Bu iki gün ərzində
+                müsbət və məhsuldar mühit bütün gözləntilərimi qarşıladı. Bu,
+                mövzunun əhəmiyyətini və ölkənin ali təhsil müəssisələrində
+                keyfiyyət təminatı sahəsində çalışanların töhfələrini bir daha
+                sübut edir.”
+              </p>
+
+              <p className="mb-4">
+                Bu fikri Almaniyanın Potsdam Universitetində Keyfiyyət və
+                İnkişaf Mərkəzinin rəhbəri və tədbirin spikerlərindən biri olan
+                Frank Niedermeier də bölüşüb: “Simpozium yaxşı təşkil olunmuşdu.
+                Bu tədbirin bir hissəsi olmaqdan məmnun oldum, bu, təkcə
+                iştirakçılar üçün deyil, həm də mənim üçün yaxşı bir təcrübə
+                oldu.”
+              </p>
+
+              <p className="mb-4">
+                ADA Universitetinin akademik işlər üzrə prorektoru Elkin
+                Nurməmmədov isə simpoziumun uğurunu nəzərə alaraq bu tədbirin
+                hər il ənənəvi olaraq keçirilməsini planlaşdırdıqlarını qeyd
+                edib.
+              </p>
+
+              <p className="mb-4">
+                Simpoziumun nəticəsi olaraq, iştirakçıların bir çoxu
+                universitetlər arasında keyfiyyət təminatı sahəsində daha sıx
+                əməkdaşlığa ehtiyac olduğunu vurğulamış və əməkdaşların
+                təcrübələri paylaşmalarına, ümumi məsələlər və layihələr
+                üzərində birgə işləmələrinə imkan verəcək bir platforma yaratmaq
+                niyyətində olduqlarını ifadə etmişlər.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-6">
+            <h2 className="text-2xl text-textPrimary">
+              TKTA nümayəndəsi Finlandiya və Estoniyada baş tutan
+              “Təhsilverənlərin tədris peşəkarlığının inkişaf etdirilməsi” ilə
+              bağlı tədbirdə iştirak edib
+            </h2>
+
+            <div className="text-justify tracking-wide leading-7 text-base">
+              <Image
+                width={700}
+                height={700}
+                className="rounded-xl w-1/5 float-left mr-8"
+                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180878/Picture2_ksenjq.png"
+                alt="iamge from bolonya"
+              />
+
+              <p className="mb-4">
+                Təhsildə Keyfiyyət Təminatı Agentliyinin (TKTA) Təlim və
+                metodologiya şöbəsinin baş məsləhətçisi Vəfadar Rizvanlı 17-20
+                sentyabr tarixlərində Finlandiyanın Helsinki və Estoniyanın
+                Tallin şəhərlərində baş tutan “Təhsilverənlərin tədris
+                peşəkarlığının inkişaf etdirilməsi” təlim proqramında iştirak
+                etmişdir. Təlim Finlandiya Respublikasının Təhsil və Mədəniyyət
+                Nazirliyi, Estoniya Respublikasının Təhsil və Tədqiqat Nazirliyi
+                və Avropa Təlim Fondu (ETF) tərəfindən birgə təşkil olunmuşdur.
+              </p>
+
+              <p className="mb-4">
+                Şərq Tərəfdaşlığı Proqramına üzv olan ölkələrin təhsil
+                sistemlərinin nümayəndələrinin iştirak etdiyi tədbirdə
+                iştirakçılar müxtəlif təhsil pillələri üzrə müəllim hazırlığı
+                sahəsində Finlandiya və Estoniya təcrübələri ilə yaxından tanış
+                olmuş, ümumtəhsil, peşə ixtisas və ali təhsil müəssisələrinə
+                sahə səfərlərində iştirak edərək müəssisələrin akademik və
+                inzibati heyəti ilə müzakirələr aparmışdır.
+              </p>
+
+              <p className="mb-4">
+                Tədbirin ikinci günündə Finlandiya Təhsil Qiymətləndirmə Mərkəzi
+                (FİNEEC) ilə görüş keçirilmiş, təhsildə keyfiyyət təminatı
+                sahəsində Finlandiya təcrübəsi ilə bağlı təqdimat
+                dinlənilmişdir.
+              </p>
             </div>
           </div>
         </TabsContent>

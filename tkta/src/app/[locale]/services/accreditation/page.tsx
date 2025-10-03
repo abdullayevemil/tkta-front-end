@@ -370,7 +370,7 @@ export default function Accreditation() {
             </ol>
 
             <Image
-              src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1737959769/accreditation/k6e9y0pdzof2sfjdtnhq.png"
+              src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1759472169/Akkreditasiyaaa_kdldn3.jpg"
               alt="accreditation structure"
               className="w-full rounded shadow"
               width={900}

@@ -17,7 +17,7 @@ interface NewsProps {
 export default function NewsCarousel({ news }: NewsProps) {
   return (
     <Carousel
-      className="px-2 sm:px-3 md:px-4 w-full border-4 sm:border-6 md:border-8 border-goldBorderColor border-solid border-x-0"
+      className="px-2 sm:px-3 md:px-4 w-full"
       opts={{
         loop: true,
       }}

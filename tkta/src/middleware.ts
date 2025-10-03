@@ -1,23 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import Negotiator from "negotiator";
-import { match } from "@formatjs/intl-localematcher";
 
-const locales = ["az", "en"];
 const defaultLocale = "az";
-
-function getLocale(request: NextRequest): string {
-  const headers: Record<string, string> = {};
-
-  request.headers.forEach((value, key) => {
-    headers[key] = value;
-  });
-
-  const negotiator = new Negotiator({ headers });
-
-  const languages = negotiator.languages();
-
-  return match(languages, locales, defaultLocale);
-}
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -30,19 +13,12 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  const pathnameHasLocale = locales.some(
-    (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)
-  );
-
-  if (pathnameHasLocale) {
+  if (pathname === `/${defaultLocale}` || pathname.startsWith(`/${defaultLocale}/`)) {
     return NextResponse.next();
   }
 
-  const locale = getLocale(request);
-
   const url = request.nextUrl.clone();
-
-  url.pathname = `/${locale}${pathname}`;
+  url.pathname = `/${defaultLocale}${pathname}`;
 
   return NextResponse.redirect(url);
 }

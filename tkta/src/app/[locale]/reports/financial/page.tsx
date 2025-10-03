@@ -13,7 +13,7 @@ export default function AnnualReports() {
       </h1>
 
       <div className="grid grid-cols-4 px-16 gap-6 w-full">
-        <Link target="_blank" rel="noopener noreferrer" href="">
+        <Link target="_blank" rel="noopener noreferrer" href="https://tkta.edu.az/files/NewFolder%2022/24/Audit%20hesabatı%20-%202024.pdf">
           <Card className="p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
             <Image src={Folder} alt="folder icon" width={120} height={120} />
 

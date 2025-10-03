@@ -436,9 +436,15 @@ export default function HomePage() {
             </li>
 
             <li>
-              Kadr bankına qoşulmaq üçün vətəndaşlar elektron ərizə sistemi
-              (http://apply.enic.edu.az) üzrə yaratdıqları kabinetə daxil
-              olmalıdırlar.
+              Kadr bankına qoşulmaq üçün vətəndaşlar elektron ərizə sistemi (
+              <Link
+                href="http://apply.enic.edu.az"
+                target="_blank"
+                className="hover:underline text-textPrimary"
+              >
+                http://apply.enic.edu.az
+              </Link>
+              ) üzrə yaratdıqları kabinetə daxil olmalıdırlar.
             </li>
 
             <li>

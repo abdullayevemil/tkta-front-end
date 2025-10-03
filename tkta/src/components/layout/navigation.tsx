@@ -403,12 +403,12 @@ export function Navigation({ locale }: { locale: string }) {
                     ></ListItem>
                   </li>
 
-                  <li>
+                  {/* <li>
                     <ListItem
                       href={`/${locale}/legislation/others`}
                       title={t.header.navigation.laws.otherLegalActs}
                     ></ListItem>
-                  </li>
+                  </li> */}
 
                   <li>
                     <ListItem

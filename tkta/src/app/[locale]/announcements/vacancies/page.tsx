@@ -226,10 +226,10 @@ export default function News({ params }: Props) {
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-8 md:px-16 w-full">
           {news.map((item) => (
             <li key={item.id} className="relative">
-              <Link href={`/announcements/vacancies/${item.id}`}>
+              <Link href={`/${locale}/announcements/vacancies/${item.id}`}>
                 <NewsCard
                   id={item.id}
-                  href={`/announcements/vacancies/${item.id}`}
+                  href={`/${locale}/announcements/vacancies/${item.id}`}
                   title={locale === "az" ? item.title : item.titleenglish}
                   date={new Date(item.date).toISOString().split("T")[0]}
                   headerimageurl={item.headerimageurl}

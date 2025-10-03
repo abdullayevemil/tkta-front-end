@@ -1,5 +1,14 @@
 "use client";
 
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent } from "@radix-ui/react-dialog";
 import Image from "next/image";
 import { use, useEffect, useState } from "react";
 
@@ -38,8 +47,6 @@ export default function NewsPage({
     headerimageurl: "",
   });
 
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
   const [error, setError] = useState("");
 
   const { id, locale } = use(params);
@@ -75,8 +82,7 @@ export default function NewsPage({
     fetchNews();
   }, [id]);
 
-  if (error) return <p>{error}</p>;
-
+  
   const {
     title,
     titleenglish,
@@ -89,7 +95,13 @@ export default function NewsPage({
     headerimageurl,
   } = news;
 
-  console.log(photos);
+  const allImages = [headerimageurl, ...photos.map((p) => p.url)].filter(
+    Boolean
+  );
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [open, setOpen] = useState(false);
+  
+  if (error) return <p>{error}</p>;
 
   return (
     <section className="w-full flex flex-col gap-8 sm:gap-12 md:gap-16 items-center px-4 sm:px-8 md:px-24 pt-8 sm:pt-12">
@@ -107,62 +119,68 @@ export default function NewsPage({
       <div className="w-full flex flex-col gap-6">
         <div className="w-full flex flex-col gap-6 sm:gap-8">
           {/* Image gallery grid */}
-          {photos && headerimageurl && photos.length > 0 && (
-            <div className="w-full">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
-                <div
-                  key={0}
-                  className={`relative cursor-pointer transition-all duration-200 hover:scale-105 ${
-                    selectedImage === headerimageurl ? "ring-4 ring-textPrimary rounded-lg" : ""
-                  }`}
-                  onClick={() => setSelectedImage(headerimageurl)}
-                >
-                  <Image
-                    src={headerimageurl}
-                    alt={`${locale === "az" ? title : titleenglish}`}
-                    width={300}
-                    height={200}
-                    className="w-full h-28 sm:h-40 md:h-48 object-cover rounded-lg shadow-md"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-all duration-200 rounded-lg flex items-center justify-center">
-                    <span className="text-white opacity-0 hover:opacity-100 font-semibold">0</span>
-                  </div>
-                </div>
-                {photos.map((image: Photo, index: number) => (
-                  <div
-                    key={index + 1}
-                    className={`relative cursor-pointer transition-all duration-200 hover:scale-105 ${
-                      selectedImage === image.url ? "ring-4 ring-textPrimary rounded-lg" : ""
-                    }`}
-                    onClick={() => setSelectedImage(image.url)}
+          <div className="w-full">
+            <Carousel className="w-full mx-auto">
+              <CarouselContent>
+                {allImages.map((img, idx) => (
+                  <CarouselItem
+                    key={idx}
+                    className="basis-1/2 md:basis-1/3 lg:basis-1/4"
                   >
-                    <Image
-                      src={image.url}
-                      alt={`${locale === "az" ? title : titleenglish}`}
-                      width={300}
-                      height={200}
-                      className="w-full h-28 sm:h-40 md:h-48 object-cover rounded-lg shadow-md"
-                    />
-                    <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-all duration-200 rounded-lg flex items-center justify-center">
-                      <span className="text-white opacity-0 hover:opacity-100 font-semibold">{index + 1}</span>
+                    <div
+                      className="relative cursor-pointer transition-transform duration-200 hover:scale-105"
+                      onClick={() => {
+                        setSelectedImage(img || '');
+                        setOpen(true);
+                      }}
+                    >
+                      <Image
+                        src={img || ''}
+                        alt={locale === "az" ? title : titleenglish}
+                        width={300}
+                        height={200}
+                        className="w-full h-28 sm:h-40 md:h-48 object-cover rounded-lg shadow-md"
+                      />
                     </div>
-                  </div>
+                  </CarouselItem>
                 ))}
-              </div>
-            </div>
-          )}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
 
-          {selectedImage && (
-            <div className="w-full">
-              <Image
-                src={selectedImage}
-                alt={locale === "az" ? title : titleenglish}
-                width={1200}
-                height={800}
-                className="w-full h-64 sm:h-96 md:h-[600px] object-cover rounded-xl shadow-lg"
-              />
-            </div>
-          )}
+            {/* Fullscreen Dialog */}
+            {selectedImage && (
+              <Dialog open={open} onOpenChange={setOpen}>
+                <DialogContent
+                  className="fixed inset-0 flex items-center justify-center bg-black/80 p-4 z-[9999]"
+                  onClick={() => setOpen(false)} // click outside the image
+                >
+                  <DialogTitle></DialogTitle>
+
+                  {/* Image container stops click propagation */}
+                  <div onClick={(e) => e.stopPropagation()} className="rounded-lg">
+                    <Image
+                      src={selectedImage!}
+                      alt={locale === "az" ? title : titleenglish}
+                      width={1600}
+                      height={1000}
+                      className="max-w-full max-h-[90vh] object-contain rounded-lg"
+                    />
+
+                    {/* Close button */}
+                    <button
+                      onClick={() => setOpen(false)}
+                      className="absolute top-4 right-4 text-white text-2xl font-bold"
+                      aria-label="Close"
+                    >
+                      &times;
+                    </button>
+                  </div>
+                </DialogContent>
+              </Dialog>
+            )}
+          </div>
         </div>
 
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">

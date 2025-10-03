@@ -42,21 +42,13 @@ const faq = [
   {
     id: 5,
     title:
-      "Təhsil almaq istədiyim ixtisasın tanınıb-tanınmayacağını necə müəyyən edə bilərəm?",
-    answer:
-      "Seçdiyiniz ixtisasın Azərbaycan Respublikası Nazirlər Kabinetinin 2020-ci il 17 aprel tarixli 140 nömrəli Qərarı ilə təsdiq edilmiş “Orta ixtisas təhsili üzrə ixtisasların Təsnifatı”, Azərbaycan Respublikası Nazirlər Kabinetinin 2019-cu il 11 fevral tarixli 45 nömrəli Qərarı ilə təsdiq edilmiş “Ali təhsilin bakalavriat (əsas (baza ali) tibb təhsili) səviyyəsi üzrə ixtisasların (proqramların) Təsnifatı” və Azərbaycan Respublikası Nazirlər Kabinetinin 2011-ci il 14 iyun tarixli 95 nömrəli Qərarı ilə təsdiq edilmiş “Ali təhsilin magistratura səviyyəsi üzrə ixtisasların (ixtisaslaşmaların) Təsnifatı” yer almasına diqqət etməyinizi tövsiyə olunur.",
-    category: "Kvalifikasiyaların tanınması",
-  },
-  {
-    id: 6,
-    title:
       "Təhsildə Keyfiyyət Təminatı Agentliyi xaricdə təhsil ilə bağlı hansı şirkətlərlə əməkdaşlıq edir?",
     answer:
       'Diqqətinizə çatdırırıq ki, Təhsildə Keyfiyyət Təminatı Agentliyi xaricdə təhsil sahəsində, o cümlədən tanınma prosedurları ilə bağlı heç bir şirkətlə əməkdaşlıq etmir və bu şirkətlərin fəaliyyətlərinə görə heç bir məsuliyyət daşımır. Qeyd edək ki, iddiaçılara hər hansı şirkət və ya şəxslər tərəfindən verilən vəd tanınma müddətində heç bir rol oynamır və belə hallarla rastlaşdığınız təqdirdə Təhsildə Keyfiyyət Təminatı Agentliyinin "Qaynar xətt” xidmətinə (146-8) və ya info@tkta.edu.az ünvanına məlumat verməyiniz xahiş edilir.',
     category: "Kvalifikasiyaların tanınması",
   },
   {
-    id: 7,
+    id: 6,
     title:
       "Müraciət zamanı qarşılaşdığım suallar və ya problemlərlə bağlı hara müraciət edə bilərəm?",
     answer:
@@ -64,14 +56,7 @@ const faq = [
     category: "Kvalifikasiyaların tanınması",
   },
   {
-    id: 8,
-    title: "Təhsil aldığım ölkədə neçə ay qalmalıyam?",
-    answer:
-      "Qaydaların 4.1.4-cü yarımbəndinə əsasən orta ixtisas təhsili, bakalavriat (əsas (baza ali) tibb təhsili) və magistratura səviyyələrinə uyğun kvalifikasiyalara münasibətdə ərizəçinin hər bir tədris ili ərzində müvafiq kvalifikasiya üzrə nəzərdə tutulmuş təhsilin normativ müddətinin azı yarısı qədər təhsil aldığı ölkənin ərazisində olması (tibb və səhiyyə ixtisasları üzrə təhsilin normativ müddətində təhsil aldığı ölkənin ərazisində olması); 4.1.5-ci yarımbəndinə əsasən orta ixtisas təhsili, bakalavriat (əsas (baza ali) tibb təhsili) və magistratura səviyyələrinə uyğun kvalifikasiyalara münasibətdə ərizəçinin tədris müddətinin azı üçdə ikisində ənənəvi təlim metodlarına əsaslanan formal təhsilin əldə olunması (tibb və səhiyyə ixtisasları üzrə təhsilin normativ müddətində ənənəvi təlim metodlarına əsaslanan formal təhsilin əldə olunması) tələb olunur.",
-    category: "Kvalifikasiyaların tanınması",
-  },
-  {
-    id: 9,
+    id: 7,
     title:
       "Şəxsi kabinetimdə müraciətimin statusu olaraq 'İcraatı dayandırıldı' yazılıb. Bu nə deməkdir",
     answer:
@@ -79,7 +64,7 @@ const faq = [
     category: "Kvalifikasiyaların tanınması",
   },
   {
-    id: 10,
+    id: 8,
     title:
       "Xarici dövlətlərin ali təhsilə aid kvalifikasiyalarının tanınması haqqında şəhadətnamələrin itirilməsi halında nə etməliyəm?",
     answer:
@@ -87,7 +72,7 @@ const faq = [
     category: "Kvalifikasiyaların tanınması",
   },
   {
-    id: 11,
+    id: 9,
     title:
       "Təqdim etdiyim sənədlər icraata götürüldükdən sonra hansı müddət ərzində müraciətim barədə yekun qərar qəbul olunacaqdır?",
     answer:
@@ -95,15 +80,7 @@ const faq = [
     category: "Kvalifikasiyaların tanınması",
   },
   {
-    id: 12,
-    title:
-      "Şəxsi kabinetimə daxil olmaq üçün mənə təqdim olunan istifadəçi adı və şifrəni unutmuşam. Bunun üçün nə etməliyəm?",
-    answer:
-      "Şəxsi kabinetin şifrəsi unudulduğu təqdirdə, “ŞİFRƏNİ UNUTMUŞAM” bölməsini sıxaraq şifrəni bərpa etmək mümkündür. Yenilənmiş şifrə barədə məlumatlar qeydiyyat zamanı müraciətçinin qeyd etdiyi elektron poçt ünvanına ötürülür. Əgər şifrənin bərpası zamanı qeydiyyatdan keçərkən istifadə olunan elektron poçt ünvanı aktiv deyilsə, bununla bağlı info@tkta.edu.az elektron poçt ünvanına müraciət etməyiniz xahiş olunur.",
-    category: "Kvalifikasiyaların tanınması",
-  },
-  {
-    id: 13,
+    id: 10,
     title:
       "Dövlət Proqramları və hökumətlərarası təqaüd proqramları çərçivəsində təhsil almış tələbələrin ali təhsil sənədlərinin leqallaşdırılmasına ehtiyac varmı?",
     answer:
@@ -111,15 +88,7 @@ const faq = [
     category: "Kvalifikasiyaların tanınması",
   },
   {
-    id: 14,
-    title:
-      "Bəzi KİV-lərdə və xaricdə təhsil şirkətlərinin elanlarında ölkə xaricinə çıxmadan “onlayn” şəkildə ali təhsil almaqla bağlı reklamlar görürürəm. Sonda diplomum tanınacaqmı?",
-    answer:
-      "Bununla bağlı bildiririk ki, tanınma (xarici dövlətlərin ali təhsilə aid kvalifikasiyasının Azərbaycan Respublikasının ərazisində qüvvədə olmasının təsdiqi) Azərbaycan Respublikası Prezidentinin 2023-cü il 18 avqust tarixli, 2306 nömrəli Fərmanı ilə təsdiq edilmiş “Xarici dövlətlərin ali təhsilə aid kvalifikasiyalarının tanınması Qaydaları”na (bundan sonra Qaydalar) əsasən yalnız ənənəvi təlim metodlarına əsaslanan formal qaydada əyani və qiyabi təhsilalma formasında əldə olunmuş kvalifikasiyalara münasibətdə həyata keçirilir. Qaydaların 4.1.4-cü yarımbəndinə əsasən orta ixtisas təhsili, bakalavriat (əsas (baza ali) tibb təhsili) və magistratura səviyyələrinə uyğun kvalifikasiyalara münasibətdə ərizəçinin hər bir tədris ili ərzində müvafiq kvalifikasiya üzrə nəzərdə tutulmuş təhsilin normativ müddətinin azı yarısı qədər təhsil aldığı ölkənin ərazisində olması (tibb və səhiyyə ixtisasları üzrə təhsilin normativ müddətində təhsil aldığı ölkənin ərazisində olması); 4.1.5-ci yarımbəndinə əsasən orta ixtisas təhsili, bakalavriat (əsas (baza ali) tibb təhsili) və magistratura səviyyələrinə uyğun kvalifikasiyalara münasibətdə ərizəçinin tədris müddətinin azı üçdə ikisində ənənəvi təlim metodlarına əsaslanan formal təhsilin əldə olunması (tibb və səhiyyə ixtisasları üzrə təhsilin normativ müddətində ənənəvi təlim metodlarına əsaslanan formal təhsilin əldə olunması) tələb olunur.",
-    category: "Kvalifikasiyaların tanınması",
-  },
-  {
-    id: 15,
+    id: 11,
     title:
       "Xidmətə görə öncəki dövrlərdə artıq ödəniş etmişəm. Buna baxmayaraq, 250 AZN xidmət haqqı ödəməyim tələb olunur. Mən nə etməliyəm?",
     answer:
@@ -127,7 +96,7 @@ const faq = [
     category: "Kvalifikasiyaların tanınması",
   },
   {
-    id: 16,
+    id: 12,
     title:
       "Xarici ali təhsil ixtisasımın ölkə ərazisində tanınması ilə bağlı xidmətdən imtina etmək istəyirəm. Xidmətə görə ödədiyim məbləği geri almaq üçün nə etməliyəm?",
     answer:
@@ -135,7 +104,7 @@ const faq = [
     category: "Kvalifikasiyaların tanınması",
   },
   {
-    id: 17,
+    id: 13,
     title:
       "Tanınma üçün müraciət zamanı xidmətə görə ödənişi necə həyata keçirməliyəm?",
     answer:
@@ -143,29 +112,21 @@ const faq = [
     category: "Kvalifikasiyaların tanınması",
   },
   {
-    id: 18,
-    title:
-      "Müraciətdən öncə tələb olunan sənədlər Azərbaycan dilinə tərcümə olunmalıdırmı?",
-    answer:
-      "Qaydaların 2.5-ci bəndinə əsasən bu Qaydaların 2.4-cü bəndində qeyd edilən sənədlər (türk, rus və ingilis dillərində verilmiş sənədlər istisna olmaqla) Azərbaycan dilinə tərcümə edilməli və notariat qaydasında təsdiq olunmalıdır.",
-    category: "Kvalifikasiyaların tanınması",
-  },
-  {
-    id: 19,
+    id: 14,
     title: "Təhsil sənədinin leqallaşdırılması dedikdə nə nəzərdə tutulur?",
     answer:
       'Tanınma üçün təqdim olunan, xarici ölkələrin müvafiq rəsmi strukturları tərəfindən verilmiş diplomlar və transkriptlər Qaydaların 2.6-cı bəndinə əsasən “Xarici rəsmi sənədlərin leqallaşdırılması tələbini ləğv edən Haaqa Konvensiya"sına uyğun olaraq sənədi verən ölkənin səlahiyyətli qurumu tərəfindən “apostil” şəhadətnaməsi/möhürü ilə leqallaşdırılmalıdır. Konvensiyanın 5-ci maddəsinə əsasən, “apostil” şəhadətnaməsi/möhürü diplom və transkripti imzalamış şəxsin imzasının həqiqiliyini, onun vəzifəsini və həmin sənədə vurulmuş möhürün və ya ştampın həqiqiliyini təsdiq edir. Konvensiyaya müvafiq əlavəyə əsasən, apostilin 2-ci bəndində diplom və transkripti imzalamış şəxsin adı və soyadı, 3-cü bəndində vəzifəsi, 4-cü bəndində isə həmin sənədə vurulmuş möhürün və ya ştampın aid olduğu müəssisənin (ali təhsil müəssisəsinin) adı qeyd olunmalıdır. “Apostil” şəhadətnaməsi/möhürü tanınma üzrə müraciətlər zamanı təqdim olunan təhsil sənədlərinin yalnız əslinə vurulmalı və sənədi imzalamış yüksək səlahiyyətli şəxsin imzası təsdiq olunmalıdır. Sənədlərin “əsli ilə düzdür”, həmçinin notarial qaydada təsdiq olunmuş nüsxələrinə vurulmuş “apostil” şəhadətnaməsi/möhürü qanunvericiliyin tələblərinə uyğun olmadığı üçün icraata götürülmür.',
     category: "Kvalifikasiyaların tanınması",
   },
   {
-    id: 20,
+    id: 15,
     title: "Tanınma üçün hansı sənədlər tələb olunur?",
     answer:
       'Tələb olunan sənədlərin siyahısı ilə tanış olmaq üçün Kvalifikasiyaların tanınması - Tələb olunan sənədlər" bölməsinə daxil olmağınız və zəruri prosedurları həyata keçirməyiniz xahiş olunur.',
     category: "Kvalifikasiyaların tanınması",
   },
   {
-    id: 21,
+    id: 16,
     title:
       "Təqdim etdiyim sənədlərin mövcud icra vəziyyəti barədə necə məlumat əldə edə bilərəm?",
     answer:
@@ -173,7 +134,7 @@ const faq = [
     category: "Kvalifikasiyaların tanınması",
   },
   {
-    id: 22,
+    id: 17,
     title:
       "Təhsil almaq istədiyim xarici ali təhsil müəssisəsinin beynəlxalq reytinq səviyyəsi barədə necə məlumat əldə edə bilərəm?",
     answer:
@@ -181,11 +142,74 @@ const faq = [
     category: "Kvalifikasiyaların tanınması",
   },
   {
+    id: 18,
+    title:
+      "Xaricdə əldə olunmuş ordinatura və rezidentura diplomlarını Azərbaycanda necə tanıtdıra bilərəm?",
+    answer:
+      "Azərbaycan Respublikası Prezidentinin 2023-cü il 18 avqust tarixli, 2306 nömrəli Fərmanı ilə təsdiq edilmiş “Xarici dövlətlərin ali təhsilə aid kvalifikasiyalarının tanınması Qaydaları”na uyğun olaraq, Təhsildə Keyfiyyət Təminatı Agentliyi tərəfindən yalnız tam orta, orta ixtisas təhsili pilləsi, bakalavriat (əsas (baza ali) tibb təhsili) və magistratura səviyyələri üzrə kvalifikasiyaların tanınması həyata keçirilir. Qeyd edilən təhsil səviyyələri üzrə kvalifikasiyaların tanınması TKTA-nın səlahiyyətləri xaricindədir.",
+    category: "Kvalifikasiyaların tanınması",
+  },
+  {
+    id: 19,
+    title:
+      "Xarici kvalifikasiyanın akademik və peşə tanınması dedikdə nə nəzərdə tutulur?",
+    answer:
+      "Azərbaycan Respublikası Prezidentinin 2023-cü il 18 avqust tarixli, 2306 nömrəli Fərmanı ilə təsdiq edilmiş “Xarici dövlətlərin ali təhsilə aid kvalifikasiyalarının tanınması Qaydaları”na əsasən, tənzimlənən ixtisaslar kateqoriyasına aid olan müəllimlik, mühəndislik, hüquq, tibb və səhiyyə ixtisasları üzrə xarici kvalifikasiyaların tam tanınması TKTA tərəfindən  akademik tanınması barədə müsbət qərar verilən və TKTA-nın sifarişi ilə müvafiq olaraq Azərbaycan Respublikası Dövlət İmtahan Mərkəzi (müəllimlik, mühəndislik, hüquq ixtisasları) və Azərbaycan Respublikası Səhiyyə Nazirliyi (tibb və səhiyyə ixtisasları) tərəfindən keçirilən imtahanlarda uğurlu nəticə göstərən xarici kvalifikasiya sahiblərinə verilir. Müvafiq imtahanlarda iştirak etməyən və ya qeyri-məqbul nəticə göstərənlər isə yalnız akademik tanınma əldə edir. Sözügedən tanınma yalnız Azərbaycan Respublikası ərazisində təhsilin növbəti pilləsi (səviyyəsi) üzrə təhsilini davam etdirmək hüququ verir.  Müraciətçilərə təqdim olunmuş həmin şəhadətnamələrdə də qeyd olunduğu kimi, müvafiq sənəd ixtisas üzrə peşə fəaliyyəti ilə məşğul olmaq hüququ VERMİR. Digər tərəfdən, akademik şəhadətnamə əldə etmiş ərizəçi tam (akademik və peşə) tanınma əldə etmək istədikdə, TKTA-ya elektron qaydada təkrar müraciət edərək Azərbaycan Respublikasının Nazirlər Kabineti tərəfindən müəyyən edilmiş məbləğdə xidmət haqqını ödəməklə təşkil olunan peşə tanınması imtahanında iştirak edir və müvafiq keçid balını topladığı təqdirdə tam tanınma əldə etmiş olur.",
+    category: "Kvalifikasiyaların tanınması",
+  },
+  {
+    id: 20,
+    title:
+      "Təhsil almaq istədiyim ixtisasın tanınıb-tanınmayacağını necə müəyyən edə bilərəm?",
+    answer:
+      "Seçdiyiniz ixtisasın Azərbaycan Respublikası Nazirlər Kabinetinin 2020-ci il 17 aprel tarixli 140 nömrəli Qərarı ilə təsdiq edilmiş “Orta ixtisas təhsili üzrə ixtisasların Təsnifatı”, Azərbaycan Respublikası Nazirlər Kabinetinin 2019-cu il 11 fevral tarixli 45 nömrəli Qərarı ilə təsdiq edilmiş “Ali təhsilin bakalavriat (əsas (baza ali) tibb təhsili) səviyyəsi üzrə ixtisasların (proqramların) Təsnifatı” və Azərbaycan Respublikası Nazirlər Kabinetinin 2011-ci il 14 iyun tarixli 95 nömrəli Qərarı ilə təsdiq edilmiş “Ali təhsilin magistratura səviyyəsi üzrə ixtisasların (ixtisaslaşmaların) Təsnifatı” yer almasına diqqət etməyinizi tövsiyə olunur.",
+    category: "Kvalifikasiyaların tanınması",
+  },
+  {
+    id: 21,
+    title: "Təhsil aldığım ölkədə neçə ay qalmalıyam?",
+    answer:
+      "Qaydaların 4.1.4-cü yarımbəndinə əsasən orta ixtisas təhsili, bakalavriat (əsas (baza ali) tibb təhsili) və magistratura səviyyələrinə uyğun kvalifikasiyalara münasibətdə ərizəçinin hər bir tədris ili ərzində müvafiq kvalifikasiya üzrə nəzərdə tutulmuş təhsilin normativ müddətinin azı yarısı qədər təhsil aldığı ölkənin ərazisində olması (tibb və səhiyyə ixtisasları üzrə təhsilin normativ müddətində təhsil aldığı ölkənin ərazisində olması); 4.1.5-ci yarımbəndinə əsasən orta ixtisas təhsili, bakalavriat (əsas (baza ali) tibb təhsili) və magistratura səviyyələrinə uyğun kvalifikasiyalara münasibətdə ərizəçinin tədris müddətinin azı üçdə ikisində ənənəvi təlim metodlarına əsaslanan formal təhsilin əldə olunması (tibb və səhiyyə ixtisasları üzrə təhsilin normativ müddətində ənənəvi təlim metodlarına əsaslanan formal təhsilin əldə olunması) tələb olunur.",
+    category: "Kvalifikasiyaların tanınması",
+  },
+  {
+    id: 22,
+    title:
+      "Bəzi KİV-lərdə və xaricdə təhsil şirkətlərinin elanlarında ölkə xaricinə çıxmadan “onlayn” şəkildə ali təhsil almaqla bağlı reklamlar görürürəm. Sonda diplomum tanınacaqmı?",
+    answer:
+      "Bununla bağlı bildiririk ki, tanınma (xarici dövlətlərin ali təhsilə aid kvalifikasiyasının Azərbaycan Respublikasının ərazisində qüvvədə olmasının təsdiqi) Azərbaycan Respublikası Prezidentinin 2023-cü il 18 avqust tarixli, 2306 nömrəli Fərmanı ilə təsdiq edilmiş “Xarici dövlətlərin ali təhsilə aid kvalifikasiyalarının tanınması Qaydaları”na (bundan sonra Qaydalar) əsasən yalnız ənənəvi təlim metodlarına əsaslanan formal qaydada əyani və qiyabi təhsilalma formasında əldə olunmuş kvalifikasiyalara münasibətdə həyata keçirilir. Qaydaların 4.1.4-cü yarımbəndinə əsasən orta ixtisas təhsili, bakalavriat (əsas (baza ali) tibb təhsili) və magistratura səviyyələrinə uyğun kvalifikasiyalara münasibətdə ərizəçinin hər bir tədris ili ərzində müvafiq kvalifikasiya üzrə nəzərdə tutulmuş təhsilin normativ müddətinin azı yarısı qədər təhsil aldığı ölkənin ərazisində olması (tibb və səhiyyə ixtisasları üzrə təhsilin normativ müddətində təhsil aldığı ölkənin ərazisində olması); 4.1.5-ci yarımbəndinə əsasən orta ixtisas təhsili, bakalavriat (əsas (baza ali) tibb təhsili) və magistratura səviyyələrinə uyğun kvalifikasiyalara münasibətdə ərizəçinin tədris müddətinin azı üçdə ikisində ənənəvi təlim metodlarına əsaslanan formal təhsilin əldə olunması (tibb və səhiyyə ixtisasları üzrə təhsilin normativ müddətində ənənəvi təlim metodlarına əsaslanan formal təhsilin əldə olunması) tələb olunur.",
+    category: "Kvalifikasiyaların tanınması",
+  },
+  {
     id: 23,
     title:
-      "Xarici ali təhsil müəssisəsinin və ya təhsil proqramının (ixtisasın) akkreditasiyasının olub-olmamasını necə yoxlaya bilərəm?",
+      "Müraciətdən öncə tələb olunan sənədlər Azərbaycan dilinə tərcümə olunmalıdırmı?",
+    answer:
+      "Qaydaların 2.5-ci bəndinə əsasən bu Qaydaların 2.4-cü bəndində qeyd edilən sənədlər (türk, rus və ingilis dillərində verilmiş sənədlər istisna olmaqla) Azərbaycan dilinə tərcümə edilməli və notariat qaydasında təsdiq olunmalıdır.",
+    category: "Kvalifikasiyaların tanınması",
+  },
+  {
+    id: 24,
+    title:
+      "Şəxsi kabinetimə necə giriş edim və müraciətimin statusuna haradan baxa bilərəm?",
+    answer:
+      "Şəxsi kabinetinizə SİMA ilə daxil olaraq, müraciətinizin statusunu izləyə bilərsiniz.",
+    category: "Kvalifikasiyaların tanınması",
+  },
+  {
+    id: 25,
+    title:
+      "Xarici ali təhsil müəssisəsinin institusional akkreditasiyasının olub-olmamasını necə yoxlaya bilərəm?",
     answer:
       "Təhsil almaq istədiyiniz ali təhsil müəssisəsini seçərkən, təhsil müəsisəsinin (eləcə də, onun digər ölkələrdə fəaliyyət göstərən filiallarının) akkreditasiyasının olmasına diqqət yetirməyiniz tövsiyə olunur. Qaydalara əsasən müvafiq kvalifikasiyaya dair sənədin əldə olunduğu təhsil müəssisəsinin fəaliyyət göstərdiyi ölkədə səlahiyyətli keyfiyyət təminatı qurumu tərəfindən institusional (proqram deyil) akkreditasiyadan keçməsi və dövlət lisenziyasının olması tələb olunur. Bu məqsədlə, ENIC-NARIC (Avropa İnformasiya Mərkəzləri-Milli Akademik Tanınma üzrə İnformasiya Mərkəzləri) Şəbəkəsinin rəsmi internet səhifəsinin (www.enic-naric.net) müvafiq ölkə üzrə nəzərdə tutulmuş bölməsinə daxil olmaqla (yaxud yerli akkreditasiya orqanlarına müraciət etməklə), həmin ölkə tərəfindən tanınan və akkreditə olunan ali təhsil müəssisələrinin siyahısını əldə edə bilərsiniz.",
+    category: "Kvalifikasiyaların tanınması",
+  },
+  {
+    id: 26,
+    title:
+      "Təhsil almaq istədiyim universitetin akkreditasiyası var. Buna baxmayaraq, diplomum tanınmaya bilər?",
+    answer:
+      "Bildiririk ki, hazırda tanınma (xarici dövlətlərin ali təhsilə aid kvalifikasiyasının Azərbaycan Respublikasının ərazisində qüvvədə olmasının təsdiqi)  Azərbaycan Respublikası Prezidentinin 2023-cü il 18 avqust tarixli, 2306 nömrəli Fərmanı ilə təsdiq edilmiş “Xarici dövlətlərin ali təhsilə aid kvalifikasiyalarının tanınması Qaydaları”na əsasən həyata keçirilir. Ali təhsil müəssisəsinin akkreditasiyadan keçməsi və dövlət lisenziyasının olması Qaydaların tanınmaya dair tələblərinin başlıca şərtlərindəndir lakin xaricdə əldə edilmiş diplomun tanınması üçün kifayət deyil. Xaricdə əldə olunmuş kvalifikasiyaların tanınması üçün Qaydaların 4-cü bölməsində qeyd olunan tanınmaya dair tələblərin tam təmin olunması şərtdir. Belə ki, Təhsildə Keyfiyyət Təminatı Agentliyi (TKTA) tərəfindən yalnız ənənəvi təlim metodlarına əsaslanan formal qaydada əyani və qiyabi (qiyabi “Baytarlıq təbabəti” və “Əczaçılıq” ixtisasları istisna olmaqla) təhsilalma formasında əldə olunmuş kvalifikasiyalara münasibətdə tanınma həyata keçirilir. Qaydaların həm 4.1.4-cü, həm də 4.1.5-ci yarımbəndlərinin tələblərinin ödənilməsi üçün şəxsin əyani təhsilama forması üzrə hər tədris ilinə münasibətdə ən az 4 ay və ümumi tədris müddətində illərin cəmi üzrə ən az 21 ay təhsil aldığı ölkədə fiziki olaraq olması şərtdir (tibb və səhiyyə ixtisasları üzrə təhsilin normativ müddətinin bütün dövrü ərzində təhsil aldığı ölkənin ərazisində olması). Bu  halda hər iki bənd üzrə tələblər təmin olunmuş olur. Qiyabi təhsilə gəldikdə isə Qaydaların 4.1.4-cü və 4.1.5-ci yarımbənlərinin tələblərinin ödənilməsi üçün hər tədris ilinə münasibətdə ərizəçinin 25 gün təhsil alacağı ölkədə olması şərtdir. Əlavə olaraq bildiririk ki, qeyd olunan müddətin tədris dövrünü əhatə etməsi zəruridir. Həmçinin seçilən ixtisasın Azərbaycan Respublikası Nazirlər Kabinetinin müvafiq qərarları ilə təsdiq edilmiş bakalavriat və ya magistratura səviyyələri üzrə təsnifatlarda yer alması, tədris müddətində seçilən dərslərin ixtisasla uyğunluq təşkil etməsi və minimum kredit həcminin qarşılanması və s. tələblərin qarşılanması zəruridir. Xüsusilə bildiririk ki, xarici ölkələrdə yerləşən universitetlərə getmədən qiyabi və əyani təhsilalma formaları üzrə “onlayn” qaydada əldə olunmuş xarici kvalifikasiyaların TKTA tərəfindən tanınması mümkün deyil.",
     category: "Kvalifikasiyaların tanınması",
   },
   {
@@ -503,8 +527,6 @@ const faq = [
 export default function FAQ() {
   return (
     <section className="w-full flex flex-col gap-16 items-center">
-      
-
       <h1 className="uppercase text-4xl text-center w-full px-16 pt-16">
         MÜNTƏZƏM VERİLƏN SUALLAR (FAQ)
       </h1>
@@ -575,7 +597,7 @@ export default function FAQ() {
         </TabsContent>
 
         <TabsContent value="licence">
-        <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4">
             <Accordion type="single" collapsible className="w-full">
               {faq
                 .filter((q) => q.category === "Akkreditasiya və Lisenziya")

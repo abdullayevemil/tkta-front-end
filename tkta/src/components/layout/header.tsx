@@ -153,7 +153,7 @@ export default function Header({ locale }: { locale: string }) {
             />
 
             <Button variant="ghost" size="sm" onClick={handleSearch}>
-              Search
+              {t.header.navigation.agency.search}
             </Button>
           </div>
 

@@ -89,7 +89,7 @@ export default function PhotoGalleryPage({ params }: Props) {
               src={selectedImage}
               alt={locale === "az" ? data.title : data.titleenglish}
               width={1200}
-              height={800}
+              height={1200}
               className="w-full h-64 sm:h-96 md:h-[600px] object-cover rounded-xl shadow-lg"
             />
           </div>

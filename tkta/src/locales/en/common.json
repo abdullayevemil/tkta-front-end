@@ -17,7 +17,8 @@
         "structure": "Structure",
         "structureDescription": "Departments and divisions",
         "internalQualityAssurance": "Internal Quality Assurance System",
-        "internalQualityAssuranceDescription": "Agency's internal control"
+        "internalQualityAssuranceDescription": "Agency's internal control",
+        "search": "Search"
       },
       "services": {
         "title": "Fields of Activity",

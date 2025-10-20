@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
+const supportedLocales = ["az", "en"];
 const defaultLocale = "az";
 
 export function middleware(request: NextRequest) {
@@ -13,13 +14,16 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  if (pathname === `/${defaultLocale}` || pathname.startsWith(`/${defaultLocale}/`)) {
+  const hasLocale = supportedLocales.some((locale) =>
+    pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)
+  );
+
+  if (hasLocale) {
     return NextResponse.next();
   }
 
   const url = request.nextUrl.clone();
   url.pathname = `/${defaultLocale}${pathname}`;
-
   return NextResponse.redirect(url);
 }
 

@@ -1,5 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Iternationalization() {
   return (
@@ -124,7 +125,7 @@ export default function Iternationalization() {
 
         <TabsContent value="employee-exchange" className="flex flex-col gap-20">
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary">
+            <h2 className="text-2xl text-textPrimary font-bold">
               TKTA nümayəndəsi Keyfiyyət təminatı üzrə Bolonya Tematik Qrupunun
               6-cı iclasında iştirak edib
             </h2>
@@ -160,20 +161,22 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary">
+            <h2 className="text-2xl text-textPrimary font-bold">
               TKTA nümayəndəsi Finlandiya və Estoniyada baş tutan
               “Təhsilverənlərin tədris peşəkarlığının inkişaf etdirilməsi” ilə
               bağlı tədbirdə iştirak edib
             </h2>
 
             <div className="text-justify tracking-wide leading-7 text-base">
-              <Image
-                width={700}
-                height={700}
-                className="w-1/5 float-left mr-8"
-                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180878/Picture2_ksenjq.png"
-                alt="TKTA logo"
-              />
+              <Link href="http://localhost:3000/az/media/multimedia/photo-gallery/16">
+                <Image
+                  width={700}
+                  height={700}
+                  className="w-1/5 float-left mr-8"
+                  src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180878/Picture2_ksenjq.png"
+                  alt="TKTA logo"
+                />
+              </Link>
 
               <p className="mb-4">
                 Təhsildə Keyfiyyət Təminatı Agentliyinin (TKTA) Təlim və
@@ -232,19 +235,21 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary">
+            <h2 className="text-2xl text-textPrimary font-bold">
               Təhsildə Keyfiyyət Təminatı Agentliyinin struktur bölmə rəhbərləri
               Türkiyə Respublikasında işgüzar səfərdə olub
             </h2>
 
             <div className="text-justify tracking-wide leading-7 text-base">
-              <Image
-                width={700}
-                height={700}
-                className="rounded-xl w-1/5 float-left mr-8"
-                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180879/Picture6_ixheja.jpg"
-                alt="image from tukiye"
-              />
+              <Link href="http://localhost:3000/az/media/multimedia/photo-gallery/19">
+                <Image
+                  width={700}
+                  height={700}
+                  className="rounded-xl w-1/5 float-left mr-8"
+                  src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180879/Picture6_ixheja.jpg"
+                  alt="image from tukiye"
+                />
+              </Link>
 
               <p className="mb-4">
                 16-19 dekabr 2024-cü il tarixlərində Təhsildə Keyfiyyət Təminatı
@@ -320,19 +325,21 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary">
+            <h2 className="text-2xl text-textPrimary font-bold">
               Təhsildə Keyfiyyət Təminatı Agentliyinin əməkdaşı Sloveniyada
               təcrübə mübadiləsi aparıb
             </h2>
 
             <div className="text-justify tracking-wide leading-7 text-base">
-              <Image
-                width={700}
-                height={700}
-                className="rounded-xl w-1/5 float-left mr-8"
-                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180878/Picture2_ksenjq.png"
-                alt="iamge from bolonya"
-              />
+              <Link href="http://localhost:3000/az/media/multimedia/photo-gallery/20">
+                <Image
+                  width={700}
+                  height={700}
+                  className="rounded-xl w-1/5 float-left mr-8"
+                  src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180878/Picture2_ksenjq.png"
+                  alt="iamge from bolonya"
+                />
+              </Link>
 
               <p className="mb-4">
                 Təhsildə Keyfiyyət Təminatı Agentliyinin (TKTA) Akkreditasiya və
@@ -396,18 +403,20 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary">
+            <h2 className="text-2xl text-textPrimary font-bold">
               TKTA-nın əməkdaşları Serbiya Respublikasında səfərdə olub
             </h2>
 
             <div className="text-justify tracking-wide leading-7 text-base">
-              <Image
-                width={700}
-                height={700}
-                className="rounded-xl w-1/5 float-left mr-8"
-                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180878/Picture11_yhvr6j.jpg"
-                alt="iamge from serbia"
-              />
+              <Link href="http://localhost:3000/az/media/multimedia/photo-gallery/21">
+                <Image
+                  width={700}
+                  height={700}
+                  className="rounded-xl w-1/5 float-left mr-8"
+                  src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180878/Picture11_yhvr6j.jpg"
+                  alt="iamge from serbia"
+                />
+              </Link>
 
               {/* <Image
                 width={700}
@@ -478,20 +487,22 @@ export default function Iternationalization() {
           className="flex flex-col gap-20"
         >
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary">
+            <h2 className="text-2xl text-textPrimary font-bold">
               Ali Təhsildə Keyfiyyət Təminatı Agentliklərinin Mərkəzi və Şərqi
               Avropa şəbəkəsinin (CEENQA) Baş Assambleyası öz işini
               yekunlaşdırıb
             </h2>
 
             <div className="text-justify tracking-wide leading-7 text-base">
-              <Image
-                width={700}
-                height={700}
-                className="rounded-xl w-1/5 float-left mr-8"
-                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293841/1_ymqcmk.jpg"
-                alt="iamge from bolonya"
-              />
+              <Link href="http://localhost:3000/az/media/multimedia/photo-gallery/5">
+                <Image
+                  width={700}
+                  height={700}
+                  className="rounded-xl w-1/5 float-left mr-8"
+                  src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293841/1_ymqcmk.jpg"
+                  alt="iamge from bolonya"
+                />
+              </Link>
 
               <p className="mb-4">
                 18 may 2024-cü il tarixində Bakıda keçirilən Mərkəzi və Şərqi
@@ -587,7 +598,7 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary">
+            <h2 className="text-2xl text-textPrimary font-bold">
               TKTA nümayəndəsi “Lissabon Tanınma Konvensiyası” üzrə Boloniya
               prosesinin Tematik İşçi Qrupunun 7-ci görüşündə iştirak edib
             </h2>
@@ -630,18 +641,20 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary">
+            <h2 className="text-2xl text-textPrimary font-bold">
               TKTA-nın nümayəndə heyəti beynəlxalq konfransda iştirak edib
             </h2>
 
             <div className="text-justify tracking-wide leading-7 text-base">
-              <Image
-                width={700}
-                height={700}
-                className="rounded-xl w-1/5 float-left mr-8"
-                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293842/8_tedrx3.jpg"
-                alt="image from bolonya"
-              />
+              <Link href="http://localhost:3000/az/media/multimedia/photo-gallery/7">
+                <Image
+                  width={700}
+                  height={700}
+                  className="rounded-xl w-1/5 float-left mr-8"
+                  src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293842/8_tedrx3.jpg"
+                  alt="image from bolonya"
+                />
+              </Link>
 
               <p className="mb-4">
                 25-26 aprel 2024-cü il tarixlərində Türkiyə Respublikasının
@@ -728,7 +741,7 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary">
+            <h2 className="text-2xl text-textPrimary font-bold">
               TKTA-nın rəhbər heyəti Almaniyada işgüzar səfərdə olub
             </h2>
 
@@ -771,19 +784,21 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary">
+            <h2 className="text-2xl text-textPrimary font-bold">
               TKTA-nın nümayəndələri Avropa Təlim Fondunun beynəlxalq tədbirində
               iştirak edib
             </h2>
 
             <div className="text-justify tracking-wide leading-7 text-base">
-              <Image
-                width={700}
-                height={700}
-                className="rounded-xl w-1/5 float-left mr-8"
-                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293843/13_ogovzo.jpg"
-                alt="iamge from bolonya"
-              />
+              <Link href="http://localhost:3000/az/media/multimedia/photo-gallery/9">
+                <Image
+                  width={700}
+                  height={700}
+                  className="rounded-xl w-1/5 float-left mr-8"
+                  src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293843/13_ogovzo.jpg"
+                  alt="iamge from bolonya"
+                />
+              </Link>
 
               <p className="mb-4">
                 Təhsildə Keyfiyyət Təminatı Agentliynin nümayəndələri Avropa
@@ -842,19 +857,21 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary">
+            <h2 className="text-2xl text-textPrimary font-bold">
               TKTA nümayəndələri Avropa Keyfiyyət Təminatı Forumunda iştirak
               edib
             </h2>
 
             <div className="text-justify tracking-wide leading-7 text-base">
-              <Image
-                width={700}
-                height={700}
-                className="rounded-xl w-1/5 float-left mr-8"
-                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293845/17_mmq784.jpg"
-                alt="iamge from bolonya"
-              />
+              <Link href="http://localhost:3000/az/media/multimedia/photo-gallery/10">
+                <Image
+                  width={700}
+                  height={700}
+                  className="rounded-xl w-1/5 float-left mr-8"
+                  src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293845/17_mmq784.jpg"
+                  alt="iamge from bolonya"
+                />
+              </Link>
 
               <p className="mb-4">
                 TKTA-nın İdarə Heyətinin üzvü İlham Hümbətov və Qeyri-formal və
@@ -879,19 +896,21 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary">
+            <h2 className="text-2xl text-textPrimary font-bold">
               TKTA tərəfindən “Ümumi təhsildə davamlı keyfiyyət təminatı” adlı
               beynəlxalq elmi-praktik konfrans keçirilib
             </h2>
 
             <div className="text-justify tracking-wide leading-7 text-base">
-              <Image
-                width={700}
-                height={700}
-                className="rounded-xl w-1/5 float-left mr-8"
-                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293845/18_trrzuk.jpg"
-                alt="iamge from bolonya"
-              />
+              <Link href="http://localhost:3000/az/media/multimedia/photo-gallery/12">
+                <Image
+                  width={700}
+                  height={700}
+                  className="rounded-xl w-1/5 float-left mr-8"
+                  src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293845/18_trrzuk.jpg"
+                  alt="iamge from bolonya"
+                />
+              </Link>
 
               <p className="mb-4">
                 20 noyabr 2023-cü il tarixində Təhsildə Keyfiyyət Təminatı
@@ -958,18 +977,20 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary">
+            <h2 className="text-2xl text-textPrimary font-bold">
               TKTA rəhbərliyi ENQA Baş Assambleyasında iştirak edib
             </h2>
 
             <div className="text-justify tracking-wide leading-7 text-base">
-              <Image
-                width={700}
-                height={700}
-                className="rounded-xl w-1/5 float-left mr-8"
-                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293851/28_nsh1en.jpg"
-                alt="iamge from bolonya"
-              />
+              <Link href="http://localhost:3000/az/media/multimedia/photo-gallery/13">
+                <Image
+                  width={700}
+                  height={700}
+                  className="rounded-xl w-1/5 float-left mr-8"
+                  src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1756293851/28_nsh1en.jpg"
+                  alt="iamge from bolonya"
+                />
+              </Link>
 
               <p className="mb-4">
                 23-25 oktyabr 2024-cü il tarixlərində Malta Respublikasının
@@ -1011,7 +1032,7 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary">
+            <h2 className="text-2xl text-textPrimary font-bold">
               TKTA əməkdaşları SEQA-ESG II layihəsi çərçivəsində tədbirdə
               iştirak edib
             </h2>
@@ -1068,19 +1089,21 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary">
+            <h2 className="text-2xl text-textPrimary font-bold">
               Qazaxıstan Respublikasında Mərkəzi-Asiya Təhsildə Keyfiyyət
               Təminatı VIII Beynəlxalq Forumu keçirilmişdir
             </h2>
 
             <div className="text-justify tracking-wide leading-7 text-base">
-              <Image
-                width={700}
-                height={700}
-                className="rounded-xl w-1/5 float-left mr-8"
-                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180878/Picture2_ksenjq.png"
-                alt="iamge from bolonya"
-              />
+              <Link href="http://localhost:3000/az/media/multimedia/photo-gallery/14">
+                <Image
+                  width={700}
+                  height={700}
+                  className="rounded-xl w-1/5 float-left mr-8"
+                  src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180878/Picture2_ksenjq.png"
+                  alt="iamge from bolonya"
+                />
+              </Link>
 
               <p className="mb-4">
                 4-5 oktyabr tarixlərində Qazaxıstan Respublikasının Astana
@@ -1116,18 +1139,20 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary">
+            <h2 className="text-2xl text-textPrimary font-bold">
               Ali Təhsildə Keyfiyyət Təminatı üzrə ilk Simpozium
             </h2>
 
             <div className="text-justify tracking-wide leading-7 text-base">
-              <Image
-                width={700}
-                height={700}
-                className="rounded-xl w-1/5 float-left mr-8"
-                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180878/Picture2_ksenjq.png"
-                alt="iamge from bolonya"
-              />
+              <Link href="http://localhost:3000/az/media/multimedia/photo-gallery/15">
+                <Image
+                  width={700}
+                  height={700}
+                  className="rounded-xl w-1/5 float-left mr-8"
+                  src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180878/Picture2_ksenjq.png"
+                  alt="iamge from bolonya"
+                />
+              </Link>
 
               <p className="mb-4">
                 ADA Universiteti Təhsildə Keyfiyyətin Təminatı Agentliyi (TKTA)
@@ -1190,23 +1215,25 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary">
+            <h2 className="text-2xl text-textPrimary font-bold">
               TKTA nümayəndəsi Finlandiya və Estoniyada baş tutan
               “Təhsilverənlərin tədris peşəkarlığının inkişaf etdirilməsi” ilə
               bağlı tədbirdə iştirak edib
             </h2>
 
             <div className="text-justify tracking-wide leading-7 text-base">
-              <Image
-                width={700}
-                height={700}
-                className="rounded-xl w-1/5 float-left mr-8"
-                src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180878/Picture2_ksenjq.png"
-                alt="iamge from bolonya"
-              />
+              <Link href="http://localhost:3000/az/media/multimedia/photo-gallery/16">
+                <Image
+                  width={700}
+                  height={700}
+                  className="rounded-xl w-1/5 float-left mr-8"
+                  src="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1753180878/Picture2_ksenjq.png"
+                  alt="iamge from bolonya"
+                />
+              </Link>
 
               <p className="mb-4">
-                Təhsildə Keyfiyyət Təminatı Agentliyinin (TKTA) Təlim və
+                Təhsildə Keyfiyyət Təminatı Agentliyinin (T KTA) Təlim və
                 metodologiya şöbəsinin baş məsləhətçisi Vəfadar Rizvanlı 17-20
                 sentyabr tarixlərində Finlandiyanın Helsinki və Estoniyanın
                 Tallin şəhərlərində baş tutan “Təhsilverənlərin tədris

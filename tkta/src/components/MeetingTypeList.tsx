@@ -146,7 +146,7 @@ const MeetingTypeList = () => {
           image={"/icons/checked.svg"}
           buttonIcon="/icons/copy.svg"
           className="text-center"
-          buttonText="Copy Meeting Link"
+          buttonText="Copy Meeting Link" 
         />
       )}
 

@@ -4,9 +4,7 @@ import Image from "next/image";
 
 export default function Principles() {
   return (
-    <div className="w-full flex flex-col justify-center gap-8 sm:gap-12 md:gap-20">
-      
-
+    <div className="w-full flex flex-col justify-center gap-8 sm:gap-12 md:gap-20"> 
       <h1 className="uppercase text-2xl sm:text-3xl md:text-4xl text-center text-textPrimary pt-8 sm:pt-12 md:pt-16">
         RƏHBƏRLİK
       </h1>

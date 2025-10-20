@@ -17,7 +17,8 @@
         "structure": "Struktur",
         "structureDescription": "Departament və şöbələr",
         "internalQualityAssurance": "Daxili keyfiyyət təminatı sistemi",
-        "internalQualityAssuranceDescription": "Agentliyin daxili nəzarəti"
+        "internalQualityAssuranceDescription": "Agentliyin daxili nəzarəti",
+        "search": "Axtar"
       },
       "services": {
         "title": "Fəaliyyət sahələri",

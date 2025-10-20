@@ -149,7 +149,6 @@ export default function NewsPage({
               <CarouselNext />
             </Carousel>
 
-            {/* Fullscreen Dialog */}
             {selectedImage && (
               <Dialog open={open} onOpenChange={setOpen}>
                 <DialogContent
@@ -158,7 +157,6 @@ export default function NewsPage({
                 >
                   <DialogTitle></DialogTitle>
 
-                  {/* Image container stops click propagation */}
                   <div onClick={(e) => e.stopPropagation()} className="rounded-lg">
                     <Image
                       src={selectedImage!}
@@ -168,7 +166,6 @@ export default function NewsPage({
                       className="max-w-full max-h-[90vh] object-contain rounded-lg"
                     />
 
-                    {/* Close button */}
                     <button
                       onClick={() => setOpen(false)}
                       className="absolute top-4 right-4 text-white text-2xl font-bold"

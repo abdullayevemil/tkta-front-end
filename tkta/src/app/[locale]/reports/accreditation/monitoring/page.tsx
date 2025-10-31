@@ -10,7 +10,7 @@ export default function AnnualReports() {
           <Card className="p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
             <Image src={Folder} alt="folder icon" width={120} height={120} />
 
-            <span className="text-center text-textPrimary">2023</span>
+            <span className="text-center text-textPrimary">2024 - 2025</span>
           </Card>
         </Link>
       </div>

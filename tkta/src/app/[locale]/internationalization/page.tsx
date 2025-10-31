@@ -161,14 +161,16 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary font-bold">
-              TKTA nümayəndəsi Finlandiya və Estoniyada baş tutan
-              “Təhsilverənlərin tədris peşəkarlığının inkişaf etdirilməsi” ilə
-              bağlı tədbirdə iştirak edib
-            </h2>
+            <Link href="/media/multimedia/photo-gallery/16">
+              <h2 className="text-2xl text-textPrimary font-bold">
+                TKTA nümayəndəsi Finlandiya və Estoniyada baş tutan
+                “Təhsilverənlərin tədris peşəkarlığının inkişaf etdirilməsi” ilə
+                bağlı tədbirdə iştirak edib
+              </h2>
+            </Link>
 
             <div className="text-justify tracking-wide leading-7 text-base">
-              <Link href="http://localhost:3000/az/media/multimedia/photo-gallery/16">
+              <Link href="/media/multimedia/photo-gallery/16">
                 <Image
                   width={700}
                   height={700}
@@ -235,13 +237,15 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary font-bold">
-              Təhsildə Keyfiyyət Təminatı Agentliyinin struktur bölmə rəhbərləri
-              Türkiyə Respublikasında işgüzar səfərdə olub
-            </h2>
+            <Link href="/media/multimedia/photo-gallery/19">
+              <h2 className="text-2xl text-textPrimary font-bold">
+                Təhsildə Keyfiyyət Təminatı Agentliyinin struktur bölmə
+                rəhbərləri Türkiyə Respublikasında işgüzar səfərdə olub
+              </h2>
+            </Link>
 
             <div className="text-justify tracking-wide leading-7 text-base">
-              <Link href="http://localhost:3000/az/media/multimedia/photo-gallery/19">
+              <Link href="/media/multimedia/photo-gallery/19">
                 <Image
                   width={700}
                   height={700}
@@ -325,13 +329,15 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary font-bold">
-              Təhsildə Keyfiyyət Təminatı Agentliyinin əməkdaşı Sloveniyada
-              təcrübə mübadiləsi aparıb
-            </h2>
+            <Link href="/media/multimedia/photo-gallery/20">
+              <h2 className="text-2xl text-textPrimary font-bold">
+                Təhsildə Keyfiyyət Təminatı Agentliyinin əməkdaşı Sloveniyada
+                təcrübə mübadiləsi aparıb
+              </h2>
+            </Link>
 
             <div className="text-justify tracking-wide leading-7 text-base">
-              <Link href="http://localhost:3000/az/media/multimedia/photo-gallery/20">
+              <Link href="/media/multimedia/photo-gallery/20">
                 <Image
                   width={700}
                   height={700}
@@ -403,12 +409,14 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary font-bold">
-              TKTA-nın əməkdaşları Serbiya Respublikasında səfərdə olub
-            </h2>
+            <Link href="/media/multimedia/photo-gallery/21">
+              <h2 className="text-2xl text-textPrimary font-bold">
+                TKTA-nın əməkdaşları Serbiya Respublikasında səfərdə olub
+              </h2>
+            </Link>
 
             <div className="text-justify tracking-wide leading-7 text-base">
-              <Link href="http://localhost:3000/az/media/multimedia/photo-gallery/21">
+              <Link href="/media/multimedia/photo-gallery/21">
                 <Image
                   width={700}
                   height={700}
@@ -487,14 +495,16 @@ export default function Iternationalization() {
           className="flex flex-col gap-20"
         >
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary font-bold">
-              Ali Təhsildə Keyfiyyət Təminatı Agentliklərinin Mərkəzi və Şərqi
-              Avropa şəbəkəsinin (CEENQA) Baş Assambleyası öz işini
-              yekunlaşdırıb
-            </h2>
+            <Link href="/media/multimedia/photo-gallery/5">
+              <h2 className="text-2xl text-textPrimary font-bold">
+                Ali Təhsildə Keyfiyyət Təminatı Agentliklərinin Mərkəzi və Şərqi
+                Avropa şəbəkəsinin (CEENQA) Baş Assambleyası öz işini
+                yekunlaşdırıb
+              </h2>
+            </Link>
 
             <div className="text-justify tracking-wide leading-7 text-base">
-              <Link href="http://localhost:3000/az/media/multimedia/photo-gallery/5">
+              <Link href="/media/multimedia/photo-gallery/5">
                 <Image
                   width={700}
                   height={700}
@@ -641,12 +651,14 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary font-bold">
-              TKTA-nın nümayəndə heyəti beynəlxalq konfransda iştirak edib
-            </h2>
+            <Link href="/media/multimedia/photo-gallery/7">
+              <h2 className="text-2xl text-textPrimary font-bold">
+                TKTA-nın nümayəndə heyəti beynəlxalq konfransda iştirak edib
+              </h2>
+            </Link>
 
             <div className="text-justify tracking-wide leading-7 text-base">
-              <Link href="http://localhost:3000/az/media/multimedia/photo-gallery/7">
+              <Link href="/media/multimedia/photo-gallery/7">
                 <Image
                   width={700}
                   height={700}
@@ -784,13 +796,15 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary font-bold">
-              TKTA-nın nümayəndələri Avropa Təlim Fondunun beynəlxalq tədbirində
-              iştirak edib
-            </h2>
+            <Link href="/media/multimedia/photo-gallery/9">
+              <h2 className="text-2xl text-textPrimary font-bold">
+                TKTA-nın nümayəndələri Avropa Təlim Fondunun beynəlxalq
+                tədbirində iştirak edib
+              </h2>
+            </Link>
 
             <div className="text-justify tracking-wide leading-7 text-base">
-              <Link href="http://localhost:3000/az/media/multimedia/photo-gallery/9">
+              <Link href="/media/multimedia/photo-gallery/9">
                 <Image
                   width={700}
                   height={700}
@@ -857,13 +871,15 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary font-bold">
-              TKTA nümayəndələri Avropa Keyfiyyət Təminatı Forumunda iştirak
-              edib
-            </h2>
+            <Link href="/media/multimedia/photo-gallery/10">
+              <h2 className="text-2xl text-textPrimary font-bold">
+                TKTA nümayəndələri Avropa Keyfiyyət Təminatı Forumunda iştirak
+                edib
+              </h2>
+            </Link>
 
             <div className="text-justify tracking-wide leading-7 text-base">
-              <Link href="http://localhost:3000/az/media/multimedia/photo-gallery/10">
+              <Link href="/media/multimedia/photo-gallery/10">
                 <Image
                   width={700}
                   height={700}
@@ -896,13 +912,15 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary font-bold">
-              TKTA tərəfindən “Ümumi təhsildə davamlı keyfiyyət təminatı” adlı
-              beynəlxalq elmi-praktik konfrans keçirilib
-            </h2>
+            <Link href="/media/multimedia/photo-gallery/12">
+              <h2 className="text-2xl text-textPrimary font-bold">
+                TKTA tərəfindən “Ümumi təhsildə davamlı keyfiyyət təminatı” adlı
+                beynəlxalq elmi-praktik konfrans keçirilib
+              </h2>
+            </Link>
 
             <div className="text-justify tracking-wide leading-7 text-base">
-              <Link href="http://localhost:3000/az/media/multimedia/photo-gallery/12">
+              <Link href="/media/multimedia/photo-gallery/12">
                 <Image
                   width={700}
                   height={700}
@@ -977,12 +995,14 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary font-bold">
-              TKTA rəhbərliyi ENQA Baş Assambleyasında iştirak edib
-            </h2>
+            <Link href="/media/multimedia/photo-gallery/13">
+              <h2 className="text-2xl text-textPrimary font-bold">
+                TKTA rəhbərliyi ENQA Baş Assambleyasında iştirak edib
+              </h2>
+            </Link>
 
             <div className="text-justify tracking-wide leading-7 text-base">
-              <Link href="http://localhost:3000/az/media/multimedia/photo-gallery/13">
+              <Link href="/media/multimedia/photo-gallery/13">
                 <Image
                   width={700}
                   height={700}
@@ -1089,13 +1109,15 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary font-bold">
-              Qazaxıstan Respublikasında Mərkəzi-Asiya Təhsildə Keyfiyyət
-              Təminatı VIII Beynəlxalq Forumu keçirilmişdir
-            </h2>
+            <Link href="/media/multimedia/photo-gallery/14">
+              <h2 className="text-2xl text-textPrimary font-bold">
+                Qazaxıstan Respublikasında Mərkəzi-Asiya Təhsildə Keyfiyyət
+                Təminatı VIII Beynəlxalq Forumu keçirilmişdir
+              </h2>
+            </Link>
 
             <div className="text-justify tracking-wide leading-7 text-base">
-              <Link href="http://localhost:3000/az/media/multimedia/photo-gallery/14">
+              <Link href="/media/multimedia/photo-gallery/14">
                 <Image
                   width={700}
                   height={700}
@@ -1139,12 +1161,14 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary font-bold">
-              Ali Təhsildə Keyfiyyət Təminatı üzrə ilk Simpozium
-            </h2>
+            <Link href="/media/multimedia/photo-gallery/15">
+              <h2 className="text-2xl text-textPrimary font-bold">
+                Ali Təhsildə Keyfiyyət Təminatı üzrə ilk Simpozium
+              </h2>
+            </Link>
 
             <div className="text-justify tracking-wide leading-7 text-base">
-              <Link href="http://localhost:3000/az/media/multimedia/photo-gallery/15">
+              <Link href="/media/multimedia/photo-gallery/15">
                 <Image
                   width={700}
                   height={700}
@@ -1215,14 +1239,16 @@ export default function Iternationalization() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl text-textPrimary font-bold">
-              TKTA nümayəndəsi Finlandiya və Estoniyada baş tutan
-              “Təhsilverənlərin tədris peşəkarlığının inkişaf etdirilməsi” ilə
-              bağlı tədbirdə iştirak edib
-            </h2>
+            <Link href="/media/multimedia/photo-gallery/16">
+              <h2 className="text-2xl text-textPrimary font-bold">
+                TKTA nümayəndəsi Finlandiya və Estoniyada baş tutan
+                “Təhsilverənlərin tədris peşəkarlığının inkişaf etdirilməsi” ilə
+                bağlı tədbirdə iştirak edib
+              </h2>
+            </Link>
 
             <div className="text-justify tracking-wide leading-7 text-base">
-              <Link href="http://localhost:3000/az/media/multimedia/photo-gallery/16">
+              <Link href="/media/multimedia/photo-gallery/16">
                 <Image
                   width={700}
                   height={700}

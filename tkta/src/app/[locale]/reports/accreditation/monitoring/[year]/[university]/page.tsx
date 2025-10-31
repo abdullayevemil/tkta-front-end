@@ -20,10 +20,10 @@ export default async function Accreditations({
   const { year, university } = await params;
 
   const reports =
-    await sql`SELECT * FROM monitoring_reports WHERE year = ${year} AND LOWER(university) = LOWER(${university})`;
+    await sql`SELECT * FROM monitoring_reports WHERE year = ${year} AND LOWER(university) = LOWER(${decodeURIComponent(university)})`;
 
   const plans =
-    await sql`SELECT * FROM activity_plan WHERE year = ${year} AND LOWER(university) = LOWER(${university})`;
+    await sql`SELECT * FROM activity_plan WHERE year = ${year} AND LOWER(university) = LOWER(${decodeURIComponent(university)})`;
 
   return (
     <div className="flex flex-row items-center justify-evenly px-16 gap-6 w-full">

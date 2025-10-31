@@ -182,6 +182,62 @@
         "submit": "Xəbəri Yadda Saxla"
       }
     },
+    "interviews": {
+      "title": "Müsahibələr",
+      "search": "Axtarış",
+      "from": "Tarixdən",
+      "to": "Tarixə qədər",
+      "newFirst": "Ən yenilər",
+      "oldFirst": "Ən köhnələr",
+      "createNews": "Müsahibə yarat",
+      "delete": "Sil",
+      "edit": "Düzəliş et",
+      "removeDialogTitle": "Müsahibəni silmək istəyirsiniz?",
+      "removeDialogContent": "Bu müsahibəni silmək istədiyinizə əminsinizmi? Bu əməliyyat geri qaytarıla bilməz.",
+      "removeDialogCancel": "Ləğv et",
+      "removeDialogConfirm": "Bəli, sil",
+      "success": {
+        "create": "Müsahibə uğurla yaradıldı.",
+        "update": "Müsahibə uğurla yeniləndi.",
+        "delete": "Müsahibə uğurla silindi."
+      },
+      "error": {
+        "create": "Müsahibə yaradılarkən xəta baş verdi.",
+        "update": "Müsahibə yenilənərkən xəta baş verdi.",
+        "delete": "Müsahibə silinərkən xəta baş verdi.",
+        "loading": "Müsahibələr yüklənərkən xəta baş verdi."
+      },
+      "create": {
+        "title": "Müsahibə Yarat",
+        "titlePlaceholder": "Başlıq",
+        "titleInputPlaceholder": "Müsahibə başlığını daxil edin",
+        "titleEnglishInputPlaceholder": "Müsahibə başlığını ingilis dilində daxil edin",
+        "contentPlaceholder": "Məzmun",
+        "contentInputPlaceholder": "Müsahibə məzmununu daxil edin",
+        "contentEnglishInputPlaceholder": "Müsahibə məzmununu ingilis dilində daxil edin",
+        "datePlaceholder": "Tarix",
+        "submit": "Müsahibəni yarat",
+        "headerImage": "Başlıq Şəkli (tək)",
+        "headerImageDescription": "Buraya tək şəkli sürüşdürüb buraxın və ya seçmək üçün klikləyin",
+        "images": "Qalereya Şəkilləri (bir neçə)",
+        "imagesDescription": "Buraya bir neçə şəkli sürüşdürüb buraxın və ya seçmək üçün klikləyin",
+        "note": "Qeyd (mütləq deyil)",
+        "noteInputPlaceholder": "Əlavə qeydləriniz varsa daxil edin",
+        "noteInputEnglishPlaceholder": "Əlavə qeydləriniz varsa ingilis dilində daxil edin",
+        "titleEnglish": "Başlıq (İngilis dilində)",
+        "contentEnglish": "Məzmun (İngilis dilində)",
+        "noteEnglish": "Qeyd (İngilis dilində, mütləq deyil)",
+        "formErrors": {
+          "titleRequired": "Başlıq mütləqdir.",
+          "contentRequired": "Məzmun mütləqdir.",
+          "dateRequired": "Tarix mütləqdir."
+        }
+      },
+      "editPage": {
+        "title": "Müsahibəni Redaktə Et",
+        "submit": "Müsahibəni Yadda Saxla"
+      }
+    },
     "multimedia": {
       "title": "MULTİMEDİA",
       "photoGallery": "Foto qalereya",

@@ -42,9 +42,13 @@ export default function Header({ locale }: { locale: string }) {
 
   return (
     <header className="border-b border-gray-100 bg-white flex flex-col items-center justify-center gap-8 py-6 px-4 sm:px-8 md:px-16 font-helvetica sticky top-0 left-0 z-50 w-full">
-      <div className="w-full flex flex-wrap flex-col md:flex-row justify-between items-center gap-4">
+      <div className="w-full flex flex-wrap flex-row justify-between items-center gap-4">
         <Link href={`/${locale}/home`} className="hover:cursor-pointer">
-          <Image src={Logo} alt="TKTA logo" className="w-[140px] sm:w-[194.4px] h-14 sm:h-18" />
+          <Image
+            src={Logo}
+            alt="TKTA logo"
+            className="w-[140px] sm:w-[194.4px] h-14 sm:h-18"
+          />
         </Link>
 
         <div className="flex flex-wrap gap-2 mt-4 md:mt-0">
@@ -141,6 +145,14 @@ export default function Header({ locale }: { locale: string }) {
           </li>
         </ul>
 
+        <div className="flex flex-row gap-2 items-center justify-center mt-2 sm:mt-0">
+          <ColorSwitch locale={locale} />
+          
+          <FontSelector />
+          
+          <LanguageSelector />
+        </div>
+
         <div className="flex flex-col sm:flex-row gap-2 items-stretch sm:items-center w-full sm:w-auto mt-4 md:mt-0">
           <div className="flex flex-row gap-2 items-center border border-gray-300 rounded-xl p-0.5 px-2 w-full sm:w-auto focus-within:border-textPrimary">
             <SearchIcon width={24} height={24} className="text-gray-500" />
@@ -156,16 +168,10 @@ export default function Header({ locale }: { locale: string }) {
               {t.header.navigation.agency.search}
             </Button>
           </div>
-
-          <div className="flex flex-row gap-2 items-center justify-center mt-2 sm:mt-0">
-            <ColorSwitch locale={locale} />
-            <FontSelector />
-            <LanguageSelector />
-          </div>
         </div>
       </div>
 
-      <Navigation locale={locale} />
+      <Navigation locale={locale} /> 
     </header>
   );
 }

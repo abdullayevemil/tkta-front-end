@@ -37,7 +37,7 @@ export default function NewsCard({ title, date, headerimageurl, note }: Props) {
 
         <div className="flex flex-row justify-between items-center">
           {note ? (
-            <Badge variant="destructive" className="py-1 sm:py-1.5 text-xs sm:text-sm">{note}</Badge>
+            <Badge variant="destructive" className="py-1 sm:py-1.5 text-xs sm:text-sm">{note.length > 40 ? note.slice(0, 40) + "..." : note}</Badge>
           ) : (
             <div></div>
           )}

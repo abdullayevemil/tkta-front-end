@@ -18,19 +18,20 @@ export async function GET(
   const { id } = await params;
 
   const gallery = await sql`
-    SELECT 
-      pg.*,
-      json_agg(
-        json_build_object(
-          'id', pgi.id,
-          'url', pgi.url
-        )
-      ) as images
-    FROM photo_gallery pg
-    LEFT JOIN photo_gallery_images pgi ON pg.id = pgi.gallery_id
-    WHERE pg.id = ${id}
-    GROUP BY pg.id, pg.title, pg.titleEnglish, pg.headerPhotoUrl, pg.date
-  `;
+  SELECT 
+    pg.*,
+    json_agg(
+      json_build_object(
+        'id', pgi.id,
+        'url', pgi.url
+      )
+    ) AS images
+  FROM "photo_gallery" AS pg
+  LEFT JOIN "photo_gallery_images" AS pgi
+    ON pg.id = pgi.gallery_id
+  WHERE pg.id = ${id}
+  GROUP BY pg.id, pg.title, pg."titleenglish", pg."headerphotourl", pg.date;
+`;
 
   if (gallery.length === 0) {
     return NextResponse.json({ error: "Gallery not found" }, { status: 404 });
@@ -46,14 +47,14 @@ export async function PUT(
   try {
     const { id } = await params;
     const formData = await req.formData();
-    
+
     // Extract text fields
-    const title = formData.get('title') as string;
-    const titleEnglish = formData.get('titleEnglish') as string;
-    const date = formData.get('date') as string;
-    const headerPhotoFile = formData.get('headerPhoto') as File | null;
-    const imageFiles = formData.getAll('images') as File[];
-    const removeImageIds = formData.getAll('removeImageIds') as string[];
+    const title = formData.get("title") as string;
+    const titleEnglish = formData.get("titleEnglish") as string;
+    const date = formData.get("date") as string;
+    const headerPhotoFile = formData.get("headerPhoto") as File | null;
+    const imageFiles = formData.getAll("images") as File[];
+    const removeImageIds = formData.getAll("removeImageIds") as string[];
 
     if (!title || !titleEnglish || !date) {
       return NextResponse.json(
@@ -67,20 +68,26 @@ export async function PUT(
 
     // Handle header photo update if provided
     if (headerPhotoFile) {
-      const headerPhotoBuffer = Buffer.from(await headerPhotoFile.arrayBuffer());
-      const headerPhotoUpload = await new Promise<UploadApiResponse>((resolve, reject) => {
-        cloudinary.uploader.upload_stream(
-          {
-            folder: 'photo-gallery/headers',
-            resource_type: 'image',
-          },
-          (error, result) => {
-            if (error) reject(error);
-            else resolve(result!);
-          }
-        ).end(headerPhotoBuffer);
-      });
-      
+      const headerPhotoBuffer = Buffer.from(
+        await headerPhotoFile.arrayBuffer()
+      );
+      const headerPhotoUpload = await new Promise<UploadApiResponse>(
+        (resolve, reject) => {
+          cloudinary.uploader
+            .upload_stream(
+              {
+                folder: "photo-gallery/headers",
+                resource_type: "image",
+              },
+              (error, result) => {
+                if (error) reject(error);
+                else resolve(result!);
+              }
+            )
+            .end(headerPhotoBuffer);
+        }
+      );
+
       updateFields = sql`${updateFields}, headerPhotoUrl = ${headerPhotoUpload.secure_url}`;
     }
 
@@ -105,28 +112,32 @@ export async function PUT(
         imageFiles.map(async (file) => {
           const buffer = Buffer.from(await file.arrayBuffer());
           return new Promise<UploadApiResponse>((resolve, reject) => {
-            cloudinary.uploader.upload_stream(
-              {
-                folder: 'photo-gallery/images',
-                resource_type: 'image',
-              },
-              (error, result) => {
-                if (error) reject(error);
-                else resolve(result!);
-              }
-            ).end(buffer);
+            cloudinary.uploader
+              .upload_stream(
+                {
+                  folder: "photo-gallery/images",
+                  resource_type: "image",
+                },
+                (error, result) => {
+                  if (error) reject(error);
+                  else resolve(result!);
+                }
+              )
+              .end(buffer);
           });
         })
       );
 
       const imageValues = uploadedImages.map((uploadResult) => ({
         gallery_id: parseInt(id),
-        url: uploadResult.secure_url
+        url: uploadResult.secure_url,
       }));
 
       await sql`
         INSERT INTO photo_gallery_images (gallery_id, url)
-        SELECT * FROM json_populate_recordset(null::photo_gallery_images, ${JSON.stringify(imageValues)})
+        SELECT * FROM json_populate_recordset(null::photo_gallery_images, ${JSON.stringify(
+          imageValues
+        )})
       `;
     }
 
@@ -166,7 +177,10 @@ export async function DELETE(
 
     // Clean up Cloudinary assets
     if (gallery.length > 0 && gallery[0].headerPhotoUrl) {
-      const publicId = gallery[0].headerPhotoUrl.split('/').pop()?.split('.')[0];
+      const publicId = gallery[0].headerPhotoUrl
+        .split("/")
+        .pop()
+        ?.split(".")[0];
       if (publicId) {
         try {
           await cloudinary.uploader.destroy(publicId);
@@ -179,7 +193,7 @@ export async function DELETE(
     // Delete all images from Cloudinary
     for (const image of images) {
       if (image.url) {
-        const publicId = image.url.split('/').pop()?.split('.')[0];
+        const publicId = image.url.split("/").pop()?.split(".")[0];
         if (publicId) {
           try {
             await cloudinary.uploader.destroy(publicId);
@@ -198,4 +212,4 @@ export async function DELETE(
       { status: 500 }
     );
   }
-} 
+}

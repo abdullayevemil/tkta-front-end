@@ -27,10 +27,13 @@ export default function NewsCarousel({ news }: NewsProps) {
         }),
       ]}
     >
-      <CarouselContent>
+      <CarouselContent className="">
         {news.map((n) => (
-          <CarouselItem key={n.id} className="basis-1/1 sm:basis-1/2 md:basis-1/3">
-            <Link href={`/media/news/${n.id}`}>
+          <CarouselItem
+            key={n.id}
+            className="basis-1/1 sm:basis-1/2 md:basis-1/3 flex"
+          >
+            <Link href={`/media/news/${n.id}`} className="flex w-full">
               <NewsCard
                 id={n.id}
                 href={`/media/news/${n.id}`}
@@ -39,6 +42,7 @@ export default function NewsCarousel({ news }: NewsProps) {
                 headerimageurl={n.headerimageurl}
                 note={n.note}
                 content=""
+                // 👇 optional if NewsCard itself uses flex-col
               />
             </Link>
           </CarouselItem>

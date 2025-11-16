@@ -46,36 +46,55 @@ export default function Iternationalization({ params }: Props) {
   const { locale } = use(params);
 
   const { data: session } = useSession();
+  
   const isAdmin = session?.user?.role !== "admin";
+  
   const t = getTranslation(locale);
 
   const [search] = useState("");
+  
   const [from] = useState<Date | undefined>();
+  
   const [to] = useState<Date | undefined>();
+  
   const [sort] = useState<"new" | "old">("new");
+  
   const [page, setPage] = useState(1);
+  
   const [gallery, setGallery] = useState<GalleryItem[]>([]);
+  
   const [total, setTotal] = useState(0);
+  
   const [deleteId, setDeleteId] = useState<number | null>(null);
+  
   const [alertOpen, setAlertOpen] = useState(false);
 
   async function fetchGallery() {
     const params = new URLSearchParams();
 
     if (search) params.append("search", search);
+  
     if (from) params.append("from", from.toISOString().split("T")[0]);
+  
     if (to) params.append("to", to.toISOString().split("T")[0]);
+  
     if (sort) params.append("sort", sort);
+  
     params.append("page", page.toString());
 
     try {
       const res = await fetch(
         `/api/media/multimedia/photo-gallery?${params.toString()}`
       );
+  
       if (!res.ok) throw new Error("Failed to fetch");
+  
       const data = await res.json();
+  
       setGallery(data.gallery);
+  
       setTotal(data.total);
+  
       console.log(data);
     } catch {
       toast.error(t.media.multimedia.error.loading);
@@ -88,6 +107,7 @@ export default function Iternationalization({ params }: Props) {
 
   async function handleDelete() {
     if (!deleteId) return;
+  
     try {
       const res = await fetch(
         `/api/media/multimedia/photo-gallery/${deleteId}`,
@@ -95,10 +115,15 @@ export default function Iternationalization({ params }: Props) {
           method: "DELETE",
         }
       );
+  
       if (!res.ok) throw new Error("Delete failed");
+  
       toast.success(t.media.multimedia.success.delete);
+  
       setAlertOpen(false);
+  
       setDeleteId(null);
+  
       fetchGallery();
     } catch {
       toast.error(t.media.multimedia.error.delete);
@@ -250,6 +275,7 @@ export default function Iternationalization({ params }: Props) {
                           width={900}
                           height={900}
                         />
+
                         <div className="p-4 flex flex-col gap-3">
                           <h3
                             className="font-bold text-base line-clamp-2"
@@ -257,6 +283,7 @@ export default function Iternationalization({ params }: Props) {
                           >
                             {locale === "az" ? item.title : item.titleenglish}
                           </h3>
+                        
                           <p className="text-right text-xs text-textSecondary w-full">
                             {format(new Date(item.date), "dd.MM.yyyy")}
                           </p>
@@ -288,14 +315,17 @@ export default function Iternationalization({ params }: Props) {
                               <AlertDialogTitle>
                                 {t.media.multimedia.removeDialogTitle}
                               </AlertDialogTitle>
+                              
                               <AlertDialogDescription>
                                 {t.media.multimedia.removeDialogContent}
                               </AlertDialogDescription>
                             </AlertDialogHeader>
+                            
                             <AlertDialogFooter>
                               <AlertDialogCancel>
                                 {t.media.multimedia.removeDialogCancel}
                               </AlertDialogCancel>
+                              
                               <Button
                                 variant="destructive"
                                 onClick={handleDelete}
@@ -332,9 +362,11 @@ export default function Iternationalization({ params }: Props) {
             >
               {t.previous}
             </Button>
+            
             <span className="self-center">
               {t.page} {page} of {totalPages}
             </span>
+            
             <Button
               variant="outline"
               disabled={page === totalPages}
@@ -398,6 +430,7 @@ export default function Iternationalization({ params }: Props) {
                                 }}
                               >
                                 <span>{t.media.multimedia.delete}</span>
+
                                 <Trash2Icon className="w-4 h-4" />
                               </Button>
                             </AlertDialogTrigger>

@@ -76,6 +76,7 @@ export default function PhotoGalleryPage({ params }: Props) {
     return (
       <section className="p-8 text-center">
         <p className="text-red-600">{error}</p>
+        
         <button onClick={() => router.back()} className="mt-4 underline">
           Go Back
         </button>
@@ -86,8 +87,6 @@ export default function PhotoGalleryPage({ params }: Props) {
   if (!data) {
     return <Skeleton className="w-full h-[700px] rounded-xl" />;
   }
-
-  console.log(data);
 
   const {
     title,

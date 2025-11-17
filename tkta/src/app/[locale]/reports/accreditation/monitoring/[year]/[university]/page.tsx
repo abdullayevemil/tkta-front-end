@@ -1,4 +1,3 @@
-import Folder from "@/assets/icons/reports/Folder.png";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";

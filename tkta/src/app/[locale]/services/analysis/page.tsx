@@ -1,4 +1,7 @@
+import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Analysis() {
   return (
@@ -73,25 +76,25 @@ export default function Analysis() {
         </TabsContent>
 
         <TabsContent value="thematic-analysis" className="flex flex-col gap-4">
-            <p className="text-justify text-justify tracking-wide leading-7 text-base">
-              Tematik təhlil, Təhsildə Keyfiyyət Təminatı Agentliyinin
-              fəaliyyətində strateji əhəmiyyət daşıyan analitik vasitələrdən
-              biridir. Bu yanaşma vasitəsilə ali təhsil müəssisələrinin
-              fəaliyyətinə dair konkret sahələr üzrə məlumatlar toplanır, təhlil
-              edilir və nəticələr əsasında təkmilləşdirmə imkanları müəyyən
-              olunur.
-            </p>
+          <p className="text-justify text-justify tracking-wide leading-7 text-base">
+            Tematik təhlil, Təhsildə Keyfiyyət Təminatı Agentliyinin
+            fəaliyyətində strateji əhəmiyyət daşıyan analitik vasitələrdən
+            biridir. Bu yanaşma vasitəsilə ali təhsil müəssisələrinin
+            fəaliyyətinə dair konkret sahələr üzrə məlumatlar toplanır, təhlil
+            edilir və nəticələr əsasında təkmilləşdirmə imkanları müəyyən
+            olunur.
+          </p>
 
-            <p>
-              Təhlillər Avropa Ali Təhsil Məkanında qəbul olunmuş ESG-2015
-              (Avropa Standartları və Təlimatları) sənədinin müddəalarına uyğun
-              olaraq aparılır və akkreditasiya qiymətləndirilməsi nəticəsində
-              hazırlanmış yekun hesabatlara istinad edir. Tematik təhlil təhsil
-              müəssisələrinin fəaliyyətində trendləri, çağırışları və yaxşı
-              təcrübələri üzə çıxarmaqla yanaşı, həm də milli keyfiyyət təminatı
-              sisteminin təkmilləşdirilməsi baxımından strateji əhəmiyyət kəsb
-              edir.
-            </p>
+          <p>
+            Təhlillər Avropa Ali Təhsil Məkanında qəbul olunmuş ESG-2015 (Avropa
+            Standartları və Təlimatları) sənədinin müddəalarına uyğun olaraq
+            aparılır və akkreditasiya qiymətləndirilməsi nəticəsində hazırlanmış
+            yekun hesabatlara istinad edir. Tematik təhlil təhsil
+            müəssisələrinin fəaliyyətində trendləri, çağırışları və yaxşı
+            təcrübələri üzə çıxarmaqla yanaşı, həm də milli keyfiyyət təminatı
+            sisteminin təkmilləşdirilməsi baxımından strateji əhəmiyyət kəsb
+            edir.
+          </p>
         </TabsContent>
 
         <TabsContent value="data-analysis">
@@ -229,6 +232,24 @@ export default function Analysis() {
               Müsabiqənin növbəti mərhələlərinin təşkili həmin struktur bölmə
               tərəfindən davam etdirilmişdir.
             </p>
+
+            <Link href={"https://res.cloudinary.com/dtwyjdkb1/image/upload/v1763414723/Tematik_t%C9%99hlil_Beyn%C9%99lmil%C9%99ll%C9%99%C5%9Fm%C9%99_15.04.2024_t48va5.pdf"}>
+              <Card className="h-[27.5rem] w-full p-4 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
+                <Image
+                  src={"https://res.cloudinary.com/dtwyjdkb1/image/upload/v1/Tematik_t%C9%99hlil_Beyn%C9%99lmil%C9%99ll%C9%99%C5%9Fm%C9%99_15.04.2024_t48va5"}
+                  alt="document preview"
+                  width={150}
+                  height={150}
+                  className="w-full max-h-[21.25rem] object-cover"
+                />
+
+                <span className="text-lg text-center text-textPrimary font-bold font-bold">
+                  2023-cü ildə akkreditasiya prosesi keçirilmiş 13 ali təhsil
+                  müəssisəsinin beynəlmiləlləşmə istiqaməti üzrə akkreditasiya
+                  nəticələrinə dair tematik hesabat
+                </span>
+              </Card>
+            </Link>
           </div>
         </TabsContent>
       </Tabs>

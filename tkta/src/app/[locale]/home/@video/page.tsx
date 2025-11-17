@@ -15,7 +15,7 @@ export default async function Video() {
         muted={false}
         preload="none"
       >
-        <source src="http://localhost:3000/videos/home1.mp4" type="video/mp4" />
+        <source src="https://github.com/abdullayevemil/tkta-front-end/releases/download/v1/home1.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="w-full h-full flex items-start px-16 pb-2 sm:pb-3 md:pb-4 justify-center">

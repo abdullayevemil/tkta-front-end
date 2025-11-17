@@ -52,15 +52,7 @@ export default async function Accreditations({
                 Monitorinq Hesabatı
               </span>
             </Card>
-          ) : (
-            <Card className="h-[27.5rem] p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
-              <Image src={Folder} alt="folder icon" width={120} height={120} />
-
-              <span className="text-lg text-center text-textPrimary font-bold font-bold">
-                {reports[0].university} Monitorinq Hesabatı
-              </span>
-            </Card>
-          )}
+          ) : null}
         </Link>
       ) : null}
 
@@ -85,15 +77,7 @@ export default async function Accreditations({
                 Fəaliyyət Planı
               </span>
             </Card>
-          ) : (
-            <Card className="h-[26.25rem] p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
-              <Image src={Folder} alt="folder icon" width={120} height={120} />
-
-              <span className="text-lg text-center text-textPrimary font-bold font-bold">
-                {plans[0].university} Fəaliyyət Planı
-              </span>
-            </Card>
-          )}
+          ) : null}
         </Link>
       ) : null}
     </div>

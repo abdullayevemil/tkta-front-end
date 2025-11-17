@@ -1,4 +1,3 @@
-import Folder from "@/assets/icons/reports/Folder.png";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
@@ -45,7 +44,7 @@ export default async function Accreditations({
   u.title AS universityTitle
 FROM elementary_school_teaching_program_accreditation e
 JOIN universities u ON e.universityId = u.id
-WHERE e.year = ${year} AND LOWER(u.title) = LOWER(${university});
+WHERE e.year = ${year} AND LOWER(u.title) = LOWER(${decodeURIComponent(university)});
 `;
 
   return (
@@ -73,20 +72,7 @@ WHERE e.year = ${year} AND LOWER(u.title) = LOWER(${university});
                     {report.title}
                   </span>
                 </Card>
-              ) : (
-                <Card className="h-[27.5rem] p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
-                  <Image
-                    src={Folder}
-                    alt="folder icon"
-                    width={120}
-                    height={120}
-                  />
-
-                  <span className="text-lg text-center text-textPrimary font-bold font-bold">
-                    {report.title}
-                  </span>
-                </Card>
-              )}
+              ) : null}
             </Link>
           ))
         : null}

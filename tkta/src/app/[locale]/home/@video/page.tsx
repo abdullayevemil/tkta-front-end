@@ -5,11 +5,16 @@ import { News } from "@/types/news";
 import { Volume2, VolumeX } from "lucide-react";
 import { useRef, useState } from "react";
 
-export default async function Video() {
-  const news: News[] = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/media/news?sort=new`, {
-    method: "GET",
-    cache: "no-store",
-  }).then(r => r.json());
+export default function Video() {
+  let news: News[] = [];
+  fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/media/news?sort=new`, {
+  method: "GET",
+  cache: "no-store",
+})
+  .then(r => r.json())
+  .then((n: News[]) => {
+    news = n;
+  });
   const videoRef = useRef<HTMLVideoElement>(null);
   const [muted, setMuted] = useState(true);
 

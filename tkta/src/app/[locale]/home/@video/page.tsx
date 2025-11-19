@@ -45,7 +45,7 @@ export default function Video() {
           preload="none"
         >
           <source
-            src="https://res.cloudinary.com/dtwyjdkb1/video/upload/v1763570016/WhatsApp_Video_2025-11-19_at_20.27.50_h4f4xj.mp4"
+            src="https://github.com/abdullayevemil/tkta-front-end/releases/download/v1/home1.mp4"
             type="video/mp4"
           />
           Your browser does not support the video tag.

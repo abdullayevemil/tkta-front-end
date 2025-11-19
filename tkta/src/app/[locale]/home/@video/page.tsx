@@ -11,8 +11,7 @@ export default async function Video() {
         className="w-full object-contain z-10"
         autoPlay
         loop
-        controls
-        muted={false}
+        muted
         preload="none"
       >
         <source src="https://github.com/abdullayevemil/tkta-front-end/releases/download/v1/home1.mp4" type="video/mp4" />

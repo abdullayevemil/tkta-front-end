@@ -55,7 +55,7 @@ const partners = [
   },
   {
     id: 12,
-    url: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1737921600/partners/gdmlfuaa18qh7wlk663n.pdf",
+    url: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1763642717/Screenshot_2025-11-20_at_16.45.10_hyek1p.png",
   },
   {
     id: 13,

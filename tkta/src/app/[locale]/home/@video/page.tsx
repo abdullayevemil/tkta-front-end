@@ -51,7 +51,6 @@ export default function Video() {
           Your browser does not support the video tag.
         </video>
 
-        {/* Mute / Unmute Button */}
         <button
           onClick={toggleMute}
           className="

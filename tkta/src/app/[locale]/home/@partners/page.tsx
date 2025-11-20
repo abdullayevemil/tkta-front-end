@@ -43,7 +43,7 @@ const partners = [
   },
   {
     id: 9,
-    url: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1737921600/partners/rjsz8lwyi12jpg18udv.png",
+    url: "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1737921600/partners/rjsz0waxxpt3vck5ceh3.png",
   },
   {
     id: 10,

@@ -97,7 +97,7 @@ export default function PhotoGalleryPage({ params }: Props) {
     images,
   } = data;
 
-  const allImages = [data.headerphotourl, ...images.map((p) => p.url)].filter(
+  const allImages = [...images.map((p) => p.url)].filter(
     Boolean
   );
   if (error) return <p>{error}</p>;

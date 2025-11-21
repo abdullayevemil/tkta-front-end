@@ -1,4 +1,3 @@
-import Folder from "@/assets/icons/reports/Folder.png";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
@@ -65,15 +64,7 @@ export default async function Accreditations({
                 Yekun Hesabat
               </span>
             </Card>
-          ) : (
-            <Card className="h-[27.5rem] p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
-              <Image src={Folder} alt="folder icon" width={120} height={120} />
-
-              <span className="text-lg text-center text-textPrimary font-bold font-bold">
-                {report[0].university} Yekun Hesabat
-              </span>
-            </Card>
-          )}
+          ) : null}
         </Link>
       ) : null}
 
@@ -98,15 +89,7 @@ export default async function Accreditations({
                 Özünü Təhlil Hesabatı
               </span>
             </Card>
-          ) : (
-            <Card className="h-[26.25rem] p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
-              <Image src={Folder} alt="folder icon" width={120} height={120} />
-
-              <span className="text-lg text-center text-textPrimary font-bold font-bold">
-                {self_analysis[0].university} Özünü Təhlil Hesabatı
-              </span>
-            </Card>
-          )}
+          ) : null}
         </Link>
       ) : null}
 
@@ -131,15 +114,7 @@ export default async function Accreditations({
                 Sertifikat
               </span>
             </Card>
-          ) : (
-            <Card className="h-[26.25rem] p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
-              <Image src={Folder} alt="folder icon" width={120} height={120} />
-
-              <span className="text-lg text-center text-textPrimary font-bold font-bold">
-                {certificate[0].university} Sertifikat
-              </span>
-            </Card>
-          )}
+          ) : null}
         </Link>
       ) : null}
     </div>

@@ -101,7 +101,7 @@ export default function Analysis() {
               "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1763414723/Tematik_t%C9%99hlil_Beyn%C9%99lmil%C9%99ll%C9%99%C5%9Fm%C9%99_15.04.2024_t48va5.pdf"
             }
           >
-            <Card className="h-[34rem] w-1/4 p-4 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
+            <Card className="w-1/4 p-4 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
               <Image
                 src={
                   "https://res.cloudinary.com/dtwyjdkb1/image/upload/f_auto,q_auto/v1/Tematik_t%C9%99hlil_Beyn%C9%99lmil%C9%99ll%C9%99%C5%9Fm%C9%99_15.04.2024_t48va5"
@@ -109,7 +109,7 @@ export default function Analysis() {
                 alt="document preview"
                 width={150}
                 height={150}
-                className="w-full max-h-[21.25rem] object-cover rounded-md"
+                className="w-full object-cover rounded-md"
               />
 
               <span className="text-lg text-center text-textPrimary font-bold font-bold">
@@ -161,6 +161,28 @@ export default function Analysis() {
               əsasında tövsiyələr hazırlanır və müvafiq hesabatlarla
               ictimaiyyətə təqdim olunur.
             </p>
+
+            <Link
+              href={
+                "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1763714412/T%C9%99qdimat_SAYT_30.10.2025_002_atferv.pdf"
+              }
+            >
+              <Card className="w-1/4 p-4 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
+                <Image
+                  src={
+                    "https://res.cloudinary.com/dtwyjdkb1/image/upload/f_auto,q_auto/v1/T%C9%99qdimat_SAYT_30.10.2025_002_atferv"
+                  }
+                  alt="document preview"
+                  width={150}
+                  height={150}
+                  className="w-full object-cover rounded-md"
+                />
+
+                <span className="text-lg text-center text-textPrimary font-bold font-bold">
+                  2024-cü il üzrə xarici kvalifikasiyaların tanınması ilə bağlı təhlil
+                </span>
+              </Card>
+            </Link>
           </div>
         </TabsContent>
 

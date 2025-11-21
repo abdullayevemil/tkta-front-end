@@ -1,7 +1,5 @@
 "use client";
 
-"use client";
-
 import { useState, useEffect, use } from "react";
 import Link from "next/link";
 import { format } from "date-fns";
@@ -60,10 +58,15 @@ export default function Iternationalization({ params }: Props) {
   const [sort] = useState<"new" | "old">("new");
   
   const [page, setPage] = useState(1);
+  const [page1, setPage1] = useState(1);
   
   const [gallery, setGallery] = useState<GalleryItem[]>([]);
+
+  const [gallery1, setGallery1] = useState<GalleryItem[]>([]);
   
   const [total, setTotal] = useState(0);
+
+  const [total1, setTotal1] = useState(0);
   
   const [deleteId, setDeleteId] = useState<number | null>(null);
   
@@ -84,7 +87,7 @@ export default function Iternationalization({ params }: Props) {
 
     try {
       const res = await fetch(
-        `/api/media/multimedia/photo-gallery?${params.toString()}`
+        `/api/media/multimedia/photo-gallery?${params.toString()}&type=2`
       );
   
       if (!res.ok) throw new Error("Failed to fetch");
@@ -94,8 +97,18 @@ export default function Iternationalization({ params }: Props) {
       setGallery(data.gallery);
   
       setTotal(data.total);
+
+      const res1 = await fetch(
+        `/api/media/multimedia/photo-gallery?${params.toString()}&type=1`
+      );
   
-      console.log(data);
+      if (!res1.ok) throw new Error("Failed to fetch");
+  
+      const data1 = await res1.json();
+  
+      setGallery1(data1.gallery);
+  
+      setTotal1(data1.total);
     } catch {
       toast.error(t.media.multimedia.error.loading);
     }
@@ -131,6 +144,8 @@ export default function Iternationalization({ params }: Props) {
   }
 
   const totalPages = Math.ceil(total / ITEMS_PER_PAGE);
+
+  const totalPages1 = Math.ceil(total1 / ITEMS_PER_PAGE);
 
   return (
     <section className="w-full flex flex-col gap-16 items-center">
@@ -259,7 +274,7 @@ export default function Iternationalization({ params }: Props) {
           <NewsSkeleton />
         ) : (
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
-            {gallery.filter(item => item.type === '1')
+            {gallery
               .map((item) => {
                 return (
                   <li key={item.id} className="relative">
@@ -385,7 +400,7 @@ export default function Iternationalization({ params }: Props) {
             <NewsSkeleton />
           ) : (
             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
-              {gallery.filter(item => item.type === '2')
+              {gallery1
                 .map((item) => {
                   return (
                     <li key={item.id} className="relative">
@@ -475,22 +490,22 @@ export default function Iternationalization({ params }: Props) {
             </ul>
           )}
 
-          {totalPages > 1 && (
+          {totalPages1 > 1 && (
             <div className="flex gap-4 mt-8">
               <Button
                 variant="outline"
-                disabled={page === 1}
-                onClick={() => setPage((p) => p - 1)}
+                disabled={page1 === 1}
+                onClick={() => setPage1((p) => p - 1)}
               >
                 {t.previous}
               </Button>
               <span className="self-center">
-                {t.page} {page} of {totalPages}
+                {t.page} {page1} of {totalPages1}
               </span>
               <Button
                 variant="outline"
-                disabled={page === totalPages}
-                onClick={() => setPage((p) => p + 1)}
+                disabled={page1 === totalPages1}
+                onClick={() => setPage1((p) => p + 1)}
               >
                 {t.next}
               </Button>

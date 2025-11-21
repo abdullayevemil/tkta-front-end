@@ -96,6 +96,7 @@ export async function POST(req: NextRequest) {
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
   const search = searchParams.get("search") || "";
+  const type = searchParams.get("type") || "2";
   const from = searchParams.get("from") || null;
   const to = searchParams.get("to") || null;
   const sort = searchParams.get("sort") === "old" ? sql`ASC` : sql`DESC`;
@@ -126,6 +127,8 @@ export async function GET(req: Request) {
       conditions.push(sql`date <= ${to}`);
     }
   }
+
+  conditions.push(sql`type = ${type}`);
 
   const whereClause = conditions.length > 0 ? sql`WHERE ${conditions}` : sql``;
 

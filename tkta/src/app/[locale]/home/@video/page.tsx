@@ -33,7 +33,7 @@ export default function Video() {
   return (
     <div className="w-full relative flex flex-col gap-24">
       <div className="relative w-full flex justify-center items-center">
-        <div className="relative w-3/4">
+        <div className="relative w-full">
           <video
             ref={videoRef}
             className="object-contain z-10"
@@ -44,7 +44,7 @@ export default function Video() {
             preload="none"
           >
             <source
-              src="https://res.cloudinary.com/dtwyjdkb1/video/upload/v1763570016/WhatsApp_Video_2025-11-19_at_20.27.50_h4f4xj.mp4"
+              src="https://github.com/abdullayevemil/tkta-front-end/releases/download/v1/home1.mp4"
               type="video/mp4"
             />
             Your browser does not support the video tag.

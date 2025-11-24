@@ -5,8 +5,7 @@ import { News } from "@/types/news";
 import { Volume2, VolumeX } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 
-interface Props
-{
+interface Props {
   news: News[];
 }
 
@@ -20,7 +19,7 @@ export default function Video() {
       method: "GET",
       cache: "no-store",
     })
-      .then(r => r.json())
+      .then((r) => r.json())
       .then((n: Props) => setNews(n.news))
       .catch(() => setNews([]));
   }, []);
@@ -34,35 +33,37 @@ export default function Video() {
   return (
     <div className="w-full relative flex flex-col gap-24">
       <div className="relative w-full flex justify-center items-center">
-        <video
-          ref={videoRef}
-          className="w-3/4 object-contain z-10"
-          autoPlay
-          loop
-          muted={muted}
-          playsInline
-          preload="none"
-        >
-          <source
-            src="https://res.cloudinary.com/dtwyjdkb1/video/upload/v1763570016/WhatsApp_Video_2025-11-19_at_20.27.50_h4f4xj.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
+        <div className="relative w-3/4">
+          <video
+            ref={videoRef}
+            className="object-contain z-10"
+            autoPlay
+            loop
+            muted={muted}
+            playsInline
+            preload="none"
+          >
+            <source
+              src="https://res.cloudinary.com/dtwyjdkb1/video/upload/v1763570016/WhatsApp_Video_2025-11-19_at_20.27.50_h4f4xj.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
 
-        <button
-          onClick={toggleMute}
-          className="
-            absolute bottom-4 right-4 
+          <button
+            onClick={toggleMute}
+            className="
+            absolute bottom-4 right-4 z-50
             bg-black/60 text-white 
             p-3 rounded-full 
             backdrop-blur 
             hover:bg-black/80 
             transition
           "
-        >
-          {muted ? <VolumeX size={22} /> : <Volume2 size={22} />}
-        </button>
+          >
+            {muted ? <VolumeX size={22} /> : <Volume2 size={22} />}
+          </button>
+        </div>
       </div>
 
       <div className="w-full h-full flex items-start px-16 pb-2 sm:pb-3 md:pb-4 justify-center">

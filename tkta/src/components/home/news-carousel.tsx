@@ -31,9 +31,9 @@ export default function NewsCarousel({ news }: NewsProps) {
         {news.map((n) => (
           <CarouselItem
             key={n.id}
-            className="basis-1/1 sm:basis-1/2 md:basis-1/3 flex"
+            className="basis-1/1 sm:basis-1/3 md:basis-1/5 flex"
           >
-            <Link href={`/media/news/${n.id}`} className="flex w-full p-6">
+            <Link href={`/media/news/${n.id}`} className="flex w-full">
               <NewsCard
                 id={n.id}
                 href={`/media/news/${n.id}`}

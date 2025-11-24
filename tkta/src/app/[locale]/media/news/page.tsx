@@ -124,10 +124,10 @@ export default function News({ params }: Props) {
 
   return (
     <div className="w-full flex flex-col gap-8 sm:gap-10 md:gap-12 items-center">
-      <h1 className="uppercase text-2xl sm:text-3xl md:text-4xl text-center w-full px-4 sm:px-8 md:px-16 pt-8 sm:pt-12 md:pt-16">
+      <h1 className="uppercase text-2xl sm:text-3xl md:text-4xl text-center w-full px-6 sm:px-10 md:px-24 pt-8 sm:pt-12 md:pt-16">
         {t.media.news.title}
       </h1>
-      <div className="w-full px-4 sm:px-8 md:px-16 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+      <div className="w-full px-6 sm:px-10 md:px-24 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
         <Input
           placeholder={`${t.media.news.search}...`}
           className="w-full flex-1"
@@ -198,15 +198,17 @@ export default function News({ params }: Props) {
             <SelectTrigger className="w-[160px]">
               <SelectValue placeholder="Sıralama" />
             </SelectTrigger>
+
             <SelectContent>
               <SelectItem value="new">{t.media.news.newFirst}</SelectItem>
+
               <SelectItem value="old">{t.media.news.oldFirst}</SelectItem>
             </SelectContent>
           </Select>
         </div>
       </div>
       {isAdmin && (
-        <div className="w-full px-4 sm:px-8 md:px-16">
+        <div className="w-full px-6 sm:px-10 md:px-24">
           <Link
             href={`/${locale}/media/news/create`}
             className="bg-textPrimary w-fit rounded shadow-md text-white px-4 py-2 flex items-center gap-2"
@@ -219,10 +221,10 @@ export default function News({ params }: Props) {
       {news.length === 0 ? (
         <NewsSkeleton />
       ) : (
-        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-8 md:px-16 w-full">
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 px-6 sm:px-10 md:px-24 w-full">
           {news.map((item) => (
-            <li key={item.id} className="relative">
-              <Link href={`/${locale}/media/news/${item.id}`}>
+            <li key={item.id} className="relative h-full">
+              <Link href={`/${locale}/media/news/${item.id}`} className="block h-full w-full">
                 <NewsCard
                   id={item.id}
                   href={`/${locale}/media/news/${item.id}`}
@@ -235,7 +237,10 @@ export default function News({ params }: Props) {
               </Link>
               {isAdmin && (
                 <div className="absolute top-4 right-4 flex items-center justify-center gap-4">
-                  <AlertDialog open={open && deleteId === item.id} onOpenChange={setOpen}>
+                  <AlertDialog
+                    open={open && deleteId === item.id}
+                    onOpenChange={setOpen}
+                  >
                     <AlertDialogTrigger asChild>
                       <Button
                         variant="destructive"
@@ -282,13 +287,21 @@ export default function News({ params }: Props) {
       )}
       {totalPages > 1 && (
         <div className="flex gap-4 mt-8">
-          <Button disabled={page === 1} onClick={() => setPage((p) => p - 1)} variant="outline">
+          <Button
+            disabled={page === 1}
+            onClick={() => setPage((p) => p - 1)}
+            variant="outline"
+          >
             {t.previous}
           </Button>
           <span className="self-center">
             {t.page} {page} / {totalPages}
           </span>
-          <Button disabled={page === totalPages} onClick={() => setPage((p) => p + 1)} variant="outline">
+          <Button
+            disabled={page === totalPages}
+            onClick={() => setPage((p) => p + 1)}
+            variant="outline"
+          >
             {t.next}
           </Button>
         </div>

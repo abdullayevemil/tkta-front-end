@@ -15,7 +15,7 @@ interface Props {
 
 export default function NewsCard({ title, date, headerimageurl, note }: Props) {
   return (
-    <Card className="w-full flex flex-col bg-transparent overflow-hidden">
+    <Card className="w-full flex flex-col bg-transparent overflow-hidden justify-between h-full">
       <div className="w-full">
         {headerimageurl ? (
           <Image

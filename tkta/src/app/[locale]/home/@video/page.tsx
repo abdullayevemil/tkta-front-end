@@ -15,7 +15,6 @@ export default function Video() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [muted, setMuted] = useState(true);
 
-  // Load news ONCE
   useEffect(() => {
     fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/media/news?sort=new`, {
       method: "GET",
@@ -37,7 +36,7 @@ export default function Video() {
       <div className="relative w-full flex justify-center items-center">
         <video
           ref={videoRef}
-          className="w-9/10 object-contain z-10"
+          className="w-3/4 object-contain z-10"
           autoPlay
           loop
           muted={muted}

@@ -61,6 +61,7 @@ function AddNewsPage({ params }: Props) {
   const [headerImage, setHeaderImage] = useState<File | null>(null);
   const [galleryImages, setGalleryImages] = useState<File[]>([]);
   const [date, setDate] = useState<Date | undefined>(new Date());
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [errors, setErrors] = useState<
     Partial<Record<keyof z.infer<typeof newsSchema>, string>>
@@ -95,6 +96,7 @@ function AddNewsPage({ params }: Props) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     setErrors({});
 
     const result = newsSchema.safeParse({
@@ -140,8 +142,10 @@ function AddNewsPage({ params }: Props) {
     }).then((res) => {
       if (res.ok) {
         toast.success(t.media.news.success.create);
+        setIsSubmitting(false);
       } else {
         toast.error(t.media.news.error.create);
+        setIsSubmitting(false);
       }
     });
   };
@@ -353,7 +357,7 @@ function AddNewsPage({ params }: Props) {
 
           <div className="flex flex-col gap-2">
             <Label htmlFor="note" className="text-sm font-medium">
-             {t.media.news.create.note}
+              {t.media.news.create.note}
             </Label>
             <Textarea
               id="note"
@@ -375,7 +379,7 @@ function AddNewsPage({ params }: Props) {
               onChange={(e) => setNoteEnglish(e.target.value)}
               rows={3}
               className="w-full rounded-md border border-gray-300 p-2 text-black resize-none"
-              placeholder= {t.media.news.create.noteInputEnglishPlaceholder}
+              placeholder={t.media.news.create.noteInputEnglishPlaceholder}
             />
           </div>
         </div>
@@ -430,6 +434,7 @@ function AddNewsPage({ params }: Props) {
       <Button
         variant={"default"}
         type="submit"
+        disabled={isSubmitting}
         onClick={handleSubmit}
         className="mt-auto bg-textSecondary hover:bg-textPrimary text-white font-semibold py-2 rounded-md shadow-md transition w-fit px-8 sm:px-12 md:px-16"
       >

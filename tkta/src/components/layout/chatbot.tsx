@@ -52,7 +52,7 @@ export default function Chatbot() {
   return (
     <div className="fixed bottom-2 right-2 sm:bottom-4 sm:right-4 flex flex-col items-end z-50">
       {open && (
-        <Card className="w-72 h-80 sm:w-80 sm:h-96 mb-2 sm:mb-4 shadow-lg rounded-xl overflow-hidden">
+        <Card className="w-64 h-72 mb-2 sm:mb-4 shadow-lg rounded-xl overflow-hidden">
           <div className="p-2 sm:p-4 flex flex-col h-full">
             <div className="flex justify-between items-center mb-2">
               <h3 className="text-lg font-semibold">Chatbot</h3>

@@ -315,7 +315,6 @@ export function Navigation({ locale }: { locale: string }) {
                       <NavigationMenuItem className="w-full">
                         <NavigationMenuTrigger className="h-fit font-helvetica w-full flex flex-row justify-left p-0 text-left">
                           <ListItem
-                            href={`/${locale}/reports/accreditation`}
                             title={
                               t.header.navigation.reports.accreditationReports
                             }

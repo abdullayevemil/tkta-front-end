@@ -20,7 +20,7 @@ export default function Video() {
       cache: "no-store",
     })
       .then((r) => r.json())
-      .then((n: Props) => setNews(n.news))
+      .then((n: Props) => setNews(n.news.slice(0, 6)))
       .catch(() => setNews([]));
   }, []);
 

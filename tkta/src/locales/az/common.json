@@ -238,6 +238,62 @@
         "submit": "Müsahibəni Yadda Saxla"
       }
     },
+    "disclosures": {
+      "title": "Açıqlamalar",
+      "search": "Axtarış",
+      "from": "Tarixdən",
+      "to": "Tarixə qədər",
+      "newFirst": "Ən yenilər",
+      "oldFirst": "Ən köhnələr",
+      "createNews": "Açıqlama yarat",
+      "delete": "Sil",
+      "edit": "Düzəliş et",
+      "removeDialogTitle": "Açıqlamanı silmək istəyirsiniz?",
+      "removeDialogContent": "Bu açıqlamanı silmək istədiyinizə əminsinizmi? Bu əməliyyat geri qaytarıla bilməz.",
+      "removeDialogCancel": "Ləğv et",
+      "removeDialogConfirm": "Bəli, sil",
+      "success": {
+        "create": "Açıqlama uğurla yaradıldı.",
+        "update": "Açıqlama uğurla yeniləndi.",
+        "delete": "Açıqlama uğurla silindi."
+      },
+      "error": {
+        "create": "Açıqlama yaradılarkən xəta baş verdi.",
+        "update": "Açıqlama yenilənərkən xəta baş verdi.",
+        "delete": "Açıqlama silinərkən xəta baş verdi.",
+        "loading": "Açıqlamalar yüklənərkən xəta baş verdi."
+      },
+      "create": {
+        "title": "Açıqlama Yarat",
+        "titlePlaceholder": "Başlıq",
+        "titleInputPlaceholder": "Açıqlama başlığını daxil edin",
+        "titleEnglishInputPlaceholder": "Açıqlama başlığını ingilis dilində daxil edin",
+        "contentPlaceholder": "Məzmun",
+        "contentInputPlaceholder": "Açıqlama məzmununu daxil edin",
+        "contentEnglishInputPlaceholder": "Açıqlama məzmununu ingilis dilində daxil edin",
+        "datePlaceholder": "Tarix",
+        "submit": "Açıqlamanı yarat",
+        "headerImage": "Başlıq Şəkli (tək)",
+        "headerImageDescription": "Buraya tək şəkli sürüşdürüb buraxın və ya seçmək üçün klikləyin",
+        "images": "Qalereya Şəkilləri (bir neçə)",
+        "imagesDescription": "Buraya bir neçə şəkli sürüşdürüb buraxın və ya seçmək üçün klikləyin",
+        "note": "Qeyd (mütləq deyil)",
+        "noteInputPlaceholder": "Əlavə qeydləriniz varsa daxil edin",
+        "noteInputEnglishPlaceholder": "Əlavə qeydləriniz varsa ingilis dilində daxil edin",
+        "titleEnglish": "Başlıq (İngilis dilində)",
+        "contentEnglish": "Məzmun (İngilis dilində)",
+        "noteEnglish": "Qeyd (İngilis dilində, mütləq deyil)",
+        "formErrors": {
+          "titleRequired": "Başlıq mütləqdir.",
+          "contentRequired": "Məzmun mütləqdir.",
+          "dateRequired": "Tarix mütləqdir."
+        }
+      },
+      "editPage": {
+        "title": "Açıqlamanı Redaktə Et",
+        "submit": "Açıqlamanı Yadda Saxla"
+      }
+    },
     "multimedia": {
       "title": "MULTİMEDİA",
       "photoGallery": "Foto qalereya",

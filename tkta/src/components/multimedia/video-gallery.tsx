@@ -205,13 +205,24 @@ export function VideoGallery({ locale }: { locale: string }) {
             <li key={item.id} className="relative">
               <Card className="w-full h-full flex flex-col bg-transparent">
                 <Link href={`/media/multimedia/video-gallery/${item.id}`}>
-                  <iframe
-                    width="560"
-                    height="280"
-                    className="w-full h-64 object-cover rounded-t-xl"
-                    src={item.headerviewurl}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  ></iframe>
+                  {item.headerviewurl.includes("cloudinary") ? (
+                    <video
+                      src={item.headerviewurl}
+                      autoPlay={false}
+                      loop={false}
+                      width={560}
+                      height={280}
+                      className="w-full h-64 object-cover rounded-t-xl"
+                    />
+                  ) : (
+                    <iframe
+                      width="560"
+                      height="280"
+                      className="w-full h-64 object-cover rounded-t-xl"
+                      src={item.headerviewurl}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    ></iframe>
+                  )}
 
                   <div className="p-4 flex flex-col gap-3">
                     <h3

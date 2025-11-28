@@ -30,9 +30,11 @@ interface Report {
 export default async function Accreditations({
   params,
 }: {
-  params: Promise<{ year: string; university: string }>;
+  params: Promise<{ university: string }>;
 }) {
-  const { year, university } = await params;
+  const { university } = await params;
+
+  console.log(decodeURIComponent(university))
 
   const reports: Report[] = await sql`
   SELECT 
@@ -44,7 +46,7 @@ export default async function Accreditations({
   u.title AS universityTitle
 FROM international_accreditation e
 JOIN international_universities u ON e.universityId = u.id
-WHERE e.year = ${year} AND LOWER(u.title) = LOWER(${university});
+WHERE LOWER(u.title) = LOWER(${decodeURIComponent(university)});
 `;
 
   return (

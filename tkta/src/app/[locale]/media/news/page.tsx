@@ -223,8 +223,8 @@ export default function News({ params }: Props) {
       ) : (
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 px-6 sm:px-10 md:px-24 w-full">
           {news.map((item) => (
-            <li key={item.id} className="relative h-full">
-              <Link href={`/${locale}/media/news/${item.id}`} className="block h-full w-full">
+            <li key={item.id} className="relative">
+              <Link href={`/${locale}/media/news/${item.id}`}>
                 <NewsCard
                   id={item.id}
                   href={`/${locale}/media/news/${item.id}`}

@@ -128,7 +128,7 @@ export default function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-textPrimary italic hover:underline"
-                href="https://apply.enic.edu.az/register/"
+                href="https://apply.enic.edu.az"
               >
                 Elektron Ərizə Sistemi
               </Link>
@@ -144,44 +144,44 @@ export default function HomePage() {
               <h4 className="font-bold">Orta ixtisas təhsili:</h4>
 
               <ul className="list-disc pl-8 flex flex-col gap-2">
-                <li className="capitalize">
+                <li>
                   Orta ixtisas təhsili haqqında sənəd (diplom) və ona aid
                   apostilin əsli (orjinal nüsxənin rəngli skan versiyası);
                 </li>
 
-                <li className="capitalize">
+                <li>
                   Orta ixtisas təhsili haqqında sənədə əlavə (transkript) və ona
                   aid apostilin əsli (orjinal nüsxənin rəngli skan versiyası);
                 </li>
 
-                <li className="capitalize">
+                <li>
                   Orta ixtisas təhsili haqqında sənəd (diplomun) və ona aid
                   apostilin notariat qaydada təsdiq olunmuş Azərbaycan dilinə
                   tərcüməsi (rus, ingilis və türk dilləri istisna olmaqla
                   (orjinal nüsxənin rəngli skan versiyası));
                 </li>
 
-                <li className="capitalize">
+                <li>
                   Orta ixtisas təhsili haqqında sənədə əlavə (transkript) və ona
                   aid apostilin notariat qaydada təsdiq olunmuş Azərbaycan
                   dilində tərcüməsi (rus, ingilis və türk dilləri istisna
                   olmaqla (orjinal nüsxənin rəngli skan versiyası));
                 </li>
 
-                <li className="capitalize">
-                  şəxsiyyət vəsiqəsinin hər iki üzünün (xarici ölkə vətəndaşları
+                <li>
+                  Şəxsiyyət vəsiqəsinin hər iki üzünün (xarici ölkə vətəndaşları
                   - daimi/müvəqqəti yaşama icazəsi) (orjinal nüsxənin rəngli
                   skan versiyası);
                 </li>
 
-                <li className="capitalize">
-                  ümumvətəndaş (xarici) pasportunun ön səhifəsinin və
+                <li>
+                  Ümumvətəndaş (xarici) pasportunun ön səhifəsinin və
                   sərhədkeçməni bildirən bütün möhürlü səhifələri) (orjinal
                   nüsxənin rəngli skan versiyası);
                 </li>
 
-                <li className="capitalize">
-                  hərbi biletin (orjinal nüsxənin rəngli skan versiyası) və ya
+                <li>
+                  Hərbi biletin (orjinal nüsxənin rəngli skan versiyası) və ya
                   hərbi xidmətin qeydiyyatı haqqında arayışın elektron surəti.
                 </li>
               </ul>
@@ -191,44 +191,44 @@ export default function HomePage() {
               <h4 className="font-bold">Bakalavr:</h4>
 
               <ul className="list-disc pl-8 flex flex-col gap-2">
-                <li className="capitalize">
-                  ali təhsil haqqında sənəd (diplom) və ona aid apostilin əsli
+                <li>
+                  Ali təhsil haqqında sənəd (diplom) və ona aid apostilin əsli
                   (orjinal nüsxənin rəngli skan versiyası);
                 </li>
 
-                <li className="capitalize">
-                  ali təhsil haqqında sənədə əlavə (transkript) və ona aid
+                <li>
+                  Ali təhsil haqqında sənədə əlavə (transkript) və ona aid
                   apostilin əsli (orjinal nüsxənin rəngli skan versiyası);
                 </li>
 
-                <li className="capitalize">
-                  ali təhsil haqqında sənəd (diplomun) və ona aid apostilin
+                <li>
+                  Ali təhsil haqqında sənəd (diplomun) və ona aid apostilin
                   notariat qaydada təsdiq olunmuş Azərbaycan dilinə tərcüməsi
                   (rus, ingilis və türk dilləri istisna olmaqla (orjinal
                   nüsxənin rəngli skan versiyası));
                 </li>
 
-                <li className="capitalize">
-                  ali təhsil haqqında sənədə əlavə (transkript) və ona aid
+                <li>
+                  Ali təhsil haqqında sənədə əlavə (transkript) və ona aid
                   apostilin notariat qaydada təsdiq olunmuş Azərbaycan dilində
                   tərcüməsi (rus, ingilis və türk dilləri istisna olmaqla
                   (orjinal nüsxənin rəngli skan versiyası));
                 </li>
 
-                <li className="capitalize">
-                  şəxsiyyət vəsiqəsinin hər iki üzünün (xarici ölkə vətəndaşları
+                <li>
+                  Şəxsiyyət vəsiqəsinin hər iki üzünün (xarici ölkə vətəndaşları
                   - daimi/müvəqqəti yaşama icazəsi) (orjinal nüsxənin rəngli
                   skan versiyası);
                 </li>
 
-                <li className="capitalize">
-                  ümumvətəndaş (xarici) pasportunun ön səhifəsinin və
+                <li>
+                  Ümumvətəndaş (xarici) pasportunun ön səhifəsinin və
                   sərhədkeçməni bildirən bütün möhürlü səhifələri) (orjinal
                   nüsxənin rəngli skan versiyası);
                 </li>
 
-                <li className="capitalize">
-                  hərbi biletin (orjinal nüsxənin rəngli skan versiyası) və ya
+                <li>
+                  Hərbi biletin (orjinal nüsxənin rəngli skan versiyası) və ya
                   hərbi xidmətin qeydiyyatı haqqında arayışın elektron surəti.
                 </li>
               </ul>
@@ -250,49 +250,49 @@ export default function HomePage() {
               <h4 className="font-bold">Magistratura:</h4>
 
               <ul className="list-disc pl-8 flex flex-col gap-2">
-                <li className="capitalize">
-                  ali təhsil haqqında sənəd (diplom) və ona aid apostilin əsli
+                <li>
+                  Ali təhsil haqqında sənəd (diplom) və ona aid apostilin əsli
                   (orjinal nüsxənin rəngli skan versiyası);
                 </li>
 
-                <li className="capitalize">
-                  ali təhsil haqqında sənədə əlavə (transkript) və ona aid
+                <li>
+                  Ali təhsil haqqında sənədə əlavə (transkript) və ona aid
                   apostilin əsli (orjinal nüsxənin rəngli skan versiyası);
                 </li>
 
-                <li className="capitalize">
-                  ali təhsil haqqında sənəd (diplomun) və ona aid apostilin
+                <li>
+                  Ali təhsil haqqında sənəd (diplomun) və ona aid apostilin
                   notariat qaydada təsdiq olunmuş Azərbaycan dilinə
                   tərcüməsi.(rus, ingilis və türk dilləri istisna olmaqla
                   (orjinal nüsxənin rəngli skan versiyası));
                 </li>
 
-                <li className="capitalize">
-                  ali təhsil haqqında sənədə əlavə (transkript) və ona aid
+                <li>
+                  Ali təhsil haqqında sənədə əlavə (transkript) və ona aid
                   apostilin notariat qaydada təsdiq olunmuş Azərbaycan dilində
                   tərcüməsi (rus, ingilis və türk dilləri istisna olmaqla
                   (orjinal nüsxənin rəngli skan versiyası));
                 </li>
 
-                <li className="capitalize">
-                  şəxsiyyət vəsiqəsinin hər iki üzünün (xarici ölkə vətəndaşları
+                <li>
+                  Şəxsiyyət vəsiqəsinin hər iki üzünün (xarici ölkə vətəndaşları
                   - daimi/müvəqqəti yaşama icazəsi) (orjinal nüsxənin rəngli
                   skan versiyası);
                 </li>
 
-                <li className="capitalize">
-                  ümumvətəndaş (xarici) pasportunun ön səhifəsinin və
+                <li>
+                  Ümumvətəndaş (xarici) pasportunun ön səhifəsinin və
                   sərhədkeçməni bildirən bütün möhürlü səhifələri) (orjinal
                   nüsxənin rəngli skan versiyası);
                 </li>
 
-                <li className="capitalize">
-                  hərbi biletin (orjinal nüsxənin rəngli skan versiyası) və ya
+                <li>
+                  Hərbi biletin (orjinal nüsxənin rəngli skan versiyası) və ya
                   hərbi xidmətin qeydiyyatı haqqında arayışın elektron surəti;
                 </li>
 
-                <li className="capitalize">
-                  bakalavriat səviyyəsi üzrə ali təhsil haqqında sənəd (diplom)
+                <li>
+                  Bakalavriat səviyyəsi üzrə ali təhsil haqqında sənəd (diplom)
                   (orjinal nüsxəsinin rəngli skan versiyası);
                 </li>
               </ul>
@@ -301,27 +301,27 @@ export default function HomePage() {
             <h4 className="font-bold uppercase">QEYD:</h4>
 
             <ol className="list-decimal pl-8 flex flex-col gap-1">
-              <li className="capitalize">
+              <li>
                 Magistratura təhsil səviyyəsi üzrə müraciət olunubsa, bakalavr
                 diplomu xarici ali təhsil müəssisəsi tərəfindən verildikdə, ilk
                 öncə həmin diplom üzrə kvalifikasiyanın tanınması üçün müraciət
                 olunmalıdır.
               </li>
-              <li className="capitalize">
+              <li>
                 Tanınma üçün tələb olunan sənədlər elektron ərizə vasitəsilə
                 müraciətçinin şəxsi kabinetinə əlavə olunmalıdır. Elektron poçt,
                 məktub və ya fiziki qaydada təqdim olunan sənədlər icraata
                 götürülmür.{" "}
               </li>
-              <li className="capitalize">
+              <li>
                 Təhsil haqqında sənəd (diplom) və ona əlavə (transkript) tanınma
                 üçün müraciət olunmadan verildiyi ölkədə leqallaşdırılmalıdır.
               </li>
-              <li className="capitalize">
+              <li>
                 Tələb olunan hər bir sənəd, həcmi 5 MB-dan çox olmamaq şərti ilə
                 PDF formatında yüklənilməlidir.
               </li>
-              <li className="capitalize">
+              <li>
                 Tələb olunan hər bir sənəd səhifələri rəngli və oxunaqlı şəkildə
                 yüklənilməlidir.
               </li>
@@ -366,14 +366,14 @@ export default function HomePage() {
         <TabsContent value="legalisation">
           <div className="flex flex-col gap-4 text-justify">
             <div>
-              Azərbaycan Respublikası Nazirlər Kabinetinin 03.02.2023-cü il
-              tarixli qərarı ilə təsdiq olunmuş “Xarici dövlətlərin ali təhsilə
-              aid kvalifikasiyalarının tanınması Qaydaları”nın 2.6-cı bəndinə
-              əsasən diplom, diplom əlavəsi və qismət tanınması üçün müraciət
-              edilmiş akademik transkript sənədləri Azərbaycan Respublikasının
-              1994-cü il 8 fevral tarixli 782 nömrəli Qanunu ilə təsdiq edilmiş
-              “Azərbaycan Respublikasının Konsul Nizamnaməsi” ilə müəyyən
-              edilmiş qaydada və ya{" "}
+              Azərbaycan Respublikası Prezidentinin 2023-cü il 18 avqust
+              tarixli, 2306 nömrəli Fərmanı ilə təsdiq edilmiş “Xarici
+              dövlətlərin ali təhsilə aid kvalifikasiyalarının tanınması
+              Qaydaları”nın 2.6-cı bəndinə əsasən diplom, diplom əlavəsi və
+              qismət tanınması üçün müraciət edilmiş akademik transkript
+              sənədləri Azərbaycan Respublikasının 1994-cü il 8 fevral tarixli
+              782 nömrəli Qanunu ilə təsdiq edilmiş “Azərbaycan Respublikasının
+              Konsul Nizamnaməsi” ilə müəyyən edilmiş qaydada və ya{" "}
               <Link
                 target="_blank"
                 rel="noopener noreferrer"

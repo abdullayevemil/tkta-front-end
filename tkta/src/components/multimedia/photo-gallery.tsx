@@ -207,7 +207,7 @@ export function PhotoGallery({ locale }: { locale: string }) {
             <li key={item.id} className="relative">
               <Card className="w-full h-full flex flex-col bg-transparent">
                 <Link
-                  href={`/${locale}/media/multimedia/photo-gallery/${item.id}`}
+                  href={`/${locale}/media/multimedia/photo-gallery/${item.id}/no-content`}
                 >
                   <Image
                     src={item.headerphotourl}

@@ -168,22 +168,6 @@ export function Navigation({ locale }: { locale: string }) {
                     <ListItem
                       target="_blank"
                       rel="noopener noreferrer"
-                      href="https://apply.enic.edu.az/instructions/"
-                      title={
-                        t.header.navigation.diplomaConfirmation.instructions
-                      }
-                    >
-                      {
-                        t.header.navigation.diplomaConfirmation
-                          .instructionsDescription
-                      }
-                    </ListItem>
-                  </li>
-
-                  <li>
-                    <ListItem
-                      target="_blank"
-                      rel="noopener noreferrer"
                       href="https://apply.enic.edu.az/"
                       title={t.header.navigation.diplomaConfirmation.apply}
                     >

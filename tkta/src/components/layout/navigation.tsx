@@ -23,13 +23,12 @@ export function Navigation({ locale }: { locale: string }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full">
+    (<nav className="w-full">
       <div className="lg:hidden flex justify-end p-2 sm:p-4">
         <button onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
-
       <div
         className={cn(
           "lg:flex w-full",
@@ -195,10 +194,9 @@ export function Navigation({ locale }: { locale: string }) {
             <NavigationMenuItem>
               <Link
                 href={`/${locale}/internationalization`}
-                legacyBehavior
-                passHref
-                className="font-helvetica text-base"
-              >
+                className="font-helvetica text-base">
+                {/* @next-codemod-error This Link previously used the now removed `legacyBehavior` prop, and has a child that might not be an anchor. The codemod bailed out of lifting the child props to the Link. Check that the child component does not render an anchor, and potentially move the props manually to Link. */
+                }
                 <NavigationMenuLink
                   className={cn(
                     navigationMenuTriggerStyle(),
@@ -480,12 +478,9 @@ export function Navigation({ locale }: { locale: string }) {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <Link
-                href={`/${locale}/contact`}
-                legacyBehavior
-                passHref
-                className="font-helvetica text-base"
-              >
+              <Link href={`/${locale}/contact`} className="font-helvetica text-base">
+                {/* @next-codemod-error This Link previously used the now removed `legacyBehavior` prop, and has a child that might not be an anchor. The codemod bailed out of lifting the child props to the Link. Check that the child component does not render an anchor, and potentially move the props manually to Link. */
+                }
                 <NavigationMenuLink
                   className={cn(
                     navigationMenuTriggerStyle(),
@@ -498,12 +493,9 @@ export function Navigation({ locale }: { locale: string }) {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <Link
-                href="tel:146"
-                legacyBehavior
-                passHref
-                className="font-helvetica text-base"
-              >
+              <Link href="tel:146" className="font-helvetica text-base">
+                {/* @next-codemod-error This Link previously used the now removed `legacyBehavior` prop, and has a child that might not be an anchor. The codemod bailed out of lifting the child props to the Link. Check that the child component does not render an anchor, and potentially move the props manually to Link. */
+                }
                 <NavigationMenuLink
                   className={cn(
                     navigationMenuTriggerStyle(),
@@ -525,6 +517,6 @@ export function Navigation({ locale }: { locale: string }) {
           </NavigationMenuList>
         </NavigationMenu>
       </div>
-    </nav>
+    </nav>)
   );
 }

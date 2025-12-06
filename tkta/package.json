@@ -61,7 +61,7 @@
     "googleapis": "^150.0.1",
     "lucide-react": "^0.469.0",
     "negotiator": "^1.0.0",
-    "next": "16.0.7",
+    "next": "15.3.6",
     "next-auth": "^4.24.11",
     "next-cloudinary": "^6.16.0",
     "next-intl": "^4.1.0",

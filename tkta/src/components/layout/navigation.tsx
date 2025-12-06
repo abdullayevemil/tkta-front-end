@@ -166,9 +166,7 @@ export function Navigation({ locale }: { locale: string }) {
                 <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                   <li>
                     <ListItem
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="https://apply.enic.edu.az/"
+                      href={`/pages/register.html`}
                       title={t.header.navigation.diplomaConfirmation.apply}
                     >
                       {t.header.navigation.diplomaConfirmation.applyDescription}

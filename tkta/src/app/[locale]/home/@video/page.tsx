@@ -66,7 +66,7 @@ export default function Video() {
         </div>
       </div>
 
-      <div className="w-full h-full flex items-start px-0 md:px-16 pb-2 sm:pb-3 md:pb-4 justify-center">
+      <div className="w-full h-full flex items-start px-8 md:px-12 lg:px-16 pb-2 sm:pb-3 md:pb-4 justify-center">
         <div className="w-full h-fit flex flex-col gap-8 sm:gap-10 md:gap-12 items-center">
           <h2 className="text-textPrimary font-bold text-2xl sm:text-3xl md:text-4xl w-full justify-center text-center uppercase px-4">
             Xəbərlər

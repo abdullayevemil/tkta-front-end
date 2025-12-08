@@ -71,7 +71,7 @@ export default function Statistics() {
         Statİstİka
       </h2>
 
-      <div className="px-4 sm:px-8 md:px-12 lg:px-16 flex flex-col gap-4 sm:gap-6">
+      <div className="px-8 md:px-12 lg:px-16 flex flex-col gap-4 sm:gap-6">
         <ul className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-evenly w-full">
           <li className="w-full sm:w-1/2 lg:w-1/4">
             <StatisticsAreaChart

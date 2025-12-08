@@ -7,6 +7,8 @@ export const useGetCallById = (id: string | string[]) => {
 
   const client = useStreamVideoClient();
 
+  console.log('useGetCallById - client:', client);
+
   useEffect(() => {
     if (!client) return;
     

@@ -16,6 +16,9 @@ const MeetingPage = () => {
 
   const user = session.data?.user;
 
+  if (user) {
+  }
+
   const { call, isCallLoading } = useGetCallById(id!);
   const [isSetupComplete, setIsSetupComplete] = useState(false);
 
@@ -27,14 +30,6 @@ const MeetingPage = () => {
         Call Not Found
       </p>
     );
-
-  // get more info about custom call type:  https://getstream.io/video/docs/react/guides/configuring-call-types/
-  const notAllowed =
-    call.type === "invited" &&
-    (!user || !call.state.members.find((m) => m.user.id === user.email));
-
-  if (notAllowed)
-    return <Alert title="You are not allowed to join this meeting" />;
 
   return (
     <main className="h-screen w-full">

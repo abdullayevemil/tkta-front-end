@@ -33,7 +33,7 @@ export default function Video() {
   return (
     <div className="w-full relative flex flex-col gap-24">
       <div className="relative w-full flex justify-center items-center">
-        <div className="relative w-3/4">
+        <div className="relative w-full md:w-3/4">
           <video
             ref={videoRef}
             className="object-contain z-10"

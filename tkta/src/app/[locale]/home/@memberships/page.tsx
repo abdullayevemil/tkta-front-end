@@ -58,7 +58,7 @@ export default function Memberships() {
             {partners.map((partner) => (
               <CarouselItem
                 key={partner.id}
-                className="basis-1/1 sm:basis-1/2 md:basis-1/3 flex items-center justify-center"
+                className="basis-1/3 flex items-center justify-center"
               >
                 <Link href="">
                   <CldImage

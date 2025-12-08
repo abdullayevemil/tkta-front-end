@@ -4,63 +4,80 @@ import GoogleMapComponent from "@/components/maps/google-map";
 import { Card } from "@/components/ui/card";
 import ExternalLinks from "./external-links";
 import Link from "next/link";
-import { Mail, MapPinned, Phone } from "lucide-react";
+import { ChevronDown, ChevronUp, Mail, MapPinned, Phone } from "lucide-react";
+import { useState } from "react";
 
 export default function Footer() {
   const currentDate = new Date();
+  const [open, setOpen] = useState(false);
 
   return (
     <footer className="flex flex-col gap-6 w-full items-end p-4 sm:p-8 md:p-16">
       <div className="flex flex-col gap-10 sm:gap-20 w-full items-end">
         <div className="w-full h-full flex flex-col md:flex-row justify-between gap-8 md:gap-0">
           <div className="flex flex-col gap-4">
-            <div className="text-textPrimary font-semibold">Sürətli keçid</div>
+            <div
+              className="text-textPrimary font-semibold flex items-center justify-between lg:cursor-default cursor-pointer"
+              onClick={() => setOpen(!open)}
+            >
+              Sürətli keçid
+              <span className="lg:hidden">
+                {open ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+              </span>
+            </div>
 
-            <ul className="flex flex-col justify-between h-full">
+            <ul
+              className={`
+          flex flex-col justify-between h-full overflow-hidden transition-all duration-300
+          ${open ? "max-h-[1000px]" : "max-h-0 lg:max-h-none"}
+          ${open ? "opacity-100" : "opacity-0 lg:opacity-100"}
+          lg:opacity-100 lg:max-h-none
+        `}
+            >
               <li className="hover:text-textPrimary">
                 <Link href="/home">Ana səhifə</Link>
               </li>
-
+              
               <li className="hover:text-textPrimary">
                 <Link href="/agency">Agentlik</Link>
               </li>
-
+              
               <li className="hover:text-textPrimary">
                 <Link href="/sercices">Fəaliyyət sahələri</Link>
               </li>
-
+              
               <li className="hover:text-textPrimary">
                 <Link href="/diploma-recognition">Diplom Təsdiqi</Link>
               </li>
-
+              
               <li className="hover:text-textPrimary">
                 <Link href="/internationalization">Beynəlmiləlləşmə</Link>
               </li>
-
+              
               <li className="hover:text-textPrimary">
                 <Link href="/">Ən çox imtina alan universitetlər</Link>
               </li>
-
+              
               <li className="hover:text-textPrimary">
                 <Link href="">Tanınmayan universitetlər</Link>
               </li>
-
+              
               <li className="hover:text-textPrimary">
                 <Link href="/announcements">Elanlar</Link>
               </li>
-
+              
               <li className="hover:text-textPrimary">
                 <Link href="/reports">Hesabatlar</Link>
               </li>
-
+              
               <li className="hover:text-textPrimary">
                 <Link href="/legislation">Qanunvericilik</Link>
               </li>
-
+              
               <li className="hover:text-textPrimary">
                 <Link href="/media">Media</Link>
               </li>
-
+              
               <li className="hover:text-textPrimary">
                 <Link href="/contact">Əlaqə</Link>
               </li>

@@ -141,7 +141,7 @@ export default function Partners() {
             {partners.map((partner) => (
               <CarouselItem
                 key={partner.id}
-                className="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5 flex items-center justify-center"
+                className="basis-1/3 md:basis-1/4 lg:basis-1/5 flex items-center justify-center"
               >
                 <Image unoptimized={process.env.NODE_ENV === "development"}
                   src={partner.url} 

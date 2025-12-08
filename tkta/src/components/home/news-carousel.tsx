@@ -17,7 +17,7 @@ interface NewsProps {
 export default function NewsCarousel({ news }: NewsProps) {
   return (
     <Carousel
-      className="px-2 sm:px-3 md:px-4 w-full"
+      className="px-0 md:px-4 w-full"
       opts={{
         loop: true,
       }}

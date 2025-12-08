@@ -5,11 +5,7 @@ import path from "path";
 import { v4 as uuidv4 } from "uuid";
 import { Readable } from "stream";
 
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+export const dynamic = "force-dynamic";
 
 const oauth2Client = new google.auth.OAuth2(
   process.env.YOUTUBE_CLIENT_ID!,

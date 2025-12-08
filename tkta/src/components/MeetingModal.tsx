@@ -42,7 +42,7 @@ const MeetingModal = ({
         <div className="flex flex-col gap-6">
           {image && (
             <div className="flex justify-center">
-              <Image src={image} alt="checked" width={72} height={72} />
+              <Image unoptimized={process.env.NODE_ENV === "development"}src={image} alt="checked" width={72} height={72} />
             </div>
           )}
           {children}

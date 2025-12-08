@@ -19,7 +19,7 @@ export default function AnnualReports() {
           href="https://tkta.edu.az/files/45/1/12/13/123/bülleten/İllik%20hesabat%20SON.pdf"
         >
           <Card className="p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
-            <Image src={Folder} alt="folder icon" width={120} height={120} />
+            <Image unoptimized={process.env.NODE_ENV === "development"}src={Folder} alt="folder icon" width={120} height={120} />
 
             <span className="text-center text-textPrimary">2024</span>
           </Card>
@@ -31,7 +31,7 @@ export default function AnnualReports() {
           href="https://tkta.edu.az/files/hesabat/2023%20illik%20hesabat/İllik%20Hesabat%202023%20cü%20il%20pdf%20versiya.pdf"
         >
           <Card className="p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
-            <Image src={Folder} alt="folder icon" width={120} height={120} />
+            <Image unoptimized={process.env.NODE_ENV === "development"}src={Folder} alt="folder icon" width={120} height={120} />
 
             <span className="text-center text-textPrimary">2023</span>
           </Card>
@@ -43,7 +43,7 @@ export default function AnnualReports() {
           href="https://tkta.edu.az/files/hesabat%20az.pdf"
         >
           <Card className="p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
-            <Image src={Folder} alt="folder icon" width={120} height={120} />
+            <Image unoptimized={process.env.NODE_ENV === "development"}src={Folder} alt="folder icon" width={120} height={120} />
 
             <span className="text-center text-textPrimary">2022</span>
           </Card>
@@ -55,7 +55,7 @@ export default function AnnualReports() {
           href="https://tkta.edu.az/files/TKTA-illik%20hesabat.pdf"
         >
           <Card className="p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
-            <Image src={Folder} alt="folder icon" width={120} height={120} />
+            <Image unoptimized={process.env.NODE_ENV === "development"}src={Folder} alt="folder icon" width={120} height={120} />
 
             <span className="text-center text-textPrimary">2021</span>
           </Card>

@@ -153,8 +153,8 @@ export default function Header({ locale }: { locale: string }) {
           <LanguageSelector />
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-2 items-stretch sm:items-center w-full sm:w-auto mt-4 md:mt-0">
-          <div className="flex flex-row gap-2 items-center border border-gray-300 rounded-xl p-0.5 px-2 w-full sm:w-auto focus-within:border-textPrimary">
+        <div className="flex flex-row gap-2 items-center w-auto sm:w-auto">
+  <div className="flex flex-row gap-2 items-center border border-gray-300 rounded-xl p-0.5 px-2 w-auto focus-within:border-textPrimary">
             <SearchIcon width={24} height={24} className="text-gray-500" />
 
             <Input

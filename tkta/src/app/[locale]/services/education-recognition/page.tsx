@@ -44,7 +44,7 @@ const data = [
   {
     title: "Aşpaz",
     methodicalMaterial:
-      "https://tkta.edu.az/files/METOD%C4%B0K%C4%B0%20V%C6%8FSA%C4%B0T/1.%20A%C5%9Fpaz.pdf",
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765175480/1._20A_C5_9Fpaz_b0pv0b.pdf",
     registration:
       "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
     sampleQuestions: "https://qfitt.testportal.net/test.html?t=YAMajgA33HjN",
@@ -52,7 +52,7 @@ const data = [
   {
     title: "Avtomobil mühərriklərinin yığıcısı",
     methodicalMaterial:
-      "https://tkta.edu.az/files/METOD%C4%B0K%C4%B0%20V%C6%8FSA%C4%B0T/2.%20Avtomobil%20m%C3%BCh%C9%99rrikl%C9%99rinin%20y%C4%B1%C4%9F%C4%B1c%C4%B1s%C4%B1.pdf",
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765175497/2._20Avtomobil_20m_C3_BCh_C9_99rrikl_C9_99rinin_20y_C4_B1_C4_9F_C4_B1c_C4_B1s_C4_B1_m8gcei.pdf",
     registration:
       "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
     sampleQuestions: "https://qfitt.testportal.net/test.html?t=GJUreE89WZZh",
@@ -60,7 +60,7 @@ const data = [
   {
     title: "Avtomobillərin təmiri çilingəri",
     methodicalMaterial:
-      "https://tkta.edu.az/files/METOD%C4%B0K%C4%B0%20V%C6%8FSA%C4%B0T/3.%20Avtomobill%C9%99rin%20t%C9%99miri%20%C3%A7iling%C9%99ri.pdf",
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765175514/3._20Avtomobill_C9_99rin_20t_C9_99miri_20_C3_A7iling_C9_99ri_si3ba3.pdf",
     registration:
       "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
     sampleQuestions: "https://qfitt.testportal.net/test.html?t=6cE47JPgHgJS",
@@ -68,7 +68,7 @@ const data = [
   {
     title: "Bağban dekorator",
     methodicalMaterial:
-      "https://tkta.edu.az/files/METOD%C4%B0K%C4%B0%20V%C6%8FSA%C4%B0T/4.%20Ba%C4%9Fban%20dekorator.pdf",
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765175530/4._20Ba_C4_9Fban_20dekorator_axbvos.pdf",
     registration:
       "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
     sampleQuestions: "https://qfitt.testportal.net/test.html?t=2WWYzWKRLyt6",
@@ -76,7 +76,7 @@ const data = [
   {
     title: "Baytar texniki",
     methodicalMaterial:
-      "https://tkta.edu.az/files/METOD%C4%B0K%C4%B0%20V%C6%8FSA%C4%B0T/5.%20Baytar%20texniki.pdf",
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765175549/5._20Baytar_20texniki_hcvhth.pdf",
     registration:
       "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
     sampleQuestions: "https://qfitt.testportal.net/test.html?t=6v6g483xn3g9",
@@ -84,7 +84,7 @@ const data = [
   {
     title: "Bərbər manikürçü-vizajist",
     methodicalMaterial:
-      "https://tkta.edu.az/files/METOD%C4%B0K%C4%B0%20V%C6%8FSA%C4%B0T/6.%20B%C9%99rb%C9%99r%20manik%C3%BCr%C3%A7%C3%BC-vizajist.pdf",
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765175568/6._20B_C9_99rb_C9_99r_20manik_C3_BCr_C3_A7_C3_BC-vizajist_g7irzo.pdf",
     registration:
       "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
     sampleQuestions: "https://qfitt.testportal.net/test.html?t=AVhuc77CZLBk",
@@ -92,7 +92,7 @@ const data = [
   {
     title: "Bərbər",
     methodicalMaterial:
-      "https://tkta.edu.az/files/METOD%C4%B0K%C4%B0%20V%C6%8FSA%C4%B0T/7.%20B%C9%99rb%C9%99r.pdf",
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765175583/7._20B_C9_99rb_C9_99r_n8rbxh.pdf",
     registration:
       "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
     sampleQuestions:
@@ -101,7 +101,7 @@ const data = [
   {
     title: "Bitkiçilik mütəxəssisi",
     methodicalMaterial:
-      "https://tkta.edu.az/files/METOD%C4%B0K%C4%B0%20V%C6%8FSA%C4%B0T/8.%20Bitki%C3%A7ilik%20m%C3%BCt%C9%99x%C9%99ssisi.pdf",
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765175599/8._20Bitki_C3_A7ilik_20m_C3_BCt_C9_99x_C9_99ssisi_xxa2vk.pdf",
     registration:
       "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
     sampleQuestions: "https://qfitt.testportal.net/test.html?t=jn8jzPfNPq2s",
@@ -109,7 +109,7 @@ const data = [
   {
     title: "Dayə",
     methodicalMaterial:
-      "https://tkta.edu.az/files/METOD%C4%B0K%C4%B0%20V%C6%8FSA%C4%B0T/9.%20Day%C9%99.pdf",
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765175616/9._20Day_C9_99_tlnlqj.pdf",
     registration:
       "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
     sampleQuestions: "https://qfitt.testportal.net/test.html?t=5PYip6D2EgS8",
@@ -117,7 +117,7 @@ const data = [
   {
     title: "Dərzi",
     methodicalMaterial:
-      "https://tkta.edu.az/files/METOD%C4%B0K%C4%B0%20V%C6%8FSA%C4%B0T/10.%20D%C9%99rzi.pdf",
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765175634/10._20D_C9_99rzi_p1tnsf.pdf",
     registration:
       "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
     sampleQuestions: "https://qfitt.testportal.net/test.html?t=EU29NTM7pqZS",
@@ -125,7 +125,7 @@ const data = [
   {
     title: "Elektrik qaz qaynaqçısı",
     methodicalMaterial:
-      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/11.%20Elektrik%20qaz%20qaynaqçısı.pdf",
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765175647/11._20Elektrik_20qaz_20qaynaq%C3%A7%C4%B1s%C4%B1_e7beum.pdf",
     registration:
       "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
     sampleQuestions: "https://qfitt.testportal.net/test.html?t=EedfVYMhuqeA",
@@ -133,7 +133,7 @@ const data = [
   {
     title: "Əməliyyatçı mühasib",
     methodicalMaterial:
-      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/12.%20Əm%C9%99liyyatçı%20mühasib.pdf",
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765175662/12._20%C6%8Fm_C9_99liyyat%C3%A7%C4%B1_20m%C3%BChasib_pojn34.pdf",
     registration:
       "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
     sampleQuestions: "https://qfitt.testportal.net/test.html?t=AQGA4hxYDKWc",
@@ -141,7 +141,7 @@ const data = [
   {
     title: "Ərzaq və qeyri-ərzaq malları satıcısı, nəzarətçi xəzinadar",
     methodicalMaterial:
-      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/13.%20Ərzaq%20v%C9%99%20qeyri-%C9%99rzaq.pdf",
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765175686/13._20%C6%8Frzaq_20v_C9_99_20qeyri-_C9_99rzaq_zshewa.pdf",
     registration:
       "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
     sampleQuestions: "https://qfitt.testportal.net/test.html?t=cx7AD52ydutk",
@@ -149,7 +149,7 @@ const data = [
   {
     title: "Heyvandarlıq mütəxəssisi",
     methodicalMaterial:
-      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/14.%20Heyvandarlıq%20müt%C9%99x%C9%99ssisi.pdf",
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765175702/14._20Heyvandarl%C4%B1q_20m%C3%BCt_C9_99x_C9_99ssisi_z40n3w.pdf",
     registration:
       "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
     sampleQuestions: "https://qfitt.testportal.net/test.html?t=iemqVK3eVDsi",
@@ -157,7 +157,7 @@ const data = [
   {
     title: "İnşaat ustası",
     methodicalMaterial:
-      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/15.%20İnşaat%20ustası.pdf",
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765175720/15._20%C4%B0n%C5%9Faat_20ustas%C4%B1_xzliif.pdf",
     registration:
       "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
     sampleQuestions: "ttps://qfitt.testportal.net/test.html?t=XQYd8aWu37y2",
@@ -165,7 +165,7 @@ const data = [
   {
     title: "Kargüzar",
     methodicalMaterial:
-      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/16.%20Kargüzar.pdf",
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765175956/16._20Karg%C3%BCzar_cr664i.pdf",
     registration:
       "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
     sampleQuestions: "https://qfitt.testportal.net/test.html?t=ygqTJ3WmmG2A",
@@ -173,7 +173,7 @@ const data = [
   {
     title: "Komputer operatoru",
     methodicalMaterial:
-      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/17.%20komputer%20operatoru.pdf",
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765175972/17._20komputer_20operatoru_g5dvqv.pdf",
     registration:
       "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
     sampleQuestions: "https://qfitt.testportal.net/test.html?t=gkbmAEFmqFcE",
@@ -181,7 +181,7 @@ const data = [
   {
     title: "Mənzil təsərrüfat xidməti",
     methodicalMaterial:
-      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/18.%20M%C9%99nzil%20t%C9%99s%C9%99rrüfat%20xidm%C9%99ti.pdf",
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765175989/18._20M_C9_99nzil_20t_C9_99s_C9_99rr%C3%BCfat_20xidm_C9_99ti_mb6irr.pdf",
     registration:
       "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
     sampleQuestions: "https://qfitt.testportal.net/test.html?t=ZmVQdG9Ja2Nh",
@@ -189,7 +189,7 @@ const data = [
   {
     title: "Mobil telefonların təmiri ustası",
     methodicalMaterial:
-      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/19.%20Mobil%20telefonların%20t%C9%99miri%20ustası.pdf",
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765176004/19._20Mobil_20telefonlar%C4%B1n_20t_C9_99miri_20ustas%C4%B1_jbq8zb.pdf",
     registration:
       "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
     sampleQuestions: "https://qfitt.testportal.net/test.html?t=CBtwM6dX7VMF",
@@ -197,7 +197,7 @@ const data = [
   {
     title: "Mühafizəçi",
     methodicalMaterial:
-      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/20.%20Mühafiz%C9%99çi.pdf",
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765176023/20._20M%C3%BChafiz_C9_99%C3%A7i_esffmv.pdf",
     registration:
       "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
     sampleQuestions: "https://qfitt.testportal.net/test.html?t=5Xt9NDaR5G9X",
@@ -205,7 +205,7 @@ const data = [
   {
     title: "Plastik boru qaynaqçısı",
     methodicalMaterial:
-      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/21.%20Plastik%20boru%20qaynaqçısı.pdf",
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765176048/21._20Plastik_20boru_20qaynaq%C3%A7%C4%B1s%C4%B1_a3q9am.pdf",
     registration:
       "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
     sampleQuestions: "https://qfitt.testportal.net/test.html?t=Ruc8kw8YqZ7A",
@@ -213,7 +213,7 @@ const data = [
   {
     title: "Poliqrafiya üzrə dizayner",
     methodicalMaterial:
-      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/22.%20Poliqrafiya%20üzr%C9%99%20dizayner.pdf",
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765176064/22._20Poliqrafiya_20%C3%BCzr_C9_99_20dizayner_r7b80d.pdf",
     registration:
       "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
     sampleQuestions: "https://qfitt.testportal.net/test.html?t=hYatS7TeaaJ7",
@@ -221,7 +221,7 @@ const data = [
   {
     title: "Qənnadçı, şirniyyatçı",
     methodicalMaterial:
-      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/23.%20Q%C9%99nnadçı%2C%20şirniyyatçı.pdf",
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765176078/23._20Q_C9_99nnad%C3%A7%C4%B1_2C_20%C5%9Firniyyat%C3%A7%C4%B1_dry4av.pdf",
     registration:
       "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
     sampleQuestions: "https://qfitt.testportal.net/test.html?t=tLeL66yd88Xg",
@@ -236,7 +236,7 @@ const data = [
   {
     title: "Tikiş avadanlıqlarının operatoru, tikişçi",
     methodicalMaterial:
-      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/24.%20Tikiş%20avadanlıqlarının%20operatoru%2Ctikişçi.pdf",
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765176105/24._20Tiki%C5%9F_20avadanl%C4%B1qlar%C4%B1n%C4%B1n_20operatoru_2Ctiki%C5%9F%C3%A7i_pqg5wv.pdf",
     registration:
       "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
     sampleQuestions: "https://qfitt.testportal.net/test.html?t=q4Q5X4UFUK2e",
@@ -244,7 +244,7 @@ const data = [
   {
     title: "Turizm sahəsində iaşə mütəxəssisi",
     methodicalMaterial:
-      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/25.%20Turizm%20sah%C9%99sind%C9%99%20iaş%C9%99%20müt%C9%99x%C9%99ssisi.pdf",
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765176122/25._20Turizm_20sah_C9_99sind_C9_99_20ia%C5%9F_C9_99_20m%C3%BCt_C9_99x_C9_99ssisi_lvumcr.pdf",
     registration:
       "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
     sampleQuestions: "https://qfitt.testportal.net/test.html?t=vJSWJdidvfrW",
@@ -252,7 +252,7 @@ const data = [
   {
     title: "Zərgər",
     methodicalMaterial:
-      "https://tkta.edu.az/files/METODİKİ%20VƏSAİT/26.%20Z%C9%99rg%C9%99r%20son.pdf",
+      "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765176140/26._20Z_C9_99rg_C9_99r_20son_swf5zc.pdf",
     registration:
       "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
     sampleQuestions: "https://qfitt.testportal.net/test.html?t=ybyKNxpM9Y6e",

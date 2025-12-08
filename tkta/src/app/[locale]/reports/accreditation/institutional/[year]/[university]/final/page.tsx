@@ -33,7 +33,7 @@ export default async function Accreditations({
             </Card>
           ) : (
             <Card className="p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
-              <Image src={Folder} alt="folder icon" width={120} height={120} />
+              <Image unoptimized={process.env.NODE_ENV === "development"}src={Folder} alt="folder icon" width={120} height={120} />
 
               <span className="text-center text-textPrimary">
                 {report[0].university}

@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
 
-    const { name, email, password } = body;
+    const { name, email, password, role } = body;
 
     if (!name || !email || !password) {
       return NextResponse.json(
@@ -39,15 +39,17 @@ export async function POST(request: NextRequest) {
       name: string;
       email: string;
       password: string;
+      role: string;
     } = {
       id: `${users.length + 1}`,
       name,
       email,
       password,
+      role,
     };
 
-    await sql`INSERT INTO users (id, name, email, password) VALUES
-('${users.length + 1}', ${name}, ${email}, ${password});`;
+    await sql`INSERT INTO users (id, name, email, password, role) VALUES
+('${users.length + 1}', ${name}, ${email}, ${password}, ${role});`;
 
     return NextResponse.json(newUser, { status: 201 });
   } catch {

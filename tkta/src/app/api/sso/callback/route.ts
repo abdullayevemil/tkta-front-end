@@ -15,7 +15,7 @@ export async function POST(request: Request) {
       Buffer.from(userDetails, "base64").toString("utf-8")
     );
 
-    const fakeEmail = decoded.GN.toString().toLower() + "@sso.fake";
+    const fakeEmail = decoded.GN + "@sso.fake";
     const fakePassword = decoded.serialNumber || "sso-default";
 
     let user = null;

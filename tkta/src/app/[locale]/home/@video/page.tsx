@@ -53,7 +53,7 @@ export default function Video() {
           <button
             onClick={toggleMute}
             className="
-            absolute bottom-4 right-4 z-50
+            absolute bottom-4 right-4 z-40
             bg-black/60 text-white 
             p-3 rounded-full 
             backdrop-blur 

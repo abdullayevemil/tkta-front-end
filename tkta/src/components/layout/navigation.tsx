@@ -479,8 +479,6 @@ export function Navigation({ locale }: { locale: string }) {
 
             <NavigationMenuItem>
               <Link href={`/${locale}/contact`} className="font-helvetica text-base">
-                {/* @next-codemod-error This Link previously used the now removed `legacyBehavior` prop, and has a child that might not be an anchor. The codemod bailed out of lifting the child props to the Link. Check that the child component does not render an anchor, and potentially move the props manually to Link. */
-                }
                 <NavigationMenuLink
                   className={cn(
                     navigationMenuTriggerStyle(),
@@ -494,8 +492,6 @@ export function Navigation({ locale }: { locale: string }) {
 
             <NavigationMenuItem>
               <Link href="tel:146" className="font-helvetica text-base">
-                {/* @next-codemod-error This Link previously used the now removed `legacyBehavior` prop, and has a child that might not be an anchor. The codemod bailed out of lifting the child props to the Link. Check that the child component does not render an anchor, and potentially move the props manually to Link. */
-                }
                 <NavigationMenuLink
                   className={cn(
                     navigationMenuTriggerStyle(),

@@ -66,23 +66,23 @@ export default function Header({ locale }: { locale: string }) {
               </Link>
             </div>
 
-            <div className="flex flex-wrap gap-2">
+            <div className="flex gap-2 justify-between">
               <Link
-                className="text-base max-w-[150px] text-center shadow border rounded p-2 hover:text-textPrimary"
+                className="w-1/2 text-sm md:text-base md:max-w-[150px] text-center shadow border rounded p-1 md:p-2 hover:text-textPrimary"
                 href="/rejected-universities"
               >
                 {t.header.mostRejectedUniversities}
               </Link>
 
               <Link
-                className="text-base max-w-[150px] text-center shadow border rounded p-2 hover:text-textPrimary"
+                className="w-1/2 text-sm md:text-base md:max-w-[150px] text-center shadow border rounded p-1 md:p-2 hover:text-textPrimary"
                 href="/not-recognized-universities"
               >
                 {t.header.nonRecognizedUniversities}
               </Link>
             </div>
 
-            <ul className="flex flex-wrap gap-3 items-center">
+            <ul className="flex gap-1 md:gap-3 items-center">
               <li>
                 <Link
                   target="_blank"
@@ -159,7 +159,7 @@ export default function Header({ locale }: { locale: string }) {
               </li>
             </ul>
 
-            <div className="flex flex-row gap-2 items-center">
+            <div className="flex flex-row gap-1 md:gap-2 items-center">
               <ColorSwitch locale={locale} />
               <FontSelector />
               <LanguageSelector />

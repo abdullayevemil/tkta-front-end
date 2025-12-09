@@ -24,7 +24,7 @@ export async function GET() {
     OperationInfo: {
       OperationId: operationId,
       Type: "Auth",
-      Platform: "ASAN", // match Postman
+      Platform: "SIMA", // match Postman
     },
     ClientInfo: {
       ClientId: CLIENT_ID,

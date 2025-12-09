@@ -1,6 +1,10 @@
 import { NextResponse } from "next/server";
 import { generateSignature } from "@/lib/sso/sign";
-import { SSORequest, SignableContainer, SSORedirectResponse } from "@/lib/sso/types";
+import {
+  SSORequest,
+  SignableContainer,
+  SSORedirectResponse,
+} from "@/lib/sso/types";
 import crypto from "crypto";
 
 const CLIENT_ID = process.env.SSO_CLIENT_ID!;
@@ -15,18 +19,18 @@ export async function GET() {
   const container: SignableContainer = {
     ProtoInfo: {
       Name: "web",
-      Version: "1.1"
+      Version: "1.0", // match Postman
     },
     OperationInfo: {
       OperationId: operationId,
       Type: "Auth",
-      Platform: "ASAN"
+      Platform: "ASAN", // match Postman
     },
     ClientInfo: {
       ClientId: CLIENT_ID,
       Callback: CALLBACK_URL,
-      RedirectURI: REDIRECT_UI
-    }
+      RedirectURI: REDIRECT_UI,
+    },
   };
 
   const signature = generateSignature(container, SECRET_KEY);
@@ -35,17 +39,18 @@ export async function GET() {
     SignableContainer: container,
     Header: {
       AlgName: "HMACSHA256",
-      Signature: signature
-    }
+      Signature: signature,
+    },
   };
 
   const ssoResponse = await fetch(SSO_URL, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(requestBody)
+    headers: {
+      "Content-Type": "application/json",
+      "x-api-key": process.env.SSO_API_KEY!,
+    },
+    body: JSON.stringify(requestBody),
   });
-
-  console.log(ssoResponse)
 
   const json = (await ssoResponse.json()) as SSORedirectResponse;
 

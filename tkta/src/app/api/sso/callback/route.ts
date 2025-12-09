@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import axios from "axios";
+import { signIn } from "next-auth/react";
 
 export async function POST(request: Request) {
   try {
@@ -49,14 +50,11 @@ export async function POST(request: Request) {
       }
     }
 
-    await axios.post(
-      `${process.env.NEXTAUTH_URL}/api/auth/callback/credentials`,
-      {
-        email: fakeEmail,
-        password: fakePassword,
-      },
-      { withCredentials: true }
-    );
+    await signIn("credentials", {
+      redirect: false,
+      email: fakeEmail,
+      password: fakePassword,
+    });
 
     const res = NextResponse.json({ status: "ok", user: decoded });
 

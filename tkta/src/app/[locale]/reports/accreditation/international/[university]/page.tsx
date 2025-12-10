@@ -50,7 +50,7 @@ WHERE LOWER(u.title) = LOWER(${decodeURIComponent(university)});
 `;
 
   return (
-    <div className="grid grid-cols-4 items-center justify-evenly px-16 gap-6 w-full">
+    <div className="grid grid-cols-4 items-center justify-evenly px-4 md:px16 gap-6 w-full">
   {reports
     ? reports.map((report, index) => (
         <Link

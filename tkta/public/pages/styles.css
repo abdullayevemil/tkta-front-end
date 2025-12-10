@@ -1,3 +1,8 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -6,14 +11,16 @@ body {
 }
 
 .container {
-  width: 100%;
+  width: 90%;
+  max-width: 1200px;
   margin: auto;
 }
 
+/* Header */
 .header {
   background: #998f76;
   color: white;
-  padding: 20px 266px;
+  padding: 15px 0;
 }
 
 .header-content {
@@ -26,93 +33,69 @@ body {
   height: 50px;
 }
 
-.nav {
-  display: flex;
-  gap: 30px;
-}
-
+/* Title */
 .title-container {
   text-align: center;
-  padding: 27px;
-}
-
-.padding {
-  padding: 0 266px;
+  padding: 20px 10px;
 }
 
 h1.title {
   color: #4E504E;
   font-weight: bold;
-  font-size: 12pt;
+  font-size: 1.5rem;
+  line-height: 1.4;
 }
 
-.nav-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-  color: white;
-}
-
-.nav-item img {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 5px;
-}
-
+/* Main content */
 .main {
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
   background-color: white;
   border: 1px solid #CCCCCC;
+  margin-bottom: 40px;
 }
 
-.title {
-  text-align: center;
-}
-
+/* Alert box */
 .alert-box {
   background: #FFFFF4;
-  padding: 20px;
-  border-radius: 6px;
+  padding: 15px;
   border-radius: 10px;
   border: 1px solid #CCCCCC;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   color: #717171;
 }
 
 .alert-box p {
-  font-size: 9pt;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
 }
 
+/* Login section */
 .login-section {
   display: flex;
-  gap: 3rem;
-  padding: 0 20px;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
 }
 
 .buttons {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin-bottom: 25px;
-  width: 35%;
+  gap: 1rem;
+  flex: 1 1 250px; /* responsive width */
+  max-width: 300px;
 }
 
 .btn {
   width: 100%;
-  flex: 1;
-  padding: 15px;
-  margin: 0.7rem 0;
-  font-size: 16px;
+  padding: 15px 10px;
+  font-size: 1rem;
   border: none;
   cursor: pointer;
   border-radius: 8px;
   background: #998f76;
   color: white;
   transition: 0.2s;
-  padding-top: 1.8rem;
-  padding-bottom: 1.8rem;
   text-align: center;
 }
 
@@ -122,12 +105,13 @@ h1.title {
 }
 
 .info-text {
-  font-size: 10pt;
+  flex: 2 1 300px;
+  font-size: 0.95rem;
   line-height: 1.6;
-  width: 65%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-width: 250px;
 }
 
 a {
@@ -140,6 +124,44 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Footer */
 .footer {
   height: 80px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .title-container h1.title {
+    font-size: 1.2rem;
+  }
+
+  .login-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .buttons {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1.title {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 12px 8px;
+    font-size: 0.9rem;
+  }
+
+  .alert-box {
+    padding: 10px;
+  }
 }

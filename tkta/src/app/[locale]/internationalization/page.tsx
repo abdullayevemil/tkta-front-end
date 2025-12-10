@@ -149,28 +149,28 @@ export default function Iternationalization({ params }: Props) {
 
   return (
     <section className="w-full flex flex-col gap-16 items-center">
-      <h1 className="uppercase text-4xl text-center w-full px-16 pt-16">
+      <h1 className="uppercase text-4xl text-center w-full px-4 md:px16 pt-16">
         Beynəlmİləlləşmə
       </h1>
 
-      <Tabs defaultValue="general-info" className="w-full px-16 flex flex-col">
-        <TabsList>
+      <Tabs defaultValue="general-info" className="w-full px-4 md:px16 flex flex-col">
+        <TabsList className="flex flex-col md:flex-row justify-evenly relative">
           <TabsTrigger
-            className="w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
+            className="w-full md:w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value="general-info"
           >
             Ümumi məlumat
           </TabsTrigger>
 
           <TabsTrigger
-            className="w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
+            className="w-full md:w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value="international-events"
           >
             Xarici tədbirlər
           </TabsTrigger>
 
           <TabsTrigger
-            className="w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
+            className="w-full md:w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value="employee-exchange"
           >
             Heyətin mübadiləsi

@@ -22,7 +22,7 @@ export default async function Accreditations({
   const reports = await sql`SELECT * FROM activity_plan WHERE year = ${year}`;
 
   return (
-      <div className="grid grid-cols-4 px-16 gap-6 w-full">
+      <div className="grid grid-cols-4 px-4 md:px16 gap-6 w-full">
         {reports.map((report, index) => (
           <Link
             key={index}

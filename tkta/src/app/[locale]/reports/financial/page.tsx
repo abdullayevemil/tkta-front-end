@@ -8,11 +8,11 @@ export default function AnnualReports() {
     <section className="w-full flex flex-col gap-16 items-center">
       
 
-      <h1 className="uppercase text-4xl text-center w-full px-16 pt-16">
+      <h1 className="uppercase text-4xl text-center w-full px-4 md:px16 pt-16">
         Malİyyə hesabatları
       </h1>
 
-      <div className="grid grid-cols-4 px-16 gap-6 w-full">
+      <div className="grid grid-cols-4 px-4 md:px16 gap-6 w-full">
         <Link target="_blank" rel="noopener noreferrer" href="https://tkta.edu.az/files/NewFolder%2022/24/Audit%20hesabatı%20-%202024.pdf">
           <Card className="p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
             <Image unoptimized={process.env.NODE_ENV === "development"}src={Folder} alt="folder icon" width={120} height={120} />

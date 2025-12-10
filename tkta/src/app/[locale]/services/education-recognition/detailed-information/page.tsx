@@ -4,32 +4,11 @@ import React from "react";
 export default function EducationRecognition() {
   return (
     <section className="w-full flex flex-col gap-16 items-center">
-      <h1 className="uppercase text-4xl text-center w-full px-16 pt-16">
+      <h1 className="uppercase text-4xl text-center w-full px-4 md:px16 pt-16">
         QEYRİ-FORMAL VƏ İNFORMAL TƏHSİLİN TANINMASI
       </h1>
 
-      <div className="py-10 space-y-6 text-justify px-16">
-        <div>
-          <h2 className="text-xl font-semibold text-textPrimary mb-2">
-            Qeyri-formal təhsil
-          </h2>
-          <p>
-            Formal təhsil mühitindən kənarda, müxtəlif kurslarda, dərnəklərdə,
-            təlimlərdə və ya iş mühitində əldə edilən bilik, bacarıq və
-            səriştələrin məcmusudur.
-          </p>
-        </div>
-
-        <div>
-          <h2 className="text-xl font-semibold text-textPrimary mb-2">
-            İnformal təhsil
-          </h2>
-          <p>
-            Gündəlik həyatımızda özünütəhsil yolu ilə, maraq dairəmizə və
-            ehtiyaclarımıza uyğun əldə edilən bilik və bacarıqlardır. Bu, əsasən
-            təcrübəyə əsaslanan səriştələrdir.
-          </p>
-        </div>
+      <div className="py-10 space-y-6 text-justify px-4 md:px16">
 
         <div>
           <h2 className="text-xl font-semibold text-textPrimary mb-2">

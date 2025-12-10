@@ -5,45 +5,45 @@ import Link from "next/link";
 export default function TrainingAndMethodology() {
   return (
     <section className="w-full flex flex-col gap-16 items-center">
-      <h1 className="uppercase text-4xl text-center w-full px-16 pt-16">
+      <h1 className="uppercase text-4xl text-center w-full px-4 md:px16 pt-16">
         TƏLİM VƏ METODOLOGİYA
       </h1>
 
       <Tabs
         defaultValue="general-information"
-        className="w-full px-16 flex flex-col gap-16 text-justify"
+        className="w-full px-4 md:px16 flex flex-col gap-16 text-justify"
       >
-        <TabsList>
+        <TabsList className="flex flex-col md:flex-row justify-evenly relative">
           <TabsTrigger
-            className="w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
+            className="w-full md:w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value="general-information"
           >
             Ümumi məlumat
           </TabsTrigger>
 
           <TabsTrigger
-            className="w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
+            className="w-full md:w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value="support"
           >
             Təlim və metodoloji dəstək
           </TabsTrigger>
 
           <TabsTrigger
-            className="w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
+            className="w-full md:w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value="documentation"
           >
             Metodoloji sənədlər
           </TabsTrigger>
 
           <TabsTrigger
-            className="w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
+            className="w-full md:w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value="expert-preparation"
           >
             Ekspert hazırlığı və qeydiyyatı
           </TabsTrigger>
 
           <TabsTrigger
-            className="w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
+            className="w-full md:w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value="qualification-ambassador"
           >
             Keyfiyyət elçisi

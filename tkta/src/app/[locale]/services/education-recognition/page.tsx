@@ -407,9 +407,7 @@ const columns: ColumnDef<Major>[] = [
   {
     accessorKey: "number",
     header: "№",
-    cell: ({ row }) => (
-      <div className="capitalize">{row.index + 1}</div>
-    ),
+    cell: ({ row }) => <div className="capitalize">{row.index + 1}</div>,
   },
   {
     accessorKey: "title",
@@ -501,17 +499,17 @@ export default function EducationRecognition() {
 
   return (
     <section className="w-full flex flex-col gap-16 items-center">
-      <h1 className="uppercase text-4xl text-center w-full px-16 pt-16">
+      <h1 className="uppercase text-4xl text-center w-full px-4 md:px16 pt-16">
         QEYRİ-FORMAL VƏ İNFORMAL TƏHSİLİN TANINMASI
       </h1>
 
       <Tabs
         defaultValue="general-information"
-        className="w-full px-16 flex flex-col gap-16"
+        className="w-full px-4 md:px16 flex flex-col gap-16"
       >
-        <TabsList>
+        <TabsList className="flex flex-col md:flex-row justify-evenly relative">
           <TabsTrigger
-            className="w-1/3 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
+            className="w-full md:w-1/3 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value="general-information"
           >
             Ümumi məlumat
@@ -532,7 +530,7 @@ export default function EducationRecognition() {
           </TabsTrigger>
 
           <TabsTrigger
-            className="w-1/3 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
+            className="w-full md:w-1/3 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value="partners"
           >
             Tərəfdaşlar
@@ -542,6 +540,26 @@ export default function EducationRecognition() {
         <TabsContent value="general-information">
           <div className="flex flex-col gap-4 text-justify">
             <div className="flex flex-col gap-6">
+              <div>
+                <h2 className="font-bold text-textPrimary">
+                  Qeyri-formal təhsil
+                </h2>
+                <p>
+                  Formal təhsil mühitindən kənarda, müxtəlif kurslarda,
+                  dərnəklərdə, təlimlərdə və ya iş mühitində əldə edilən bilik,
+                  bacarıq və səriştələrin məcmusudur.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="font-bold text-textPrimary">İnformal təhsil</h2>
+                <p>
+                  Gündəlik həyatımızda özünütəhsil yolu ilə, maraq dairəmizə və
+                  ehtiyaclarımıza uyğun əldə edilən bilik və bacarıqlardır. Bu,
+                  əsasən təcrübəyə əsaslanan səriştələrdir.
+                </p>
+              </div>
+
               <div className="flex flex-col gap-3">
                 <h2 className="font-bold text-textPrimary">
                   Qeyri-formal və İnformal Təhsilin Tanınması
@@ -573,9 +591,16 @@ export default function EducationRecognition() {
 
               <div className="flex flex-col gap-3">
                 <h2 className="font-bold text-textPrimary">
-                  QFİTT-in fəaliyyəti ilə linkə keçid edərək tanış ola bilərsiniz
+                  QFİTT-in fəaliyyəti ilə linkə keçid edərək tanış ola
+                  bilərsiniz
                 </h2>
-                <Link className="p-4 text-textPrimary border-2 font-semibold w-fit rounded-xl" target="_blank" href="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765375064/T%C9%99qdimat_2__compressed_iyqruy.pdf">Təqdimat</Link>
+                <Link
+                  className="p-4 text-textPrimary border-2 font-semibold w-fit rounded-xl"
+                  target="_blank"
+                  href="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765375064/T%C9%99qdimat_2__compressed_iyqruy.pdf"
+                >
+                  Təqdimat
+                </Link>
               </div>
 
               <div className="flex flex-col gap-4">

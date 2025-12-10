@@ -39,7 +39,7 @@ export default async function Accreditations({
   `;
 
   return (
-    <div className="flex flex-row items-center justify-evenly px-16 gap-6 w-full">
+    <div className="flex flex-row items-center justify-evenly px-4 md:px16 gap-6 w-full">
       {report ? (
         <Link
           className="w-1/4"

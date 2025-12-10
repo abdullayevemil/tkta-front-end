@@ -40,7 +40,7 @@ export default function Header({ locale }: { locale: string }) {
   return (
     <header className="border-b border-gray-100 bg-white flex flex-col items-center gap-4 py-4 px-4 sm:px-8 md:px-16 font-helvetica sticky top-0 left-0 z-50 w-full">
       <div className="w-full flex items-center justify-between md:hidden">
-        <Link href={`/${locale}/home`}>
+        <Link href={`/${locale}/home`} onClick={() => setMenuOpen(false)}>
           <Image src={Logo} alt="TKTA logo" className="w-[130px] h-12" />
         </Link>
 
@@ -70,6 +70,7 @@ export default function Header({ locale }: { locale: string }) {
               <Link
                 className="w-1/2 text-sm md:text-base md:max-w-[150px] text-center shadow border rounded p-1 md:p-2 hover:text-textPrimary"
                 href="/rejected-universities"
+                onClick={() => setMenuOpen(false)}
               >
                 {t.header.mostRejectedUniversities}
               </Link>
@@ -77,6 +78,7 @@ export default function Header({ locale }: { locale: string }) {
               <Link
                 className="flex justify-center items-center w-1/2 text-sm md:text-base md:max-w-[150px] text-center shadow border rounded p-1 md:p-2 hover:text-textPrimary"
                 href="/not-recognized-universities"
+                onClick={() => setMenuOpen(false)}
               >
                 {t.header.nonRecognizedUniversities}
               </Link>
@@ -195,7 +197,7 @@ export default function Header({ locale }: { locale: string }) {
             </div>
           </div>
 
-          <Navigation locale={locale} />
+          <Navigation locale={locale} setOpen={setMenuOpen} />
         </div>
       </div>
     </header>

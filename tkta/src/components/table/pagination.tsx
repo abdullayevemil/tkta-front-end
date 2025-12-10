@@ -33,7 +33,7 @@ export function TablePagination({
 
   return (
     <Pagination className="justify-end text-buttonHoverText">
-      <PaginationContent>
+      <PaginationContent className="gap-0 md:gap-1">
         <PaginationItem>
           <PaginationPrevious
             className="hover:cursor-pointer hover:text-textPrimary"

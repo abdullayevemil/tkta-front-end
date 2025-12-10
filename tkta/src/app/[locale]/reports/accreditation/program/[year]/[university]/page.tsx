@@ -33,7 +33,7 @@ export default async function Accreditations({
   const { year, university } = await params;
 
   return (
-      <div className="grid grid-cols-4 px-16 gap-6 w-full">
+      <div className="grid grid-cols-4 px-4 md:px16 gap-6 w-full">
         {types.map((type, index) => (
           <Link
             key={index}

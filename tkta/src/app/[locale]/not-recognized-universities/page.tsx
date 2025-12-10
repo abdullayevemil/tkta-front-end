@@ -407,11 +407,11 @@ export default function DataTableDemo() {
 
   return (
     <section className="w-full flex flex-col gap-16 items-center">
-      <h1 className="uppercase text-4xl text-center w-full px-16 pt-16">
+      <h1 className="uppercase text-4xl text-center w-full px-4 md:px-16 pt-16">
         Tanınmayan unİversİtetlər
       </h1>
 
-      <h2 className="text-base text-center px-16">
+      <h2 className="text-base text-center px-4 md:px-16">
         <div>
           Təhsildə Keyfiyyət Təminatı Agentliyinə (TKTA) edilən müraciətlərin
           təhlili nəticəsində yerli akkreditasiyası olmadığı üçün ali təhsil
@@ -421,7 +421,7 @@ export default function DataTableDemo() {
         <div>Müvafiqdir: 25.09.2025*</div>
       </h2>
 
-      <div className="w-full px-16">
+      <div className="w-full px-4 md:px-16">
         <div className="flex items-center py-4">
           <Input
             placeholder="Ada görə..."
@@ -508,7 +508,7 @@ export default function DataTableDemo() {
             </TableBody>
           </Table>
         </div>
-        <div className="flex items-center justify-end space-x-2 py-4">
+        <div className="flex flex-col md:flex-row items-center justify-end space-x-2 py-4">
           <ItemsPerPageSelector
             pageSize={pagination.pageSize}
             pageIndex={pagination.pageIndex}
@@ -524,7 +524,7 @@ export default function DataTableDemo() {
         </div>
       </div>
 
-      <div className="w-full px-16 text-center">
+      <div className="w-full px-4 md:px-16 text-center">
         * Siyahı, ali təhsil müəssisəsi üzrə minimum 30 müraciət nəzərə
         alınaraq, edilən müraciətlərdən 30% və ondan artıq imtinaları əhatə
         etməkdədir.

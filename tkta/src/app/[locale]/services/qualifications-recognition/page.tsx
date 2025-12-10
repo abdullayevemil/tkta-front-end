@@ -16,46 +16,46 @@ export default function HomePage() {
 
       <Tabs
         defaultValue="general-information"
-        className="w-full px-16 flex flex-col gap-16"
+        className="w-full px-4 md:px16 flex flex-col gap-16"
       >
-        <TabsList className="justify-evenly">
+        <TabsList className="flex flex-col md:flex-row justify-evenly relative">
           <TabsTrigger
-            className="w-1/4 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
+            className="w-full md:w-1/4 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value="general-information"
           >
             Ümumi məlumat
           </TabsTrigger>
 
           <TabsTrigger
-            className="w-1/4 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
+            className="w-full md:w-1/4 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value="required-documents"
           >
             Tələb edilən sənədlər
           </TabsTrigger>
 
           <TabsTrigger
-            className="w-1/4 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
+            className="w-full md:w-1/4 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value="recognition-certificate"
           >
             Tanınma haqqında şəhadətnamə
           </TabsTrigger>
 
           <TabsTrigger
-            className="w-1/4 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
+            className="w-full md:w-1/4 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value="legalisation"
           >
             Leqallaşdırma
           </TabsTrigger>
 
           <TabsTrigger
-            className="w-1/4 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
+            className="w-full md:w-1/4 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value="personnel-bank"
           >
             Kadr bankı
           </TabsTrigger>
 
           <TabsTrigger
-            className="w-1/4 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
+            className="w-full md:w-1/4 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value="recongition-types"
           >
             Tanınma növləri

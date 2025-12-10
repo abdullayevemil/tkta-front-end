@@ -95,14 +95,14 @@ function ContactFormFields({
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-6 px-16 mx-auto w-full"
+        className="space-y-6 px-4 md:px16 mx-auto w-full"
       >
         <div className="flex flex-row justify-between gap-6">
           <FormField
             control={form.control}
             name="fullName"
             render={({ field }) => (
-              <FormItem className="w-1/2">
+              <FormItem className="w-full md:w-1/2">
                 <FormLabel>Ad və Soyad</FormLabel>
                 <FormControl>
                   <Input
@@ -119,7 +119,7 @@ function ContactFormFields({
             control={form.control}
             name="contactNumber"
             render={({ field }) => (
-              <FormItem className="w-1/2">
+              <FormItem className="w-full md:w-1/2">
                 <FormLabel>Əlaqə nömrəsi</FormLabel>
                 <FormControl>
                   <Input
@@ -235,32 +235,32 @@ export default function ContactForm() {
 
       <Tabs
         defaultValue="contact"
-        className="w-full px-16 flex flex-col gap-16"
+        className="w-full px-4 md:px16 flex flex-col gap-16"
       >
-        <TabsList>
+        <TabsList className="flex flex-col md:flex-row justify-evenly relative">
           <TabsTrigger
-            className="w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
+            className="w-full md:w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value="contact"
           >
             Onlayn müraciət
           </TabsTrigger>
 
           <TabsTrigger
-            className="w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
+            className="w-full md:w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value="complaint"
           >
             Şikayət
           </TabsTrigger>
 
           <TabsTrigger
-            className="w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
+            className="w-full md:w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value="appeal"
           >
             Apelyasiya müraciəti
           </TabsTrigger>
 
           <TabsTrigger
-            className="w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
+            className="w-full md:w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value=""
           >
             <Link href="https://www.qebul.edu.az/?page=add_ticket" target="_blank" className="w-full text-textPrimary z-50">

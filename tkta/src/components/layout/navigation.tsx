@@ -17,14 +17,20 @@ import { cn } from "@/lib/utils";
 import CallIcon from "@/assets/icons/footer/call.svg";
 import { getTranslation } from "@/lib/i18n";
 
-export function Navigation({ locale }: { locale: string }) {
+export function Navigation({
+  locale,
+  setOpen,
+}: {
+  locale: string;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}) {
   const t = getTranslation(locale);
 
   return (
     <nav className="w-full">
       <div className="block flex flex-col lg:flex-row w-full">
         <NavigationMenu className="w-full max-w-full">
-          <NavigationMenuList className="w-screen md:w-full flex-col lg:flex-row items-start md:items-center md:justify-evenly">
+          <NavigationMenuList className="w-[85vw] md:w-full flex-col lg:flex-row items-start md:items-center md:justify-evenly">
             <NavigationMenuItem className="ml-1 w-full justify-start">
               <NavigationMenuTrigger className="font-helvetica text-base">
                 {t.header.navigation.agency.title}
@@ -33,7 +39,7 @@ export function Navigation({ locale }: { locale: string }) {
               <NavigationMenuContent className="left-0 z-50 w-full">
                 <ul className="grid w-[200px] md:gap-3 md:p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/agency/about`}
                       title={t.header.navigation.agency.about}
                     >
@@ -42,7 +48,7 @@ export function Navigation({ locale }: { locale: string }) {
                   </li>
 
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/agency/principles`}
                       title={t.header.navigation.agency.principles}
                     >
@@ -51,7 +57,7 @@ export function Navigation({ locale }: { locale: string }) {
                   </li>
 
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/agency/structure`}
                       title={t.header.navigation.agency.structure}
                     >
@@ -60,7 +66,7 @@ export function Navigation({ locale }: { locale: string }) {
                   </li>
 
                   {/* <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/agency/inner-quality`}
                       title={
                         t.header.navigation.agency.internalQualityAssurance
@@ -84,7 +90,7 @@ export function Navigation({ locale }: { locale: string }) {
               <NavigationMenuContent className="left-0 z-50 w-full">
                 <ul className="grid w-[200px] md:gap-3 md:p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/services/qualifications-recognition`}
                       title={
                         t.header.navigation.services
@@ -99,7 +105,7 @@ export function Navigation({ locale }: { locale: string }) {
                   </li>
 
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/services/education-recognition`}
                       title={
                         t.header.navigation.services
@@ -114,7 +120,7 @@ export function Navigation({ locale }: { locale: string }) {
                   </li>
 
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/services/accreditation`}
                       title={t.header.navigation.services.accreditation}
                     >
@@ -123,7 +129,7 @@ export function Navigation({ locale }: { locale: string }) {
                   </li>
 
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/services/training-methodology`}
                       title={t.header.navigation.services.training}
                     >
@@ -132,7 +138,7 @@ export function Navigation({ locale }: { locale: string }) {
                   </li>
 
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/services/analysis`}
                       title={t.header.navigation.services.analysis}
                     >
@@ -151,7 +157,7 @@ export function Navigation({ locale }: { locale: string }) {
               <NavigationMenuContent className="left-0 z-50 w-full">
                 <ul className="grid w-[200px] md:gap-3 md:p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/pages/register.html`}
                       title={t.header.navigation.diplomaConfirmation.apply}
                     >
@@ -160,7 +166,7 @@ export function Navigation({ locale }: { locale: string }) {
                   </li>
 
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       target="_blank"
                       rel="noopener noreferrer"
                       href="https://apply.enic.edu.az/e-reference/"
@@ -189,6 +195,7 @@ export function Navigation({ locale }: { locale: string }) {
                     navigationMenuTriggerStyle(),
                     "font-helvetica text-base"
                   )}
+                  onClick={() => setOpen(false)}
                 >
                   {t.header.navigation.internationalization}
                 </NavigationMenuLink>
@@ -203,7 +210,7 @@ export function Navigation({ locale }: { locale: string }) {
               <NavigationMenuContent className="left-0 z-50 w-full">
                 <ul className="grid w-[200px] md:gap-3 md:p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/announcements/vacancies`}
                       title={t.header.navigation.announcements.vacancies}
                     >
@@ -212,7 +219,7 @@ export function Navigation({ locale }: { locale: string }) {
                   </li>
 
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/announcements/qualification-recognition`}
                       title={
                         t.header.navigation.announcements.documentSubmission
@@ -226,7 +233,7 @@ export function Navigation({ locale }: { locale: string }) {
                   </li>
 
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/announcements/cooperation`}
                       title={
                         t.header.navigation.announcements
@@ -251,7 +258,7 @@ export function Navigation({ locale }: { locale: string }) {
               <NavigationMenuContent className="left-0 z-50 w-full">
                 <ul className="grid w-[200px] md:gap-3 md:p-4 md:w-[150px] md:grid-cols-1 lg:w-[300px]">
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/reports/annual`}
                       title={t.header.navigation.reports.annualReports}
                     >
@@ -260,7 +267,7 @@ export function Navigation({ locale }: { locale: string }) {
                   </li>
 
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/reports/financial`}
                       title={t.header.navigation.reports.financialReports}
                     >
@@ -269,7 +276,7 @@ export function Navigation({ locale }: { locale: string }) {
                   </li>
 
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/reports/accreditation/monitoring`}
                       title={t.header.navigation.reports.monitoringReports}
                     >
@@ -281,7 +288,7 @@ export function Navigation({ locale }: { locale: string }) {
                     <NavigationMenuList className="w-full">
                       <NavigationMenuItem className="w-full">
                         <NavigationMenuTrigger className="h-fit font-helvetica w-full flex flex-row justify-left p-0 text-left">
-                          <ListItem
+                          <ListItem onClick={() => setOpen(false)}
                             title={
                               t.header.navigation.reports.accreditationReports
                             }
@@ -297,7 +304,7 @@ export function Navigation({ locale }: { locale: string }) {
                         <NavigationMenuContent className="z-50 left-64 top-0">
                           <ul className="grid w-[200px] md:gap-3 md:p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                             <li>
-                              <ListItem
+                              <ListItem onClick={() => setOpen(false)}
                                 href={`/${locale}/reports/accreditation/atm`}
                                 title={
                                   t.header.navigation.reports
@@ -307,7 +314,7 @@ export function Navigation({ locale }: { locale: string }) {
                             </li>
 
                             <li>
-                              <ListItem
+                              <ListItem onClick={() => setOpen(false)}
                                 href={`/${locale}/reports/accreditation/professional`}
                                 title={
                                   t.header.navigation.reports
@@ -317,7 +324,7 @@ export function Navigation({ locale }: { locale: string }) {
                             </li>
 
                             <li>
-                              <ListItem
+                              <ListItem onClick={() => setOpen(false)}
                                 href={`/${locale}/reports/accreditation/international`}
                                 title={
                                   t.header.navigation.reports
@@ -342,56 +349,56 @@ export function Navigation({ locale }: { locale: string }) {
               <NavigationMenuContent className="left-0 z-50 w-full">
                 <ul className="grid w-[200px] md:gap-3 md:p-4 md:w-[150px] md:grid-cols-1 lg:w-[300px]">
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/legislation/laws`}
                       title={t.header.navigation.laws.laws}
                     ></ListItem>
                   </li>
 
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/legislation/president-requirements`}
                       title={t.header.navigation.laws.prezidentLaws}
                     ></ListItem>
                   </li>
 
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/legislation/cabinet_of_ministers`}
                       title={t.header.navigation.laws.cabinetDecisions}
                     ></ListItem>
                   </li>
 
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/legislation/education`}
                       title={t.header.navigation.laws.ministryDecisions}
                     ></ListItem>
                   </li>
 
                   {/* <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/legislation/others`}
                       title={t.header.navigation.laws.otherLegalActs}
                     ></ListItem>
                   </li> */}
 
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/legislation/accreditation-parameters`}
                       title={t.header.navigation.laws.accreditationCriteria}
                     ></ListItem>
                   </li>
 
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/legislation/accreditation-regulations`}
                       title={t.header.navigation.laws.accreditationRules}
                     ></ListItem>
                   </li>
 
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/legislation/agency-regulations`}
                       title={t.header.navigation.laws.agencyCharter}
                     ></ListItem>
@@ -408,7 +415,7 @@ export function Navigation({ locale }: { locale: string }) {
               <NavigationMenuContent className="left-0 z-50 w-full">
                 <ul className="grid w-[200px] md:gap-3 md:p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/media/news`}
                       title={t.header.navigation.media.news}
                     >
@@ -417,7 +424,7 @@ export function Navigation({ locale }: { locale: string }) {
                   </li>
 
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/media/interviews`}
                       title={t.header.navigation.media.interviews}
                     >
@@ -426,7 +433,7 @@ export function Navigation({ locale }: { locale: string }) {
                   </li>
 
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/media/disclosures`}
                       title={t.header.navigation.media.statements}
                     >
@@ -435,7 +442,7 @@ export function Navigation({ locale }: { locale: string }) {
                   </li>
 
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/media/multimedia`}
                       title={t.header.navigation.media.multimedia}
                     >
@@ -444,7 +451,7 @@ export function Navigation({ locale }: { locale: string }) {
                   </li>
 
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/media/video-instructions`}
                       title={t.header.navigation.media.videoTutorials}
                     >
@@ -453,7 +460,7 @@ export function Navigation({ locale }: { locale: string }) {
                   </li>
 
                   <li>
-                    <ListItem
+                    <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/media/faq`}
                       title={t.header.navigation.media.faq}
                     >
@@ -474,6 +481,7 @@ export function Navigation({ locale }: { locale: string }) {
                     navigationMenuTriggerStyle(),
                     "font-helvetica text-base"
                   )}
+                  onClick={() => setOpen(false)}
                 >
                   {t.header.navigation.contact.title}
                 </NavigationMenuLink>
@@ -490,6 +498,7 @@ export function Navigation({ locale }: { locale: string }) {
                     navigationMenuTriggerStyle(),
                     "font-helvetica text-base"
                   )}
+                  onClick={() => setOpen(false)}
                 >
                   {t.header.navigation.videoCall.title}
                 </NavigationMenuLink>
@@ -503,6 +512,7 @@ export function Navigation({ locale }: { locale: string }) {
                     navigationMenuTriggerStyle(),
                     "font-helvetica text-base"
                   )}
+                  onClick={() => setOpen(false)}
                 >
                   <div className="flex flex-row justify-between items-center gap-2">
                     <CallIcon

@@ -491,6 +491,19 @@ export function Navigation({ locale }: { locale: string }) {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
+              <Link href={`/${locale}/video-call`} className="font-helvetica text-base">
+                <NavigationMenuLink
+                  className={cn(
+                    navigationMenuTriggerStyle(),
+                    "font-helvetica text-base"
+                  )}
+                >
+                  {t.header.navigation.videoCall.title}
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
               <Link href="tel:146" className="font-helvetica text-base">
                 <NavigationMenuLink
                   className={cn(

@@ -102,6 +102,9 @@
       },
       "contact": {
         "title": "Contact"
+      },
+      "videoCall": {
+        "title": "Video call"
       }
     }
   },

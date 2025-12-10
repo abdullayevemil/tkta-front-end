@@ -102,6 +102,9 @@
       },
       "contact": {
         "title": "Əlaqə"
+      },
+      "videoCall" :{
+        "title": "Video zəng"
       }
     }
   },

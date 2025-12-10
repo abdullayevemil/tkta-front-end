@@ -18,7 +18,7 @@ export default async function Accreditations({
   `;
 
   return (
-    <div className="grid grid-cols-4 px-4 md:px16 gap-6 w-full">
+    <div className="grid grid-cols-4 px-4 md:px-16 gap-6 w-full">
       {report ? (
         <Link target="_blank" rel="noopener noreferrer" href={report[0].link}>
           {report[0].imagelink ? (

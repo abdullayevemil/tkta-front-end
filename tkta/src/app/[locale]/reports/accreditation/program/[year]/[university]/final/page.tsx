@@ -18,7 +18,7 @@ export default async function Accreditations({
     );
 
   return (
-      <div className="grid grid-cols-4 px-4 md:px16 gap-6 w-full">
+      <div className="grid grid-cols-4 px-4 md:px-16 gap-6 w-full">
         {report ? (
           <Link
             key={report.id}

@@ -8,11 +8,11 @@ export default function AnnualReports() {
     <section className="w-full flex flex-col gap-16 items-center">
       
 
-      <h1 className="uppercase text-4xl text-center w-full px-4 md:px16 pt-16">
+      <h1 className="uppercase text-4xl text-center w-full px-4 md:px-16 pt-16">
         İllİk hesabatlar
       </h1>
 
-      <div className="grid grid-cols-4 px-4 md:px16 gap-6 w-full">
+      <div className="grid grid-cols-4 px-4 md:px-16 gap-6 w-full">
         <Link
           target="_blank"
           rel="noopener noreferrer"

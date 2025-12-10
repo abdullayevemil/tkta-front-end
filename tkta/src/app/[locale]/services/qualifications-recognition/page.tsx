@@ -16,7 +16,7 @@ export default function HomePage() {
 
       <Tabs
         defaultValue="general-information"
-        className="w-full px-4 md:px16 flex flex-col gap-16"
+        className="w-full px-4 md:px-16 flex flex-col gap-16"
       >
         <TabsList className="flex flex-col md:flex-row justify-evenly relative">
           <TabsTrigger

@@ -30,7 +30,7 @@ export default async function Accreditations({
 `).map(row => row.title);
 
   return (
-    <div className="grid grid-cols-4 px-4 md:px16 gap-6 w-full">
+    <div className="grid grid-cols-4 px-4 md:px-16 gap-6 w-full">
       {universities
         .map((university, index) => (
           <Link

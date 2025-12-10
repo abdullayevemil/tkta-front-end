@@ -5,11 +5,11 @@ export default function Council() {
     <section className="w-full flex flex-col gap-16 items-cente">
       
 
-      <h1 className="uppercase text-4xl text-center w-full px-4 md:px16 pt-16">
+      <h1 className="uppercase text-4xl text-center w-full px-4 md:px-16 pt-16">
         Akkredİtasİya şurası
       </h1>
 
-      <div className="flex flex-col gap-4  px-4 md:px16">
+      <div className="flex flex-col gap-4  px-4 md:px-16">
         <div>
           <span className="font-bold">Akkreditasiya şurası</span> -
           Akkreditasiya şurası akkreditasiyanın nəticələrinə dair yekun qərar

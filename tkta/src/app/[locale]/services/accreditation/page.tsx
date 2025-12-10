@@ -185,13 +185,13 @@ const documents = [
 export default function Accreditation() {
   return (
     <section className="w-full flex flex-col gap-16 items-center">
-      <h1 className="uppercase text-4xl text-center w-full px-4 md:px16 pt-16">
+      <h1 className="uppercase text-4xl text-center w-full px-4 md:px-16 pt-16">
         Akkredİtasİya
       </h1>
 
       <Tabs
         defaultValue="accreditation-process"
-        className="w-full px-4 md:px16 flex flex-col gap-16"
+        className="w-full px-4 md:px-16 flex flex-col gap-16"
       >
         <TabsList className="flex flex-col md:flex-row justify-evenly relative">
           <TabsTrigger
@@ -335,7 +335,7 @@ export default function Accreditation() {
         </TabsContent>
 
         <TabsContent value="council">
-          <div className="flex flex-col gap-4 px-4 md:px16 text-justify">
+          <div className="flex flex-col gap-4 px-4 md:px-16 text-justify">
             <div>
               <span className="font-bold">Akkreditasiya şurası</span> -
               Akkreditasiya şurası akkreditasiyanın nəticələrinə dair yekun

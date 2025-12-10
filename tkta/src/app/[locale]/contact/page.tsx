@@ -95,7 +95,7 @@ function ContactFormFields({
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-6 px-4 md:px16 mx-auto w-full"
+        className="space-y-6 px-4 md:px-16 mx-auto w-full"
       >
         <div className="flex flex-row justify-between gap-6">
           <FormField
@@ -235,7 +235,7 @@ export default function ContactForm() {
 
       <Tabs
         defaultValue="contact"
-        className="w-full px-4 md:px16 flex flex-col gap-16"
+        className="w-full px-4 md:px-16 flex flex-col gap-16"
       >
         <TabsList className="flex flex-col md:flex-row justify-evenly relative">
           <TabsTrigger

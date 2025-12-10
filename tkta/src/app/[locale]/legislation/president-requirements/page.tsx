@@ -21,11 +21,11 @@ export default function Laws() {
     <section className="w-full flex flex-col gap-16 items-center">
       
 
-      <h1 className="uppercase text-4xl text-center w-full px-4 md:px16 pt-16">
+      <h1 className="uppercase text-4xl text-center w-full px-4 md:px-16 pt-16">
         AR Prezİdentİnİn fərmanaları
       </h1>
 
-      <ul className="grid grid-cols-4 gap-4 px-4 md:px16 justify-center items-center">
+      <ul className="grid grid-cols-4 gap-4 px-4 md:px-16 justify-center items-center">
         {laws.map((law) => (
           <li key={law.id}>
             <Link

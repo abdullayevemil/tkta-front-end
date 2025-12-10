@@ -51,7 +51,7 @@ const LoginForm = () => {
     if (updatedSession?.user) {
       toast.success("Signed In successfully!");
 
-      router.push("/home");
+      router.push("/video-call");
 
       return;
     }

@@ -16,35 +16,22 @@ import ListItem from "./navigation-link";
 import { cn } from "@/lib/utils";
 import CallIcon from "@/assets/icons/footer/call.svg";
 import { getTranslation } from "@/lib/i18n";
-import { Menu, X } from "lucide-react";
 
 export function Navigation({ locale }: { locale: string }) {
   const t = getTranslation(locale);
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    (<nav className="w-full">
-      <div className="lg:hidden flex justify-end p-2 sm:p-4">
-        <button onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
-      <div
-        className={cn(
-          "lg:flex w-full",
-          isOpen ? "block" : "hidden",
-          "lg:block"
-        )}
-      >
+    <nav className="w-full">
+      <div className="block flex flex-col lg:flex-row w-full">
         <NavigationMenu className="w-full max-w-full">
-          <NavigationMenuList className="w-full flex-col lg:flex-row lg:justify-evenly max-w-full">
-            <NavigationMenuItem>
+          <NavigationMenuList className="w-screen md:w-full flex-col lg:flex-row items-start md:items-center md:justify-evenly">
+            <NavigationMenuItem className="ml-1 w-full justify-start">
               <NavigationMenuTrigger className="font-helvetica text-base">
                 {t.header.navigation.agency.title}
               </NavigationMenuTrigger>
 
-              <NavigationMenuContent className="left-0">
-                <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
+              <NavigationMenuContent className="left-0 z-50 w-full">
+                <ul className="grid w-[200px] md:gap-3 md:p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                   <li>
                     <ListItem
                       href={`/${locale}/agency/about`}
@@ -89,13 +76,13 @@ export function Navigation({ locale }: { locale: string }) {
               </NavigationMenuContent>
             </NavigationMenuItem>
 
-            <NavigationMenuItem>
+            <NavigationMenuItem className="w-full justify-start">
               <NavigationMenuTrigger className="font-helvetica text-base">
                 {t.header.navigation.services.title}
               </NavigationMenuTrigger>
 
-              <NavigationMenuContent className="left-0">
-                <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
+              <NavigationMenuContent className="left-0 z-50 w-full">
+                <ul className="grid w-[200px] md:gap-3 md:p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                   <li>
                     <ListItem
                       href={`/${locale}/services/qualifications-recognition`}
@@ -156,13 +143,13 @@ export function Navigation({ locale }: { locale: string }) {
               </NavigationMenuContent>
             </NavigationMenuItem>
 
-            <NavigationMenuItem>
+            <NavigationMenuItem className="w-full justify-start">
               <NavigationMenuTrigger className="font-helvetica text-base">
                 {t.header.navigation.diplomaConfirmation.title}
               </NavigationMenuTrigger>
 
-              <NavigationMenuContent className="left-0">
-                <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
+              <NavigationMenuContent className="left-0 z-50 w-full">
+                <ul className="grid w-[200px] md:gap-3 md:p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                   <li>
                     <ListItem
                       href={`/pages/register.html`}
@@ -191,12 +178,12 @@ export function Navigation({ locale }: { locale: string }) {
               </NavigationMenuContent>
             </NavigationMenuItem>
 
-            <NavigationMenuItem>
+            <NavigationMenuItem className="w-full justify-start">
               <Link
                 href={`/${locale}/internationalization`}
-                className="font-helvetica text-base">
-                {/* @next-codemod-error This Link previously used the now removed `legacyBehavior` prop, and has a child that might not be an anchor. The codemod bailed out of lifting the child props to the Link. Check that the child component does not render an anchor, and potentially move the props manually to Link. */
-                }
+                className="font-helvetica text-base"
+              >
+                {/* @next-codemod-error This Link previously used the now removed `legacyBehavior` prop, and has a child that might not be an anchor. The codemod bailed out of lifting the child props to the Link. Check that the child component does not render an anchor, and potentially move the props manually to Link. */}
                 <NavigationMenuLink
                   className={cn(
                     navigationMenuTriggerStyle(),
@@ -208,13 +195,13 @@ export function Navigation({ locale }: { locale: string }) {
               </Link>
             </NavigationMenuItem>
 
-            <NavigationMenuItem>
+            <NavigationMenuItem className="w-full justify-start">
               <NavigationMenuTrigger className="font-helvetica text-base">
                 {t.header.navigation.announcements.title}
               </NavigationMenuTrigger>
 
-              <NavigationMenuContent className="left-0">
-                <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
+              <NavigationMenuContent className="left-0 z-50 w-full">
+                <ul className="grid w-[200px] md:gap-3 md:p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                   <li>
                     <ListItem
                       href={`/${locale}/announcements/vacancies`}
@@ -256,13 +243,13 @@ export function Navigation({ locale }: { locale: string }) {
               </NavigationMenuContent>
             </NavigationMenuItem>
 
-            <NavigationMenuItem>
+            <NavigationMenuItem className="w-full justify-start">
               <NavigationMenuTrigger className="font-helvetica text-base">
                 {t.header.navigation.reports.title}
               </NavigationMenuTrigger>
 
-              <NavigationMenuContent className="left-0">
-                <ul className="grid w-[200px] gap-3 p-4 md:w-[150px] md:grid-cols-1 lg:w-[300px]">
+              <NavigationMenuContent className="left-0 z-50 w-full">
+                <ul className="grid w-[200px] md:gap-3 md:p-4 md:w-[150px] md:grid-cols-1 lg:w-[300px]">
                   <li>
                     <ListItem
                       href={`/${locale}/reports/annual`}
@@ -308,7 +295,7 @@ export function Navigation({ locale }: { locale: string }) {
                         </NavigationMenuTrigger>
 
                         <NavigationMenuContent className="z-50 left-64 top-0">
-                          <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
+                          <ul className="grid w-[200px] md:gap-3 md:p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                             <li>
                               <ListItem
                                 href={`/${locale}/reports/accreditation/atm`}
@@ -347,13 +334,13 @@ export function Navigation({ locale }: { locale: string }) {
               </NavigationMenuContent>
             </NavigationMenuItem>
 
-            <NavigationMenuItem>
+            <NavigationMenuItem className="w-full justify-start">
               <NavigationMenuTrigger className="font-helvetica text-base">
                 {t.header.navigation.laws.title}
               </NavigationMenuTrigger>
 
-              <NavigationMenuContent className="left-0">
-                <ul className="grid w-[200px] gap-3 p-4 md:w-[150px] md:grid-cols-1 lg:w-[300px]">
+              <NavigationMenuContent className="left-0 z-50 w-full">
+                <ul className="grid w-[200px] md:gap-3 md:p-4 md:w-[150px] md:grid-cols-1 lg:w-[300px]">
                   <li>
                     <ListItem
                       href={`/${locale}/legislation/laws`}
@@ -413,13 +400,13 @@ export function Navigation({ locale }: { locale: string }) {
               </NavigationMenuContent>
             </NavigationMenuItem>
 
-            <NavigationMenuItem>
+            <NavigationMenuItem className="w-full justify-start">
               <NavigationMenuTrigger className="font-helvetica text-base">
                 {t.header.navigation.media.title}
               </NavigationMenuTrigger>
 
-              <NavigationMenuContent className="left-0">
-                <ul className="grid w-[200px] gap-3 p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
+              <NavigationMenuContent className="left-0 z-50 w-full">
+                <ul className="grid w-[200px] md:gap-3 md:p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                   <li>
                     <ListItem
                       href={`/${locale}/media/news`}
@@ -477,8 +464,11 @@ export function Navigation({ locale }: { locale: string }) {
               </NavigationMenuContent>
             </NavigationMenuItem>
 
-            <NavigationMenuItem>
-              <Link href={`/${locale}/contact`} className="font-helvetica text-base">
+            <NavigationMenuItem className="w-full justify-start">
+              <Link
+                href={`/${locale}/contact`}
+                className="font-helvetica text-base"
+              >
                 <NavigationMenuLink
                   className={cn(
                     navigationMenuTriggerStyle(),
@@ -490,8 +480,11 @@ export function Navigation({ locale }: { locale: string }) {
               </Link>
             </NavigationMenuItem>
 
-            <NavigationMenuItem>
-              <Link href={`/${locale}/video-call`} className="font-helvetica text-base">
+            <NavigationMenuItem className="w-full justify-start">
+              <Link
+                href={`/${locale}/book-call`}
+                className="font-helvetica text-base"
+              >
                 <NavigationMenuLink
                   className={cn(
                     navigationMenuTriggerStyle(),
@@ -503,7 +496,7 @@ export function Navigation({ locale }: { locale: string }) {
               </Link>
             </NavigationMenuItem>
 
-            <NavigationMenuItem>
+            <NavigationMenuItem className="w-full justify-start">
               <Link href="tel:146" className="font-helvetica text-base">
                 <NavigationMenuLink
                   className={cn(
@@ -526,6 +519,6 @@ export function Navigation({ locale }: { locale: string }) {
           </NavigationMenuList>
         </NavigationMenu>
       </div>
-    </nav>)
+    </nav>
   );
 }

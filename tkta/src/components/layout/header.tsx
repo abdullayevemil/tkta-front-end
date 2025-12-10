@@ -55,7 +55,7 @@ export default function Header({ locale }: { locale: string }) {
         } flex-col md:flex md:flex-row w-full justify-between items-center gap-4 w-full`}
       >
         <div className="flex flex-col gap-4 w-full">
-          <div  className="flex-col md:flex md:flex-row w-full justify-between items-center gap-4">
+          <div className="flex-col gap-2 flex md:flex-row w-full justify-between items-center md:gap-4">
             <div className="hidden md:block">
               <Link href={`/${locale}/home`}>
                 <Image
@@ -66,7 +66,7 @@ export default function Header({ locale }: { locale: string }) {
               </Link>
             </div>
 
-            <div className="flex gap-2 justify-between">
+            <div className="flex gap-2 justify-between w-full md:w-auto">
               <Link
                 className="w-1/2 text-sm md:text-base md:max-w-[150px] text-center shadow border rounded p-1 md:p-2 hover:text-textPrimary"
                 href="/rejected-universities"
@@ -75,109 +75,120 @@ export default function Header({ locale }: { locale: string }) {
               </Link>
 
               <Link
-                className="w-1/2 text-sm md:text-base md:max-w-[150px] text-center shadow border rounded p-1 md:p-2 hover:text-textPrimary"
+                className="flex justify-center items-center w-1/2 text-sm md:text-base md:max-w-[150px] text-center shadow border rounded p-1 md:p-2 hover:text-textPrimary"
                 href="/not-recognized-universities"
               >
                 {t.header.nonRecognizedUniversities}
               </Link>
             </div>
 
-            <ul className="flex gap-1 md:gap-3 items-center">
-              <li>
-                <Link
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.facebook.com/tkta.edu.az"
-                >
-                  <FacebookIcon
-                    color="var(--gold-border-color)"
-                    width={24}
-                    height={24}
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://x.com/home"
-                >
-                  <XIcon
-                    color="var(--gold-border-color)"
-                    width={24}
-                    height={24}
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.instagram.com/tktaeduaz/"
-                >
-                  <InstagramIcon
-                    color="var(--gold-border-color)"
-                    width={24}
-                    height={24}
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://t.me/tktaeduaz"
-                >
-                  <TelegramIcon
-                    color="var(--gold-border-color)"
-                    width={24}
-                    height={24}
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.linkedin.com/company/54113705/admin/page-posts/published/"
-                >
-                  <LinkedinIcon
-                    color="var(--gold-border-color)"
-                    width={24}
-                    height={24}
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.youtube.com/@thsildkeyfiyyttminatagentl1977"
-                >
-                  <YoutubeIcon color="var(--gold-border-color)" height={24} />
-                </Link>
-              </li>
-            </ul>
+            <div className="flex flex-row gap-2 md:gap-4 justify-between w-full ma-w-full md:w-auto">
+              <ul className="flex gap-1 items-center">
+                <li>
+                  <Link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.facebook.com/tkta.edu.az"
+                  >
+                    <FacebookIcon
+                      color="var(--gold-border-color)"
+                      width={24}
+                      height={24}
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://x.com/home"
+                  >
+                    <XIcon
+                      color="var(--gold-border-color)"
+                      width={24}
+                      height={24}
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/tktaeduaz/"
+                  >
+                    <InstagramIcon
+                      color="var(--gold-border-color)"
+                      width={24}
+                      height={24}
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://t.me/tktaeduaz"
+                  >
+                    <TelegramIcon
+                      color="var(--gold-border-color)"
+                      width={24}
+                      height={24}
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/company/54113705/admin/page-posts/published/"
+                  >
+                    <LinkedinIcon
+                      color="var(--gold-border-color)"
+                      width={24}
+                      height={24}
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.youtube.com/@thsildkeyfiyyttminatagentl1977"
+                  >
+                    <YoutubeIcon color="var(--gold-border-color)" height={24} />
+                  </Link>
+                </li>
+              </ul>
 
-            <div className="flex flex-row gap-1 md:gap-2 items-center">
-              <ColorSwitch locale={locale} />
-              <FontSelector />
-              <LanguageSelector />
+              <div className="flex flex-row gap-1 md:gap-2 items-center">
+                <ColorSwitch locale={locale} />
+                <FontSelector />
+                <LanguageSelector />
+              </div>
             </div>
 
             <div className="flex flex-row gap-2 items-center w-full md:w-auto">
-              <div className="flex flex-row gap-2 items-center border border-gray-300 rounded-xl p-0.5 px-2 w-full md:w-auto focus-within:border-textPrimary">
-                <SearchIcon width={24} height={24} className="text-gray-500" />
+              <div className="h-fit py-0 flex flex-row gap-2 items-center border border-gray-300 rounded-xl p-0.5 px-2 w-full md:w-auto focus-within:border-textPrimary">
+                <SearchIcon
+                  width={24}
+                  height={24}
+                  className="text-gray-500 w-4 md:w-6"
+                />
 
                 <Input
                   value={searchValue}
                   onChange={(e) => setSearchValue(e.target.value)}
                   onKeyDown={handleKeyDown}
                   placeholder={t.header.navigation.agency.search}
-                  className="border-none outline-none shadow-none focus-visible:ring-0 w-full"
+                  className="border-none outline-none shadow-none focus-visible:ring-0 w-full text-sm md:text-base"
                 />
 
-                <Button variant="ghost" size="sm" onClick={handleSearch}>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="text-xs p-1 md:p-2 md:text-sm"
+                  onClick={handleSearch}
+                >
                   {t.header.navigation.agency.search}
                 </Button>
               </div>

@@ -11,12 +11,12 @@ export function ColorSwitch({locale}: { locale: string }) {
   const t = getTranslation(locale);
 
   return (
-    <div className="flex items-center gap-2">
-      <Label htmlFor="color-mode-before">{t.header.colorSwitch.color}: </Label>
+    <div className="flex items-center gap-1 md:gap-2">
+      <Label className="hidden md:block"  htmlFor="color-mode-before">{t.header.colorSwitch.color}: </Label>
 
       <Switch defaultChecked={true} checked={!isBlackAndWhite} id="color-mode" onClick={toggleColorMode}/>
 
-      <Label htmlFor="color-mode">{isBlackAndWhite ? t.header.colorSwitch.off : t.header.colorSwitch.on}</Label>
+      <Label className="hidden md:block" htmlFor="color-mode">{isBlackAndWhite ? t.header.colorSwitch.off : t.header.colorSwitch.on}</Label>
     </div>
   );
 }

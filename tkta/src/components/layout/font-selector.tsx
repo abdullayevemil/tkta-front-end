@@ -19,23 +19,13 @@ import {
 import { useFontSize } from "@/context/font-size-context";
 
 const languages = [
-  {
-    value: "14px",
-    label: "A",
-  },
-  {
-    value: "16px",
-    label: "A",
-  },
-  {
-    value: "18px",
-    label: "A",
-  },
+  { value: "14px", label: "A" },
+  { value: "16px", label: "A" },
+  { value: "18px", label: "A" },
 ];
 
 export function FontSelector() {
   const [open, setOpen] = React.useState(false);
-
   const { fontSize, setFontSize } = useFontSize();
 
   return (
@@ -45,33 +35,34 @@ export function FontSelector() {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-18 justify-between"
-          style={{ fontSize: fontSize }}
+          className="justify-between w-18 h-10 px-3 text-base sm:w-20 sm:h-10 sm:text-base 
+                     max-sm:w-14 max-sm:h-8 max-sm:px-2 max-sm:text-sm"
+          style={{ fontSize }}
         >
           A
-          <ChevronsUpDown className="opacity-50" />
+          <ChevronsUpDown className="opacity-50 w-4 h-4 max-sm:w-3 max-sm:h-3" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-18 p-0">
+      <PopoverContent className="p-0 w-20 max-sm:w-14">
         <Command>
           <CommandList>
             <CommandGroup>
-              {languages.map((languages) => (
+              {languages.map((lang) => (
                 <CommandItem
-                  key={languages.value}
-                  value={languages.value}
+                  key={lang.value}
+                  value={lang.value}
                   onSelect={(currentValue) => {
                     setFontSize(currentValue);
-                    
                     setOpen(false);
                   }}
-                  style={{ fontSize: Number.parseInt(languages.value) }}
+                  className="max-sm:text-sm"
+                  style={{ fontSize: Number.parseInt(lang.value) }}
                 >
-                  {languages.label}
+                  {lang.label}
                   <Check
                     className={cn(
                       "ml-auto",
-                      fontSize === languages.value ? "opacity-100" : "opacity-0"
+                      fontSize === lang.value ? "opacity-100" : "opacity-0"
                     )}
                   />
                 </CommandItem>

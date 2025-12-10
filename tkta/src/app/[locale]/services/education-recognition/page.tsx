@@ -227,13 +227,6 @@ const data = [
     sampleQuestions: "https://qfitt.testportal.net/test.html?t=tLeL66yd88Xg",
   },
   {
-    title: "Təmirçi-çilingər",
-    methodicalMaterial: "",
-    registration:
-      "https://docs.google.com/forms/d/e/1FAIpQLSclfuaGFZErqohmUrLwpOPvmIOpUtqRhmFVDZQn5jduWg4VJQ/viewform?usp=dialog",
-    sampleQuestions: "https://qfitt.testportal.net/test.html?t=Ve9BeqCn4Hup",
-  },
-  {
     title: "Tikiş avadanlıqlarının operatoru, tikişçi",
     methodicalMaterial:
       "https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765176105/24._20Tiki%C5%9F_20avadanl%C4%B1qlar%C4%B1n%C4%B1n_20operatoru_2Ctiki%C5%9F%C3%A7i_pqg5wv.pdf",
@@ -256,6 +249,41 @@ const data = [
     registration:
       "https://docs.google.com/forms/d/1uTK38oUMXg218EraNbOagrmIaDqZ7AkL0kGggRWqpbo/edit",
     sampleQuestions: "https://qfitt.testportal.net/test.html?t=ybyKNxpM9Y6e",
+  },
+  {
+    title: "Təmirçi-çilingər",
+    methodicalMaterial: "",
+    registration:
+      "https://docs.google.com/forms/d/e/1FAIpQLSclfuaGFZErqohmUrLwpOPvmIOpUtqRhmFVDZQn5jduWg4VJQ/viewform?usp=dialog",
+    sampleQuestions: "",
+  },
+  {
+    title: "Qrafik dizayner",
+    methodicalMaterial: "",
+    registration:
+      "https://docs.google.com/forms/d/e/1FAIpQLSclfuaGFZErqohmUrLwpOPvmIOpUtqRhmFVDZQn5jduWg4VJQ/viewform?usp=dialog",
+    sampleQuestions: "",
+  },
+  {
+    title: "Arıçı",
+    methodicalMaterial: "",
+    registration:
+      "https://docs.google.com/forms/d/e/1FAIpQLSclfuaGFZErqohmUrLwpOPvmIOpUtqRhmFVDZQn5jduWg4VJQ/viewform?usp=dialog",
+    sampleQuestions: "",
+  },
+  {
+    title: "Kombi və kondisioner ustası",
+    methodicalMaterial: "",
+    registration:
+      "https://docs.google.com/forms/d/e/1FAIpQLSclfuaGFZErqohmUrLwpOPvmIOpUtqRhmFVDZQn5jduWg4VJQ/viewform?usp=dialog",
+    sampleQuestions: "",
+  },
+  {
+    title: "Mebel ustası",
+    methodicalMaterial: "",
+    registration:
+      "https://docs.google.com/forms/d/e/1FAIpQLSclfuaGFZErqohmUrLwpOPvmIOpUtqRhmFVDZQn5jduWg4VJQ/viewform?usp=dialog",
+    sampleQuestions: "",
   },
 ];
 
@@ -373,8 +401,15 @@ const partners = [
 const columns: ColumnDef<Major>[] = [
   {
     id: "select",
-    enableSorting: false,
-    enableHiding: false,
+    enableSorting: true,
+    enableHiding: true,
+  },
+  {
+    accessorKey: "number",
+    header: "№",
+    cell: ({ row }) => (
+      <div className="capitalize">{row.index + 1}</div>
+    ),
   },
   {
     accessorKey: "title",
@@ -534,6 +569,13 @@ export default function EducationRecognition() {
                 növbəti səviyyəsinə keçid Qaydası&quot;na uyğun olaraq peşə
                 təhsili pilləsinin növbəti səviyyəsində təhsilini davam etdirmək
                 hüququ verir.
+              </div>
+
+              <div className="flex flex-col gap-3">
+                <h2 className="font-bold text-textPrimary">
+                  QFİTT-in fəaliyyəti ilə linkə keçid edərək tanış ola bilərsiniz
+                </h2>
+                <Link className="p-4 text-textPrimary border-2 font-semibold w-fit rounded-xl" target="_blank" href="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765375064/T%C9%99qdimat_2__compressed_iyqruy.pdf">Təqdimat</Link>
               </div>
 
               <div className="flex flex-col gap-4">

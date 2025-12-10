@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function EducationRecognition() {
@@ -208,10 +209,10 @@ export default function EducationRecognition() {
             ilə tənzimlənir.
           </p>
           <p className="mt-2">
-            <strong>Xidmət ödənişlidir:</strong> Biliklərin qiymətləndirilməsi
+            <strong>Qeyd! Xidmət ödənişlidir:</strong> Biliklərin qiymətləndirilməsi
             üçün 100 AZN, bacarıq və təcrübənin qiymətləndirilməsi üçün hər
             modul üzrə 80 AZN ödənilir. Peşə ixtisası sertifikatı və diplomu
-            əldə edən şəxsə əmək fəaliyyəti hüququ verilir.
+            əldə edən şəxsə əmək fəaliyyəti hüququ verilir. Ödənişlə bağlı təlimatla <Link className="text-textPrimary hover:underline italic" target="_blank" href="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1765374525/v_C9_99t_C9_99nda%C5%9Flar_20%C3%BC%C3%A7%C3%BCn_20%C3%B6d_C9_99ni%C5%9F_20t_C9_99limat_20v_C9_99r_C9_99qi_nb8dns.pdf">buradan</Link> tanış ola bilərsiniz. 
           </p>
         </div>
       </div>

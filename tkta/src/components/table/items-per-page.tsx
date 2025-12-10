@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Check, ChevronsUpDown } from "lucide-react";
 import React from "react";
 
-const options: number[] = [10, 15, 20, 25, 30];
+const options: number[] = [10, 20, 30, 40];
 
 type ItemsPerPageSelectorProps = {
   pageSize: number;

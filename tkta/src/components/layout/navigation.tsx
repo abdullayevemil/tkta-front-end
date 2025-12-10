@@ -490,7 +490,7 @@ export function Navigation({
 
             <NavigationMenuItem className="w-full justify-start">
               <Link
-                href={`/${locale}/book-call`}
+                href={`/${locale}/sso/redirect`}
                 className="font-helvetica text-base"
               >
                 <NavigationMenuLink

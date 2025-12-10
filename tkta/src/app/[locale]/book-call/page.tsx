@@ -20,18 +20,8 @@ import {
   setMinutes,
   setSeconds,
 } from "date-fns";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogFooter,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
 import { toast } from "react-toastify";
 
-// --- Helpers ---
 const getWeekDays = () => {
   const today = new Date();
   const start = startOfWeek(today, { weekStartsOn: 1 });
@@ -45,21 +35,18 @@ const getTimeSlots = () => {
   });
 };
 
-// UTC+4 conversion
 const toLocalTime = (date: Date) => {
   const utc = date.getTime() + date.getTimezoneOffset() * 60_000;
   const offset = 4 * 60 * 60 * 1000;
   return new Date(utc + offset);
 };
 
-// --- Component ---
 export default function WeeklyMeetingCalendar() {
   const [selected, setSelected] = useState<string | null>(null);
   const [bookedSlots, setBookedSlots] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
   const [approved, setApproved] = useState(false);
 
-  const [modalOpen, setModalOpen] = useState(false);
   const [fin, setFin] = useState("");
   const [serialNumber, setSerialNumber] = useState("");
 
@@ -69,7 +56,6 @@ export default function WeeklyMeetingCalendar() {
   const params = useParams();
   const locale = params?.lang || "az";
 
-  // fetch booked slots
   useEffect(() => {
     const fetchBooked = async () => {
       const res = await fetch("/api/booked-slots");
@@ -102,7 +88,6 @@ export default function WeeklyMeetingCalendar() {
         toast.success("Uığurlu qeydiyyat!");
         setApproved(true);
         setBookedSlots([...bookedSlots, selected]);
-        setModalOpen(false);
         setFin("");
         setSerialNumber("");
         router.push(`/${locale}/sima`);
@@ -179,57 +164,9 @@ export default function WeeklyMeetingCalendar() {
         </CardContent>
       </Card>
 
-      {/* --- Approve Button & Modal --- */}
-      <Dialog open={modalOpen} onOpenChange={setModalOpen}>
-        <DialogTrigger asChild>
-          <Button disabled={!selected || approved || loading}>
-            {approved
-              ? "Approved"
-              : loading
-              ? "Approving..."
-              : "Approve Selection"}
-          </Button>
-        </DialogTrigger>
-
-        <DialogContent className="sm:max-w-[425px]">
-          <DialogHeader>
-            <DialogTitle>
-              Şəxsiyyət vəsiqəsinin FİN kodunu və seriya nömrəsini daxil edin
-            </DialogTitle>
-          </DialogHeader>
-
-          <div className="grid gap-4 py-4">
-            <div className="grid gap-2">
-              <label htmlFor="fin">FIN Kod</label>
-              <Input
-                id="fin"
-                value={fin}
-                onChange={(e) => setFin(e.target.value)}
-                placeholder="FİN kodu daxil edin"
-              />
-            </div>
-
-            <div className="grid gap-2">
-              <label htmlFor="serial">Seriaya nömrəsi</label>
-              <Input
-                id="serial"
-                value={serialNumber}
-                onChange={(e) => setSerialNumber(e.target.value)}
-                placeholder="Seriya nömrəsini daxil edin"
-              />
-            </div>
-          </div>
-
-          <DialogFooter>
-            <Button
-              disabled={!fin || !serialNumber || loading}
-              onClick={handleModalApprove}
-            >
-              Confirm Booking
-            </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
+      <Button disabled={!selected || approved || loading} onClick={handleModalApprove}>
+        {approved ? "Approved" : loading ? "Approving..." : "Approve Selection"}
+      </Button>
     </div>
   );
 }

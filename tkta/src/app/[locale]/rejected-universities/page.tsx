@@ -476,7 +476,7 @@ export default function DataTableDemo() {
           çox imtina verilmiş universitetlərin siyahısı
         </div>
 
-        <div>Müvafiqdir: 21.05.2024**</div>
+        {/* <div>Müvafiqdir: 21.05.2024**</div> */}
       </h2>
 
       <div className="w-full px-4 md:px-16">

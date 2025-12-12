@@ -43,7 +43,7 @@ export default async function RootLayout({
   const { locale } = await params;
 
   return (
-    <html lang={locale} className="bg-white">
+    <html lang={locale} className="bg-white" data-theme="light">
       <Head>
         <meta name="al:ios:url" content="instagram://user?username=tktaeduaz" />
         <meta name="al:ios:app_name" content="Instagram" />

@@ -126,6 +126,10 @@ body {
   background-color: white !important;
 }
 
+input, textarea, select, button {
+  color-scheme: light;
+}
+
 @layer base {
   :root {
     color-scheme: light;

@@ -33,7 +33,6 @@ const MeetingTypeList = () => {
   const { toast } = useToast();
 
   const createMeeting = async () => {
-    console.log(client, user)
     if (!client || !user) return;
     try {
       if (!values.dateTime) {

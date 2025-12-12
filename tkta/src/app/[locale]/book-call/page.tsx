@@ -21,34 +21,31 @@ import {
   setSeconds,
 } from "date-fns";
 import { toast } from "react-toastify";
+import { useSession } from "next-auth/react";
 
-const getWeekDays = () => {
-  const today = new Date();
-  const start = startOfWeek(today, { weekStartsOn: 1 });
-  return Array.from({ length: 7 }, (_, i) => addDays(start, i));
-};
-
-const getTimeSlots = () => {
-  return Array.from({ length: 9 }, (_, i) => {
-    const date = setSeconds(setMinutes(setHours(new Date(), 9 + i), 0), 0);
-    return date;
-  });
-};
-
-const toLocalTime = (date: Date) => {
-  const utc = date.getTime() + date.getTimezoneOffset() * 60_000;
-  const offset = 4 * 60 * 60 * 1000;
-  return new Date(utc + offset);
-};
+// ShadCN modal
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
 
 export default function WeeklyMeetingCalendar() {
   const [selected, setSelected] = useState<string | null>(null);
   const [bookedSlots, setBookedSlots] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
   const [approved, setApproved] = useState(false);
+  const [email, setEmail] = useState("");
+  const [open, setOpen] = useState(false);
 
-  const [fin, setFin] = useState("");
-  const [serialNumber, setSerialNumber] = useState("");
+  const session = useSession();
+  const user = session.data?.user;
+  console.log("User:", user);
 
   const weekDays = getWeekDays();
   const timeSlots = getTimeSlots();
@@ -75,31 +72,50 @@ export default function WeeklyMeetingCalendar() {
   };
 
   const handleModalApprove = async () => {
-    if (!selected || !fin || !serialNumber) return;
+    if (!selected) return;
+    if (!email) return toast.error("Please enter an email");
+
     setLoading(true);
     try {
-      const res = await fetch("/api/book-slot", {
+      // const res = await fetch("/api/book-slot", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify({ fin: user.name, serialNumber: user.id, slot: selected }),
+      // });
+      // const data = await res.json();
+
+      // if (data.success) {
+      //   setApproved(true);
+      //   setBookedSlots([...bookedSlots, selected]);
+      //   toast.success("Uğurlu qeydiyyat!");
+
+      // } else {
+      //   toast.error(data.message);
+      // }
+
+      const emailRes = await fetch("/api/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ fin, serialNumber, slot: selected }),
+        body: JSON.stringify({
+          to: email,
+          subject: "Meeting Confirmation",
+          text: `Your meeting is confirmed for ${selected}.`,
+        }),
       });
-      const data = await res.json();
-      if (data.success) {
-        toast.success("Uığurlu qeydiyyat!");
-        setApproved(true);
-        setBookedSlots([...bookedSlots, selected]);
-        setFin("");
-        setSerialNumber("");
-        router.push(`/${locale}/sima`);
+
+      if (!emailRes.ok) {
+        toast.error("Email göndərmək alınmadı");
       } else {
-        alert(data.message);
+        toast.success("Confirmation email sent!");
       }
     } catch (err) {
       toast.error("Qeydiyyat zamanı xəta baş verdi.");
     } finally {
       setLoading(false);
+      setOpen(false);
     }
   };
+
   return (
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       <h1 className="text-2xl font-bold">Select a Meeting Slot</h1>
@@ -164,9 +180,52 @@ export default function WeeklyMeetingCalendar() {
         </CardContent>
       </Card>
 
-      <Button disabled={!selected || approved || loading} onClick={handleModalApprove}>
-        {approved ? "Approved" : loading ? "Approving..." : "Approve Selection"}
-      </Button>
+      <Dialog open={open} onOpenChange={setOpen}>
+        <DialogTrigger asChild>
+          <Button disabled={!selected || approved || loading}>
+            Approve Selection
+          </Button>
+        </DialogTrigger>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Enter Email</DialogTitle>
+            <DialogDescription>
+              Please enter your email to receive confirmation.
+            </DialogDescription>
+          </DialogHeader>
+          <Input
+            type="email"
+            placeholder="Email address"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="mt-2"
+          />
+          <DialogFooter>
+            <Button onClick={handleModalApprove} disabled={loading}>
+              {loading ? "Approving..." : "Confirm"}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
+
+const getWeekDays = () => {
+  const today = new Date();
+  const start = startOfWeek(today, { weekStartsOn: 1 });
+  return Array.from({ length: 7 }, (_, i) => addDays(start, i));
+};
+
+const getTimeSlots = () => {
+  return Array.from({ length: 9 }, (_, i) => {
+    const date = setSeconds(setMinutes(setHours(new Date(), 9 + i), 0), 0);
+    return date;
+  });
+};
+
+const toLocalTime = (date: Date) => {
+  const utc = date.getTime() + date.getTimezoneOffset() * 60_000;
+  const offset = 4 * 60 * 60 * 1000;
+  return new Date(utc + offset);
+};

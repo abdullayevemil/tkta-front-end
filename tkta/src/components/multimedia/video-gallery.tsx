@@ -43,7 +43,7 @@ const ITEMS_PER_PAGE = 9;
 
 export function VideoGallery({ locale }: { locale: string }) {
   const { data: session } = useSession();
-  const isAdmin = session?.user?.role !== "admin";
+  const isAdmin = session?.user?.role === "admin";
   const t = getTranslation(locale);
 
   const [search, setSearch] = useState("");

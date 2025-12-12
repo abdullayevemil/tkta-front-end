@@ -43,7 +43,7 @@ export default async function RootLayout({
   const { locale } = await params;
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className="bg-white">
       <Head>
         <meta name="al:ios:url" content="instagram://user?username=tktaeduaz" />
         <meta name="al:ios:app_name" content="Instagram" />
@@ -56,7 +56,7 @@ export default async function RootLayout({
       </Head>
 
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
       >
         <FontSizeProvider>
           <ColorModeProvider>

@@ -30,7 +30,7 @@ export default function HomePage() {
             className="w-full md:w-1/4 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value="required-documents"
           >
-            Tələb edilən sənədlər
+            Tələb olunan sənədlər
           </TabsTrigger>
 
           <TabsTrigger
@@ -138,7 +138,7 @@ export default function HomePage() {
 
         <TabsContent className="text-justify" value="required-documents">
           <div className="flex flex-col gap-4">
-            <div>Tələb edilən sənədlər</div>
+            <div>Tələb olunan sənədlər</div>
 
             <div className="flex flex-col gap-3">
               <h4 className="font-bold">Orta ixtisas təhsili:</h4>

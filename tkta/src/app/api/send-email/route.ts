@@ -57,15 +57,15 @@ export async function POST(req: NextRequest) {
 <body>
     <p style="margin-bottom:14pt;"><strong>H&ouml;rmətli m&uuml;raciət&ccedil;i,</strong></p>
     <p style="font-size:11pt; font-family:Calibri; color:#000000; margin-bottom:14pt;">
-  Sizə bildiririk ki, <strong>${meetingDate}</strong> tarixində, saat <strong>${meetingTime}</strong>-da onlayn video görüşün keçirilməsi planlaşdırılmışdır.
+  Sizə bildiririk ki, <strong>${meetingDate}</strong>-ci il tarixində, saat <strong>${meetingTime}</strong>-da onlayn video görüşün keçirilməsi planlaşdırılmışdır.
   </p>
 
   <p style="font-size:11pt; font-family:Calibri; color:#000000; margin-bottom:14pt;">
-  Video görüşdə iştirak etmək üçün aşağıdakı keçid vasitəsilə qeyd olunan vaxtdan <strong>ən azı 5 dəqiqə əvvəl</strong> daxil olmağınız xahiş olunur.
+  Video görüşdə iştirak etmək üçün qeyd olunan vaxtdan <strong>ən azı 5 dəqiqə əvvəl</strong> daxil olmağınız xahiş olunur.
   </p>
 
   <p style="font-size:11pt; font-family:Calibri; color:#000000; margin-bottom:14pt;">
-  Nəzərinizə çatdırırıq ki, video görüşə qoşulmazdan əvvəl saytımız üzərindən QR kodu oxudub <strong>SİMA identifikasiya (autentifikasiya) xidmətindən</strong> uğurla keçməyiniz tələb olunur.
+  Nəzərinizə çatdırırıq ki, video görüşə qoşulmazdan əvvəl aşağıdakı keçiddən istifadə edərək verilmiş QR kodu oxudub <strong>SİMA identifikasiya (autentifikasiya) xidmətindən</strong> uğurla keçməyiniz tələb olunur.
   </p>
 
   <p style="font-size:11pt; font-family:Calibri; color:#000000; margin-bottom:14pt;">

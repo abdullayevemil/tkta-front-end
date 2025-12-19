@@ -44,7 +44,7 @@ export default function Video() {
             preload="none"
           >
             <source
-              src="https://github.com/abdullayevemil/tkta-front-end/releases/download/v1/home1.mp4"
+              src={`${process.env.NEXT_PUBLIC_BASE_URL}/home1.mp4`}
               type="video/mp4"
             />
             Your browser does not support the video tag.

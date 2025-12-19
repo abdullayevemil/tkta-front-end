@@ -74,7 +74,6 @@ export function PhotoGallery({ locale }: { locale: string }) {
       const data = await res.json();
       setGallery(data.gallery);
       setTotal(data.total);
-      console.log(data);
     } catch {
       toast.error(t.media.multimedia.error.loading);
     }

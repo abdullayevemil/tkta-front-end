@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 
 export default function EducationRecognition() {
   return (
@@ -9,7 +8,6 @@ export default function EducationRecognition() {
       </h1>
 
       <div className="py-10 space-y-6 text-justify px-4 md:px-16">
-
         <div>
           <h2 className="text-xl font-semibold text-textPrimary mb-2">
             Müraciət Qaydaları

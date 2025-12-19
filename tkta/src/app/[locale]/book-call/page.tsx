@@ -97,9 +97,11 @@ export default function WeeklyMeetingCalendar() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          to: email,
+          email,
+          meetingDate: format(new Date(selected), "PPP"),
+          meetingTime: format(new Date(selected), "HH:mm"),
+          meetingLink: `${process.env.NEXT_PUBLIC_BASE_URL}/redirect`,
           subject: "Meeting Confirmation",
-          text: `Your meeting is confirmed for ${selected}.`,
         }),
       });
 

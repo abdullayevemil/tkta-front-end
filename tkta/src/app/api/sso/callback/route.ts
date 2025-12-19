@@ -1,11 +1,9 @@
 import { NextResponse } from "next/server";
 import axios from "axios";
-import { signIn } from "next-auth/react";
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-
     const userDetails = body.SignableContainer?.UserInfo?.Details;
 
     if (!userDetails) {
@@ -50,23 +48,34 @@ export async function POST(request: Request) {
       }
     }
 
-    await signIn("credentials", {
-      redirect: false,
-      email: fakeEmail,
-      password: fakePassword,
-    });
+    const authResp = await axios.post(
+      `${process.env.NEXTAUTH_URL}/api/auth/callback/credentials`,
+      new URLSearchParams({
+        email: fakeEmail,
+        password: fakePassword,
+        csrfToken: "sso",
+        redirect: "false",
+      }).toString(),
+      {
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        withCredentials: true,
+      }
+    );
 
+    console.log("NextAuth login status:", authResp.status, authResp.statusText);
+
+    if (authResp.status !== 200) {
+      return NextResponse.json(
+        { error: "NextAuth login failed" },
+        { status: 401 }
+      );
+    }
+
+    const setCookies = authResp.headers["set-cookie"];
     const res = NextResponse.json({ status: "ok", user: decoded });
-
-    res.cookies.set({
-      name: "sso_session",
-      value: fakeEmail,
-      httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
-      path: "/",
-      maxAge: 2 * 60 * 60,
-    });
+    if (setCookies) {
+      setCookies.forEach((cookie: string) => res.headers.append("set-cookie", cookie));
+    }
 
     return res;
   } catch (err) {

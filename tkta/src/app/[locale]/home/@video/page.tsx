@@ -43,10 +43,7 @@ export default function Video() {
             playsInline
             preload="none"
           >
-            <source
-              src={`${process.env.NEXT_PUBLIC_BASE_URL}/home1.mp4`}
-              type="video/mp4"
-            />
+            <source src="/home1.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 

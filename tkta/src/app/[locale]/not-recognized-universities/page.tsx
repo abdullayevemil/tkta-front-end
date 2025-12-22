@@ -363,7 +363,7 @@ const columns: ColumnDef<University>[] = [
       );
     },
     cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("status")}</div>
+      <div>{row.getValue("status")}</div>
     ),
   },
 ];

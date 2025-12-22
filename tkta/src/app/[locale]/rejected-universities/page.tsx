@@ -115,12 +115,6 @@ const data: University[] = [
     rejectionPercentage: 76,
   },
   {
-    id: 13,
-    country: "Gürcüstan",
-    name: "Avropa Universiteti",
-    rejectionPercentage: 76,
-  },
-  {
     id: 14,
     country: "Gürcüstan",
     name: "Millenium Tədris Universiteti",

@@ -18,6 +18,7 @@ interface News {
   titleenglish: string;
   content: string;
   contentenglish: string;
+  videourl: string;
   headerimageurl?: string;
   date: string;
   note?: string;
@@ -45,6 +46,7 @@ export default function NewsPage({
     date: "",
     photos: [],
     headerimageurl: "",
+    videourl: "",
   });
 
   const [error, setError] = useState("");
@@ -82,7 +84,6 @@ export default function NewsPage({
     fetchNews();
   }, [id]);
 
-  
   const {
     title,
     titleenglish,
@@ -93,6 +94,7 @@ export default function NewsPage({
     note,
     photos,
     headerimageurl,
+    videourl,
   } = news;
 
   const allImages = [headerimageurl, ...photos.map((p) => p.url)].filter(
@@ -100,7 +102,7 @@ export default function NewsPage({
   );
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [open, setOpen] = useState(false);
-  
+
   if (error) return <p>{error}</p>;
 
   return (
@@ -116,6 +118,20 @@ export default function NewsPage({
         }}
       />
 
+      {videourl && (
+        <div className="w-full flex justify-center">
+          <div className="w-full sm:w-[80%] md:w-[65%] lg:w-[60%]">
+            <video
+              src={videourl}
+              controls
+              className="w-full rounded-lg shadow-md"
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      )}
+
       <div className="w-full flex flex-col gap-6">
         <div className="w-full flex flex-col gap-6 sm:gap-8">
           {/* Image gallery grid */}
@@ -130,12 +146,12 @@ export default function NewsPage({
                     <div
                       className="relative cursor-pointer transition-transform duration-200 hover:scale-105"
                       onClick={() => {
-                        setSelectedImage(img || '');
+                        setSelectedImage(img || "");
                         setOpen(true);
                       }}
                     >
                       <Image
-                        src={img || ''}
+                        src={img || ""}
                         alt={locale === "az" ? title : titleenglish}
                         width={300}
                         height={200}
@@ -157,7 +173,10 @@ export default function NewsPage({
                 >
                   <DialogTitle></DialogTitle>
 
-                  <div onClick={(e) => e.stopPropagation()} className="rounded-lg">
+                  <div
+                    onClick={(e) => e.stopPropagation()}
+                    className="rounded-lg"
+                  >
                     <Image
                       src={selectedImage!}
                       alt={locale === "az" ? title : titleenglish}

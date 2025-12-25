@@ -44,70 +44,70 @@ export default function Iternationalization({ params }: Props) {
   const { locale } = use(params);
 
   const { data: session } = useSession();
-  
+
   const isAdmin = session?.user?.role === "admin";
-  
+
   const t = getTranslation(locale);
 
   const [search] = useState("");
-  
+
   const [from] = useState<Date | undefined>();
-  
+
   const [to] = useState<Date | undefined>();
-  
+
   const [sort] = useState<"new" | "old">("new");
-  
+
   const [page, setPage] = useState(1);
   const [page1, setPage1] = useState(1);
-  
+
   const [gallery, setGallery] = useState<GalleryItem[]>([]);
 
   const [gallery1, setGallery1] = useState<GalleryItem[]>([]);
-  
+
   const [total, setTotal] = useState(0);
 
   const [total1, setTotal1] = useState(0);
-  
+
   const [deleteId, setDeleteId] = useState<number | null>(null);
-  
+
   const [alertOpen, setAlertOpen] = useState(false);
 
   async function fetchGallery() {
     const params = new URLSearchParams();
 
     if (search) params.append("search", search);
-  
+
     if (from) params.append("from", from.toISOString().split("T")[0]);
-  
+
     if (to) params.append("to", to.toISOString().split("T")[0]);
-  
+
     if (sort) params.append("sort", sort);
-  
+
     params.append("page", page.toString());
 
     try {
       const res = await fetch(
         `/api/media/multimedia/photo-gallery?${params.toString()}&type=2`
       );
-  
+
       if (!res.ok) throw new Error("Failed to fetch");
-  
+
       const data = await res.json();
-  
+
       setGallery(data.gallery);
-  
+
       setTotal(data.total);
 
       const res1 = await fetch(
         `/api/media/multimedia/photo-gallery?${params.toString()}&type=1`
       );
-  
+
       if (!res1.ok) throw new Error("Failed to fetch");
-  
+
       const data1 = await res1.json();
-  
+
       setGallery1(data1.gallery);
-  
+
       setTotal1(data1.total);
     } catch {
       toast.error(t.media.multimedia.error.loading);
@@ -120,7 +120,7 @@ export default function Iternationalization({ params }: Props) {
 
   async function handleDelete() {
     if (!deleteId) return;
-  
+
     try {
       const res = await fetch(
         `/api/media/multimedia/photo-gallery/${deleteId}`,
@@ -128,15 +128,15 @@ export default function Iternationalization({ params }: Props) {
           method: "DELETE",
         }
       );
-  
+
       if (!res.ok) throw new Error("Delete failed");
-  
+
       toast.success(t.media.multimedia.success.delete);
-  
+
       setAlertOpen(false);
-  
+
       setDeleteId(null);
-  
+
       fetchGallery();
     } catch {
       toast.error(t.media.multimedia.error.delete);
@@ -153,7 +153,10 @@ export default function Iternationalization({ params }: Props) {
         Beynəlmİləlləşmə
       </h1>
 
-      <Tabs defaultValue="general-info" className="w-full px-4 md:px-16 flex flex-col">
+      <Tabs
+        defaultValue="general-info"
+        className="w-full px-4 md:px-16 flex flex-col"
+      >
         <TabsList className="flex flex-col md:flex-row justify-evenly relative">
           <TabsTrigger
             className="w-full md:w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
@@ -267,29 +270,28 @@ export default function Iternationalization({ params }: Props) {
           </div>
         </TabsContent>
 
-        <TabsContent
-          value="employee-exchange"
-          className="flex flex-col gap-20"
-        >{gallery.length === 0 ? (
-          <NewsSkeleton />
-        ) : (
-          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
-            {gallery
-              .map((item) => {
+        <TabsContent value="employee-exchange" className="flex flex-col gap-20">
+          {gallery.length === 0 ? (
+            <NewsSkeleton />
+          ) : (
+            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+              {gallery.map((item) => {
                 return (
                   <li key={item.id} className="relative">
                     <Card className="w-full h-full flex flex-col bg-transparent">
                       <Link
                         href={`/${locale}/media/multimedia/photo-gallery/${item.id}`}
                       >
-                        <Image
-                          src={item.headerphotourl}
-                          alt={item.title}
-                          className="max-w-full max-h-full object-contain"
-                          loading="lazy"
-                          width={900}
-                          height={900}
-                        />
+                        <div className="h-3/5 w-full h-32 sm:h-40 md:h-48 lg:h-[16rem] flex justify-center items-center bg-gray-100 rounded-t-xl overflow-hidden">
+                          <Image
+                            src={item.headerphotourl}
+                            alt={item.title}
+                            className="max-w-full max-h-full object-contain"
+                            loading="lazy"
+                            width={900}
+                            height={900}
+                          />
+                        </div>
 
                         <div className="p-4 flex flex-col gap-3">
                           <h3
@@ -298,7 +300,7 @@ export default function Iternationalization({ params }: Props) {
                           >
                             {locale === "az" ? item.title : item.titleenglish}
                           </h3>
-                        
+
                           <p className="text-right text-xs text-textSecondary w-full">
                             {format(new Date(item.date), "dd.MM.yyyy")}
                           </p>
@@ -330,17 +332,17 @@ export default function Iternationalization({ params }: Props) {
                               <AlertDialogTitle>
                                 {t.media.multimedia.removeDialogTitle}
                               </AlertDialogTitle>
-                              
+
                               <AlertDialogDescription>
                                 {t.media.multimedia.removeDialogContent}
                               </AlertDialogDescription>
                             </AlertDialogHeader>
-                            
+
                             <AlertDialogFooter>
                               <AlertDialogCancel>
                                 {t.media.multimedia.removeDialogCancel}
                               </AlertDialogCancel>
-                              
+
                               <Button
                                 variant="destructive"
                                 onClick={handleDelete}
@@ -365,33 +367,34 @@ export default function Iternationalization({ params }: Props) {
                   </li>
                 );
               })}
-          </ul>
-        )}
+            </ul>
+          )}
 
-        {totalPages > 1 && (
-          <div className="flex gap-4 mt-8">
-            <Button
-              variant="outline"
-              disabled={page === 1}
-              onClick={() => setPage((p) => p - 1)}
-            >
-              {t.previous}
-            </Button>
-            
-            <span className="self-center">
-              {t.page} {page} of {totalPages}
-            </span>
-            
-            <Button
-              variant="outline"
-              disabled={page === totalPages}
-              onClick={() => setPage((p) => p + 1)}
-            >
-              {t.next}
-            </Button>
-          </div>
-        )}</TabsContent>
-        
+          {totalPages > 1 && (
+            <div className="flex gap-4 mt-8">
+              <Button
+                variant="outline"
+                disabled={page === 1}
+                onClick={() => setPage((p) => p - 1)}
+              >
+                {t.previous}
+              </Button>
+
+              <span className="self-center">
+                {t.page} {page} of {totalPages}
+              </span>
+
+              <Button
+                variant="outline"
+                disabled={page === totalPages}
+                onClick={() => setPage((p) => p + 1)}
+              >
+                {t.next}
+              </Button>
+            </div>
+          )}
+        </TabsContent>
+
         <TabsContent
           value="international-events"
           className="flex flex-col gap-20"
@@ -400,14 +403,14 @@ export default function Iternationalization({ params }: Props) {
             <NewsSkeleton />
           ) : (
             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
-              {gallery1
-                .map((item) => {
-                  return (
-                    <li key={item.id} className="relative">
-                      <Card className="w-full h-full flex flex-col bg-transparent">
-                        <Link
-                          href={`/${locale}/media/multimedia/photo-gallery/${item.id}`}
-                        >
+              {gallery1.map((item) => {
+                return (
+                  <li key={item.id} className="relative">
+                    <Card className="w-full h-full flex flex-col bg-transparent">
+                      <Link
+                        href={`/${locale}/media/multimedia/photo-gallery/${item.id}`}
+                      >
+                        <div className="h-3/5 w-full h-32 sm:h-40 md:h-48 lg:h-[16rem] flex justify-center items-center bg-gray-100 rounded-t-xl overflow-hidden">
                           <Image
                             src={item.headerphotourl}
                             alt={item.title}
@@ -416,77 +419,79 @@ export default function Iternationalization({ params }: Props) {
                             width={900}
                             height={900}
                           />
-                          <div className="p-4 flex flex-col gap-3">
-                            <h3
-                              className="font-bold text-base line-clamp-2"
-                              title={item.title}
-                            >
-                              {locale === "az" ? item.title : item.titleenglish}
-                            </h3>
-                            <p className="text-right text-xs text-textSecondary w-full">
-                              {format(new Date(item.date), "dd.MM.yyyy")}
-                            </p>
-                          </div>
-                        </Link>
-                      </Card>
+                        </div>
 
-                      {isAdmin && (
-                        <div className="absolute top-4 right-4 flex items-center justify-center gap-4">
-                          <AlertDialog
-                            open={alertOpen && deleteId === item.id}
-                            onOpenChange={setAlertOpen}
+                        <div className="p-4 flex flex-col gap-3">
+                          <h3
+                            className="font-bold text-base line-clamp-2"
+                            title={item.title}
                           >
-                            <AlertDialogTrigger asChild>
+                            {locale === "az" ? item.title : item.titleenglish}
+                          </h3>
+                          <p className="text-right text-xs text-textSecondary w-full">
+                            {format(new Date(item.date), "dd.MM.yyyy")}
+                          </p>
+                        </div>
+                      </Link>
+                    </Card>
+
+                    {isAdmin && (
+                      <div className="absolute top-4 right-4 flex items-center justify-center gap-4">
+                        <AlertDialog
+                          open={alertOpen && deleteId === item.id}
+                          onOpenChange={setAlertOpen}
+                        >
+                          <AlertDialogTrigger asChild>
+                            <Button
+                              variant="destructive"
+                              onClick={() => {
+                                setDeleteId(item.id);
+                                setAlertOpen(true);
+                              }}
+                            >
+                              <span>{t.media.multimedia.delete}</span>
+
+                              <Trash2Icon className="w-4 h-4" />
+                            </Button>
+                          </AlertDialogTrigger>
+
+                          <AlertDialogContent>
+                            <AlertDialogHeader>
+                              <AlertDialogTitle>
+                                {t.media.multimedia.removeDialogTitle}
+                              </AlertDialogTitle>
+                              <AlertDialogDescription>
+                                {t.media.multimedia.removeDialogContent}
+                              </AlertDialogDescription>
+                            </AlertDialogHeader>
+                            <AlertDialogFooter>
+                              <AlertDialogCancel>
+                                {t.media.multimedia.removeDialogCancel}
+                              </AlertDialogCancel>
                               <Button
                                 variant="destructive"
-                                onClick={() => {
-                                  setDeleteId(item.id);
-                                  setAlertOpen(true);
-                                }}
+                                onClick={handleDelete}
                               >
-                                <span>{t.media.multimedia.delete}</span>
-
-                                <Trash2Icon className="w-4 h-4" />
+                                {t.media.multimedia.removeDialogConfirm}
                               </Button>
-                            </AlertDialogTrigger>
+                            </AlertDialogFooter>
+                          </AlertDialogContent>
+                        </AlertDialog>
 
-                            <AlertDialogContent>
-                              <AlertDialogHeader>
-                                <AlertDialogTitle>
-                                  {t.media.multimedia.removeDialogTitle}
-                                </AlertDialogTitle>
-                                <AlertDialogDescription>
-                                  {t.media.multimedia.removeDialogContent}
-                                </AlertDialogDescription>
-                              </AlertDialogHeader>
-                              <AlertDialogFooter>
-                                <AlertDialogCancel>
-                                  {t.media.multimedia.removeDialogCancel}
-                                </AlertDialogCancel>
-                                <Button
-                                  variant="destructive"
-                                  onClick={handleDelete}
-                                >
-                                  {t.media.multimedia.removeDialogConfirm}
-                                </Button>
-                              </AlertDialogFooter>
-                            </AlertDialogContent>
-                          </AlertDialog>
-
-                          <Link
-                            href={`/${locale}/media/multimedia/photo-gallery/${item.id}/edit`}
-                            className="flex items-center justify-center gap-2 px-2 py-2 bg-blue-600 text-white rounded-md"
-                          >
-                            <span className="text-sm">
-                              {t.media.multimedia.edit}
-                            </span>
-                            <EditIcon className="w-4 h-4" />
-                          </Link>
-                        </div>
-                      )}
-                    </li>
-                  );
-                })}
+                        <Link
+                          href={`/${locale}/media/multimedia/photo-gallery/${item.id}/edit`}
+                          className="flex items-center justify-center gap-2 px-2 py-2 bg-blue-600 text-white rounded-md"
+                        >
+                          <span className="text-sm">
+                            {t.media.multimedia.edit}
+                          </span>
+                          <EditIcon className="w-4 h-4" />
+                        </Link>
+                      </div>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           )}
 

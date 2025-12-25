@@ -5,11 +5,11 @@ export default function VideoInstructionsPage() {
         Xarici dövlətlərin ali təhsilə aid kvalifikasiyalarının tanınmasına dair
         video-təlimat: Necə müraciət etməliyik?
       </h1>
-      
+
       <video
         className="w-full h-auto w-3/5 rounded-lg shadow-lg"
         controls
-        src={`${process.env.NEXT_PUBLIC_BASE_URL}/videos/video-instructions.mp4`}
+        src={`/videos/video-instruction.mp4`}
       ></video>
     </div>
   );

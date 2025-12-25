@@ -91,6 +91,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/formidable": "^3.4.5",
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/negotiator": "^0.6.3",
     "@types/node": "^20",
     "@types/nodemailer": "^7.0.4",

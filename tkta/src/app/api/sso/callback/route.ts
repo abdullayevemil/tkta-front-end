@@ -1,5 +1,12 @@
 import { NextResponse } from "next/server";
 import axios from "axios";
+import jwt from "jsonwebtoken";
+
+const SECRET = process.env.NEXTAUTH_SECRET || "super-secret"
+
+export function generateOneTimeToken(email: string) {
+  return jwt.sign({ email }, SECRET, { expiresIn: "2m" })
+}
 
 export async function POST(request: Request) {
   try {
@@ -48,9 +55,11 @@ export async function POST(request: Request) {
       }
     }
 
+    const token = generateOneTimeToken(fakeEmail);
+
     return NextResponse.redirect(
-      `/api/auth/callback/credentials?provider=sso&email=${encodeURIComponent(
-        fakeEmail
+      `${process.env.NEXTAUTH_URL}/book-call?token=${encodeURIComponent(
+        token
       )}`
     );
   } catch (err) {

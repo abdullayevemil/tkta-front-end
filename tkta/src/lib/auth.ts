@@ -2,6 +2,7 @@ import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
 import type { NextAuthOptions } from "next-auth";
 import axios from "axios";
+import jwt from "jsonwebtoken";
 
 export const authOptions: NextAuthOptions = {
   providers: [
@@ -37,26 +38,28 @@ export const authOptions: NextAuthOptions = {
     CredentialsProvider({
       id: "sso",
       name: "SSO",
-
-      credentials: {
-        email: { type: "email" },
-      },
-
+      credentials: { token: { type: "text" } },
       async authorize(credentials) {
-        if (!credentials?.email) return null;
+        const token = credentials?.token;
+        if (!token) return null;
 
-        const response = await axios.get(
-          `${process.env.NEXTAUTH_URL}/api/users?email=${credentials.email}`
+        let payload: { email: string };
+        try {
+          payload = jwt.verify(token, process.env.NEXTAUTH_SECRET!) as any;
+        } catch {
+          return null;
+        }
+
+        const email = payload.email;
+        if (!email) return null;
+
+        const res = await fetch(
+          `${process.env.NEXTAUTH_URL}/api/users?email=${email}`
         );
+        const user = (await res.json())[0];
+        if (!user) return null;
 
-        let user = response.data[0];
-
-        return {
-          id: user.id,
-          name: user.name,
-          email: user.email,
-          role: user.role,
-        };
+        return user;
       },
     }),
   ],

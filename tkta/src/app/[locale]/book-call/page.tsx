@@ -1,6 +1,6 @@
 "use client";
 
-import { useParams, useRouter } from "next/navigation";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -21,7 +21,7 @@ import {
   setSeconds,
 } from "date-fns";
 import { toast } from "react-toastify";
-import { useSession } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 
 // ShadCN modal
 import {
@@ -36,6 +36,9 @@ import {
 import { Input } from "@/components/ui/input";
 
 export default function WeeklyMeetingCalendar() {
+  const params1 = useSearchParams();
+  const token = params1.get("token");
+
   const [selected, setSelected] = useState<string | null>(null);
   const [bookedSlots, setBookedSlots] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
@@ -70,6 +73,12 @@ export default function WeeklyMeetingCalendar() {
     if (datetime <= nowUTC4.toISOString()) return;
     setSelected(datetime);
   };
+
+  useEffect(() => {
+    if (token) {
+      signIn("sso", { token, callbackUrl: "/book-call" });
+    }
+  }, [token]);
 
   const handleModalApprove = async () => {
     if (!selected) return;

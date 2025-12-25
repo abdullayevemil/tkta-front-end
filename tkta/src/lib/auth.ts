@@ -17,7 +17,9 @@ export const authOptions: NextAuthOptions = {
       },
       async authorize(credentials) {
         const { email, password } = credentials || {};
-        const response = await axios.get(`${process.env.NEXTAUTH_URL}/api/users?email=${email}`);
+        const response = await axios.get(
+          `${process.env.NEXTAUTH_URL}/api/users?email=${email}`
+        );
         const user = response.data[0];
 
         if (user?.password === password) {
@@ -30,6 +32,31 @@ export const authOptions: NextAuthOptions = {
         }
 
         return null;
+      },
+    }),
+    CredentialsProvider({
+      id: "sso",
+      name: "SSO",
+
+      credentials: {
+        email: { type: "email" },
+      },
+
+      async authorize(credentials) {
+        if (!credentials?.email) return null;
+
+        const response = await axios.get(
+          `${process.env.NEXTAUTH_URL}/api/users?email=${credentials.email}`
+        );
+
+        let user = response.data[0];
+
+        return {
+          id: user.id,
+          name: user.name,
+          email: user.email,
+          role: user.role,
+        };
       },
     }),
   ],

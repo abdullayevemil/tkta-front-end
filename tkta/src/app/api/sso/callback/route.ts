@@ -48,36 +48,11 @@ export async function POST(request: Request) {
       }
     }
 
-    const authResp = await axios.post(
-      `${process.env.NEXTAUTH_URL}/api/auth/callback/credentials`,
-      new URLSearchParams({
-        email: fakeEmail,
-        password: fakePassword,
-        csrfToken: "sso",
-        redirect: "false",
-      }).toString(),
-      {
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        withCredentials: true,
-      }
+    return NextResponse.redirect(
+      `/api/auth/callback/credentials?provider=sso&email=${encodeURIComponent(
+        fakeEmail
+      )}`
     );
-
-    console.log("NextAuth login status:", authResp.status, authResp.statusText);
-
-    if (authResp.status !== 200) {
-      return NextResponse.json(
-        { error: "NextAuth login failed" },
-        { status: 401 }
-      );
-    }
-
-    const setCookies = authResp.headers["set-cookie"];
-    const res = NextResponse.json({ status: "ok", user: decoded });
-    if (setCookies) {
-      setCookies.forEach((cookie: string) => res.headers.append("set-cookie", cookie));
-    }
-
-    return res;
   } catch (err) {
     console.error("SSO Callback Error:", err);
     return NextResponse.json(

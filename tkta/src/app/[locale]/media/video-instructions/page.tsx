@@ -7,7 +7,7 @@ export default function VideoInstructionsPage() {
       </h1>
 
       <video
-        className="w-full h-auto w-1/2 rounded-lg shadow-lg"
+        className="h-auto w-4/5 rounded-lg shadow-lg"
         controls
         src="https://res.cloudinary.com/dtwyjdkb1/video/upload/v1766674258/WhatsApp_Video_2025-12-25_at_18.17.21_t9dylb.mp4"
       ></video>

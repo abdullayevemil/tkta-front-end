@@ -285,7 +285,7 @@ export default function Iternationalization({ params }: Props) {
                         <Image
                           src={item.headerphotourl}
                           alt={item.title}
-                          className="w-full h-64 object-cover rounded-t-xl"
+                          className="max-w-full max-h-full object-contain"
                           loading="lazy"
                           width={900}
                           height={900}
@@ -411,7 +411,7 @@ export default function Iternationalization({ params }: Props) {
                           <Image
                             src={item.headerphotourl}
                             alt={item.title}
-                            className="w-full h-64 object-cover rounded-t-xl"
+                            className="max-w-full max-h-full object-contain"
                             loading="lazy"
                             width={900}
                             height={900}

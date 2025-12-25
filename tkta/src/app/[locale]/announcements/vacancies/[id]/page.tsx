@@ -11,7 +11,6 @@ import { DialogTitle } from "@/components/ui/dialog";
 import { Dialog, DialogContent } from "@radix-ui/react-dialog";
 import Image from "next/image";
 import { use, useEffect, useState } from "react";
-import { notFound } from "next/navigation";
 
 interface News {
   id: number;
@@ -31,78 +30,82 @@ interface Photo {
   url: string;
 }
 
-export default async function NewsPage({
+export default function NewsPage({
   params,
 }: {
-  params: Promise<{ id: string; locale: string }>;
+  params: Promise<{ id: number; locale: string }>;
 }) {
   const [news, setNews] = useState<News>({
-      id: 0,
-      title: "",
-      titleenglish: "",
-      content: "",
-      contentenglish: "",
-      note: "",
-      noteenglish: "",
-      date: "",
-      photos: [],
-      headerimageurl: "",
-      videourl: "",
-    });
-  
-    const [error, setError] = useState("");
-  
-    const { id, locale } = use(params);
-  
-    useEffect(() => {
-      const fetchNews = async () => {
-        try {
-          const res = await fetch(
-            `${process.env.NEXT_PUBLIC_BASE_URL}/api/announcements/vacancies/${id}`
-          );
-  
-          if (!res.ok) {
-            setError("Not Found");
-            return;
-          }
-  
-          const data = await res.json();
-          if (!data) {
-            setError("Not Found");
-            return;
-          }
-  
-          setNews(data);
-  
-          if (data.headerimageurl) {
-            setSelectedImage(data.headerimageurl);
-          }
-        } catch {
-          setError("Failed to load news");
+    id: 0,
+    title: "",
+    titleenglish: "",
+    content: "",
+    contentenglish: "",
+    note: "",
+    noteenglish: "",
+    date: "",
+    photos: [],
+    headerimageurl: "",
+    videourl: "",
+  });
+
+  const [error, setError] = useState("");
+
+  const { id, locale } = use(params);
+
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        const res = await fetch(
+          `${process.env.NEXT_PUBLIC_BASE_URL}/api/announcements/vacancies/${id}`
+        );
+
+        if (!res.ok) {
+          setError("Not Found");
+          return;
         }
-      };
-  
-      fetchNews();
-    }, [id]);
-  
-    const {
-      title,
-      titleenglish,
-      contentenglish,
-      noteenglish,
-      content,
-      date,
-      note,
-      photos,
-      headerimageurl,
-      videourl,
-    } = news;
+
+        const data = await res.json();
+        if (!data) {
+          setError("Not Found");
+          return;
+        }
+
+        setNews(data);
+
+        console.log("Fetched news data:", data);
+
+        if (data.headerimageurl) {
+          setSelectedImage(data.headerimageurl);
+        }
+      } catch {
+        setError("Failed to load news");
+      }
+    };
+
+    fetchNews();
+  }, [id]);
+
+  const {
+    title,
+    titleenglish,
+    contentenglish,
+    noteenglish,
+    content,
+    date,
+    note,
+    photos,
+    headerimageurl,
+    videourl,
+  } = news;
 
   const allImages = [headerimageurl, ...photos.map((p) => p.url)].filter(
     Boolean
   );
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [open, setOpen] = useState(false);
+
+  if (error) return <p>{error}</p>;
 
   return (
     <section className="w-full flex flex-col gap-8 sm:gap-12 md:gap-16 items-center px-4 sm:px-8 md:px-24 pt-8 sm:pt-12">
@@ -116,6 +119,20 @@ export default async function NewsPage({
           __html: locale === "az" ? content : contentenglish,
         }}
       />
+
+      {videourl && (
+        <div className="w-full flex justify-center">
+          <div className="w-full sm:w-[80%] md:w-[65%] lg:w-[60%]">
+            <video
+              src={videourl}
+              controls
+              className="w-full rounded-lg shadow-md"
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      )}
 
       <div className="w-full flex flex-col gap-6">
         <div className="w-full flex flex-col gap-6 sm:gap-8">

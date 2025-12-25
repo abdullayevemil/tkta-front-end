@@ -60,7 +60,7 @@ export async function POST(request: Request) {
     return NextResponse.redirect(
       `${process.env.NEXTAUTH_URL}/book-call?token=${encodeURIComponent(
         token
-      )}`
+      )}`, 302
     );
   } catch (err) {
     console.error("SSO Callback Error:", err);

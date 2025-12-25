@@ -75,6 +75,7 @@ export default function WeeklyMeetingCalendar() {
   };
 
   useEffect(() => {
+    console.log("Signing in with token:", token);
     if (token) {
       signIn("sso", { token, callbackUrl: "/book-call" });
     }

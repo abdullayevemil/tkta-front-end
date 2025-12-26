@@ -69,8 +69,8 @@ export default function PhotoGalleryPage({ params }: Props) {
 
   if (!data) return <Skeleton className="w-full h-[700px] rounded-xl" />;
 
-  const { title, titleenglish, date, images } = data;
-  const allImages = images.map((p) => p.url).filter(Boolean);
+  const { title, titleenglish, headerphotourl, date, images } = data;
+  const allImages = [headerphotourl, ...images.map((p) => p.url).filter(Boolean)];
   const selectedImage = allImages[selectedIndex];
 
   const goLeft = () =>

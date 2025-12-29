@@ -26,7 +26,7 @@ export default function ExternalLinks() {
           <CarouselItem className="basis-full basis-1/2 lg:basis-1/5">
             <LinkCard
               name="Azərbaycan Respublikasının Prezidenti"
-              imageUrl="https://tkta.edu.az/files/thumbnail_gerb%201.png"
+              imageUrl="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1766765535/Emblem_of_Azerbaijan.svg_adogff.png"
               url="https://prezident.az"
             />
           </CarouselItem>
@@ -34,7 +34,7 @@ export default function ExternalLinks() {
           <CarouselItem className="basis-full basis-1/2 lg:basis-1/5">
             <LinkCard
               name="Azərbaycan Respublikasının Birinci xanımı"
-              imageUrl="https://tkta.edu.az/files/thumbnail_gerb%201.png"
+              imageUrl="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1766765535/Emblem_of_Azerbaijan.svg_adogff.png"
               url="https://mehriban-aliyeva.az/"
             />
           </CarouselItem>
@@ -42,7 +42,7 @@ export default function ExternalLinks() {
           <CarouselItem className="basis-full basis-1/2 lg:basis-1/5">
             <LinkCard
               name="Azərbaycan Respublikası Elm və Təhsil Nazirliyi"
-              imageUrl="https://www.tkta.edu.az/files/NewFolder%203/Main_logotype_AZE.png"
+              imageUrl="https://res.cloudinary.com/dtwyjdkb1/image/upload/v1766765534/elm-tehsil-naziriyi-logo_rn5h9f.png"
               url="https://edu.gov.az"
             />
           </CarouselItem>

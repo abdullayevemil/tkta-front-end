@@ -16,7 +16,7 @@ export default function AnnualReports() {
         <Link
           target="_blank"
           rel="noopener noreferrer"
-          href="https://tkta.edu.az/files/45/1/12/13/123/bülleten/İllik%20hesabat%20SON.pdf"
+          href="/assets/reports/annual/2024.pdf"
         >
           <Card className="p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
             <Image unoptimized={process.env.NODE_ENV === "development"}src={Folder} alt="folder icon" width={120} height={120} />
@@ -28,7 +28,7 @@ export default function AnnualReports() {
         <Link
           target="_blank"
           rel="noopener noreferrer"
-          href="https://tkta.edu.az/files/hesabat/2023%20illik%20hesabat/İllik%20Hesabat%202023%20cü%20il%20pdf%20versiya.pdf"
+          href="/assets/reports/annual/2023.pdf"
         >
           <Card className="p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
             <Image unoptimized={process.env.NODE_ENV === "development"}src={Folder} alt="folder icon" width={120} height={120} />
@@ -40,7 +40,7 @@ export default function AnnualReports() {
         <Link
           target="_blank"
           rel="noopener noreferrer"
-          href="https://tkta.edu.az/files/hesabat%20az.pdf"
+          href="/assets/reports/annual/2022.pdf"
         >
           <Card className="p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
             <Image unoptimized={process.env.NODE_ENV === "development"}src={Folder} alt="folder icon" width={120} height={120} />
@@ -52,7 +52,7 @@ export default function AnnualReports() {
         <Link
           target="_blank"
           rel="noopener noreferrer"
-          href="https://tkta.edu.az/files/TKTA-illik%20hesabat.pdf"
+          href="/assets/reports/annual/2021.pdf"
         >
           <Card className="p-6 py-20 flex flex-col gap-6 items-center justify-center hover:cursor-pointer hover:font-bold text-base">
             <Image unoptimized={process.env.NODE_ENV === "development"}src={Folder} alt="folder icon" width={120} height={120} />

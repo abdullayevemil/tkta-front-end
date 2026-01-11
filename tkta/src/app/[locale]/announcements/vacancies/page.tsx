@@ -64,7 +64,7 @@ export default function News({ params }: Props) {
   if (status === "loading") {
   }
 
-  const isAdmin = session?.user?.role === "admin";
+  const isAdmin = session?.user?.role === "admin" || session?.user?.role === "superadmin";
 
   async function handleDelete() {
     if (deleteId === null) return;

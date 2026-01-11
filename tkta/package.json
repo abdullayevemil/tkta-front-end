@@ -48,6 +48,7 @@
     "@vercel/speed-insights": "^1.1.0",
     "@xyflow/react": "^12.3.6",
     "axios": "^1.7.9",
+    "bcrypt": "^6.0.0",
     "class-variance-authority": "^0.7.1",
     "cloudinary": "^2.6.0",
     "clsx": "^2.1.1",
@@ -91,6 +92,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@types/bcrypt": "^6.0.0",
     "@types/formidable": "^3.4.5",
     "@types/jsonwebtoken": "^9.0.10",
     "@types/negotiator": "^0.6.3",

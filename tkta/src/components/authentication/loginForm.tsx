@@ -38,13 +38,15 @@ const LoginForm = () => {
   const onSubmit = async (data: z.infer<typeof LoginSchema>) => {
     setLoading(true);
 
-    await signIn("credentials", {
+    const res = await signIn("credentials", {
       redirect: false,
       email: data.email,
       password: data.password,
     });
 
     const updatedSession = await getSession();
+
+    console.log("SignIn response:", updatedSession?.user);
 
     setLoading(false);
 

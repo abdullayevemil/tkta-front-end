@@ -45,7 +45,7 @@ export default function Iternationalization({ params }: Props) {
 
   const { data: session } = useSession();
 
-  const isAdmin = session?.user?.role === "admin";
+  const isAdmin = session?.user?.role === "admin" || session?.user?.role === "superadmin";
 
   const t = getTranslation(locale);
 

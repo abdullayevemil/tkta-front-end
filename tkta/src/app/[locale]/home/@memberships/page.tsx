@@ -13,26 +13,32 @@ const partners = [
   {
     id: 1,
     url: "membership/rcevdw4g7s6klunzx4cv",
+    link: "http://enqa.eu",
   },
   {
     id: 2,
     url: "membership/ksargqtut4r8et0dsgzu",
+    link: "https://www.inqaahe.org",
   },
   {
     id: 3,
     url: "membership/t3goilav8ghdntaq69qs",
+    link: "https://www.taicep.org/",
   },
   {
     id: 4,
     url: "membership/rcevdw4g7s6klunzx4cv",
+    link: "http://enqa.eu",
   },
   {
     id: 5,
     url: "membership/ksargqtut4r8et0dsgzu",
+    link: "https://www.inqaahe.org",
   },
   {
     id: 6,
     url: "membership/t3goilav8ghdntaq69qs",
+    link: "https://www.taicep.org/",
   },
 ];
 
@@ -60,7 +66,7 @@ export default function Memberships() {
                 key={partner.id}
                 className="basis-1/3 flex items-center justify-center"
               >
-                <Link href="">
+                <Link href={partner.link} target="_blank" rel="noopener noreferrer">
                   <CldImage
                     src={partner.url}
                     width="200"

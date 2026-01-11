@@ -3,6 +3,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import type { NextAuthOptions } from "next-auth";
 import axios from "axios";
 import jwt from "jsonwebtoken";
+import bcrypt from "bcrypt";
 
 export const authOptions: NextAuthOptions = {
   providers: [
@@ -17,22 +18,36 @@ export const authOptions: NextAuthOptions = {
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        const { email, password } = credentials || {};
-        const response = await axios.get(
-          `${process.env.NEXTAUTH_URL}/api/users?email=${email}`
-        );
-        const user = response.data[0];
+        try {
+          if (!credentials?.email || !credentials?.password) {
+            return null;
+          }
 
-        if (user?.password === password) {
+          const response = await axios.get(
+            `${process.env.NEXTAUTH_URL}/api/users?email=${credentials.email}`
+          );
+
+          const user = response.data?.[0];
+          if (!user || !user.password) {
+            return null;
+          }
+
+          const isValid = await bcrypt.compare(
+            credentials.password,
+            user.password
+          );
+
+          if (!isValid) return null;
+
           return {
-            id: user.id,
+            id: String(user.id),
             name: user.name,
             email: user.email,
             role: user.role,
           };
+        } catch (err) {
+          return null;
         }
-
-        return null;
       },
     }),
     CredentialsProvider({

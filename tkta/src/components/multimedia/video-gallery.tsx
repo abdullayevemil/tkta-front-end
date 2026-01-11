@@ -43,7 +43,7 @@ const ITEMS_PER_PAGE = 9;
 
 export function VideoGallery({ locale }: { locale: string }) {
   const { data: session } = useSession();
-  const isAdmin = session?.user?.role === "admin";
+  const isAdmin = session?.user?.role === "admin" || session?.user?.role === "superadmin";
   const t = getTranslation(locale);
 
   const [search, setSearch] = useState("");
@@ -205,7 +205,7 @@ export function VideoGallery({ locale }: { locale: string }) {
             <li key={item.id} className="relative">
               <Card className="w-full h-full flex flex-col bg-transparent">
                 <Link href={`/media/multimedia/video-gallery/${item.id}`}>
-                  {item.headerviewurl.includes("cloudinary") ? (
+                  {!item.headerviewurl.includes("youtube")? (
                     <video
                       src={item.headerviewurl}
                       autoPlay={false}

@@ -158,7 +158,7 @@ export function Navigation({
                 <ul className="grid w-[200px] md:gap-3 md:p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                   <li>
                     <ListItem onClick={() => setOpen(false)}
-                      href={`/pages/register.html`}
+                      href="https://apply.enic.edu.az/"
                       title={t.header.navigation.diplomaConfirmation.apply}
                     >
                       {t.header.navigation.diplomaConfirmation.applyDescription}

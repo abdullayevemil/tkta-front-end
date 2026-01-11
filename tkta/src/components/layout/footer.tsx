@@ -43,11 +43,11 @@ export default function Footer() {
               </li>
               
               <li className="hover:text-textPrimary">
-                <Link href="/sercices">Fəaliyyət sahələri</Link>
+                <Link href="/services">Fəaliyyət sahələri</Link>
               </li>
               
               <li className="hover:text-textPrimary">
-                <Link href="/diploma-recognition">Diplom Təsdiqi</Link>
+                <Link href="https://apply.enic.edu.az/">Diplom Təsdiqi</Link>
               </li>
               
               <li className="hover:text-textPrimary">
@@ -55,11 +55,11 @@ export default function Footer() {
               </li>
               
               <li className="hover:text-textPrimary">
-                <Link href="/">Ən çox imtina alan universitetlər</Link>
+                <Link href="/rejected-universities">Ən çox imtina alan universitetlər</Link>
               </li>
               
               <li className="hover:text-textPrimary">
-                <Link href="">Tanınmayan universitetlər</Link>
+                <Link href="/not-recognized-universities">Tanınmayan universitetlər</Link>
               </li>
               
               <li className="hover:text-textPrimary">

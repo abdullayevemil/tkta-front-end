@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { v2 as cloudinary, UploadApiResponse } from "cloudinary";
 import sql from "@/lib/db";
+import { authOptions } from "@/lib/auth";
+import { getServerSession } from "next-auth/next";
 
 export const dynamic = "force-dynamic";
 
@@ -69,6 +71,18 @@ export async function GET(req: Request) {
 }
 
 export async function POST(req: NextRequest) {
+  const session = await getServerSession(authOptions);
+
+  if (!session) {
+    return new Response(JSON.stringify({ error: "Unauthorized" }), { status: 401 });
+  }
+
+  const role = session.user.role;
+
+  if (role !== "admin" && role !== "superadmin") {
+    return new Response(JSON.stringify({ error: "Forbidden" }), { status: 403 });
+  }
+  
   try {
     const formData = await req.formData();
 

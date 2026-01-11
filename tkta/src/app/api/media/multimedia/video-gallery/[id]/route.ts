@@ -1,4 +1,6 @@
+import { authOptions } from "@/lib/auth";
 import sql from "@/lib/db";
+import { getServerSession } from "next-auth/next";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(
@@ -25,6 +27,22 @@ export async function PUT(
   req: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
+  const session = await getServerSession(authOptions);
+
+  if (!session) {
+    return new Response(JSON.stringify({ error: "Unauthorized" }), {
+      status: 401,
+    });
+  }
+
+  const role = session.user.role;
+
+  if (role !== "admin" && role !== "superadmin") {
+    return new Response(JSON.stringify({ error: "Forbidden" }), {
+      status: 403,
+    });
+  }
+
   try {
     const { id } = await params;
     const body = await req.json();
@@ -59,6 +77,22 @@ export async function DELETE(
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const session = await getServerSession(authOptions);
+
+    if (!session) {
+      return new Response(JSON.stringify({ error: "Unauthorized" }), {
+        status: 401,
+      });
+    }
+
+    const role = session.user.role;
+
+    if (role !== "superadmin") {
+      return new Response(JSON.stringify({ error: "Forbidden" }), {
+        status: 403,
+      });
+    }
+
     const { id } = await params;
 
     await sql`

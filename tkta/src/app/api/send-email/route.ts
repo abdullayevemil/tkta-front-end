@@ -1,6 +1,20 @@
+import { authOptions } from "@/lib/auth";
+import { getServerSession } from "next-auth/next";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
+  const session = await getServerSession(authOptions);
+
+  if (!session) {
+    return new Response(JSON.stringify({ error: "Unauthorized" }), { status: 401 });
+  }
+
+  const role = session.user.role;
+
+  if (role !== "admin" && role !== "superadmin" && role !== "user") {
+    return new Response(JSON.stringify({ error: "Forbidden" }), { status: 403 });
+  }
+  
   const body = await req.json();
   const { meetingDate, meetingTime, meetingLink, email, name } = body;
 

@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import sql from "@/lib/db";
 import { v2 as cloudinary, UploadApiResponse } from "cloudinary";
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "@/lib/auth";
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME!,
@@ -49,6 +51,18 @@ export async function PUT(
   req: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
+  const session = await getServerSession(authOptions);
+
+  if (!session) {
+    return new Response(JSON.stringify({ error: "Unauthorized" }), { status: 401 });
+  }
+
+  const role = session.user.role;
+
+  if (role !== "admin" && role !== "superadmin") {
+    return new Response(JSON.stringify({ error: "Forbidden" }), { status: 403 });
+  }
+  
   const { id } = await params;
   const idNumber = parseInt(id);
 
@@ -126,6 +140,18 @@ export async function DELETE(
   req: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
+  const session = await getServerSession(authOptions);
+
+  if (!session) {
+    return new Response(JSON.stringify({ error: "Unauthorized" }), { status: 401 });
+  }
+
+  const role = session.user.role;
+
+  if (role !== "superadmin") {
+    return new Response(JSON.stringify({ error: "Forbidden" }), { status: 403 });
+  }
+  
   if (req.method !== "DELETE") {
     return NextResponse.json({ error: "Method not allowed" }, { status: 405 });
   }

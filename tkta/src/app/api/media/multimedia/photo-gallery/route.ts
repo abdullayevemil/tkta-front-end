@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { v2 as cloudinary, UploadApiResponse } from "cloudinary";
 import sql from "@/lib/db";
+import { authOptions } from "@/lib/auth";
+import { getServerSession } from "next-auth/next";
 
 export const dynamic = "force-dynamic";
 
@@ -12,53 +14,85 @@ cloudinary.config({
 
 export async function POST(req: NextRequest) {
   try {
+    const session = await getServerSession(authOptions);
+
+    if (!session) {
+      return new Response(JSON.stringify({ error: "Unauthorized" }), {
+        status: 401,
+      });
+    }
+
+    const role = session.user.role;
+
+    if (role !== "admin" && role !== "superadmin") {
+      return new Response(JSON.stringify({ error: "Forbidden" }), {
+        status: 403,
+      });
+    }
+
     const formData = await req.formData();
-    
+
     // Extract text fields
-    const title = formData.get('title') as string;
-    const titleEnglish = formData.get('titleEnglish') as string;
-    const headerPhotoFile = formData.get('headerPhoto') as File;
-    const date = formData.get('date') as string;
-    const imageFiles = formData.getAll('images') as File[];
+    const title = formData.get("title") as string;
+    const titleEnglish = formData.get("titleEnglish") as string;
+    const headerPhotoFile = formData.get("headerPhoto") as File;
+    const date = formData.get("date") as string;
+    const imageFiles = formData.getAll("images") as File[];
 
     // Validate required fields
-    if (!title || !titleEnglish || !headerPhotoFile || !date || !imageFiles || imageFiles.length === 0) {
+    if (
+      !title ||
+      !titleEnglish ||
+      !headerPhotoFile ||
+      !date ||
+      !imageFiles ||
+      imageFiles.length === 0
+    ) {
       return NextResponse.json(
-        { error: "Missing required fields: title, titleEnglish, headerPhoto, date, and at least one image" },
+        {
+          error:
+            "Missing required fields: title, titleEnglish, headerPhoto, date, and at least one image",
+        },
         { status: 400 }
       );
     }
 
     // Upload header photo to Cloudinary
     const headerPhotoBuffer = Buffer.from(await headerPhotoFile.arrayBuffer());
-    const headerPhotoUpload = await new Promise<UploadApiResponse>((resolve, reject) => {
-      cloudinary.uploader.upload_stream(
-        {
-          folder: 'photo-gallery/headers',
-          resource_type: 'image',
-        },
-        (error, result) => {
-          if (error) reject(error);
-          else resolve(result!);
-        }
-      ).end(headerPhotoBuffer);
-    });
+    const headerPhotoUpload = await new Promise<UploadApiResponse>(
+      (resolve, reject) => {
+        cloudinary.uploader
+          .upload_stream(
+            {
+              folder: "photo-gallery/headers",
+              resource_type: "image",
+            },
+            (error, result) => {
+              if (error) reject(error);
+              else resolve(result!);
+            }
+          )
+          .end(headerPhotoBuffer);
+      }
+    );
 
     // Upload all images to Cloudinary
     const uploadedImages = await Promise.all(
       imageFiles.map(async (file) => {
         const buffer = Buffer.from(await file.arrayBuffer());
         return new Promise<UploadApiResponse>((resolve, reject) => {
-          cloudinary.uploader.upload_stream(
-            {
-              folder: 'photo-gallery/images',
-              resource_type: 'image',
-            },
-            (error, result) => {
-              if (error) reject(error);
-              else resolve(result!);
-            }
-          ).end(buffer);
+          cloudinary.uploader
+            .upload_stream(
+              {
+                folder: "photo-gallery/images",
+                resource_type: "image",
+              },
+              (error, result) => {
+                if (error) reject(error);
+                else resolve(result!);
+              }
+            )
+            .end(buffer);
         });
       })
     );
@@ -76,10 +110,12 @@ export async function POST(req: NextRequest) {
       `;
     });
 
-    return NextResponse.json({
-      message: "Photo gallery created successfully"
-    }, { status: 201 });
-
+    return NextResponse.json(
+      {
+        message: "Photo gallery created successfully",
+      },
+      { status: 201 }
+    );
   } catch (error) {
     console.error("Error creating photo gallery:", error);
     return NextResponse.json(

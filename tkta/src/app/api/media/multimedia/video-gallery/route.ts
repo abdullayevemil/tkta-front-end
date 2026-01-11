@@ -1,4 +1,6 @@
+import { authOptions } from "@/lib/auth";
 import sql from "@/lib/db";
+import { getServerSession } from "next-auth/next";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(req: Request) {
@@ -59,6 +61,22 @@ export async function GET(req: Request) {
 
 export async function POST(req: NextRequest) {
   try {
+    const session = await getServerSession(authOptions);
+
+    if (!session) {
+      return new Response(JSON.stringify({ error: "Unauthorized" }), {
+        status: 401,
+      });
+    }
+
+    const role = session.user.role;
+
+    if (role !== "admin" && role !== "superadmin") {
+      return new Response(JSON.stringify({ error: "Forbidden" }), {
+        status: 403,
+      });
+    }
+
     const body = await req.json();
     const { title, titleEnglish, headerviewurl } = body;
 

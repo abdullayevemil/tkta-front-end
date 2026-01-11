@@ -1,6 +1,8 @@
 import sql from "@/lib/db";
 import { NextRequest, NextResponse } from "next/server";
 import { v2 as cloudinary, UploadApiResponse } from "cloudinary";
+import { authOptions } from "@/lib/auth";
+import { getServerSession } from "next-auth/next";
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME!,
@@ -45,6 +47,22 @@ export async function PUT(
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const session = await getServerSession(authOptions);
+
+    if (!session) {
+      return new Response(JSON.stringify({ error: "Unauthorized" }), {
+        status: 401,
+      });
+    }
+
+    const role = session.user.role;
+
+    if (role !== "admin" && role !== "superadmin") {
+      return new Response(JSON.stringify({ error: "Forbidden" }), {
+        status: 403,
+      });
+    }
+
     const { id } = await params;
     const formData = await req.formData();
 
@@ -158,6 +176,22 @@ export async function DELETE(
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const session = await getServerSession(authOptions);
+
+    if (!session) {
+      return new Response(JSON.stringify({ error: "Unauthorized" }), {
+        status: 401,
+      });
+    }
+
+    const role = session.user.role;
+
+    if (role !== "superadmin") {
+      return new Response(JSON.stringify({ error: "Forbidden" }), {
+        status: 403,
+      });
+    }
+
     const { id } = await params;
 
     // Get gallery info for Cloudinary cleanup

@@ -413,13 +413,12 @@ export function Navigation({
               </NavigationMenuTrigger>
 
               <NavigationMenuContent className="left-0 z-50 w-full">
-                <ul className="grid w-[200px] md:gap-3 md:p-4 md:w-[250px] grid-cols-1 md:grid-cols-1 lg:grid-cols-2 lg:w-[350px]">
+                <ul className="grid w-[200px] md:gap-3 md:p-4 md:w-[250px] md:grid-cols-1 lg:w-[300px]">
                   <li>
                     <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/media/news`}
                       title={t.header.navigation.media.news}
                     >
-                      {t.header.navigation.media.newsDescription}
                     </ListItem>
                   </li>
 
@@ -428,7 +427,6 @@ export function Navigation({
                       href={`/${locale}/media/interviews`}
                       title={t.header.navigation.media.interviews}
                     >
-                      {t.header.navigation.media.interviewsDescription}
                     </ListItem>
                   </li>
 
@@ -437,7 +435,6 @@ export function Navigation({
                       href={`/${locale}/media/disclosures`}
                       title={t.header.navigation.media.statements}
                     >
-                      {t.header.navigation.media.statementsDescription}
                     </ListItem>
                   </li>
 
@@ -446,7 +443,6 @@ export function Navigation({
                       href={`/${locale}/media/bulletins`}
                       title={t.header.navigation.media.bulletins}
                     >
-                      {t.header.navigation.media.bulletinsDescription}
                     </ListItem>
                   </li>
 
@@ -455,7 +451,6 @@ export function Navigation({
                       href={`/${locale}/media/multimedia`}
                       title={t.header.navigation.media.multimedia}
                     >
-                      {t.header.navigation.media.multimediaDescription}
                     </ListItem>
                   </li>
 
@@ -464,7 +459,6 @@ export function Navigation({
                       href={`/${locale}/media/video-instructions`}
                       title={t.header.navigation.media.videoTutorials}
                     >
-                      {t.header.navigation.media.videoTutorialsDescription}
                     </ListItem>
                   </li>
 
@@ -473,7 +467,6 @@ export function Navigation({
                       href={`/${locale}/media/faq`}
                       title={t.header.navigation.media.faq}
                     >
-                      {t.header.navigation.media.faqDescription}
                     </ListItem>
                   </li>
                 </ul>

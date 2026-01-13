@@ -98,7 +98,9 @@
         "videoTutorials": "Video Tutorials",
         "videoTutorialsDescription": "Explanations in video format",
         "faq": "FAQ",
-        "faqDescription": "Frequently Asked Questions"
+        "faqDescription": "Frequently Asked Questions",
+        "bulletins": "Bulletins",
+        "bulletinsDescription": "Periodic informational releases"
       },
       "contact": {
         "title": "Contact"

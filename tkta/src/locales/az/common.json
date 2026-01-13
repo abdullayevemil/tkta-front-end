@@ -98,7 +98,9 @@
         "videoTutorials": "Video təlimatlar",
         "videoTutorialsDescription": "Video formatında izahlar",
         "faq": "FAQ",
-        "faqDescription": "Müntəzəm verilən suallar"
+        "faqDescription": "Müntəzəm verilən suallar",
+        "bulletins": "Bülletenlər",
+        "bulletinsDescription": "Müntəzəm informasiya buraxılışları"
       },
       "contact": {
         "title": "Əlaqə"

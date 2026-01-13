@@ -540,7 +540,7 @@ export default function FAQ() {
             className="w-1/3 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value="qualifications-recognition"
           >
-            Kvalifikasiyaların tanınması
+            Xarici kvalifikasiyaların tanınması
           </TabsTrigger>
 
           <TabsTrigger

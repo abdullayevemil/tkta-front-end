@@ -3,7 +3,15 @@ import { getServerSession } from "next-auth/next";
 import { NextResponse } from "next/server";
 import postgres from "postgres";
 
-const sql = postgres(process.env.DATABASE_URL!);
+const sql = postgres({
+  host: process.env.DB_HOST,       
+  port: 5432,
+  username: process.env.DB_USER,   
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  ssl: "require",                  
+  prepare: false
+});
 
 export async function POST(req: Request) {
   const session = await getServerSession(authOptions);

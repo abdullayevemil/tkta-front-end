@@ -413,7 +413,7 @@ export function Navigation({
               </NavigationMenuTrigger>
 
               <NavigationMenuContent className="left-0 z-50 w-full">
-                <ul className="grid w-[200px] md:gap-3 md:p-4 md:w-[280px] md:grid-cols-2 lg:w-[350px]">
+                <ul className="grid w-[200px] md:gap-3 md:p-4 md:w-[250px] grid-cols-1 md:grid-cols-1 lg:grid-cols-2 lg:w-[350px]">
                   <li>
                     <ListItem onClick={() => setOpen(false)}
                       href={`/${locale}/media/news`}

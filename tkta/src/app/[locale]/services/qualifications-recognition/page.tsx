@@ -145,43 +145,43 @@ export default function HomePage() {
 
               <ul className="list-disc pl-8 flex flex-col gap-2">
                 <li>
-                  Orta ixtisas təhsili haqqında sənəd (diplom) və ona aid
-                  apostilin əsli (orjinal nüsxənin rəngli skan versiyası);
+                  Orta ixtisas təhsili haqqında sənəd (attestat) və ona aid
+                  apostilin əsli (orijinal nüsxənin rəngli skan versiyası);
                 </li>
 
                 <li>
                   Orta ixtisas təhsili haqqında sənədə əlavə (transkript) və ona
-                  aid apostilin əsli (orjinal nüsxənin rəngli skan versiyası);
+                  aid apostilin əsli (orijinal nüsxənin rəngli skan versiyası);
                 </li>
 
                 <li>
-                  Orta ixtisas təhsili haqqında sənəd (diplomun) və ona aid
+                  Orta ixtisas təhsili haqqında sənəd (attestat) və ona aid
                   apostilin notariat qaydada təsdiq olunmuş Azərbaycan dilinə
                   tərcüməsi (rus, ingilis və türk dilləri istisna olmaqla
-                  (orjinal nüsxənin rəngli skan versiyası));
+                  (orijinal nüsxənin rəngli skan versiyası));
                 </li>
 
                 <li>
                   Orta ixtisas təhsili haqqında sənədə əlavə (transkript) və ona
                   aid apostilin notariat qaydada təsdiq olunmuş Azərbaycan
                   dilində tərcüməsi (rus, ingilis və türk dilləri istisna
-                  olmaqla (orjinal nüsxənin rəngli skan versiyası));
+                  olmaqla (orijinal nüsxənin rəngli skan versiyası));
                 </li>
 
                 <li>
                   Şəxsiyyət vəsiqəsinin hər iki üzünün (xarici ölkə vətəndaşları
-                  - daimi/müvəqqəti yaşama icazəsi) (orjinal nüsxənin rəngli
+                  - daimi/müvəqqəti yaşama icazəsi) (orijinal nüsxənin rəngli
                   skan versiyası);
                 </li>
 
                 <li>
                   Ümumvətəndaş (xarici) pasportunun ön səhifəsinin və
-                  sərhədkeçməni bildirən bütün möhürlü səhifələri) (orjinal
+                  sərhədkeçməni bildirən bütün möhürlü səhifələri) (orijinal
                   nüsxənin rəngli skan versiyası);
                 </li>
 
                 <li>
-                  Hərbi biletin (orjinal nüsxənin rəngli skan versiyası) və ya
+                  Hərbi biletin (orijinal nüsxənin rəngli skan versiyası) və ya
                   hərbi xidmətin qeydiyyatı haqqında arayışın elektron surəti.
                 </li>
               </ul>
@@ -193,18 +193,18 @@ export default function HomePage() {
               <ul className="list-disc pl-8 flex flex-col gap-2">
                 <li>
                   Ali təhsil haqqında sənəd (diplom) və ona aid apostilin əsli
-                  (orjinal nüsxənin rəngli skan versiyası);
+                  (orijinal nüsxənin rəngli skan versiyası);
                 </li>
 
                 <li>
                   Ali təhsil haqqında sənədə əlavə (transkript) və ona aid
-                  apostilin əsli (orjinal nüsxənin rəngli skan versiyası);
+                  apostilin əsli (orijinal nüsxənin rəngli skan versiyası);
                 </li>
 
                 <li>
                   Ali təhsil haqqında sənəd (diplomun) və ona aid apostilin
                   notariat qaydada təsdiq olunmuş Azərbaycan dilinə tərcüməsi
-                  (rus, ingilis və türk dilləri istisna olmaqla (orjinal
+                  (rus, ingilis və türk dilləri istisna olmaqla (orijinal
                   nüsxənin rəngli skan versiyası));
                 </li>
 
@@ -212,23 +212,23 @@ export default function HomePage() {
                   Ali təhsil haqqında sənədə əlavə (transkript) və ona aid
                   apostilin notariat qaydada təsdiq olunmuş Azərbaycan dilində
                   tərcüməsi (rus, ingilis və türk dilləri istisna olmaqla
-                  (orjinal nüsxənin rəngli skan versiyası));
+                  (orijinal nüsxənin rəngli skan versiyası));
                 </li>
 
                 <li>
                   Şəxsiyyət vəsiqəsinin hər iki üzünün (xarici ölkə vətəndaşları
-                  - daimi/müvəqqəti yaşama icazəsi) (orjinal nüsxənin rəngli
+                  - daimi/müvəqqəti yaşama icazəsi) (orijinal nüsxənin rəngli
                   skan versiyası);
                 </li>
 
                 <li>
                   Ümumvətəndaş (xarici) pasportunun ön səhifəsinin və
-                  sərhədkeçməni bildirən bütün möhürlü səhifələri) (orjinal
+                  sərhədkeçməni bildirən bütün möhürlü səhifələri) (orijinal
                   nüsxənin rəngli skan versiyası);
                 </li>
 
                 <li>
-                  Hərbi biletin (orjinal nüsxənin rəngli skan versiyası) və ya
+                  Hərbi biletin (orijinal nüsxənin rəngli skan versiyası) və ya
                   hərbi xidmətin qeydiyyatı haqqında arayışın elektron surəti.
                 </li>
               </ul>
@@ -252,48 +252,48 @@ export default function HomePage() {
               <ul className="list-disc pl-8 flex flex-col gap-2">
                 <li>
                   Ali təhsil haqqında sənəd (diplom) və ona aid apostilin əsli
-                  (orjinal nüsxənin rəngli skan versiyası);
+                  (orijinal nüsxənin rəngli skan versiyası);
                 </li>
 
                 <li>
                   Ali təhsil haqqında sənədə əlavə (transkript) və ona aid
-                  apostilin əsli (orjinal nüsxənin rəngli skan versiyası);
+                  apostilin əsli (orijinal nüsxənin rəngli skan versiyası);
                 </li>
 
                 <li>
                   Ali təhsil haqqında sənəd (diplomun) və ona aid apostilin
                   notariat qaydada təsdiq olunmuş Azərbaycan dilinə
                   tərcüməsi.(rus, ingilis və türk dilləri istisna olmaqla
-                  (orjinal nüsxənin rəngli skan versiyası));
+                  (orijinal nüsxənin rəngli skan versiyası));
                 </li>
 
                 <li>
                   Ali təhsil haqqında sənədə əlavə (transkript) və ona aid
                   apostilin notariat qaydada təsdiq olunmuş Azərbaycan dilində
                   tərcüməsi (rus, ingilis və türk dilləri istisna olmaqla
-                  (orjinal nüsxənin rəngli skan versiyası));
+                  (orijinal nüsxənin rəngli skan versiyası));
                 </li>
 
                 <li>
                   Şəxsiyyət vəsiqəsinin hər iki üzünün (xarici ölkə vətəndaşları
-                  - daimi/müvəqqəti yaşama icazəsi) (orjinal nüsxənin rəngli
+                  - daimi/müvəqqəti yaşama icazəsi) (orijinal nüsxənin rəngli
                   skan versiyası);
                 </li>
 
                 <li>
                   Ümumvətəndaş (xarici) pasportunun ön səhifəsinin və
-                  sərhədkeçməni bildirən bütün möhürlü səhifələri) (orjinal
+                  sərhədkeçməni bildirən bütün möhürlü səhifələri) (orijinal
                   nüsxənin rəngli skan versiyası);
                 </li>
 
                 <li>
-                  Hərbi biletin (orjinal nüsxənin rəngli skan versiyası) və ya
+                  Hərbi biletin (orijinal nüsxənin rəngli skan versiyası) və ya
                   hərbi xidmətin qeydiyyatı haqqında arayışın elektron surəti;
                 </li>
 
                 <li>
                   Bakalavriat səviyyəsi üzrə ali təhsil haqqında sənəd (diplom)
-                  (orjinal nüsxəsinin rəngli skan versiyası);
+                  (orijinal nüsxəsinin rəngli skan versiyası);
                 </li>
               </ul>
             </div>

@@ -86,7 +86,7 @@ const data: University[] = [
   },
   {
     id: 8,
-    country: "Ukrayna",
+    country: "Gürcüstan",
     name: "Laqodexi Elm-Təhsil İnstitutu (Learning-Scientific Institute of Lagodekhi)",
     status: "Yoxdur (Hazırda fəaliyyət göstərmir)",
   },

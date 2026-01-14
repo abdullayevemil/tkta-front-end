@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
+import { useRouter, useSearchParams } from "next/navigation";
 import {
   Popover,
   PopoverContent,
@@ -54,17 +55,23 @@ export default function News({ params }: Props) {
   const [from, setFrom] = useState<Date | undefined>();
   const [to, setTo] = useState<Date | undefined>();
   const [sort, setSort] = useState<"new" | "old">("new");
-  const [page, setPage] = useState(1);
   const [news, setNews] = useState<NewsType[]>([]);
   const [total, setTotal] = useState(0);
   const { data: session, status } = useSession();
   const [deleteId, setDeleteId] = useState<number | null>(null);
   const [open, setOpen] = useState(false);
+  const PAGE_WINDOW = 10;
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const pageParam = Number(searchParams.get("page") ?? 1);
+  const [page, setPage] = useState(pageParam);
 
   if (status === "loading") {
   }
 
-  const isAdmin = session?.user?.role === "admin" || session?.user?.role === "superadmin";
+  const isAdmin =
+    session?.user?.role === "admin" || session?.user?.role === "superadmin";
 
   async function handleDelete() {
     if (deleteId === null) return;
@@ -120,7 +127,17 @@ export default function News({ params }: Props) {
     fetchNews();
   }, [searchQuery, from, to, sort, page]);
 
+  useEffect(() => {
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("page", page.toString());
+    router.replace(`?${params.toString()}`, { scroll: false });
+  }, [page]);
+
   const totalPages = Math.ceil(total / ITEMS_PER_PAGE);
+
+  const currentBlock = Math.floor((page - 1) / PAGE_WINDOW);
+  const startPage = currentBlock * PAGE_WINDOW + 1;
+  const endPage = Math.min(startPage + PAGE_WINDOW - 1, totalPages);
 
   return (
     <div className="w-full flex flex-col gap-8 sm:gap-10 md:gap-12 items-center">
@@ -286,21 +303,35 @@ export default function News({ params }: Props) {
         </ul>
       )}
       {totalPages > 1 && (
-        <div className="flex gap-4 mt-8">
+        <div className="flex flex-wrap items-center gap-2 mt-10">
+          {/* Prev */}
           <Button
-            disabled={page === 1}
-            onClick={() => setPage((p) => p - 1)}
             variant="outline"
+            disabled={page === 1}
+            onClick={() => setPage(page - 1)}
           >
             {t.previous}
           </Button>
-          <span className="self-center">
-            {t.page} {page} / {totalPages}
-          </span>
+
+          {/* Page numbers */}
+          {Array.from(
+            { length: endPage - startPage + 1 },
+            (_, i) => startPage + i
+          ).map((p) => (
+            <Button
+              key={p}
+              variant={p === page ? "default" : "outline"}
+              onClick={() => setPage(p)}
+            >
+              {p}
+            </Button>
+          ))}
+
+          {/* Next */}
           <Button
-            disabled={page === totalPages}
-            onClick={() => setPage((p) => p + 1)}
             variant="outline"
+            disabled={page === totalPages}
+            onClick={() => setPage(page + 1)}
           >
             {t.next}
           </Button>

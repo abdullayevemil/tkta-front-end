@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { format } from "date-fns";
+import { useRouter, useSearchParams } from "next/navigation";
 import { toast } from "react-toastify";
 import { useSession } from "next-auth/react";
 import { Input } from "../ui/input";
@@ -43,18 +44,24 @@ const ITEMS_PER_PAGE = 9;
 
 export function VideoGallery({ locale }: { locale: string }) {
   const { data: session } = useSession();
-  const isAdmin = session?.user?.role === "admin" || session?.user?.role === "superadmin";
+  const isAdmin =
+    session?.user?.role === "admin" || session?.user?.role === "superadmin";
   const t = getTranslation(locale);
 
   const [search, setSearch] = useState("");
   const [from, setFrom] = useState<Date | undefined>();
   const [to, setTo] = useState<Date | undefined>();
   const [sort, setSort] = useState<"new" | "old">("new");
-  const [page, setPage] = useState(1);
   const [gallery, setGallery] = useState<GalleryItem[]>([]);
   const [total, setTotal] = useState(0);
   const [deleteId, setDeleteId] = useState<number | null>(null);
   const [alertOpen, setAlertOpen] = useState(false);
+  const PAGE_WINDOW = 10;
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const pageParam = Number(searchParams.get("page") ?? 1);
+  const [page, setPage] = useState(pageParam);
 
   async function fetchGallery() {
     const params = new URLSearchParams();
@@ -101,7 +108,17 @@ export function VideoGallery({ locale }: { locale: string }) {
     }
   }
 
+  useEffect(() => {
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("page", page.toString());
+    router.replace(`?${params.toString()}`, { scroll: false });
+  }, [page]);
+
   const totalPages = Math.ceil(total / ITEMS_PER_PAGE);
+
+  const currentBlock = Math.floor((page - 1) / PAGE_WINDOW);
+  const startPage = currentBlock * PAGE_WINDOW + 1;
+  const endPage = Math.min(startPage + PAGE_WINDOW - 1, totalPages);
 
   return (
     <div className="w-full flex flex-col gap-8 sm:gap-10 md:gap-12 items-center">
@@ -205,7 +222,7 @@ export function VideoGallery({ locale }: { locale: string }) {
             <li key={item.id} className="relative">
               <Card className="w-full h-full flex flex-col bg-transparent">
                 <Link href={`/media/multimedia/video-gallery/${item.id}`}>
-                  {!item.headerviewurl.includes("youtube")? (
+                  {!item.headerviewurl.includes("youtube") ? (
                     <video
                       src={item.headerviewurl}
                       autoPlay={false}
@@ -295,23 +312,37 @@ export function VideoGallery({ locale }: { locale: string }) {
       )}
 
       {totalPages > 1 && (
-        <div className="flex gap-4 mt-8">
+        <div className="flex flex-wrap items-center gap-2 mt-10">
+          {/* Prev */}
           <Button
             variant="outline"
             disabled={page === 1}
-            onClick={() => setPage((p) => p - 1)}
+            onClick={() => setPage(page - 1)}
           >
-            Previous
+            {t.previous}
           </Button>
-          <span className="self-center">
-            Page {page} of {totalPages}
-          </span>
+
+          {/* Page numbers */}
+          {Array.from(
+            { length: endPage - startPage + 1 },
+            (_, i) => startPage + i
+          ).map((p) => (
+            <Button
+              key={p}
+              variant={p === page ? "default" : "outline"}
+              onClick={() => setPage(p)}
+            >
+              {p}
+            </Button>
+          ))}
+
+          {/* Next */}
           <Button
             variant="outline"
             disabled={page === totalPages}
-            onClick={() => setPage((p) => p + 1)}
+            onClick={() => setPage(page + 1)}
           >
-            Next
+            {t.next}
           </Button>
         </div>
       )}

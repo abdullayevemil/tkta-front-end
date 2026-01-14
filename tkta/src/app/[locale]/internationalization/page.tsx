@@ -4,6 +4,7 @@ import { useState, useEffect, use } from "react";
 import Link from "next/link";
 import { format } from "date-fns";
 import { toast } from "react-toastify";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useSession } from "next-auth/react";
 import {
   AlertDialog,
@@ -45,7 +46,8 @@ export default function Iternationalization({ params }: Props) {
 
   const { data: session } = useSession();
 
-  const isAdmin = session?.user?.role === "admin" || session?.user?.role === "superadmin";
+  const isAdmin =
+    session?.user?.role === "admin" || session?.user?.role === "superadmin";
 
   const t = getTranslation(locale);
 
@@ -56,9 +58,6 @@ export default function Iternationalization({ params }: Props) {
   const [to] = useState<Date | undefined>();
 
   const [sort] = useState<"new" | "old">("new");
-
-  const [page, setPage] = useState(1);
-  const [page1, setPage1] = useState(1);
 
   const [gallery, setGallery] = useState<GalleryItem[]>([]);
 
@@ -71,52 +70,68 @@ export default function Iternationalization({ params }: Props) {
   const [deleteId, setDeleteId] = useState<number | null>(null);
 
   const [alertOpen, setAlertOpen] = useState(false);
+  const PAGE_WINDOW = 10;
+  const router = useRouter();
+  const searchParams = useSearchParams();
 
-  async function fetchGallery() {
-    const params = new URLSearchParams();
+  const pageParam = Number(searchParams.get("page") ?? 1);
+  const [page, setPage] = useState(pageParam);
+  const [page1, setPage1] = useState(pageParam);
 
-    if (search) params.append("search", search);
-
-    if (from) params.append("from", from.toISOString().split("T")[0]);
-
-    if (to) params.append("to", to.toISOString().split("T")[0]);
-
-    if (sort) params.append("sort", sort);
-
-    params.append("page", page.toString());
-
+  async function fetchGalleryType2() {
     try {
+      const params = new URLSearchParams();
+      if (search) params.append("search", search);
+      if (from) params.append("from", from.toISOString().split("T")[0]);
+      if (to) params.append("to", to.toISOString().split("T")[0]);
+      if (sort) params.append("sort", sort);
+      params.append("page", page.toString());
+
       const res = await fetch(
         `/api/media/multimedia/photo-gallery?${params.toString()}&type=2`
       );
 
-      if (!res.ok) throw new Error("Failed to fetch");
+      if (!res.ok) throw new Error("Failed to fetch gallery type 2");
 
       const data = await res.json();
-
       setGallery(data.gallery);
-
       setTotal(data.total);
+    } catch {
+      toast.error(t.media.multimedia.error.loading);
+    }
+  }
 
-      const res1 = await fetch(
+  // Fetch gallery of type 1 (other gallery)
+  async function fetchGalleryType1() {
+    try {
+      const params = new URLSearchParams();
+      if (search) params.append("search", search);
+      if (from) params.append("from", from.toISOString().split("T")[0]);
+      if (to) params.append("to", to.toISOString().split("T")[0]);
+      if (sort) params.append("sort", sort);
+      params.append("page", page1.toString());
+
+      const res = await fetch(
         `/api/media/multimedia/photo-gallery?${params.toString()}&type=1`
       );
 
-      if (!res1.ok) throw new Error("Failed to fetch");
+      if (!res.ok) throw new Error("Failed to fetch gallery type 1");
 
-      const data1 = await res1.json();
-
-      setGallery1(data1.gallery);
-
-      setTotal1(data1.total);
+      const data = await res.json();
+      setGallery1(data.gallery);
+      setTotal1(data.total);
     } catch {
       toast.error(t.media.multimedia.error.loading);
     }
   }
 
   useEffect(() => {
-    fetchGallery();
+    fetchGalleryType2();
   }, [search, from, to, sort, page]);
+
+  useEffect(() => {
+    fetchGalleryType1();
+  }, [search, from, to, sort, page1]);
 
   async function handleDelete() {
     if (!deleteId) return;
@@ -137,15 +152,36 @@ export default function Iternationalization({ params }: Props) {
 
       setDeleteId(null);
 
-      fetchGallery();
+      fetchGalleryType2();
+      fetchGalleryType1();
     } catch {
       toast.error(t.media.multimedia.error.delete);
     }
   }
 
+  useEffect(() => {
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("page", page.toString());
+    router.replace(`?${params.toString()}`, { scroll: false });
+  }, [page]);
+
+  useEffect(() => {
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("page1", page1.toString());
+    router.replace(`?${params.toString()}`, { scroll: false });
+  }, [page1]);
+
   const totalPages = Math.ceil(total / ITEMS_PER_PAGE);
 
+  const currentBlock = Math.floor((page - 1) / PAGE_WINDOW);
+  const startPage = currentBlock * PAGE_WINDOW + 1;
+  const endPage = Math.min(startPage + PAGE_WINDOW - 1, totalPages);
+
   const totalPages1 = Math.ceil(total1 / ITEMS_PER_PAGE);
+
+  const currentBlock1 = Math.floor((page1 - 1) / PAGE_WINDOW);
+  const startPage1 = currentBlock1 * PAGE_WINDOW + 1;
+  const endPage1 = Math.min(startPage1 + PAGE_WINDOW - 1, totalPages1);
 
   return (
     <section className="w-full flex flex-col gap-16 items-center">
@@ -270,7 +306,10 @@ export default function Iternationalization({ params }: Props) {
           </div>
         </TabsContent>
 
-        <TabsContent value="employee-exchange" className="flex flex-col gap-20">
+        <TabsContent
+          value="employee-exchange"
+          className="flex flex-col gap-20 items-center justify-center"
+        >
           {gallery.length === 0 ? (
             <NewsSkeleton />
           ) : (
@@ -371,23 +410,35 @@ export default function Iternationalization({ params }: Props) {
           )}
 
           {totalPages > 1 && (
-            <div className="flex gap-4 mt-8">
+            <div className="flex flex-wrap items-center gap-2 w-full justify-center flex-1">
+              {/* Prev */}
               <Button
                 variant="outline"
                 disabled={page === 1}
-                onClick={() => setPage((p) => p - 1)}
+                onClick={() => setPage(page - 1)}
               >
                 {t.previous}
               </Button>
 
-              <span className="self-center">
-                {t.page} {page} of {totalPages}
-              </span>
+              {/* Page numbers */}
+              {Array.from(
+                { length: endPage - startPage + 1 },
+                (_, i) => startPage + i
+              ).map((p) => (
+                <Button
+                  key={p}
+                  variant={p === page ? "default" : "outline"}
+                  onClick={() => setPage(p)}
+                >
+                  {p}
+                </Button>
+              ))}
 
+              {/* Next */}
               <Button
                 variant="outline"
                 disabled={page === totalPages}
-                onClick={() => setPage((p) => p + 1)}
+                onClick={() => setPage(page + 1)}
               >
                 {t.next}
               </Button>
@@ -496,21 +547,35 @@ export default function Iternationalization({ params }: Props) {
           )}
 
           {totalPages1 > 1 && (
-            <div className="flex gap-4 mt-8">
+            <div className="flex flex-wrap items-center gap-2 w-full justify-center flex-1">
+              {/* Prev */}
               <Button
                 variant="outline"
                 disabled={page1 === 1}
-                onClick={() => setPage1((p) => p - 1)}
+                onClick={() => setPage1(page1 - 1)}
               >
                 {t.previous}
               </Button>
-              <span className="self-center">
-                {t.page} {page1} of {totalPages1}
-              </span>
+
+              {/* Page numbers */}
+              {Array.from(
+                { length: endPage1 - startPage1 + 1 },
+                (_, i) => startPage1 + i
+              ).map((p) => (
+                <Button
+                  key={p}
+                  variant={p === page1 ? "default" : "outline"}
+                  onClick={() => setPage1(p)}
+                >
+                  {p}
+                </Button>
+              ))}
+
+              {/* Next */}
               <Button
                 variant="outline"
                 disabled={page1 === totalPages1}
-                onClick={() => setPage1((p) => p + 1)}
+                onClick={() => setPage1(page1 + 1)}
               >
                 {t.next}
               </Button>

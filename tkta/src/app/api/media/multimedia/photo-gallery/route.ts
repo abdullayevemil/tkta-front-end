@@ -127,6 +127,8 @@ export async function POST(req: NextRequest) {
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
+  console.log("Params", searchParams.toString());
+
   const search = searchParams.get("search") || "";
   const type = searchParams.get("type") || null;
   const from = searchParams.get("from") || null;

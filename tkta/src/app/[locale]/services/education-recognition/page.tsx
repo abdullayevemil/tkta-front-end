@@ -416,20 +416,20 @@ const columns: ColumnDef<Major>[] = [
       <div className="capitalize">{row.getValue("title")}</div>
     ),
   },
-  {
-    accessorKey: "methodicalMaterial",
-    header: "Metodik Vəsait",
-    cell: ({ row }) => (
-      <Link
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:text-textPrimary italic hover:underline"
-        href={row.getValue("methodicalMaterial")}
-      >
-        Keçid
-      </Link>
-    ),
-  },
+  // {
+  //   accessorKey: "methodicalMaterial",
+  //   header: "Metodik Vəsait",
+  //   cell: ({ row }) => (
+  //     <Link
+  //       target="_blank"
+  //       rel="noopener noreferrer"
+  //       className="hover:text-textPrimary italic hover:underline"
+  //       href={row.getValue("methodicalMaterial")}
+  //     >
+  //       Keçid
+  //     </Link>
+  //   ),
+  // },
   {
     accessorKey: "registration",
     header: "Qeydiyyat",

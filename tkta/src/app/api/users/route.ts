@@ -16,22 +16,24 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
-    const session = await getServerSession(authOptions);
-
-    if (!session) {
-      return new Response(JSON.stringify({ error: "Unauthorized" }), {
-        status: 401,
-      });
-    };
-
-    if (session.user.role !== "superadmin") {
-      return new Response(JSON.stringify({ error: "Forbidden" }), {
-        status: 403,
-      });
-    }
-
     const body = await request.json();
     const { name, email, password, role } = body;
+
+    if (role === "admin" || role === "superadmin") {
+      const session = await getServerSession(authOptions);
+
+      if (!session) {
+        return new Response(JSON.stringify({ error: "Unauthorized" }), {
+          status: 401,
+        });
+      }
+
+      if (session.user.role !== "superadmin") {
+        return new Response(JSON.stringify({ error: "Forbidden" }), {
+          status: 403,
+        });
+      }
+    }
 
     if (!name || !email || !password) {
       return NextResponse.json(

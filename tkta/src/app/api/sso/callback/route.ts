@@ -45,7 +45,7 @@ export async function POST(request: Request) {
 
     await sql`
       INSERT INTO sso_sessions (id, email, expires_at)
-      VALUES (${sessionId}, ${fakeEmail}, now() + interval '2 minutes')
+      VALUES (${sessionId}, ${fakeEmail}, now() + interval '10 minutes')
     `;
 
     const cookieStore = await cookies();

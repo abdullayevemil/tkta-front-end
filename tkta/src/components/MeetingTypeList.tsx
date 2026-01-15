@@ -16,6 +16,8 @@ const initialValues = {
   dateTime: new Date(),
   description: "",
   link: "",
+  email: "",
+  name: "",
 };
 
 const MeetingTypeList = () => {
@@ -33,9 +35,6 @@ const MeetingTypeList = () => {
   const { toast } = useToast();
 
   const createMeeting = async () => {
-    console.log("User:", user);
-    console.log("Client:", client);
-    console.log("Values:", values);
     if (!client || !user) return;
     try {
       if (!values.dateTime) {
@@ -57,8 +56,25 @@ const MeetingTypeList = () => {
         },
       });
       setCallDetail(call);
+
+      const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/video-call/meeting/${call.id}`;
+
+      if (meetingState === "isInstantMeeting" && values.email) {
+        await fetch("/api/send-email", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            meetingDate: new Date(startsAt).toLocaleDateString(),
+            meetingTime: new Date(startsAt).toLocaleTimeString(),
+            meetingLink,
+            email: values.email,
+            name: values.name || "Guest",
+          }),
+        });
+      }
+
       if (!values.description) {
-        router.push(`/video-call/meeting/${call.id}`);
+        router.push(meetingLink);
       }
       toast({
         title: "Meeting Created",
@@ -149,7 +165,7 @@ const MeetingTypeList = () => {
           image={"/icons/checked.svg"}
           buttonIcon="/icons/copy.svg"
           className="text-center"
-          buttonText="Copy Meeting Link" 
+          buttonText="Copy Meeting Link"
         />
       )}
 

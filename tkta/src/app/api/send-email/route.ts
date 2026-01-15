@@ -162,6 +162,7 @@ export async function POST(req: NextRequest) {
       );
     }
   } catch (err) {
+    console.log("Error in send-email route:", err);
     return NextResponse.json({ error: err }, { status: 500 });
   }
 }

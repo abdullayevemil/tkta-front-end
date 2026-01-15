@@ -6,15 +6,19 @@ export async function POST(req: NextRequest) {
   const session = await getServerSession(authOptions);
 
   if (!session) {
-    return new Response(JSON.stringify({ error: "Unauthorized" }), { status: 401 });
+    return new Response(JSON.stringify({ error: "Unauthorized" }), {
+      status: 401,
+    });
   }
 
   const role = session.user.role;
 
   if (role !== "admin" && role !== "superadmin" && role !== "user") {
-    return new Response(JSON.stringify({ error: "Forbidden" }), { status: 403 });
+    return new Response(JSON.stringify({ error: "Forbidden" }), {
+      status: 403,
+    });
   }
-  
+
   const body = await req.json();
   const { meetingDate, meetingTime, meetingLink, email, name } = body;
 
@@ -127,6 +131,8 @@ export async function POST(req: NextRequest) {
       method: "POST",
     });
 
+    console.log(authRes);
+
     if (!authRes.ok) throw new Error("Login failed");
 
     const authData = await authRes.json();
@@ -139,12 +145,16 @@ export async function POST(req: NextRequest) {
       },
     });
 
+    console.log(emailRes);
+
     if (emailRes.status === 201) {
       return NextResponse.json({ success: true, emailRes });
     } else {
-      return NextResponse.json({ error: "Error sending email" }, { status: 500 });
+      return NextResponse.json(
+        { error: "Error sending email" },
+        { status: 500 }
+      );
     }
-
   } catch (err) {
     return NextResponse.json({ error: err }, { status: 500 });
   }

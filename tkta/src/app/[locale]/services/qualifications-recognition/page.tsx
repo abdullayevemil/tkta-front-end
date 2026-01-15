@@ -141,7 +141,7 @@ export default function HomePage() {
             <div>Tələb olunan sənədlər</div>
 
             <div className="flex flex-col gap-3">
-              <h4 className="font-bold">Orta ixtisas təhsili:</h4>
+              <h4 className="font-bold">Tam orta təhsil:</h4>
 
               <ul className="list-disc pl-8 flex flex-col gap-2">
                 <li>
@@ -156,6 +156,53 @@ export default function HomePage() {
 
                 <li>
                   Orta ixtisas təhsili haqqında sənəd (attestat) və ona aid
+                  apostilin notariat qaydada təsdiq olunmuş Azərbaycan dilinə
+                  tərcüməsi (rus, ingilis və türk dilləri istisna olmaqla
+                  (orijinal nüsxənin rəngli skan versiyası));
+                </li>
+
+                <li>
+                  Orta ixtisas təhsili haqqında sənədə əlavə (transkript) və ona
+                  aid apostilin notariat qaydada təsdiq olunmuş Azərbaycan
+                  dilində tərcüməsi (rus, ingilis və türk dilləri istisna
+                  olmaqla (orijinal nüsxənin rəngli skan versiyası));
+                </li>
+
+                <li>
+                  Şəxsiyyət vəsiqəsinin hər iki üzünün (xarici ölkə vətəndaşları
+                  - daimi/müvəqqəti yaşama icazəsi) (orijinal nüsxənin rəngli
+                  skan versiyası);
+                </li>
+
+                <li>
+                  Ümumvətəndaş (xarici) pasportunun ön səhifəsinin və
+                  sərhədkeçməni bildirən bütün möhürlü səhifələri) (orijinal
+                  nüsxənin rəngli skan versiyası);
+                </li>
+
+                <li>
+                  Hərbi biletin (orijinal nüsxənin rəngli skan versiyası) və ya
+                  hərbi xidmətin qeydiyyatı haqqında arayışın elektron surəti.
+                </li>
+              </ul>
+            </div>
+
+            <div className="flex flex-col gap-3">
+              <h4 className="font-bold">Orta ixtisas təhsili:</h4>
+
+              <ul className="list-disc pl-8 flex flex-col gap-2">
+                <li>
+                  Orta ixtisas təhsili haqqında sənəd (diplom) və ona aid
+                  apostilin əsli (orijinal nüsxənin rəngli skan versiyası);
+                </li>
+
+                <li>
+                  Orta ixtisas təhsili haqqında sənədə əlavə (transkript) və ona
+                  aid apostilin əsli (orijinal nüsxənin rəngli skan versiyası);
+                </li>
+
+                <li>
+                  Orta ixtisas təhsili haqqında sənəd (diplomun) və ona aid
                   apostilin notariat qaydada təsdiq olunmuş Azərbaycan dilinə
                   tərcüməsi (rus, ingilis və türk dilləri istisna olmaqla
                   (orijinal nüsxənin rəngli skan versiyası));

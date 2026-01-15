@@ -5,6 +5,8 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(req: NextRequest) {
   const session = await getServerSession(authOptions);
 
+  console.log(session)
+
   if (!session) {
     return new Response(JSON.stringify({ error: "Unauthorized" }), {
       status: 401,
@@ -12,6 +14,8 @@ export async function POST(req: NextRequest) {
   }
 
   const role = session.user.role;
+
+  console.log("User role:", role);
 
   if (role !== "admin" && role !== "superadmin" && role !== "user") {
     return new Response(JSON.stringify({ error: "Forbidden" }), {
@@ -21,6 +25,8 @@ export async function POST(req: NextRequest) {
 
   const body = await req.json();
   const { meetingDate, meetingTime, meetingLink, email, name } = body;
+
+  console.log("Email request body:", body);
 
   const htmlContent = `
   <!DOCTYPE html>

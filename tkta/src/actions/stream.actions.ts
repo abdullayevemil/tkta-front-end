@@ -27,7 +27,7 @@ export const tokenProvider = async () => {
       return res.json();
     })
     .then((body) => {
-      id = body[0].id;
+      id = `${body[0].id}`;
     });
 
   if (!user) throw new Error("User is not authenticated");
@@ -43,6 +43,8 @@ export const tokenProvider = async () => {
   const issuedAt = Math.floor(Date.now() / 1000) - 60;
 
   const token = streamClient.createToken(id!, expirationTime, issuedAt);
+
+  console.log("Generated Stream Token:", token, { userId: id });
 
   return token;
 };

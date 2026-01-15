@@ -191,7 +191,16 @@ const MeetingTypeList = () => {
         className="text-center"
         buttonText="Start Meeting"
         handleClick={createMeeting}
-      />
+      >
+        <div className="flex flex-col gap-3">
+          <Input
+            type="email"
+            placeholder="Email address"
+            onChange={(e) => setValues({ ...values, email: e.target.value })}
+            className="border-none bg-dark-3 focus-visible:ring-0"
+          />
+        </div>
+      </MeetingModal>
     </section>
   );
 };

@@ -46,275 +46,279 @@ const data: University[] = [
     id: 1,
     country: "Amerika Birləşmiş Ştatları",
     name: "Beynəlxalq Atlantik Universiteti",
-    status: "Yoxdur",
+    status: "Yoxdur"
   },
   {
     id: 2,
     country: "Avstriya Respublikası",
     name: "Beynəlxalq Xristian Universiteti",
-    status: "Yoxdur (Hazırda fəaliyyət göstərmir)",
+    status: "Yoxdur (Hazırda fəaliyyət göstərmir)"
   },
   {
     id: 3,
     country: "Birləşmiş Ərəb Əmirlikləri",
     name: "Middlesex Universiteti (Middlesex University Dubai)",
-    status: "09.01.2025-ci il tarixindən etibarən akkreditasiyası var",
+    status: "09.01.2025-ci il tarixindən etibarən akkreditasiyası var"
   },
   {
     id: 4,
     country: "Çex Respublikası",
     name: "Beynəlxalq Praqa Universiteti (International Prague University)",
-    status: "Yoxdur",
+    status: "Yoxdur"
   },
   {
     id: 5,
     country: "Fransa Respublikası",
     name: "EICAR – Paris Beynəlxalq Film və Televiziya Məktəbi (EICAR – The International Film & Television School Paris)",
-    status: "Yoxdur",
+    status: "Yoxdur"
   },
   {
     id: 6,
     country: "Fransa Respublikası",
     name: "Vatel Otel və Turizm Biznes Məktəbi (Vatel Hotel & Tourism Business School)",
-    status: "Yoxdur",
+    status: "Yoxdur"
   },
   {
     id: 7,
     country: "Ukrayna",
     name: "Şərqi Avropa İqtisadiyyat və İdarəetmə Universiteti (East European University of Economics and Management)",
-    status: "Gürcüstan filialının akkreditasiyası yoxdur",
+    status: "Gürcüstan filialının akkreditasiyası yoxdur"
   },
   {
     id: 8,
     country: "Gürcüstan",
     name: "Laqodexi Elm-Təhsil İnstitutu (Learning-Scientific Institute of Lagodekhi)",
-    status: "Yoxdur (Hazırda fəaliyyət göstərmir)",
+    status: "Yoxdur (Hazırda fəaliyyət göstərmir)"
   },
   {
     id: 9,
     country: "Ukrayna",
     name: "Beynəlxalq Ekologiya və Tibb Akademiyası (The International Academy of Ecology and Medicine)",
-    status: "Gürcüstan filialının akkreditasiyası yoxdur",
+    status: "Gürcüstan filialının akkreditasiyası yoxdur"
   },
   {
     id: 10,
     country: "Ukrayna",
     name: "Avqustin Voloşin adına Karpat Universiteti (Augustine Voloshyn Carpathian University)",
-    status: "Gürcüstan filialının akkreditasiyası yoxdur",
+    status: "Gürcüstan filialının akkreditasiyası yoxdur"
   },
   {
     id: 11,
     country: "Ukrayna",
     name: "Avropa Universiteti (European University)",
-    status: "Gürcüstan filialının akkreditasiyası yoxdur",
+    status: "Gürcüstan filialının akkreditasiyası yoxdur"
   },
   {
     id: 12,
     country: "Ukrayna",
     name: "“KROK” İqtisadiyyat və Hüquq Universiteti (KROK University of Economics and Law)",
-    status: "Gürcüstan filialının akkreditasiyası yoxdur",
+    status: "Gürcüstan filialının akkreditasiyası yoxdur"
   },
   {
     id: 13,
     country: "Ukrayna",
-    name: "Regionlararası Heyətin İdarəolunması Akademiyası (Interregional Academy of Personnel Management)",
-    status: "Gürcüstan filialının akkreditasiyası yoxdur",
+    name: "Regionlararası Heyətin İdarəolunması Akademiyası (Private Joint-Stock Company \"Higher Education Institution Interregional Academy of Personnel Management\")",
+    status: "Gürcüstan filialının akkreditasiyası yoxdur"
   },
   {
     id: 14,
     country: "İspaniya Krallığı",
     name: "EADA Biznes Məktəbi (EADA International Management Development Center)",
-    status: "Yoxdur",
+    status: "Yoxdur"
   },
   {
     id: 15,
     country: "İspaniya Krallığı",
     name: "Barselona Qlobal Biznes Məktəbi (Global Business School Barcelona)",
-    status: "Yoxdur",
+    status: "Yoxdur"
   },
   {
     id: 16,
     country: "İspaniya Krallığı",
     name: "Avropa Universiteti Biznes Məktəbi (EU Business School)",
-    status: "Yoxdur",
+    status: "Yoxdur"
   },
   {
     id: 17,
     country: "İspaniya Krallığı",
     name: "Marbella Beynəlxalq Universiteti (Marbella International University Centre)",
-    status: "Yoxdur",
+    status: "Yoxdur"
   },
   {
     id: 18,
     country: "İspaniya Krallığı",
     name: "Harbour Space Universiteti (Harbour Space University)",
-    status: "Yoxdur",
+    status: "Yoxdur"
   },
   {
     id: 19,
     country: "İtaliya Respublikası",
     name: "Roma Biznes Məktəbi (Rome Business School)",
-    status: "Yoxdur",
+    status: "Yoxdur"
   },
   {
     id: 20,
     country: "İtaliya Respublikası",
     name: "Maranqoni İnstitutu (Istituto Marangoni)",
-    status: "Yoxdur",
+    status: "Yoxdur"
   },
   {
     id: 21,
     country: "Rusiya Federasiyası",
-    name: "Beynəlxalq Humanitar-Texniki Akademiya",
-    status: "26.04.2015-ci ilə qədər akkreditasiyası var",
+    name: "Beynəlxalq Humanitar-Texniki Akademiya (Международная гуманитарно-техническая академия)",
+    status: "26.04.2015-ci ilə qədər akkreditasiyası var"
   },
   {
     id: 22,
     country: "Rusiya Federasiyası",
-    name: "Nijeqorod Menecment və Biznes İnstitutu",
-    status: "26.04.2015-ci ilə qədər akkreditasiyası var",
+    name: "Nijeqorod Menecment və Biznes İnstitutu (Нижегородский институт менеджмента и бизнеса)",
+    status: "26.04.2015-ci ilə qədər akkreditasiyası var"
   },
   {
     id: 23,
     country: "Rusiya Federasiyası",
-    name: "Şərqi Avropa Psixoanaliz İnstitutu",
-    status: "22.06.2017-ci ilə qədər akkreditasiyası var",
+    name: "Şərqi Avropa Psixoanaliz İnstitutu (Восточно-Европейский институт психоанализа)",
+    status: "22.06.2017-ci ilə qədər akkreditasiyası var"
   },
   {
     id: 24,
     country: "Rusiya Federasiyası",
-    name: "Sosial-Humanitar Təhsil və Xidmət İnstitutu",
-    status: "19.12.2017-ci il tarixində fəaliyyətini dayandırıb",
+    name: "Sosial-Humanitar Təhsil və Xidmət İnstitutu (Институт социально-гуманитарного образования и сервиса)",
+    status: "Ali təhsil müəssisəsi 19.12.2017-ci il tarixində fəaliyyətini dayandırıb."
   },
   {
     id: 25,
     country: "Rusiya Federasiyası",
-    name: "Dünya İqtisadiyyatı İnstitutu",
-    status: "2014-cü ilə qədər olub, 2024-cü ildən təkrar akkreditasiyası var",
+    name: "Dünya İqtisadiyyatı İnstitutu (Институт мировой экономики)",
+    status: "2014-cü ilə qədər olub və 2024-cü ildən təkrar akkreditasiyası var. 2014-2023-cü illər ərzində akkreditasiyası olmamışdır."
   },
   {
     id: 26,
     country: "Rusiya Federasiyası",
-    name: "Moskva Humanitar-İqtisad İnstitutu",
-    status: "Ukrayna filialının akkreditasiyası yoxdur",
+    name: "Moskva Humanitar-İqtisad İnstitutu (Московский гуманитарно-экономический институт)",
+    status: "Ukrayna filialının akkreditasiyası yoxdur"
   },
   {
     id: 27,
     country: "İsveçrə Konfederasiyası",
-    name: "İsveçrədə Amerika Tətbiqi Elmlər İnstitutu (American University in Switzerland)",
-    status: "Yoxdur",
+    name: "İsveçrədə Amerika Tətbiqi Elmlər İnstitutu (İsveçrə Amerika Universiteti) (American Institute of Applied Sciences in Switzerland - The American University in Switzerland)",
+    status: "Yoxdur"
   },
   {
     id: 28,
     country: "İsveçrə Konfederasiyası",
     name: "İsveçrə Ali Təhsil Məktəbi (Swiss School of Higher Education)",
-    status: "Yoxdur",
+    status: "Yoxdur"
   },
   {
     id: 29,
     country: "İsveçrə Konfederasiyası",
-    name: "Avropa Universiteti Biznes Məktəbi (EU Business School - European University)",
-    status: "Yoxdur",
+    name: "Avropa Universiteti Biznes Məktəbi (Avropa Universiteti) (EU Business School - European University)",
+    status: "Yoxdur"
   },
   {
     id: 30,
     country: "İsveçrə Konfederasiyası",
     name: "Cenevrə Biznes Məktəbi (Geneva Business School)",
-    status: "Yoxdur",
+    status: "Yoxdur"
   },
   {
     id: 31,
     country: "İsveçrə Konfederasiyası",
-    name: "Cenevrə Beynəlxalq Universiteti (International University in Geneva)",
-    status: "Yoxdur",
+    name: "Cenevrə Beynəlxalq Universiteti (International University in Geneva – International Institute in Geneva)",
+    status: "Yoxdur"
   },
   {
     id: 32,
     country: "İsveçrə Konfederasiyası",
     name: "Biznes və Hotel Menecmenti Məktəbi (Business & Hotel Management School)",
-    status: "Yoxdur",
+    status: "Yoxdur"
   },
   {
     id: 33,
     country: "İsveçrə Konfederasiyası",
     name: "Cenevrə Diplomatiya və Beynəlxalq Münasibətlər Universiteti (Geneva School of Diplomacy & International Relations)",
-    status: "Yoxdur",
+    status: "Yoxdur"
   },
   {
     id: 34,
     country: "İsveçrə Konfederasiyası",
     name: "İsveçrə Montre Biznes Məktəbi (Swiss Montreux Business School)",
-    status: "Yoxdur",
+    status: "Yoxdur"
   },
   {
     id: 35,
     country: "İsveçrə Konfederasiyası",
-    name: "Biznes və Beynəlxalq Münasibətlər Universiteti (University of Business and International Studies)",
-    status: "Yoxdur",
+    name: "Biznes və Beynəlxalq Münasibətlər Universiteti (University of Business and International Studies - University of Business Innovation and Sustainability)",
+    status: "Yoxdur"
   },
   {
     id: 36,
     country: "İsveçrə Konfederasiyası",
     name: "Glion Ali Təhsil Universiteti (Glion Institute of Higher Education)",
-    status: "Yoxdur",
+    status: "20.06.2025-ci il tarixindən etibarən akkreditasiyası var"
   },
   {
     id: 37,
     country: "İsveçrə Konfederasiyası",
     name: "Vebster Universiteti (Webster University)",
-    status: "Yoxdur",
+    status: "Yoxdur"
   },
   {
     id: 38,
     country: "Çex Respublikası",
     name: "Beynəlxalq Biznes İnstitutu (International Business Institute)",
-    status: "Yoxdur",
+    status: "Yoxdur"
   },
   {
     id: 39,
     country: "Fransa Respublikası",
-    name: "UniMan Beynəlxalq İdarəetmə və Performans Akademiyası",
-    status: "Yoxdur",
+    name: "UniMan Beynəlxalq İdarəetmə və Performans Akademiyası (UniMan “Academy of International Management and Performance”)",
+    status: "Yoxdur"
   },
   {
     id: 40,
     country: "Amerika Birləşmiş Ştatları",
     name: "Biznes, İnnovasiya və Davamlılıq Universiteti (UBIS - University of Business Innovation and Sustainability)",
-    status: "Yoxdur",
+    status: "Yoxdur"
   },
   {
     id: 41,
     country: "İtaliya Respublikası",
     name: "Florensiya Dizayn Beynəlxalq İnstitutu (The Florence Institute of Design International)",
-    status: "Yoxdur",
+    status: "Yoxdur"
   },
   {
     id: 42,
     country: "Birləşmiş Ərəb Əmirlikləri",
     name: "SAE Yaradıcı Media İnstitutu (SAE Creative Media Institute)",
-    status: "09.01.2025-ci il tarixindən etibarən akkreditasiyası var",
+    status: "09.01.2025-ci il tarixindən etibarən akkreditasiyası var"
   },
   {
     id: 43,
     country: "İsveçrə Konfederasiyası",
     name: "İsveçrə Cenevrə Biznes İnstitutu (Swiss Geneva Business Institute)",
-    status: "Yoxdur",
+    status: "Yoxdur"
   },
   {
     id: 44,
     country: "İsveçrə Konfederasiyası",
     name: "İsveçrə Cenevrə Biznes İnstitutu (Swiss Geneva Business Institute)",
-    status:
-      "“Antalya International College of Tourism” ilə tərəfdaşlıq çərçivəsində proqram - lisenziyası və akkreditasiyası yoxdur",
+    status: "Türkiyə Respublikasında “Antalya International College of Tourism” nəzdindəki kampusunun lisenziyası və akkreditasiyası yoxdur."
   },
   {
     id: 45,
     country: "İspaniya Krallığı",
-    name: '"Les Roçhes" Beynəlxalq Otel İdarəetmə Məktəbi (Les Roches: Escuela Internacional de Dirección Hotelera y Turismo)',
-    status: "Yoxdur",
+    name: "\"Les Roçhes\" Beynəlxalq Otel İdarəetmə Məktəbi (Les Roches: Escuela Internacional de Dirección Hotelera y Turismo)",
+    status: "Yoxdur"
   },
-];
-
+  {
+    id: 46,
+    country: "İsveçrə Konfederasiyası",
+    name: "Les Roches Beynəlxalq Otel İdarəetmə Məktəbi (Les Roches Global Hospitality Education)",
+    status: "20.09.2024-cü il tarixindən etibarən akkreditasiyası var"
+  }
+]
 const columns: ColumnDef<University>[] = [
   {
     id: "select",
@@ -418,7 +422,7 @@ export default function DataTableDemo() {
           sənədlərinə imtina verilmiş universitetlərin siyahısı
         </div>
 
-        <div>Müvafiqdir: 25.09.2025*</div>
+        <div>Müvafiqdir: 03.11.2025*</div>
       </h2>
 
       <div className="w-full px-4 md:px-16">

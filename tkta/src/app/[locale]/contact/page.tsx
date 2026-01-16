@@ -318,7 +318,7 @@ export default function ContactForm() {
               onSubmit={() =>
                 onSubmit({
                   type: "Şikayət",
-                  ...contactForm.getValues(),
+                  ...complaintForm.getValues(),
                 })
               }
             />
@@ -336,7 +336,7 @@ export default function ContactForm() {
               onSubmit={() =>
                 onSubmit({
                   type: "Apelyasiya müraciəti",
-                  ...contactForm.getValues(),
+                  ...appealForm.getValues(),
                 })
               }
             />

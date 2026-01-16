@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(req: NextRequest) {
   const body = await req.json();
   const { email, fullName, contactNumber, message, type } = body;
+  console.log(email, fullName, contactNumber, message, type);
 
   const htmlContent = `
 <!DOCTYPE html>
@@ -95,11 +96,7 @@ export async function POST(req: NextRequest) {
     process.env.EMAIL_SERVICE_URL +
     `/send-email-2?sender={"name":"Təhsildə Keyfiyyət Təminatı Agentliyi", "email": "${encodeURIComponent(
       process.env.SENDER_EMAIL || ""
-    )}" }&to=[{"email" : "info@tkta.edu.az", "name":"TKTA"},{"email":"${encodeURIComponent(
-      email
-    )}", "name": "${encodeURIComponent(
-      fullName
-    )}"}]&subject=${type}&htmlContent=${encodeURIComponent(
+    )}" }&to=[{"email" : "info@tkta.edu.az", "name":"TKTA"}]&subject=${type}&htmlContent=${encodeURIComponent(
       htmlContent
     )}`;
 
@@ -109,6 +106,8 @@ export async function POST(req: NextRequest) {
     const authRes = await fetch(authUrl, {
       method: "POST",
     });
+
+    console.log(authRes);
 
     if (!authRes.ok) throw new Error("Login failed");
 
@@ -121,6 +120,8 @@ export async function POST(req: NextRequest) {
         Authorization: `bearer ${bearerToken}`,
       },
     });
+
+    console.log(emailRes);
 
     if (emailRes.status === 201) {
       return NextResponse.json({ success: true, emailRes });

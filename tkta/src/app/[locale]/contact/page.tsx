@@ -18,6 +18,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useRef, useState, type RefObject } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import Link from "next/link";
+import { toast } from "react-toastify";
 
 const ContactSchema = z.object({
   fullName: z.string().min(1, {
@@ -233,8 +234,10 @@ export default function ContactForm() {
       if (!res.ok) {
         throw new Error("Failed to send message");
       }
+      
+      toast.success("Mesajınız uğurla göndərildi!");
     } catch (error) {
-      console.error(error);
+      toast.error("Xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.");
     }
   };
 

@@ -185,6 +185,10 @@ function ContactFormFields({
   );
 }
 
+interface ContactData extends ContactFormData {
+  type: string;
+}
+
 export default function ContactForm() {
   const contactForm = useForm<ContactFormData>({
     resolver: zodResolver(ContactSchema),
@@ -216,7 +220,7 @@ export default function ContactForm() {
     },
   });
 
-  const onSubmit = async (data: ContactFormData) => {
+  const onSubmit = async (data: ContactData) => {
     try {
       const res = await fetch("/contact/send-email", {
         method: "POST",
@@ -290,7 +294,12 @@ export default function ContactForm() {
               recaptchaRef={contactCaptcha.recaptchaRef}
               handleChange={contactCaptcha.handleChange}
               handleExpired={contactCaptcha.handleExpired}
-              onSubmit={() => onSubmit(contactForm.getValues())}
+              onSubmit={() =>
+                onSubmit({
+                  type: "Onlayn müraciət",
+                  ...contactForm.getValues(),
+                })
+              }
             />
           </div>
         </TabsContent>
@@ -303,7 +312,12 @@ export default function ContactForm() {
               recaptchaRef={complaintCaptcha.recaptchaRef}
               handleChange={complaintCaptcha.handleChange}
               handleExpired={complaintCaptcha.handleExpired}
-              onSubmit={() => onSubmit(contactForm.getValues())}
+              onSubmit={() =>
+                onSubmit({
+                  type: "Şikayət",
+                  ...contactForm.getValues(),
+                })
+              }
             />
           </div>
         </TabsContent>
@@ -316,7 +330,12 @@ export default function ContactForm() {
               recaptchaRef={appealCaptcha.recaptchaRef}
               handleChange={appealCaptcha.handleChange}
               handleExpired={appealCaptcha.handleExpired}
-              onSubmit={() => onSubmit(contactForm.getValues())}
+              onSubmit={() =>
+                onSubmit({
+                  type: "Apelyasiya müraciəti",
+                  ...contactForm.getValues(),
+                })
+              }
             />
           </div>
         </TabsContent>

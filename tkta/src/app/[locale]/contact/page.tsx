@@ -223,7 +223,7 @@ export default function ContactForm() {
 
   const onSubmit = async (data: ContactData) => {
     try {
-      const res = await fetch("/contact/send-email", {
+      const res = await fetch("/api/contact/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -234,7 +234,7 @@ export default function ContactForm() {
       if (!res.ok) {
         throw new Error("Failed to send message");
       }
-      
+
       toast.success("Mesajınız uğurla göndərildi!");
     } catch (error) {
       toast.error("Xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.");

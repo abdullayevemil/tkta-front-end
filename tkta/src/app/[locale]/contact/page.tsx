@@ -282,7 +282,7 @@ export default function ContactForm() {
             <Link
               href="https://www.qebul.edu.az/?page=add_ticket"
               target="_blank"
-              className="w-full text-textPrimary z-50"
+              className="w-full text-textPrimary z-40"
             >
               Vətəndaş qəbulu
             </Link>

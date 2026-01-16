@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
-  const { email, fullName, contactNumber, message, type } = body;
+  const { email, fullName, contactNumber, content, type } = body;
 
   const htmlContent = `
 <!DOCTYPE html>
@@ -52,7 +52,7 @@ export async function POST(req: NextRequest) {
 
 <body>
   <div class="container">
-    <h2>${type}}</h2>
+    <h2>${type}</h2>
 
     <p><span class="label">Ad və Soyad:</span> ${fullName}</p>
     <p><span class="label">E-poçt:</span> ${email}</p>
@@ -64,7 +64,7 @@ export async function POST(req: NextRequest) {
     )}</p>
 
     <div class="message">
-      ${message}
+      ${content}
     </div>
 
     <div class="footer">

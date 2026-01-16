@@ -122,10 +122,7 @@ function ContactFormFields({
               <FormItem className="w-full md:w-1/2">
                 <FormLabel>Əlaqə nömrəsi</FormLabel>
                 <FormControl>
-                  <Input
-                    placeholder="Əlaqə nömrənizi daxil edin"
-                    {...field}
-                  />
+                  <Input placeholder="Əlaqə nömrənizi daxil edin" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -220,8 +217,20 @@ export default function ContactForm() {
   });
 
   const onSubmit = async (data: ContactFormData) => {
-    if (data) {
-      return;
+    try {
+      const res = await fetch("/contact/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      console.error(error);
     }
   };
 
@@ -263,9 +272,13 @@ export default function ContactForm() {
             className="w-full md:w-1/2 px-2 text-base text-textPrimary data-[state=active]:font-bold data-[state=active]:text-textPrimary font-semibold"
             value=""
           >
-            <Link href="https://www.qebul.edu.az/?page=add_ticket" target="_blank" className="w-full text-textPrimary z-50">
-            Vətəndaş qəbulu
-          </Link>
+            <Link
+              href="https://www.qebul.edu.az/?page=add_ticket"
+              target="_blank"
+              className="w-full text-textPrimary z-50"
+            >
+              Vətəndaş qəbulu
+            </Link>
           </TabsTrigger>
         </TabsList>
 
@@ -277,7 +290,7 @@ export default function ContactForm() {
               recaptchaRef={contactCaptcha.recaptchaRef}
               handleChange={contactCaptcha.handleChange}
               handleExpired={contactCaptcha.handleExpired}
-              onSubmit={onSubmit}
+              onSubmit={() => onSubmit(contactForm.getValues())}
             />
           </div>
         </TabsContent>
@@ -290,7 +303,7 @@ export default function ContactForm() {
               recaptchaRef={complaintCaptcha.recaptchaRef}
               handleChange={complaintCaptcha.handleChange}
               handleExpired={complaintCaptcha.handleExpired}
-              onSubmit={onSubmit}
+              onSubmit={() => onSubmit(contactForm.getValues())}
             />
           </div>
         </TabsContent>
@@ -303,11 +316,11 @@ export default function ContactForm() {
               recaptchaRef={appealCaptcha.recaptchaRef}
               handleChange={appealCaptcha.handleChange}
               handleExpired={appealCaptcha.handleExpired}
-              onSubmit={onSubmit}
+              onSubmit={() => onSubmit(contactForm.getValues())}
             />
           </div>
         </TabsContent>
       </Tabs>
     </section>
-  ); 
+  );
 }

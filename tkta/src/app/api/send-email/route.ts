@@ -93,6 +93,13 @@ export async function POST(req: NextRequest) {
   </p>
 
   <p style="font-size:11pt; font-family:Calibri; color:#000000; margin-bottom:14pt;">
+  <strong>SİMA identifikasiya xidməti linki:</strong><br/>
+  <a href="https://tkta.edu.az/sso/redirect?email=${email}" target="_blank" style="color:#0563c1; text-decoration:underline;">
+  https://tkta.edu.az/sso/redirect?email=${email}
+  </a>
+  </p>
+
+  <p style="font-size:11pt; font-family:Calibri; color:#000000; margin-bottom:14pt;">
   <strong>Video görüş linki:</strong><br/>
   <a href="${meetingLink}" target="_blank" style="color:#0563c1; text-decoration:underline;">
   ${meetingLink}

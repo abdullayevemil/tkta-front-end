@@ -13,8 +13,10 @@ export async function POST(req: NextRequest) {
   try {
     const formData = await req.formData();
 
-    const file = formData.get("file") as File | null;
+    const file = formData.get("video") as File | null;
     const title = (formData.get("title") as string) || "video";
+
+    console.log("Received upload request for title:", title);
 
     if (!file) {
       return NextResponse.json(
@@ -30,6 +32,8 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    console.log("Saving file to upload directory:", UPLOAD_DIR);
+
     await fs.mkdir(UPLOAD_DIR, { recursive: true });
 
     const ext = path.extname(file.name) || ".mp4";
@@ -44,8 +48,11 @@ export async function POST(req: NextRequest) {
     const buffer = Buffer.from(await file.arrayBuffer());
     await fs.writeFile(filePath, buffer);
 
-    const relativePath = `media/multimedia/video-gallery/${fileName}`;
+    const relativePath = `assets/media/multimedia/video-gallery/${fileName}`;
+
     const videoUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/${relativePath}`;
+
+    console.log("File saved successfully:", filePath);
 
     return NextResponse.json(
       {

@@ -69,10 +69,19 @@ export default function News({ params }: Props) {
         {locale === "az" ? data.title : data.titleenglish}
       </h1>
       <div className="w-full">
-        <iframe
-          src={(data as Video).headerviewurl}
-          className="w-full rounded-xl shadow h-64 sm:h-96 md:h-[700px]"
-        />
+        {(data as Video).headerviewurl.includes("youtube") ? (
+          <iframe
+            src={(data as Video).headerviewurl}
+            className="w-full rounded-xl shadow h-64 sm:h-96 md:h-[700px]"
+            allowFullScreen
+          />
+        ) : (
+          <video
+            src={(data as Video).headerviewurl}
+            className="w-full rounded-xl shadow h-64 sm:h-96 md:h-[700px]"
+            controls
+          />
+        )}
       </div>
       <p className="text-sm text-gray-600 w-full text-right">
         {format(new Date(data.date.toString()), "dd-MM-yyyy")}

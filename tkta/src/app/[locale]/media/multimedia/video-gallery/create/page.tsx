@@ -66,7 +66,7 @@ export default function AddVideoGalleryPage() {
         "/api/media/multimedia/video-gallery/youtube",
         formData
       );
-      const iframeUrl = response.data.iframeUrl;
+      const iframeUrl = response.data.videoUrl;
 
       await axios.post("/api/media/multimedia/video-gallery", {
         title,

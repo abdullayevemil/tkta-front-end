@@ -1,33 +1,20 @@
 import { NextRequest, NextResponse } from "next/server";
-import { google } from "googleapis";
-import { writeFile } from "fs/promises";
+import fs from "fs/promises";
 import path from "path";
-import { v4 as uuidv4 } from "uuid";
-import { Readable } from "stream";
+import crypto from "crypto";
 
+export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const oauth2Client = new google.auth.OAuth2(
-  process.env.YOUTUBE_CLIENT_ID!,
-  process.env.YOUTUBE_CLIENT_SECRET!,
-  process.env.YOUTUBE_REDIRECT_URI!
-);
-
-oauth2Client.setCredentials({
-  refresh_token: process.env.YOUTUBE_REFRESH_TOKEN!,
-});
-
-const youtube = google.youtube({
-  version: "v3",
-  auth: oauth2Client,
-});
+const UPLOAD_DIR =
+  "/var/www/nextapp_uploads/media/multimedia/video-gallery";
 
 export async function POST(req: NextRequest) {
   try {
     const formData = await req.formData();
-    const file = formData.get("file") as File;
-    const title = (formData.get("title") as string) || "Video Upload";
-    const description = (formData.get("description") as string) || "";
+
+    const file = formData.get("file") as File | null;
+    const title = (formData.get("title") as string) || "video";
 
     if (!file) {
       return NextResponse.json(
@@ -36,38 +23,43 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const buffer = Buffer.from(await file.arrayBuffer());
-    const tempFilename = `${uuidv4()}-${file.name}`;
-    const tempPath = path.join("/tmp", tempFilename);
-    await writeFile(tempPath, buffer);
-
-    const stream = Readable.from(buffer);
-
-    const uploadResponse = await youtube.videos.insert({
-      part: ["snippet", "status"],
-      requestBody: {
-        snippet: {
-          title,
-          description,
-        },
-        status: {
-          privacyStatus: "private",
-        },
-      },
-      media: {
-        body: stream,
-      },
-    });
-
-    const videoId = uploadResponse?.data?.id;
-    if (!videoId) {
-      return NextResponse.json({ error: "Upload failed" }, { status: 500 });
+    if (!file.type.startsWith("video/")) {
+      return NextResponse.json(
+        { error: "Uploaded file is not a video" },
+        { status: 400 }
+      );
     }
 
-    const iframeUrl = `https://www.youtube.com/embed/${videoId}`;
-    return NextResponse.json({ iframeUrl }, { status: 200 });
+    await fs.mkdir(UPLOAD_DIR, { recursive: true });
+
+    const ext = path.extname(file.name) || ".mp4";
+    const safeTitle = title
+      .toLowerCase()
+      .replace(/[^a-z0-9-_]/g, "-")
+      .slice(0, 60);
+
+    const fileName = `${safeTitle}-${crypto.randomUUID()}${ext}`;
+    const filePath = path.join(UPLOAD_DIR, fileName);
+
+    const buffer = Buffer.from(await file.arrayBuffer());
+    await fs.writeFile(filePath, buffer);
+
+    const relativePath = `media/multimedia/video-gallery/${fileName}`;
+    const videoUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/${relativePath}`;
+
+    return NextResponse.json(
+      {
+        success: true,
+        videoUrl,
+        fileName,
+      },
+      { status: 200 }
+    );
   } catch (err) {
     console.error("Upload error:", err);
-    return NextResponse.json({ error: "Internal error" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Internal server error" },
+      { status: 500 }
+    );
   }
 }
